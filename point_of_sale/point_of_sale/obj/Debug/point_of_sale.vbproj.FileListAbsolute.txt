@@ -1,0 +1,286 @@
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.exe.config
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.exe
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.pdb
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.xml
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu_UI_v1.5.3.dll
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Guna.UI2.dll
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.xml
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu_UI_v1.5.3.xml
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbprojResolveAssemblyReference.cache
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.point_of_sale.exe.config
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.Form1.resources
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_AdminDas.resources
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_PointOfSale.resources
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.Resources.resources
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.GenerateResource.Cache
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.exe
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.xml
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.pdb
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.xml
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmAddProduct.resources
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmAddSeler.resources
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmReport.resources
+c:\users\ohoteeni\documents\visual studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_DailySale.resources
+C:\Users\OHOTEENI\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+C:\Users\OHOTEENI\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
+C:\Users\OHOTEENI\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
+C:\Users\OHOTEENI\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+C:\Users\OHOTEENI\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Guna.UI.dll
+C:\Users\OHOTEENI\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+C:\Users\OHOTEENI\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml
+C:\Users\OHOTEENI\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.xml
+C:\Users\OHOTEENI\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+C:\Users\OHOTEENI\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_Addtype.resources
+C:\Users\OHOTEENI\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_ChanegePassword.resources
+C:\Users\OHOTEENI\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_MySales.resources
+C:\Users\OHOTEENI\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_Sale.resources
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.exe.config
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.exe
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.xml
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.pdb
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.exe
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.pdb
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.xml
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Guna.UI.dll
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Guna.UI2.dll
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.xml
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.xml
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.xml
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu_UI_v1.5.3.xml
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.point_of_sale.exe.config
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.Form1.resources
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmAddProduct.resources
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmAddSeler.resources
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmReport.resources
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_Addtype.resources
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_AdminDas.resources
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_ChanegePassword.resources
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_DailySale.resources
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_MySales.resources
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_PointOfSale.resources
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_Sale.resources
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.Resources.resources
+D:\Documents\Visual Studio 2015\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.GenerateResource.Cache
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.exe.config
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.exe
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.xml
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.pdb
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.exe
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.pdb
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.xml
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\MySql.Data.dll
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\Google.Protobuf.dll
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\Zstandard.Net.dll
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\Renci.SshNet.dll
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\System.Buffers.dll
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.xml
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.xml
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.xml
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\Bunifu_UI_v1.5.3.xml
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\bin\Debug\MySql.Data.xml
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbprojResolveAssemblyReference.cache
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.point_of_sale.exe.config
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.Form1.resources
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmAddProduct.resources
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmAddSeler.resources
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmReport.resources
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_Addtype.resources
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_AdminDas.resources
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_ChanegePassword.resources
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_DailySale.resources
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_MySales.resources
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_PointOfSale.resources
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_Sale.resources
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.Resources.resources
+C:\Users\OHOTEENI\Desktop\Projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.GenerateResource.Cache
+E:\projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.exe.config
+E:\projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.exe
+E:\projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.pdb
+E:\projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.xml
+E:\projects\point_of_sale\point_of_sale\bin\Debug\Google.Protobuf.dll
+E:\projects\point_of_sale\point_of_sale\bin\Debug\Zstandard.Net.dll
+E:\projects\point_of_sale\point_of_sale\bin\Debug\K4os.Compression.LZ4.Streams.dll
+E:\projects\point_of_sale\point_of_sale\bin\Debug\BouncyCastle.Crypto.dll
+E:\projects\point_of_sale\point_of_sale\bin\Debug\Ubiety.Dns.Core.dll
+E:\projects\point_of_sale\point_of_sale\bin\Debug\Renci.SshNet.dll
+E:\projects\point_of_sale\point_of_sale\bin\Debug\System.Memory.dll
+E:\projects\point_of_sale\point_of_sale\bin\Debug\System.Buffers.dll
+E:\projects\point_of_sale\point_of_sale\bin\Debug\K4os.Compression.LZ4.dll
+E:\projects\point_of_sale\point_of_sale\bin\Debug\K4os.Hash.xxHash.dll
+E:\projects\point_of_sale\point_of_sale\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+E:\projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml
+E:\projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.xml
+E:\projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.xml
+E:\projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
+E:\projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.xml
+E:\projects\point_of_sale\point_of_sale\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+E:\projects\point_of_sale\point_of_sale\bin\Debug\Bunifu_UI_v1.5.3.xml
+E:\projects\point_of_sale\point_of_sale\bin\Debug\MySql.Data.xml
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.AssemblyReference.cache
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.exe.config
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.Form1.resources
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmAddProduct.resources
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmAddSeler.resources
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmReport.resources
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_Addtype.resources
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_AdminDas.resources
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_ChanegePassword.resources
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_DailySale.resources
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_MySales.resources
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_PointOfSale.resources
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_Sale.resources
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.Resources.resources
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.GenerateResource.cache
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.CoreCompileInputs.cache
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.CopyComplete
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.exe
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.xml
+E:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.pdb
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.AssemblyReference.cache
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.exe.config
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmLogin.resources
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmAddProduct.resources
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmAddSeler.resources
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmReport.resources
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_Addtype.resources
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_AdminDas.resources
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_ChanegePassword.resources
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_MySales.resources
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_PointOfSale.resources
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_Sale.resources
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.Resources.resources
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.GenerateResource.cache
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.CoreCompileInputs.cache
+G:\projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.exe.config
+G:\projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.exe
+G:\projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.pdb
+G:\projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.xml
+G:\projects\point_of_sale\point_of_sale\bin\Debug\Google.Protobuf.dll
+G:\projects\point_of_sale\point_of_sale\bin\Debug\Zstandard.Net.dll
+G:\projects\point_of_sale\point_of_sale\bin\Debug\K4os.Compression.LZ4.Streams.dll
+G:\projects\point_of_sale\point_of_sale\bin\Debug\Ubiety.Dns.Core.dll
+G:\projects\point_of_sale\point_of_sale\bin\Debug\System.Memory.dll
+G:\projects\point_of_sale\point_of_sale\bin\Debug\System.Buffers.dll
+G:\projects\point_of_sale\point_of_sale\bin\Debug\K4os.Compression.LZ4.dll
+G:\projects\point_of_sale\point_of_sale\bin\Debug\K4os.Hash.xxHash.dll
+G:\projects\point_of_sale\point_of_sale\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.CopyComplete
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.exe
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.xml
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.pdb
+G:\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmCheck_Stock.resources
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.exe.config
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.exe
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.pdb
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\bin\Debug\point_of_sale.xml
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\bin\Debug\Google.Protobuf.dll
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\bin\Debug\Zstandard.Net.dll
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\bin\Debug\System.Memory.dll
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\bin\Debug\System.Buffers.dll
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmCheck_Stock.resources
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmLogin.resources
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmAddProduct.resources
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmAddSeler.resources
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmReport.resources
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_Addtype.resources
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_AdminDas.resources
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_ChanegePassword.resources
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_MySales.resources
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_PointOfSale.resources
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_Sale.resources
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.Resources.resources
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.GenerateResource.cache
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.exe
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.xml
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.pdb
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbprojResolveAssemblyReference.cache
+C:\Users\Senz Digitals\Desktop\projects\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.point_of_sale.exe.config
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\point_of_sale.exe.config
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.exe
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.xml
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.pdb
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\point_of_sale.exe
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\point_of_sale.pdb
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\point_of_sale.xml
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\Google.Protobuf.dll
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\System.Memory.dll
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\System.Buffers.dll
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbprojResolveAssemblyReference.cache
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmCheck_Stock.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmLogin.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmAddProduct.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmAddSeler.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmReport.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_Addtype.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_AdminDas.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_ChanegePassword.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_MySales.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_PointOfSale.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_Sale.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.Resources.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.vbproj.GenerateResource.Cache
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.User_Lists.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_ListOfProduct.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\MySql.Data.dll
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\MySqlBackup.dll
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\ZstdNet.dll
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\Google.Protobuf.pdb
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\Google.Protobuf.xml
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\MySql.Data.xml
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\System.Buffers.xml
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\System.Memory.xml
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_Profit.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frm_GenSettings.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.splash.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.test.resources
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\bin\Debug\Zstandard.Net.dll
+C:\Users\OHOTEENI ERNEST\Desktop\point_of_sale\point_of_sale\obj\Debug\point_of_sale.frmStatics.resources
+C:\Users\OHOTEENI ERNEST\Source\Repos\AnekPOS\point_of_sale\point_of_sale\bin\Debug\point_of_sale.exe.config
+C:\Users\OHOTEENI ERNEST\Source\Repos\AnekPOS\point_of_sale\point_of_sale\obj\Debug\point_of_sale.exe
+C:\Users\OHOTEENI ERNEST\Source\Repos\AnekPOS\point_of_sale\point_of_sale\obj\Debug\point_of_sale.xml
+C:\Users\OHOTEENI ERNEST\Source\Repos\AnekPOS\point_of_sale\point_of_sale\obj\Debug\point_of_sale.pdb
