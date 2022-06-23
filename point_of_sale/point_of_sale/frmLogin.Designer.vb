@@ -30,10 +30,10 @@ Partial Class frmLogin
         Me.btnLogin = New Guna.UI2.WinForms.Guna2Button()
         Me.BunifuGradientPanel2 = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.ProgressBar1 = New Guna.UI.WinForms.GunaProgressBar()
-        Me.BunifuLabel1 = New Bunifu.UI.Winforms.BunifuLabel()
-        Me.lblInvalid = New Bunifu.UI.Winforms.BunifuLabel()
-        Me.BunifuLabel2 = New Bunifu.UI.Winforms.BunifuLabel()
-        Me.BunifuLabel3 = New Bunifu.UI.Winforms.BunifuLabel()
+        Me.BunifuLabel1 = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.lblInvalid = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.BunifuLabel2 = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.BunifuLabel3 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.btn_Close = New Bunifu.Framework.UI.BunifuImageButton()
         Me.txt_Password = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.txt_Username = New Bunifu.Framework.UI.BunifuMetroTextbox()
@@ -119,14 +119,14 @@ Partial Class frmLogin
         Me.BunifuLabel1.AutoEllipsis = False
         Me.BunifuLabel1.CursorType = Nothing
         Me.BunifuLabel1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuLabel1.Location = New System.Drawing.Point(284, 60)
+        Me.BunifuLabel1.Location = New System.Drawing.Point(270, 60)
         Me.BunifuLabel1.Name = "BunifuLabel1"
         Me.BunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.BunifuLabel1.Size = New System.Drawing.Size(92, 27)
+        Me.BunifuLabel1.Size = New System.Drawing.Size(114, 27)
         Me.BunifuLabel1.TabIndex = 3
-        Me.BunifuLabel1.Text = "Username"
+        Me.BunifuLabel1.Text = "Employee ID"
         Me.BunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel1.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'lblInvalid
         '
@@ -140,7 +140,7 @@ Partial Class frmLogin
         Me.lblInvalid.TabIndex = 3
         Me.lblInvalid.Text = Nothing
         Me.lblInvalid.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.lblInvalid.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.lblInvalid.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'BunifuLabel2
         '
@@ -154,7 +154,7 @@ Partial Class frmLogin
         Me.BunifuLabel2.TabIndex = 3
         Me.BunifuLabel2.Text = "Password"
         Me.BunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel2.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'BunifuLabel3
         '
@@ -168,7 +168,7 @@ Partial Class frmLogin
         Me.BunifuLabel3.TabIndex = 3
         Me.BunifuLabel3.Text = "ANEK POS SYSTEM LOGIN"
         Me.BunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel3.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'btn_Close
         '

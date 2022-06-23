@@ -808,7 +808,7 @@ Public Class frm_Sale
 
     End Sub
 
-    Private Sub cmb_ProductName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_ProductName.KeyPress, cmbType.KeyPress
+    Private Sub cmb_ProductName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_ProductName.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
             txt_Quantity.Focus()
         End If
@@ -822,7 +822,7 @@ Public Class frm_Sale
         inStock()
     End Sub
 
-    Private Sub cmbType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbType.SelectedIndexChanged
+    Private Sub cmbType_SelectedIndexChanged(sender As Object, e As EventArgs)
         Try
             cmb_Hide.Items.Clear()
             cmb_Hide.Text = ""

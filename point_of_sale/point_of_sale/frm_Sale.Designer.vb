@@ -61,7 +61,6 @@ Partial Class frm_Sale
         Me.lblInStock = New Guna.UI.WinForms.GunaLabel()
         Me.lstTrackQty = New System.Windows.Forms.ListBox()
         Me.lstID = New System.Windows.Forms.ListBox()
-        Me.cmbType = New System.Windows.Forms.ComboBox()
         Me.GunaLabel10 = New Guna.UI.WinForms.GunaLabel()
         Me.cmb_QuantInstack = New System.Windows.Forms.ComboBox()
         Me.GunaLabel11 = New Guna.UI.WinForms.GunaLabel()
@@ -80,6 +79,7 @@ Partial Class frm_Sale
         Me.btn_Clear = New Guna.UI.WinForms.GunaButton()
         Me.btn_Done = New Guna.UI.WinForms.GunaButton()
         Me.btn_AddToList = New Guna.UI.WinForms.GunaButton()
+        Me.cmbType = New Guna.UI.WinForms.GunaComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txt_Quantity, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -92,7 +92,7 @@ Partial Class frm_Sale
         Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold)
         Me.GunaLabel1.Location = New System.Drawing.Point(391, 8)
         Me.GunaLabel1.Name = "GunaLabel1"
-        Me.GunaLabel1.Size = New System.Drawing.Size(164, 32)
+        Me.GunaLabel1.Size = New System.Drawing.Size(163, 32)
         Me.GunaLabel1.TabIndex = 0
         Me.GunaLabel1.Text = "SALES POINT"
         '
@@ -100,7 +100,7 @@ Partial Class frm_Sale
         '
         Me.GunaLabel2.AutoSize = True
         Me.GunaLabel2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel2.Location = New System.Drawing.Point(22, 74)
+        Me.GunaLabel2.Location = New System.Drawing.Point(22, 82)
         Me.GunaLabel2.Name = "GunaLabel2"
         Me.GunaLabel2.Size = New System.Drawing.Size(141, 25)
         Me.GunaLabel2.TabIndex = 0
@@ -110,7 +110,7 @@ Partial Class frm_Sale
         '
         Me.GunaLabel3.AutoSize = True
         Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel3.Location = New System.Drawing.Point(24, 114)
+        Me.GunaLabel3.Location = New System.Drawing.Point(24, 122)
         Me.GunaLabel3.Name = "GunaLabel3"
         Me.GunaLabel3.Size = New System.Drawing.Size(99, 25)
         Me.GunaLabel3.TabIndex = 0
@@ -120,7 +120,7 @@ Partial Class frm_Sale
         '
         Me.GunaLabel4.AutoSize = True
         Me.GunaLabel4.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel4.Location = New System.Drawing.Point(24, 154)
+        Me.GunaLabel4.Location = New System.Drawing.Point(24, 162)
         Me.GunaLabel4.Name = "GunaLabel4"
         Me.GunaLabel4.Size = New System.Drawing.Size(89, 25)
         Me.GunaLabel4.TabIndex = 0
@@ -145,7 +145,7 @@ Partial Class frm_Sale
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(886, 242)
+        Me.DataGridView1.Size = New System.Drawing.Size(1025, 242)
         Me.DataGridView1.TabIndex = 8
         '
         'id
@@ -195,15 +195,15 @@ Partial Class frm_Sale
         Me.cmd_unitPrice.Enabled = False
         Me.cmd_unitPrice.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmd_unitPrice.FormattingEnabled = True
-        Me.cmd_unitPrice.Location = New System.Drawing.Point(171, 114)
+        Me.cmd_unitPrice.Location = New System.Drawing.Point(171, 122)
         Me.cmd_unitPrice.Name = "cmd_unitPrice"
         Me.cmd_unitPrice.Size = New System.Drawing.Size(90, 31)
-        Me.cmd_unitPrice.TabIndex = 9
+        Me.cmd_unitPrice.TabIndex = 1
         '
         'txt_Quantity
         '
         Me.txt_Quantity.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_Quantity.Location = New System.Drawing.Point(171, 151)
+        Me.txt_Quantity.Location = New System.Drawing.Point(171, 159)
         Me.txt_Quantity.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.txt_Quantity.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.txt_Quantity.Name = "txt_Quantity"
@@ -214,7 +214,7 @@ Partial Class frm_Sale
         'cmb_pID
         '
         Me.cmb_pID.FormattingEnabled = True
-        Me.cmb_pID.Location = New System.Drawing.Point(214, 85)
+        Me.cmb_pID.Location = New System.Drawing.Point(214, 93)
         Me.cmb_pID.Name = "cmb_pID"
         Me.cmb_pID.Size = New System.Drawing.Size(121, 21)
         Me.cmb_pID.TabIndex = 11
@@ -223,10 +223,10 @@ Partial Class frm_Sale
         '
         Me.rtxtReceipt.AutoWordSelection = True
         Me.rtxtReceipt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.rtxtReceipt.Location = New System.Drawing.Point(465, 126)
+        Me.rtxtReceipt.Location = New System.Drawing.Point(499, 126)
         Me.rtxtReceipt.Name = "rtxtReceipt"
         Me.rtxtReceipt.ReadOnly = True
-        Me.rtxtReceipt.Size = New System.Drawing.Size(431, 354)
+        Me.rtxtReceipt.Size = New System.Drawing.Size(536, 354)
         Me.rtxtReceipt.TabIndex = 13
         Me.rtxtReceipt.Text = ""
         '
@@ -234,7 +234,7 @@ Partial Class frm_Sale
         '
         Me.GunaLabel5.AutoSize = True
         Me.GunaLabel5.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel5.Location = New System.Drawing.Point(640, 98)
+        Me.GunaLabel5.Location = New System.Drawing.Point(732, 98)
         Me.GunaLabel5.Name = "GunaLabel5"
         Me.GunaLabel5.Size = New System.Drawing.Size(77, 25)
         Me.GunaLabel5.TabIndex = 0
@@ -243,28 +243,28 @@ Partial Class frm_Sale
         'cmb_cID
         '
         Me.cmb_cID.FormattingEnabled = True
-        Me.cmb_cID.Location = New System.Drawing.Point(329, 85)
+        Me.cmb_cID.Location = New System.Drawing.Point(329, 93)
         Me.cmb_cID.Name = "cmb_cID"
-        Me.cmb_cID.Size = New System.Drawing.Size(121, 21)
+        Me.cmb_cID.Size = New System.Drawing.Size(156, 21)
         Me.cmb_cID.TabIndex = 12
         '
         'txtpri
         '
         Me.txtpri.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
-        Me.txtpri.Location = New System.Drawing.Point(359, 152)
+        Me.txtpri.Location = New System.Drawing.Point(397, 160)
         Me.txtpri.Name = "txtpri"
-        Me.txtpri.Size = New System.Drawing.Size(98, 29)
+        Me.txtpri.Size = New System.Drawing.Size(95, 29)
         Me.txtpri.TabIndex = 14
         '
         'GunaLabel6
         '
         Me.GunaLabel6.AutoSize = True
         Me.GunaLabel6.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel6.Location = New System.Drawing.Point(276, 151)
+        Me.GunaLabel6.Location = New System.Drawing.Point(268, 159)
         Me.GunaLabel6.Name = "GunaLabel6"
-        Me.GunaLabel6.Size = New System.Drawing.Size(56, 25)
+        Me.GunaLabel6.Size = New System.Drawing.Size(126, 25)
         Me.GunaLabel6.TabIndex = 15
-        Me.GunaLabel6.Text = "Price"
+        Me.GunaLabel6.Text = "Price             :"
         '
         'lblTotalPrice
         '
@@ -281,19 +281,19 @@ Partial Class frm_Sale
         Me.cmb_ProductName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmb_ProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
         Me.cmb_ProductName.FormattingEnabled = True
-        Me.cmb_ProductName.Location = New System.Drawing.Point(171, 77)
+        Me.cmb_ProductName.Location = New System.Drawing.Point(171, 85)
         Me.cmb_ProductName.Name = "cmb_ProductName"
-        Me.cmb_ProductName.Size = New System.Drawing.Size(287, 32)
-        Me.cmb_ProductName.TabIndex = 16
+        Me.cmb_ProductName.Size = New System.Drawing.Size(322, 32)
+        Me.cmb_ProductName.TabIndex = 0
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.Button1.Location = New System.Drawing.Point(420, 432)
+        Me.Button1.Location = New System.Drawing.Point(389, 445)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(41, 30)
+        Me.Button1.Size = New System.Drawing.Size(104, 30)
         Me.Button1.TabIndex = 17
-        Me.Button1.Text = "Del"
+        Me.Button1.Text = "Remove"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'txtDeletePrice
@@ -316,9 +316,9 @@ Partial Class frm_Sale
         Me.ListBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 21
-        Me.ListBox1.Location = New System.Drawing.Point(19, 232)
+        Me.ListBox1.Location = New System.Drawing.Point(19, 240)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(442, 25)
+        Me.ListBox1.Size = New System.Drawing.Size(474, 25)
         Me.ListBox1.TabIndex = 19
         '
         'lstItemID
@@ -326,9 +326,9 @@ Partial Class frm_Sale
         Me.lstItemID.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstItemID.FormattingEnabled = True
         Me.lstItemID.ItemHeight = 21
-        Me.lstItemID.Location = New System.Drawing.Point(19, 257)
+        Me.lstItemID.Location = New System.Drawing.Point(19, 267)
         Me.lstItemID.Name = "lstItemID"
-        Me.lstItemID.Size = New System.Drawing.Size(442, 172)
+        Me.lstItemID.Size = New System.Drawing.Size(474, 172)
         Me.lstItemID.TabIndex = 4
         '
         'lstTrackPrice
@@ -345,7 +345,7 @@ Partial Class frm_Sale
         '
         Me.GunaLabel7.AutoSize = True
         Me.GunaLabel7.Font = New System.Drawing.Font("Segoe UI", 30.0!, System.Drawing.FontStyle.Bold)
-        Me.GunaLabel7.Location = New System.Drawing.Point(81, 432)
+        Me.GunaLabel7.Location = New System.Drawing.Point(81, 437)
         Me.GunaLabel7.Name = "GunaLabel7"
         Me.GunaLabel7.Size = New System.Drawing.Size(126, 54)
         Me.GunaLabel7.TabIndex = 0
@@ -381,7 +381,7 @@ Partial Class frm_Sale
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.Button2.Location = New System.Drawing.Point(720, 486)
+        Me.Button2.Location = New System.Drawing.Point(812, 486)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(61, 30)
         Me.Button2.TabIndex = 17
@@ -415,7 +415,7 @@ Partial Class frm_Sale
         '
         Me.GunaLabel9.AutoSize = True
         Me.GunaLabel9.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel9.Location = New System.Drawing.Point(78, 162)
+        Me.GunaLabel9.Location = New System.Drawing.Point(78, 170)
         Me.GunaLabel9.Name = "GunaLabel9"
         Me.GunaLabel9.Size = New System.Drawing.Size(0, 25)
         Me.GunaLabel9.TabIndex = 0
@@ -425,7 +425,7 @@ Partial Class frm_Sale
         '
         Me.lblInStock.AutoSize = True
         Me.lblInStock.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInStock.Location = New System.Drawing.Point(493, 45)
+        Me.lblInStock.Location = New System.Drawing.Point(493, 53)
         Me.lblInStock.Name = "lblInStock"
         Me.lblInStock.Size = New System.Drawing.Size(0, 25)
         Me.lblInStock.TabIndex = 0
@@ -446,27 +446,16 @@ Partial Class frm_Sale
         Me.lstID.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstID.FormattingEnabled = True
         Me.lstID.ItemHeight = 21
-        Me.lstID.Location = New System.Drawing.Point(634, 136)
+        Me.lstID.Location = New System.Drawing.Point(662, 136)
         Me.lstID.Name = "lstID"
         Me.lstID.Size = New System.Drawing.Size(104, 214)
         Me.lstID.TabIndex = 4
-        '
-        'cmbType
-        '
-        Me.cmbType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.cmbType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.cmbType.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
-        Me.cmbType.FormattingEnabled = True
-        Me.cmbType.Location = New System.Drawing.Point(171, 40)
-        Me.cmbType.Name = "cmbType"
-        Me.cmbType.Size = New System.Drawing.Size(287, 32)
-        Me.cmbType.TabIndex = 16
         '
         'GunaLabel10
         '
         Me.GunaLabel10.AutoSize = True
         Me.GunaLabel10.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel10.Location = New System.Drawing.Point(22, 40)
+        Me.GunaLabel10.Location = New System.Drawing.Point(22, 48)
         Me.GunaLabel10.Name = "GunaLabel10"
         Me.GunaLabel10.Size = New System.Drawing.Size(131, 25)
         Me.GunaLabel10.TabIndex = 0
@@ -477,25 +466,25 @@ Partial Class frm_Sale
         Me.cmb_QuantInstack.Enabled = False
         Me.cmb_QuantInstack.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_QuantInstack.FormattingEnabled = True
-        Me.cmb_QuantInstack.Location = New System.Drawing.Point(358, 115)
+        Me.cmb_QuantInstack.Location = New System.Drawing.Point(397, 123)
         Me.cmb_QuantInstack.Name = "cmb_QuantInstack"
-        Me.cmb_QuantInstack.Size = New System.Drawing.Size(100, 31)
+        Me.cmb_QuantInstack.Size = New System.Drawing.Size(96, 31)
         Me.cmb_QuantInstack.TabIndex = 24
         '
         'GunaLabel11
         '
         Me.GunaLabel11.AutoSize = True
         Me.GunaLabel11.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel11.Location = New System.Drawing.Point(268, 118)
+        Me.GunaLabel11.Location = New System.Drawing.Point(263, 126)
         Me.GunaLabel11.Name = "GunaLabel11"
-        Me.GunaLabel11.Size = New System.Drawing.Size(86, 25)
+        Me.GunaLabel11.Size = New System.Drawing.Size(133, 25)
         Me.GunaLabel11.TabIndex = 25
-        Me.GunaLabel11.Text = "Ave Qty:"
+        Me.GunaLabel11.Text = "Available Qty:"
         '
         'btnPrint
         '
         Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.btnPrint.Location = New System.Drawing.Point(592, 486)
+        Me.btnPrint.Location = New System.Drawing.Point(684, 486)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(104, 30)
         Me.btnPrint.TabIndex = 26
@@ -523,7 +512,7 @@ Partial Class frm_Sale
         'lblProf
         '
         Me.lblProf.AutoSize = True
-        Me.lblProf.Location = New System.Drawing.Point(498, 202)
+        Me.lblProf.Location = New System.Drawing.Point(520, 202)
         Me.lblProf.Name = "lblProf"
         Me.lblProf.Size = New System.Drawing.Size(39, 13)
         Me.lblProf.TabIndex = 28
@@ -532,7 +521,7 @@ Partial Class frm_Sale
         'cmbCost
         '
         Me.cmbCost.FormattingEnabled = True
-        Me.cmbCost.Location = New System.Drawing.Point(498, 219)
+        Me.cmbCost.Location = New System.Drawing.Point(520, 219)
         Me.cmbCost.Name = "cmbCost"
         Me.cmbCost.Size = New System.Drawing.Size(52, 21)
         Me.cmbCost.TabIndex = 29
@@ -543,7 +532,7 @@ Partial Class frm_Sale
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel6.Location = New System.Drawing.Point(13, 778)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(886, 10)
+        Me.Panel6.Size = New System.Drawing.Size(1025, 10)
         Me.Panel6.TabIndex = 38
         '
         'Panel4
@@ -552,7 +541,7 @@ Partial Class frm_Sale
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(13, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(886, 15)
+        Me.Panel4.Size = New System.Drawing.Size(1025, 15)
         Me.Panel4.TabIndex = 39
         '
         'Panel2
@@ -560,7 +549,7 @@ Partial Class frm_Sale
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(899, 0)
+        Me.Panel2.Location = New System.Drawing.Point(1038, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(13, 788)
         Me.Panel2.TabIndex = 37
@@ -585,7 +574,7 @@ Partial Class frm_Sale
         'cmb_Hide
         '
         Me.cmb_Hide.FormattingEnabled = True
-        Me.cmb_Hide.Location = New System.Drawing.Point(498, 160)
+        Me.cmb_Hide.Location = New System.Drawing.Point(533, 160)
         Me.cmb_Hide.Name = "cmb_Hide"
         Me.cmb_Hide.Size = New System.Drawing.Size(51, 21)
         Me.cmb_Hide.TabIndex = 40
@@ -595,7 +584,7 @@ Partial Class frm_Sale
         Me.list_hide.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.list_hide.FormattingEnabled = True
         Me.list_hide.ItemHeight = 21
-        Me.list_hide.Location = New System.Drawing.Point(487, 136)
+        Me.list_hide.Location = New System.Drawing.Point(521, 136)
         Me.list_hide.Name = "list_hide"
         Me.list_hide.Size = New System.Drawing.Size(104, 214)
         Me.list_hide.TabIndex = 41
@@ -604,7 +593,7 @@ Partial Class frm_Sale
         '
         Me.btn_close.Image = Global.point_of_sale.My.Resources.Resources.close
         Me.btn_close.ImageActive = Nothing
-        Me.btn_close.Location = New System.Drawing.Point(880, 2)
+        Me.btn_close.Location = New System.Drawing.Point(1022, 2)
         Me.btn_close.Name = "btn_close"
         Me.btn_close.Size = New System.Drawing.Size(27, 29)
         Me.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -658,7 +647,7 @@ Partial Class frm_Sale
         Me.btn_Done.OnHoverImage = Nothing
         Me.btn_Done.OnPressedColor = System.Drawing.Color.Black
         Me.btn_Done.Size = New System.Drawing.Size(208, 42)
-        Me.btn_Done.TabIndex = 4
+        Me.btn_Done.TabIndex = 3
         Me.btn_Done.Text = "Confirm Purchase"
         Me.btn_Done.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -675,24 +664,43 @@ Partial Class frm_Sale
         Me.btn_AddToList.ForeColor = System.Drawing.Color.Black
         Me.btn_AddToList.Image = CType(resources.GetObject("btn_AddToList.Image"), System.Drawing.Image)
         Me.btn_AddToList.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btn_AddToList.Location = New System.Drawing.Point(171, 186)
+        Me.btn_AddToList.Location = New System.Drawing.Point(171, 194)
         Me.btn_AddToList.Name = "btn_AddToList"
         Me.btn_AddToList.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btn_AddToList.OnHoverBorderColor = System.Drawing.Color.Black
         Me.btn_AddToList.OnHoverForeColor = System.Drawing.Color.White
         Me.btn_AddToList.OnHoverImage = Nothing
         Me.btn_AddToList.OnPressedColor = System.Drawing.Color.Black
-        Me.btn_AddToList.Size = New System.Drawing.Size(286, 42)
+        Me.btn_AddToList.Size = New System.Drawing.Size(322, 42)
         Me.btn_AddToList.TabIndex = 2
         Me.btn_AddToList.Text = "Add to List"
         Me.btn_AddToList.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'cmbType
+        '
+        Me.cmbType.BackColor = System.Drawing.Color.Transparent
+        Me.cmbType.BaseColor = System.Drawing.Color.White
+        Me.cmbType.BorderColor = System.Drawing.Color.Silver
+        Me.cmbType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbType.FocusedColor = System.Drawing.Color.Empty
+        Me.cmbType.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmbType.ForeColor = System.Drawing.Color.Black
+        Me.cmbType.FormattingEnabled = True
+        Me.cmbType.Location = New System.Drawing.Point(171, 47)
+        Me.cmbType.Name = "cmbType"
+        Me.cmbType.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbType.OnHoverItemForeColor = System.Drawing.Color.White
+        Me.cmbType.Size = New System.Drawing.Size(322, 26)
+        Me.cmbType.TabIndex = 42
         '
         'frm_Sale
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(912, 788)
+        Me.ClientSize = New System.Drawing.Size(1051, 788)
+        Me.Controls.Add(Me.cmbType)
         Me.Controls.Add(Me.rtxtReceipt)
         Me.Controls.Add(Me.list_hide)
         Me.Controls.Add(Me.btn_close)
@@ -711,7 +719,6 @@ Partial Class frm_Sale
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.cmbType)
         Me.Controls.Add(Me.cmb_ProductName)
         Me.Controls.Add(Me.GunaLabel6)
         Me.Controls.Add(Me.txtpri)
@@ -798,7 +805,6 @@ Partial Class frm_Sale
     Friend WithEvents lblInStock As Guna.UI.WinForms.GunaLabel
     Friend WithEvents lstTrackQty As ListBox
     Friend WithEvents lstID As ListBox
-    Friend WithEvents cmbType As ComboBox
     Friend WithEvents GunaLabel10 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents cmb_QuantInstack As ComboBox
     Friend WithEvents GunaLabel11 As Guna.UI.WinForms.GunaLabel
@@ -813,4 +819,5 @@ Partial Class frm_Sale
     Friend WithEvents Panel8 As Panel
     Friend WithEvents cmb_Hide As ComboBox
     Friend WithEvents list_hide As ListBox
+    Friend WithEvents cmbType As Guna.UI.WinForms.GunaComboBox
 End Class
