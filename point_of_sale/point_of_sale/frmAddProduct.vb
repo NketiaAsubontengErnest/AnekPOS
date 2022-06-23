@@ -168,6 +168,7 @@ Public Class frmAddProduct
         If count > 0 Then
             oldc += 1
             proId = "PRD" + Number + oldc.ToString
+            txt_ProductID.Text = proId
         Else
 
             txt_ProductID.Text = proId

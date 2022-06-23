@@ -214,7 +214,7 @@ Partial Class frm_Sale
         'cmb_pID
         '
         Me.cmb_pID.FormattingEnabled = True
-        Me.cmb_pID.Location = New System.Drawing.Point(214, 93)
+        Me.cmb_pID.Location = New System.Drawing.Point(202, 93)
         Me.cmb_pID.Name = "cmb_pID"
         Me.cmb_pID.Size = New System.Drawing.Size(121, 21)
         Me.cmb_pID.TabIndex = 11
@@ -223,10 +223,10 @@ Partial Class frm_Sale
         '
         Me.rtxtReceipt.AutoWordSelection = True
         Me.rtxtReceipt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.rtxtReceipt.Location = New System.Drawing.Point(499, 126)
+        Me.rtxtReceipt.Location = New System.Drawing.Point(499, 112)
         Me.rtxtReceipt.Name = "rtxtReceipt"
         Me.rtxtReceipt.ReadOnly = True
-        Me.rtxtReceipt.Size = New System.Drawing.Size(536, 354)
+        Me.rtxtReceipt.Size = New System.Drawing.Size(536, 368)
         Me.rtxtReceipt.TabIndex = 13
         Me.rtxtReceipt.Text = ""
         '
@@ -234,7 +234,7 @@ Partial Class frm_Sale
         '
         Me.GunaLabel5.AutoSize = True
         Me.GunaLabel5.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel5.Location = New System.Drawing.Point(732, 98)
+        Me.GunaLabel5.Location = New System.Drawing.Point(727, 86)
         Me.GunaLabel5.Name = "GunaLabel5"
         Me.GunaLabel5.Size = New System.Drawing.Size(77, 25)
         Me.GunaLabel5.TabIndex = 0

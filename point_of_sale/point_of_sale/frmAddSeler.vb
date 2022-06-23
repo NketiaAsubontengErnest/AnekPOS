@@ -49,12 +49,15 @@ Public Class frmAddSeler
 
         connection.ConnectionString = connstring
 
+        Dim Pass As String = Encrypt(txt_Password.Text)
+        MsgBox(Pass)
+
         Try
             connection.Open()
             insertString_login = "INSERT INTO `login` (`employeeID`, `password`, `position`, `block`) VALUES 
-                                                      ('" & txt_UserID.Text & "', 
-                                                      '" & txt_Password.Text & "', 
-                                                      '" & cmd_position.Text & "',
+                                                      ('" & (txt_UserID.Text).ToUpper & "', 
+                                                      '" & Pass & "', 
+                                                      '" & (cmd_position.Text).ToUpper & "',
                                                       'NO')"
 
             command1 = New MySqlCommand(insertString_login, connection)
@@ -91,11 +94,11 @@ Public Class frmAddSeler
         Try
             connection.Open()
             insertString_EmpDetiles = "INSERT INTO `employee` (`employeeID`, `name`, `phone`, `address`, `position`,`block`) VALUES  
-                                                              ('" & txt_UserID.Text & "', 
-                                                              '" & txt_Name.Text & "', 
-                                                              '" & txt_Phone.Text & "', 
-                                                              '" & txt_Address.Text & "',
-                                                              '" & cmd_position.Text & "',
+                                                              ('" & (txt_UserID.Text).ToUpper & "', 
+                                                              '" & (txt_Name.Text).ToUpper & "', 
+                                                              '" & (txt_Phone.Text).ToUpper & "', 
+                                                              '" & (txt_Address.Text).ToUpper & "',
+                                                              '" & (cmd_position.Text).ToUpper & "',
                                                               'NO')"
 
             command = New MySqlCommand(insertString_EmpDetiles, connection)

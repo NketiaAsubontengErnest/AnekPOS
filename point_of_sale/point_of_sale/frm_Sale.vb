@@ -60,7 +60,7 @@ Public Class frm_Sale
         calculateSales(frm_AdminDas.lblUserID.Text)
         updateProducts()
 
-        rtxtReceipt.AppendText(vbTab + "ISAAC NYAMEKYE DRUG STORE" + vbCrLf)
+        rtxtReceipt.AppendText(vbTab + "ANEK POS" + vbCrLf)
         rtxtReceipt.AppendText("        Sales Receipt" + vbCrLf)
         rtxtReceipt.AppendText("--------------------------------------------------------------------" + vbCrLf)
         rtxtReceipt.AppendText("Item" + "                                " + "Price" + "          " + "Qty" + "        " + "Amount" + vbCrLf)
@@ -109,6 +109,40 @@ Public Class frm_Sale
 
                     End If
 
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+            End Using
+
+        End Using
+    End Sub
+
+    Private Sub LoadProduct()
+        Dim conStringg As String = connstring
+        Dim CHECK As String = ""
+
+        Dim query1 = "SELECT * FROM product Where Pro_Name = '" + cmb_ProductName.Text + "'"
+        Using conn As New MySqlConnection(conStringg)
+            Using command As New MySqlCommand
+                With command
+                    .Connection = conn
+                    .CommandText = query1
+                End With
+
+                Try
+                    conn.Open()
+                    Dim reader As MySqlDataReader = command.ExecuteReader
+
+                    While reader.Read
+                        CHECK = reader.Item("hide")
+                        If CHECK = "NO" Then
+                            cmd_unitPrice.Text = reader.Item("price")
+                            'cmb_pID.Text = reader.Item("Product_ID")
+                            cmbCost.Text = reader("selling_price")
+                            cmb_QuantInstack.Text = reader("instock")
+                            cmb_Hide.Text = reader("hide")
+                        End If
+                    End While
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try
@@ -250,15 +284,16 @@ Public Class frm_Sale
     End Sub
 
     Private Sub cmb_ProductName_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles cmb_ProductName.SelectedIndexChanged
-
+        LoadProduct()
 
         Try
-            cmd_unitPrice.Text = cmd_unitPrice.Items(cmb_ProductName.SelectedIndex)
+            'cmd_unitPrice.Text = cmd_unitPrice.Items(cmb_ProductName.SelectedIndex)
             cmb_pID.Text = cmb_pID.Items(cmb_ProductName.SelectedIndex)
-            cmb_cID.Text = cmb_cID.Items(cmb_ProductName.SelectedIndex)
-            cmbCost.Text = cmbCost.Items(cmb_ProductName.SelectedIndex)
-            cmb_QuantInstack.Text = cmb_QuantInstack.Items(cmb_ProductName.SelectedIndex)
-            cmb_Hide.Text = cmb_Hide.Items(cmb_ProductName.SelectedIndex)
+            'cmb_cID.Text = cmb_cID.Items(cmb_ProductName.SelectedIndex)
+            'cmbCost.Text = cmbCost.Items(cmb_ProductName.SelectedIndex)
+            'cmb_QuantInstack.Text = cmb_QuantInstack.Items(cmb_ProductName.SelectedIndex)
+            'cmb_Hide.Text = cmb_Hide.Items(cmb_ProductName.SelectedIndex)
+
 
             txt_Quantity.Enabled = True
             btn_AddToList.Enabled = True
@@ -294,7 +329,7 @@ Public Class frm_Sale
 
     Public Sub inStock()
         Dim conStringg As String = connstring
-        Dim query As String = "SELECT instock, hide from product where product_ID='" + cmb_pID.Text + "'"
+        Dim query As String = "SELECT instock, hide from product where Pro_Name='" + cmb_ProductName.Text + "'"
 
         Dim todaySales As Decimal = 0.00
 
@@ -311,13 +346,9 @@ Public Class frm_Sale
 
                     If reader.Read Then
                         lblInStock.Text = reader("instock")
-                        txt_Quantity.Maximum = Convert.ToInt32(lblInStock.Text)
-
-                        'cmb_QuantInstack.Text = Convert.ToSingle(lblInStock.Text)
                     End If
+                    txt_Quantity.Maximum = Convert.ToInt32(lblInStock.Text)
 
-
-                    'lblSales.Text = "Gh¢" + todaySales.ToString
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try
@@ -784,10 +815,6 @@ Public Class frm_Sale
         If e.KeyChar = ChrW(Keys.Enter) Then
             txt_Quantity.Focus()
         End If
-    End Sub
-
-    Private Sub GunaLabel4_Click(sender As Object, e As EventArgs) Handles GunaLabel4.Click, lblInStock.Click, GunaLabel9.Click
-
     End Sub
 
     Private Sub cmd_unitPrice_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmd_unitPrice.SelectedIndexChanged

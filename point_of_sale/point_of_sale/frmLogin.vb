@@ -15,8 +15,11 @@ Public Class frmLogin
 
 
     Public Sub login()
+        ProgressBar1.Value = 0
         openConnection()
-        query = "SELECT * FROM login WHERE employeeID='" + (txt_Username.Text).ToUpper + "' AND password='" + txt_Password.Text + "'"
+        Dim Pass As String = ""
+
+        query = "SELECT * FROM login WHERE employeeID='" + (txt_Username.Text).ToUpper + "'"
 
         Dim role As String = ""
         ProgressBar1.Value = 0
@@ -33,51 +36,61 @@ Public Class frmLogin
 
                     If reader.Read Then
                         role = reader("position")
+                        Pass = reader("password")
                     End If
-
-                    If role = "Admin" Then
-                        Timer1.Start()
-                        frm_AdminDas.Show()
-
-                        frm_AdminDas.lblUserID.Text = (txt_Username.Text).ToUpper
-                        frm_AdminDas.lblTime.Text = DateTime.Now.ToString
-                        frm_AdminDas.lblRole.Text = role
-                        selectUsername()
-
-                        Me.Close()
+                    If (Decrypt(Pass)).Trim = (txt_Password.Text).Trim Then
 
 
-                    ElseIf role = "Sale" Then
-                        Timer1.Start()
-                        frm_PointOfSale.Show()
+                        If (role).ToLower = "admin" Then
+                            Timer1.Start()
+                            frm_AdminDas.Show()
 
-                        frm_AdminDas.lblUserID.Text = (txt_Username.Text).ToUpper
-                        'frm_PointOfSale.lblUserID.Text = (txt_Username.Text).ToUpper
-                        frm_AdminDas.lblTime.Text = DateTime.Now.ToString
-                        frm_AdminDas.lblRole.Text = role
-                        selectUsername()
+                            frm_AdminDas.lblUserID.Text = (txt_Username.Text).ToUpper
+                            frm_AdminDas.lblTime.Text = DateTime.Now.ToString
+                            frm_AdminDas.lblRole.Text = role
+                            selectUsername()
 
-                        Me.Close()
-
-                    ElseIf role = "guest" Then
-                        Timer1.Start()
-                        frm_AdminDas.Show()
-
-                        frm_AdminDas.btn_AddProduct.Enabled = False
-                        frm_AdminDas.btn_DailySales.Enabled = False
-                        frm_AdminDas.btnMakeSales.Enabled = False
-                        frm_AdminDas.Panel1.Visible = False
-
-                        frm_AdminDas.mnSettings.Enabled = False
+                            Me.Close()
 
 
-                        selectUsername()
+                        ElseIf (role).ToLower = "sale" Then
+                            Timer1.Start()
+                            frm_PointOfSale.Show()
 
-                        Me.Close()
+                            frm_AdminDas.lblUserID.Text = (txt_Username.Text).ToUpper
+                            'frm_PointOfSale.lblUserID.Text = (txt_Username.Text).ToUpper
+                            frm_AdminDas.lblTime.Text = DateTime.Now.ToString
+                            frm_AdminDas.lblRole.Text = role
+                            selectUsername()
+
+                            Me.Close()
+
+                        ElseIf (role).ToLower = "guest" Then
+                            Timer1.Start()
+                            frm_AdminDas.Show()
+
+                            frm_AdminDas.btn_AddProduct.Enabled = False
+                            frm_AdminDas.btn_DailySales.Enabled = False
+                            frm_AdminDas.btnMakeSales.Enabled = False
+                            frm_AdminDas.Panel1.Visible = False
+
+                            frm_AdminDas.mnSettings.Enabled = False
+
+
+                            selectUsername()
+
+                            Me.Close()
+                        Else
+                            MsgBox("No Role Found!!!", MsgBoxStyle.Critical)
+                            ProgressBar1.Value = 0
+                            txt_Password.Text = ""
+                            txt_Password.Focus()
+                        End If
                     Else
-                        ToolTip1.Show("Invalid Login Attempt ", lblInvalid, 3000)
+                        MsgBox("Invalid Login Attempt!!!", MsgBoxStyle.Critical)
                         ProgressBar1.Value = 0
                         txt_Password.Text = ""
+                        txt_Password.Focus()
                     End If
 
                 Catch ex As Exception
@@ -125,26 +138,21 @@ Public Class frmLogin
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txt_Username.Focus()
-
     End Sub
 
-
-
-
     Dim inc As Integer = 0
-
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         inc += 4
         If ProgressBar1.Value = 100 Then
             Timer1.Stop()
-
+            inc = 0
             login()
-
         Else
             ProgressBar1.Value = inc
         End If
     End Sub
+
 
 
     Public Sub clearMe()
