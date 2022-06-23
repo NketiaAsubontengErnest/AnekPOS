@@ -8,7 +8,7 @@ Public Class frm_Profit
     End Sub
 
     Public Sub calculateGenAmount()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String
 
         'If cmbDate.Text = "" Then
@@ -52,7 +52,7 @@ Public Class frm_Profit
         End Using
     End Sub
     Public Sub calculateSales()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String
 
         If cmbDate.Text = "" Then
@@ -91,7 +91,7 @@ Public Class frm_Profit
     End Sub
 
     Public Sub employeeDetail()
-        Dim con1Stringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim con1Stringg As String = connstring
         Dim query1 As String = "SELECT distinct month from sales"
 
         Using conn As New MySqlConnection(con1Stringg)

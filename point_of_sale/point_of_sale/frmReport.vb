@@ -25,7 +25,7 @@ Public Class frmReport
     End Sub
 
     Public Sub setDate()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String = ""
 
         If cmbEmployeeID.Text = "" Then
@@ -58,7 +58,7 @@ Public Class frmReport
     End Sub
 
     Public Sub employeeDetails()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String = "SELECT employeeID,name from employee"
 
         Using conn As New MySqlConnection(conStringg)
@@ -98,7 +98,7 @@ Public Class frmReport
         Dim ada As New MySqlDataAdapter
         Dim ds As New DataSet
 
-        con = New MySqlConnection("server=localhost;userid=root;password=0554013980A@;database=point_of_sale")
+        con = New MySqlConnection(connstring)
         con.Open()
 
         If cmbDate.Text = "" And cmbEmployeeID.Text = "" Then

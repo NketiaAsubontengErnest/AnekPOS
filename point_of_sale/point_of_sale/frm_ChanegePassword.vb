@@ -18,7 +18,7 @@ Public Class frm_ChanegePassword
 
 
         Try
-            conn = New MySqlConnection("server=localhost;userid=root;password=0554013980A@;database=point_of_sale")
+            conn = New MySqlConnection(connstring)
             conn.Open()
 
             command = New MySqlCommand("Update `login` Set `Password` = '" + txt_NewPassword.Text + "' WHERE employeeID = '" + txtUserID.Text + "'", conn)

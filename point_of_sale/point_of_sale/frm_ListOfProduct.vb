@@ -10,7 +10,7 @@ Public Class frm_ListOfProduct
         Dim ada As New MySqlDataAdapter
         Dim ds As New DataSet
 
-        con = New MySqlConnection("server=localhost;userid=root;password=0554013980A@;database=point_of_sale")
+        con = New MySqlConnection(connstring)
         con.Open()
 
         ada = New MySqlDataAdapter("SELECT `Product_ID`, `Pro_Name`, `instock`, `Price`, `selling_price`,`New_Quant_Added`, `Date_Updated` FROM `product`", con)
@@ -24,7 +24,7 @@ Public Class frm_ListOfProduct
         Dim ada As New MySqlDataAdapter
         Dim ds As New DataSet
 
-        con = New MySqlConnection("server=localhost;userid=root;password=0554013980A@;database=point_of_sale")
+        con = New MySqlConnection(connstring)
         con.Open()
 
         ada = New MySqlDataAdapter("SELECT `Product_ID`, `Pro_Name`, `instock`, `Price`, `selling_price`,`New_Quant_Added`, `Date_Updated` FROM `product` WHERE hide = 'NO'", con)
@@ -38,7 +38,7 @@ Public Class frm_ListOfProduct
     End Sub
 
     Public Sub ProductDetails()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         cmb_ProductName.Items.Clear()
         Dim query As String
 
@@ -70,7 +70,7 @@ Public Class frm_ListOfProduct
     End Sub
 
     Public Sub ProductDetailsAll()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         cmb_ProductName.Items.Clear()
         Dim query As String
 
@@ -106,7 +106,7 @@ Public Class frm_ListOfProduct
         Dim ada As New MySqlDataAdapter
         Dim ds As New DataSet
 
-        con = New MySqlConnection("server=localhost;userid=root;password=0554013980A@;database=point_of_sale")
+        con = New MySqlConnection(connstring)
         con.Open()
 
         ada = New MySqlDataAdapter("SELECT `Product_ID`, `Pro_Name`, `instock`, `Price`, `selling_price`,`New_Quant_Added`, `Date_Updated` FROM `product` WHERE `Pro_Name` ='" + cmb_ProductName.Text + "' AND hide = 'NO'", con)
@@ -120,7 +120,7 @@ Public Class frm_ListOfProduct
         Dim ada As New MySqlDataAdapter
         Dim ds As New DataSet
 
-        con = New MySqlConnection("server=localhost;userid=root;password=0554013980A@;database=point_of_sale")
+        con = New MySqlConnection(connstring)
         con.Open()
 
         ada = New MySqlDataAdapter("SELECT `Product_ID`, `Pro_Name, `instock`, `Price`, `selling_price`,`New_Quant_Added`, `Date_Updated` FROM `product` WHERE `Pro_Name` ='" + cmb_ProductName.Text + "'", con)
@@ -143,7 +143,7 @@ Public Class frm_ListOfProduct
             Dim insertString_EmpDetiles As String = ""
             Dim connection = New MySqlConnection
 
-            connection.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+            connection.ConnectionString = connstring
 
             Try
                 connection.Open()

@@ -108,7 +108,7 @@ Public Class frm_AdminDas
     End Sub
 
     Public Function isClosed()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String = "SELECT isClosed from dailysales where employeeID='" + lblUserID.Text + "'
                               AND date='" + Date.Now.ToString("dd/MM/yyyy") + "'"
 
@@ -154,7 +154,7 @@ Public Class frm_AdminDas
         Dim insertString_EmpDetiles As String = ""
         Dim connection = New MySqlConnection
 
-        connection.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        connection.ConnectionString = connstring
 
         Try
             connection.Open()
@@ -374,7 +374,7 @@ Public Class frm_AdminDas
     End Sub
 
     Public Sub countOutStock()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String = "Select Product_ID FROM product WHERE `instock` < `Average_Quantity`"
 
         Dim countOut As int16 = 0

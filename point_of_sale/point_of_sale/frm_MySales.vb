@@ -23,7 +23,7 @@ Public Class frm_MySales
     End Sub
 
     Public Sub employeeDetail()
-        Dim con1Stringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim con1Stringg As String = connstring
         Dim query1 As String = "SELECT distinct month from sales where employeeID='" + cmbEmpID.Text + "'"
 
         Using conn As New MySqlConnection(con1Stringg)
@@ -48,7 +48,7 @@ Public Class frm_MySales
     End Sub
 
     Public Sub calculateSales()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String
 
         If cmbEmpID.Text = "" Then
@@ -87,7 +87,7 @@ Public Class frm_MySales
 
 
     Public Sub setName()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String = "SELECT employeeID,name from employee"
 
         Using conn As New MySqlConnection(conStringg)
@@ -120,7 +120,7 @@ Public Class frm_MySales
         Dim ada As New MySqlDataAdapter
         Dim ds As New DataSet
 
-        con = New MySqlConnection("server=localhost;userid=root;password=0554013980A@;database=point_of_sale")
+        con = New MySqlConnection(connstring)
         con.Open()
 
         If cmbEmpID.Text = "" Then
@@ -141,7 +141,7 @@ Public Class frm_MySales
         Dim ada As New MySqlDataAdapter
         Dim ds As New DataSet
 
-        con = New MySqlConnection("server=localhost;userid=root;password=0554013980A@;database=point_of_sale")
+        con = New MySqlConnection(connstring)
         con.Open()
 
         If cmbEmpID.Text = "" Then

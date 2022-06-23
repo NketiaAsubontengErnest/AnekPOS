@@ -18,7 +18,7 @@ Public Class frm_GenSettings
             ListOfTables.Add("producttype")
             ListOfTables.Add("sales")
 
-            Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+            Dim conStringg As String = connstring
 
             Using con As New MySqlConnection(conStringg)
                 con.Open()
@@ -47,7 +47,7 @@ Public Class frm_GenSettings
         Dim insertString_login As String
         con = New MySqlConnection
 
-        con.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        con.ConnectionString = connstring
 
         Try
             con.Open()
@@ -74,7 +74,7 @@ Public Class frm_GenSettings
         Dim insertString_EmpDetiles As String
         con = New MySqlConnection
 
-        con.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        con.ConnectionString = connstring
 
         Try
             con.Open()
@@ -109,7 +109,7 @@ Public Class frm_GenSettings
         If ans = DialogResult.Yes Then
 
 
-            Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+            Dim conStringg As String = connstring
 
             Using con As New MySqlConnection(conStringg)
                 con.Open()
@@ -151,7 +151,7 @@ Public Class frm_GenSettings
             With FolderBrowserDialog1
                 .SelectedPath = "C:\backup"
                 If .ShowDialog = Windows.Forms.DialogResult.OK Then
-                    Dim conn As MySqlConnection = New MySqlConnection("server=localhost;userid=root;password=0554013980A@;database=point_of_sale")
+                    Dim conn As MySqlConnection = New MySqlConnection(connstring)
                     Dim cmd As MySqlCommand = New MySqlCommand
                     cmd.Connection = conn
                     conn.Open()

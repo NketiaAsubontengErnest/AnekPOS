@@ -1,15 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class frmLogin
-    Dim cmd As New MySqlCommand
-    Dim da As New MySqlDataAdapter
-    'declare conn as connection and it will now a new connection because
-    'it is equal to Getconnection Function
-    Dim con As MySqlConnection = dataconnection()
+
+
     Public Emp_Position, password, EID As String
-    Public Function dataconnection() As MySqlConnection
-        Return New MySqlConnection("server=localhost;user id=root;password=;database=pointofsale")
-    End Function
     Private Sub btn_Close_Click(sender As Object, e As EventArgs) Handles btn_Close.Click
         Me.Close()
 
@@ -21,12 +15,12 @@ Public Class frmLogin
 
 
     Public Sub login()
-        Dim con1Stringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
-        Dim query As String = "SELECT * FROM login WHERE employeeID='" + (txt_Username.Text).ToUpper + "' AND password='" + txt_Password.Text + "'"
+        openConnection()
+        query = "SELECT * FROM login WHERE employeeID='" + (txt_Username.Text).ToUpper + "' AND password='" + txt_Password.Text + "'"
 
         Dim role As String = ""
         ProgressBar1.Value = 0
-        Using conn As New MySqlConnection(con1Stringg)
+        Using conn As New MySqlConnection(connstring)
             Using command As New MySqlCommand
                 With command
                     .Connection = conn
@@ -95,7 +89,7 @@ Public Class frmLogin
     End Sub
 
     Public Sub selectUsername()
-        Dim con1Stringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim con1Stringg As String = connstring
         Dim query As String = "SELECT * FROM employee WHERE employeeID='" + (txt_Username.Text).ToUpper + "' "
 
         Dim role As String = ""

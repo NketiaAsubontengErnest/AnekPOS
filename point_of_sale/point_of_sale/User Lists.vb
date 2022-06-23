@@ -12,7 +12,7 @@ Public Class User_Lists
         Dim ada As New MySqlDataAdapter
         Dim ds As New DataSet
 
-        con = New MySqlConnection("server=localhost;userid=root;password=0554013980A@;database=point_of_sale")
+        con = New MySqlConnection(connstring)
         con.Open()
 
         ada = New MySqlDataAdapter("SELECT `employeeID`, `name`, `Phone`, `address`, `position`,`block` FROM `employee`", con)
@@ -48,7 +48,7 @@ Public Class User_Lists
         Dim insertString_EmpDetiles As String = ""
         Dim connection = New MySqlConnection
 
-        connection.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        connection.ConnectionString = connstring
 
         Try
             connection.Open()
@@ -74,7 +74,7 @@ Public Class User_Lists
         Dim insertString_EmpDetiles As String = ""
         Dim connection = New MySqlConnection
 
-        connection.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        connection.ConnectionString = connstring
 
         Try
             connection.Open()
@@ -103,7 +103,7 @@ Public Class User_Lists
         Dim insertString_EmpDetiles As String = ""
         Dim connection = New MySqlConnection
 
-        connection.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        connection.ConnectionString = connstring
 
         Try
             connection.Open()
@@ -135,7 +135,7 @@ Public Class User_Lists
         Dim insertString_EmpDetiles As String = ""
         Dim connection = New MySqlConnection
 
-        connection.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        connection.ConnectionString = connstring
 
         Try
 
@@ -190,7 +190,7 @@ Public Class User_Lists
         Dim insertString_EmpDetiles As String = ""
         Dim connection = New MySqlConnection
 
-        connection.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        connection.ConnectionString = connstring
 
         Try
             connection.Open()
@@ -217,7 +217,7 @@ Public Class User_Lists
         Dim insertString_EmpDetiles As String = ""
         Dim connection = New MySqlConnection
 
-        connection.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        connection.ConnectionString = connstring
 
         Try
             connection.Open()

@@ -73,7 +73,7 @@ Public Class frm_PointOfSale
 
 
     Public Function isClosed()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String = "SELECT isClosed from dailysales where employeeID='" + frm_AdminDas.lblUserID.Text + "'
                               AND date='" + Date.Now.ToString("dd/MM/yyyy") + "'"
 
@@ -112,7 +112,7 @@ Public Class frm_PointOfSale
         Dim insertString_EmpDetiles As String = ""
         Dim connection = New MySqlConnection
 
-        connection.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        connection.ConnectionString = connstring
 
         Try
 

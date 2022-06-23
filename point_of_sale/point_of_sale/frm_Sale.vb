@@ -80,7 +80,7 @@ Public Class frm_Sale
         Button1.PerformClick()
     End Sub
     Public Sub countOutStock()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String = "Select Product_ID FROM product WHERE `instock` < `Average_Quantity`"
 
         Dim countOut As Int16 = 0
@@ -120,7 +120,7 @@ Public Class frm_Sale
 
     Public Sub ProductDetails()
         Dim CHECK As String = ""
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
 
         Dim query As String
 
@@ -164,7 +164,7 @@ Public Class frm_Sale
     End Sub
 
     Public Sub ProductDetailsAllHiden()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
 
         Dim query As String
 
@@ -207,7 +207,7 @@ Public Class frm_Sale
 
     Public Sub productType()
 
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String = "SELECT * FROM producttype"
 
         Using conn As New MySqlConnection(conStringg)
@@ -234,7 +234,7 @@ Public Class frm_Sale
 
     End Sub
     Public Sub setCategory()
-        Dim con1Stringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim con1Stringg As String = connstring
         Dim query1 As String = "SELECT * FROM producttype"
 
         Using conn As New MySqlConnection(con1Stringg)
@@ -321,7 +321,7 @@ Public Class frm_Sale
 
 
     Public Sub inStock()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String = "SELECT instock, hide from product where product_ID='" + cmb_pID.Text + "'"
 
         Dim todaySales As Decimal = 0.00
@@ -525,7 +525,7 @@ Public Class frm_Sale
             Dim ada As New MySqlDataAdapter
             Dim ds As New DataSet
 
-            con = New MySqlConnection("server=localhost;userid=root;password=0554013980A@;database=point_of_sale")
+            con = New MySqlConnection(connstring)
             con.Open()
 
             ada = New MySqlDataAdapter("Select ID,item,Qty,price,Amount,month from sales where month='" + Date.Now.ToString("dd/MM/yyyy") + "'
@@ -542,7 +542,7 @@ Public Class frm_Sale
         Dim ada As New MySqlDataAdapter
         Dim ds As New DataSet
 
-        con = New MySqlConnection("server=localhost;userid=root;password=0554013980A@;database=point_of_sale")
+        con = New MySqlConnection(connstring)
         con.Open()
 
         ada = New MySqlDataAdapter("Select ID,item,Qty,price,Amount,month from sales where month='" + Date.Now.ToString("dd/MM/yyyy") + "'
@@ -552,7 +552,7 @@ Public Class frm_Sale
     End Sub
 
     Public Sub calculateSales(ByVal ids As String)
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String = "SELECT amount from sales where month='" + Date.Now.ToString("dd/MM/yyyy") + "' AND employeeID='" + ids + "'"
 
         Dim todaySales As Decimal = 0.00
@@ -590,7 +590,7 @@ Public Class frm_Sale
         Dim insertString_EmpDetiles As String = ""
         Dim connection = New MySqlConnection
 
-        connection.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        connection.ConnectionString = connstring
 
         Dim track As String = Path.GetRandomFileName()
         track.Replace(".", "")
@@ -643,7 +643,7 @@ Public Class frm_Sale
         Dim insertString_EmpDetiles As String = ""
         Dim connection = New MySqlConnection
 
-        connection.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        connection.ConnectionString = connstring
 
         Try
 
@@ -677,7 +677,7 @@ Public Class frm_Sale
     End Sub
 
     Public Function isClosed()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String = "SELECT isClosed from dailysales where employeeID='" + frm_AdminDas.lblUserID.Text + "'
                               AND date='" + Date.Now.ToString("dd/MM/yyyy") + "'"
 
@@ -716,7 +716,7 @@ Public Class frm_Sale
         Dim insertString_EmpDetiles As String = ""
         Dim connection = New MySqlConnection
 
-        connection.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        connection.ConnectionString = connstring
 
         Try
 

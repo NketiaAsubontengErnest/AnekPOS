@@ -54,7 +54,7 @@ Public Class frmAddProduct
         Try
             Dim cmd As MySqlCommand
             con.Close()
-            con.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+            con.ConnectionString = connstring
 
 
             con.Open()
@@ -96,7 +96,7 @@ Public Class frmAddProduct
     End Sub
 
     Public Sub genrateID()
-        Dim conString As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conString As String = connstring
         Dim query As String = "SELECT * FROM  product"
 
         count = 0

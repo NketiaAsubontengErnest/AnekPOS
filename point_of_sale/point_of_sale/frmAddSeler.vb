@@ -49,7 +49,7 @@ Public Class frmAddSeler
         Dim insertString_login As String
         connection = New MySqlConnection
 
-        connection.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        connection.ConnectionString = connstring
 
         Try
             connection.Open()
@@ -88,7 +88,7 @@ Public Class frmAddSeler
         Dim insertString_EmpDetiles As String
         connection = New MySqlConnection
 
-        connection.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        connection.ConnectionString = connstring
 
         Try
             connection.Open()
@@ -124,7 +124,7 @@ Public Class frmAddSeler
 
     Public Sub generateID()
 
-        Dim conString As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conString As String = connstring
         Dim query As String = "SELECT * FROM `employee`"
 
         Dim count As Integer = 0

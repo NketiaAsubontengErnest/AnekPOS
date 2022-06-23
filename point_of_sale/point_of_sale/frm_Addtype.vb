@@ -8,7 +8,7 @@ Public Class frm_Addtype
         Dim insertString_login As String
         Dim connection = New MySqlConnection
 
-        connection.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        connection.ConnectionString = connstring
 
         Try
             connection.Open()
@@ -34,7 +34,7 @@ Public Class frm_Addtype
     End Sub
 
     Public Sub genrateID()
-        Dim conString As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conString As String = connstring
         Dim query As String = "SELECT * FROM producttype"
 
         Dim count As Integer = 0

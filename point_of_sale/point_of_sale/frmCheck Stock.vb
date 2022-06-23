@@ -16,7 +16,7 @@ Public Class frmCheck_Stock
         Dim ada As New MySqlDataAdapter
         Dim ds As New DataSet
 
-        con = New MySqlConnection("server=localhost;userid=root;password=0554013980A@;database=point_of_sale")
+        con = New MySqlConnection(connstring)
         con.Open()
 
         ada = New MySqlDataAdapter("Select Product_ID,Pro_Name,instock FROM product WHERE 
@@ -26,7 +26,7 @@ Public Class frmCheck_Stock
         countOutStock()
     End Sub
     Public Sub countOutStock()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String = "Select Product_ID FROM product WHERE `instock` < `Average_Quantity`"
 
         Dim countOut As Int16 = 0
@@ -69,7 +69,7 @@ Public Class frmCheck_Stock
         Dim ada As New MySqlDataAdapter
         Dim ds As New DataSet
 
-        con = New MySqlConnection("server=localhost;userid=root;password=0554013980A@;database=point_of_sale")
+        con = New MySqlConnection(connstring)
         con.Open()
 
         ada = New MySqlDataAdapter("Select Product_ID,Pro_Name,instock FROM product WHERE 
@@ -104,7 +104,7 @@ Public Class frmCheck_Stock
         Dim insertString_EmpDetiles As String = ""
         Dim connection = New MySqlConnection
 
-        connection.ConnectionString = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        connection.ConnectionString = connstring
 
         Try
             If txtNewQuant.Text = "" Then
@@ -130,7 +130,7 @@ Public Class frmCheck_Stock
     End Sub
 
     Public Sub FillItem()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String = "Select Product_ID,Pro_Name,instock FROM product "
 
         Dim todaySales As Decimal = 0.00
@@ -165,7 +165,7 @@ Public Class frmCheck_Stock
     End Sub
 
     Public Sub FillDetails()
-        Dim conStringg As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+        Dim conStringg As String = connstring
         Dim query As String = "Select Product_ID, Pro_Name, instock, Price, Average_Quantity, selling_price FROM product WHERE Product_ID='" + cmbID.Text + "' order by ID desc"
 
         Dim todaySales As Decimal = 0.00
@@ -235,7 +235,7 @@ Public Class frmCheck_Stock
             e.Handled = True
 
             Try
-                conn = New MySqlConnection("server=localhost;userid=root;password=0554013980A@;database=point_of_sale")
+                conn = New MySqlConnection(connstring)
                 conn.Open()
                 Dim cmd1 As New MySqlCommand("SELECT Product_ID,Pro_Name,instock FROM `product` WHERE `Pro_Name`='" & cmbName.Text & "'", conn)
                 Dim da1 As New MySqlDataAdapter
