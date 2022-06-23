@@ -336,7 +336,7 @@ Partial Class frm_Sale
         Me.lstTrackPrice.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstTrackPrice.FormattingEnabled = True
         Me.lstTrackPrice.ItemHeight = 21
-        Me.lstTrackPrice.Location = New System.Drawing.Point(556, 136)
+        Me.lstTrackPrice.Location = New System.Drawing.Point(634, 148)
         Me.lstTrackPrice.Name = "lstTrackPrice"
         Me.lstTrackPrice.Size = New System.Drawing.Size(104, 214)
         Me.lstTrackPrice.TabIndex = 4
@@ -512,7 +512,7 @@ Partial Class frm_Sale
         'lblProf
         '
         Me.lblProf.AutoSize = True
-        Me.lblProf.Location = New System.Drawing.Point(520, 202)
+        Me.lblProf.Location = New System.Drawing.Point(574, 203)
         Me.lblProf.Name = "lblProf"
         Me.lblProf.Size = New System.Drawing.Size(39, 13)
         Me.lblProf.TabIndex = 28
@@ -521,7 +521,7 @@ Partial Class frm_Sale
         'cmbCost
         '
         Me.cmbCost.FormattingEnabled = True
-        Me.cmbCost.Location = New System.Drawing.Point(520, 219)
+        Me.cmbCost.Location = New System.Drawing.Point(562, 219)
         Me.cmbCost.Name = "cmbCost"
         Me.cmbCost.Size = New System.Drawing.Size(52, 21)
         Me.cmbCost.TabIndex = 29
@@ -574,7 +574,7 @@ Partial Class frm_Sale
         'cmb_Hide
         '
         Me.cmb_Hide.FormattingEnabled = True
-        Me.cmb_Hide.Location = New System.Drawing.Point(533, 160)
+        Me.cmb_Hide.Location = New System.Drawing.Point(562, 148)
         Me.cmb_Hide.Name = "cmb_Hide"
         Me.cmb_Hide.Size = New System.Drawing.Size(51, 21)
         Me.cmb_Hide.TabIndex = 40
@@ -584,7 +584,7 @@ Partial Class frm_Sale
         Me.list_hide.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.list_hide.FormattingEnabled = True
         Me.list_hide.ItemHeight = 21
-        Me.list_hide.Location = New System.Drawing.Point(521, 136)
+        Me.list_hide.Location = New System.Drawing.Point(575, 153)
         Me.list_hide.Name = "list_hide"
         Me.list_hide.Size = New System.Drawing.Size(104, 214)
         Me.list_hide.TabIndex = 41

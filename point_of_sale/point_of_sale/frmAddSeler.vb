@@ -2,8 +2,6 @@
 
 Public Class frmAddSeler
 
-
-
     Dim connection As MySqlConnection
     Dim reader As MySqlDataReader
 

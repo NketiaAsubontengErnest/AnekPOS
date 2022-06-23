@@ -1,17 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class frmAddProduct
-    Dim count As Integer = 0
-
-    Dim con As New MySqlConnection
-    'Dim cmd As MySqlCommand
-    'Dim da As MySqlDataAdapter
-
-    Private Sub btn_AddType_Click(sender As Object, e As EventArgs)
-        Dim f As New frm_Addtype  'this is an object calling a form
-
-    End Sub
-
+    Dim connection As MySqlConnection = New MySqlConnection
 
     Private Sub txt_Quant_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Quant.KeyPress
         If Asc(e.KeyChar) <> 8 Then
@@ -53,18 +43,17 @@ Public Class frmAddProduct
         End If
         Try
             Dim cmd As MySqlCommand
-            con.Close()
-            con.ConnectionString = connstring
+
+            connection.ConnectionString = connstring
 
 
-            con.Open()
+            connection.Open()
 
 
 
-            Dim login As String = "INSERT INTO `product`(`Product_ID`, `Pro_Name`,`type`, `instock`, `Price`,`date`,`catID`,`selling_price`, `hide`, `Average_Quantity`, `New_Quant_Added`, `Date_Updated`) VALUES
+            query = "INSERT INTO `product`(`Product_ID`, `Pro_Name`, `instock`, `Price`,`date`,`catID`,`selling_price`, `hide`, `Average_Quantity`, `New_Quant_Added`, `Date_Updated`) VALUES
                                                         ('" & txt_ProductID.Text & "', 
                                                         '" & (txt_ProductName.Text).ToUpper & "',
-                                                        '" & cmbCatID.Text & "',
                                                         '" & txt_Quant.Text & "', 
                                                         '" & txt_Price.Text & "',
                                                         '" & DateTime.Now & "',
@@ -75,20 +64,20 @@ Public Class frmAddProduct
                                                         '" & txt_Quant.Text & "',
                                                         '" & DateTime.Now & "')"
 
-            cmd = New MySqlCommand(login, con)
+            cmd = New MySqlCommand(query, connection)
 
             Dim reader = cmd.ExecuteNonQuery
 
-            MsgBox("Product added Successfully")
+            MsgBox("Product added Successfully", MsgBoxStyle.Information)
 
-            con.Close()
+            connection.Close()
             clearMe()
 
         Catch ex As MySqlException
             MsgBox(ex.Message, MsgBoxStyle.Critical)
         Finally
 
-            con.Dispose()
+            connection.Dispose()
 
             genrateID()
 
@@ -99,7 +88,7 @@ Public Class frmAddProduct
         Dim conString As String = connstring
         Dim query As String = "SELECT * FROM  product"
 
-        count = 0
+        Dim count As Integer = 0
         Dim number As String = ""
         Dim cmd As MySqlCommand
 
@@ -128,9 +117,6 @@ Public Class frmAddProduct
             End Using
         End Using
 
-
-
-
         If count < 10 Then
             number = "000"
         ElseIf count < 100 Then
@@ -142,10 +128,17 @@ Public Class frmAddProduct
         count += 1
 
         Dim proId As String = "PRD" + number + count.ToString
+        check_id(proId, number, count)
+
+    End Sub
+
+    Public Sub check_id(ByVal proId As String, ByVal Number As String, ByVal oldc As Integer)
+        Dim count As Integer
+        Dim conString As String = connstring
 
         Dim queryex As String = "SELECT * FROM  product where Product_ID = '" + proId + "'"
 
-        cmd = New MySqlCommand(queryex, con)
+        cmd = New MySqlCommand(queryex, connection)
 
         Using conn As New MySqlConnection(conString)
             Using command As New MySqlCommand
@@ -171,9 +164,17 @@ Public Class frmAddProduct
             End Using
         End Using
 
-        proId = "PRD" + number + count.ToString
 
-        txt_ProductID.Text = proId
+        If count > 0 Then
+            oldc += 1
+            proId = "PRD" + Number + oldc.ToString
+        Else
+
+            txt_ProductID.Text = proId
+        End If
+
+
+
     End Sub
 
 
@@ -199,7 +200,7 @@ Public Class frmAddProduct
 
     Public Sub data_fill_Product_type()
 
-        Dim conString As String = "server=localhost;user id=root;password=0554013980A@;database=point_of_sale"
+        Dim conString As String = connstring
         Dim query As String = "SELECT * FROM producttype"
 
         Using conn As New MySqlConnection(conString)

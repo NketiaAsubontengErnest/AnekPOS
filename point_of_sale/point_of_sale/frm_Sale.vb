@@ -35,7 +35,7 @@ Public Class frm_Sale
 
 
         fillReceipt()
-        productType()
+        setCategory()
         ProductDetails()
         cmbType.Items.Add("Show All Products...")
 
@@ -148,7 +148,6 @@ Public Class frm_Sale
                             cmb_ProductName.Items.Add(reader.Item("Pro_Name"))
                             cmd_unitPrice.Items.Add(reader.Item("price"))
                             cmb_pID.Items.Add(reader.Item("Product_ID"))
-                            cmb_cID.Items.Add(reader("type"))
                             cmbCost.Items.Add(reader("selling_price"))
                             cmb_QuantInstack.Items.Add(reader("instock"))
                             cmb_Hide.Items.Add(reader("hide"))
@@ -190,7 +189,6 @@ Public Class frm_Sale
                         cmb_ProductName.Items.Add(reader.Item("Pro_Name"))
                         cmd_unitPrice.Items.Add(reader.Item("price"))
                         cmb_pID.Items.Add(reader.Item("Product_ID"))
-                        cmb_cID.Items.Add(reader("type"))
                         cmbCost.Items.Add(reader("selling_price"))
                         cmb_QuantInstack.Items.Add(reader("instock"))
                         cmb_Hide.Items.Add(reader("hide"))
@@ -204,39 +202,12 @@ Public Class frm_Sale
 
     End Sub
 
-
-    Public Sub productType()
-
-        Dim conStringg As String = connstring
-        Dim query As String = "SELECT * FROM producttype"
-
-        Using conn As New MySqlConnection(conStringg)
-            Using command As New MySqlCommand
-                With command
-                    .Connection = conn
-                    .CommandText = query
-                End With
-
-                Try
-                    conn.Open()
-                    Dim reader As MySqlDataReader = command.ExecuteReader
-
-                    While reader.Read
-                        cmb_cID.Items.Add(reader("catID"))
-                        cmbType.Items.Add(reader("category"))
-                    End While
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
-            End Using
-
-        End Using
-
-    End Sub
     Public Sub setCategory()
         Dim con1Stringg As String = connstring
         Dim query1 As String = "SELECT * FROM producttype"
 
+        cmb_cID.Items.Clear()
+        cmbType.Items.Clear()
         Using conn As New MySqlConnection(con1Stringg)
             Using command As New MySqlCommand
                 With command
@@ -250,6 +221,7 @@ Public Class frm_Sale
 
                     While reader1.Read
                         cmb_cID.Items.Add(reader1.Item("catID"))
+                        cmbType.Items.Add(reader1.Item("category"))
                     End While
                 Catch ex As Exception
                     MsgBox(ex.Message)
@@ -822,34 +794,7 @@ Public Class frm_Sale
         inStock()
     End Sub
 
-    Private Sub cmbType_SelectedIndexChanged(sender As Object, e As EventArgs)
-        Try
-            cmb_Hide.Items.Clear()
-            cmb_Hide.Text = ""
-            cmb_ProductName.Items.Clear()
-            cmb_ProductName.Text = ""
-            cmd_unitPrice.Items.Clear()
-            cmd_unitPrice.Text = ""
-            lblInStock.Text = ""
-            cmb_QuantInstack.Items.Clear()
-            cmb_QuantInstack.Text = ""
-            txtpri.Text = ""
-            cmbCost.Items.Clear()
-            txt_Quantity.Value = 1
-            cmb_cID.Text = cmb_cID.Items(cmbType.SelectedIndex)
 
-        Catch ex As Exception
-        Finally
-            If ckShowAll.Checked = True Then
-                ProductDetailsAllHiden()
-            Else
-
-                ProductDetails()
-            End If
-
-        End Try
-
-    End Sub
 
     Private Sub txt_Quantity_MouseClick(sender As Object, e As MouseEventArgs) Handles txt_Quantity.MouseClick
         cal_Price()
@@ -888,6 +833,24 @@ Public Class frm_Sale
         End Try
     End Sub
 
+    Private Sub cmbType_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles cmbType.SelectedIndexChanged
+
+
+        Try
+            clearing()
+
+        Catch ex As Exception
+        Finally
+            If ckShowAll.Checked = True Then
+                ProductDetailsAllHiden()
+            Else
+
+                ProductDetails()
+            End If
+
+        End Try
+    End Sub
+
     Private Sub Label1_MouseEnter(sender As Object, e As EventArgs) Handles Label1.MouseEnter
         Label1.ForeColor = Color.Blue
 
@@ -896,5 +859,21 @@ Public Class frm_Sale
     Private Sub Label1_MouseLeave(sender As Object, e As EventArgs) Handles Label1.MouseLeave
         Label1.ForeColor = Color.Maroon
 
+    End Sub
+
+    Private Sub clearing()
+        cmb_Hide.Items.Clear()
+        cmb_Hide.Text = ""
+        cmb_QuantInstack.Items.Clear()
+        cmb_QuantInstack.Text = ""
+        cmb_ProductName.Items.Clear()
+        cmb_ProductName.Text = ""
+        cmbCost.Items.Clear()
+        cmd_unitPrice.Items.Clear()
+        cmd_unitPrice.Text = ""
+        lblInStock.Text = ""
+        txtpri.Text = ""
+        txt_Quantity.Value = 1
+        cmb_cID.Text = cmb_cID.Items(cmbType.SelectedIndex)
     End Sub
 End Class

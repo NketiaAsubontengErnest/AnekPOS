@@ -22,6 +22,21 @@ Module GlobalConfig
         End Try
     End Sub
 
+    Public Sub closings()
+        frm_Addtype.Close()
+        frm_ChanegePassword.Close()
+        frm_GenSettings.Close()
+        frm_ListOfProduct.Close()
+        frm_MySales.Close()
+        frm_Profit.Close()
+        frm_Sale.Close()
+        frmAddProduct.Close()
+        frmAddSeler.Close()
+        frmCheck_Stock.Close()
+        frmReport.Close()
+        frmStatics.Close()
+    End Sub
+
 
 
 End Module

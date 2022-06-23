@@ -14,19 +14,7 @@ Public Class frm_AdminDas
     Private Sub btn_AddSaler_Click(sender As Object, e As EventArgs) Handles btn_AddSaler.Click
 
         Try
-            frm_Addtype.Close()
-            frm_ChanegePassword.Close()
-            frm_GenSettings.Close()
-            frm_ListOfProduct.Close()
-            frm_MySales.Close()
-            frm_Profit.Close()
-            frm_Sale.Close()
-            frmAddProduct.Close()
-            frmAddSeler.Close()
-            frmCheck_Stock.Close()
-            frmReport.Close()
-            frmStatics.Close()
-
+            closings()
 
             frmAddSeler.MdiParent = Me
             frmAddSeler.Show()
@@ -38,18 +26,7 @@ Public Class frm_AdminDas
     Private Sub btn_AddProduct_Click(sender As Object, e As EventArgs) Handles btn_AddProduct.Click
         Try
 
-            frm_Addtype.Close()
-            frm_ChanegePassword.Close()
-            frm_GenSettings.Close()
-            frm_ListOfProduct.Close()
-            frm_MySales.Close()
-            frm_Profit.Close()
-            frm_Sale.Close()
-            frmAddProduct.Close()
-            frmAddSeler.Close()
-            frmCheck_Stock.Close()
-            frmReport.Close()
-            frmStatics.Close()
+            closings()
 
             frmAddProduct.MdiParent = Me
             frmAddProduct.Show()
@@ -62,18 +39,7 @@ Public Class frm_AdminDas
 
     Private Sub btn_DailySales_Click(sender As Object, e As EventArgs) Handles btnMakeSales.Click
         Try
-            frm_Addtype.Close()
-            frm_ChanegePassword.Close()
-            frm_GenSettings.Close()
-            frm_ListOfProduct.Close()
-            frm_MySales.Close()
-            frm_Profit.Close()
-            frm_Sale.Close()
-            frmAddProduct.Close()
-            frmAddSeler.Close()
-            frmCheck_Stock.Close()
-            frmReport.Close()
-            frmStatics.Close()
+            closings()
 
 
             frm_Sale.MdiParent = Me
@@ -84,18 +50,7 @@ Public Class frm_AdminDas
     End Sub
     Private Sub btn_DailySales_Click_1(sender As Object, e As EventArgs) Handles btn_DailySales.Click
         Try
-            frm_Addtype.Close()
-            frm_ChanegePassword.Close()
-            frm_GenSettings.Close()
-            frm_ListOfProduct.Close()
-            frm_MySales.Close()
-            frm_Profit.Close()
-            frm_Sale.Close()
-            frmAddProduct.Close()
-            frmAddSeler.Close()
-            frmCheck_Stock.Close()
-            frmReport.Close()
-            frmStatics.Close()
+            closings()
 
             frm_MySales.MdiParent = Me
             frm_MySales.Show()
@@ -202,18 +157,7 @@ Public Class frm_AdminDas
 
     Private Sub ReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportToolStripMenuItem.Click
         Try
-            frm_Addtype.Close()
-            frm_ChanegePassword.Close()
-            frm_GenSettings.Close()
-            frm_ListOfProduct.Close()
-            frm_MySales.Close()
-            frm_Profit.Close()
-            frm_Sale.Close()
-            frmAddProduct.Close()
-            frmAddSeler.Close()
-            frmCheck_Stock.Close()
-            frmReport.Close()
-            frmStatics.Close()
+            closings()
 
             frmReport.MdiParent = Me
             frmReport.Show()
@@ -222,18 +166,7 @@ Public Class frm_AdminDas
         End Try
     End Sub
     Private Sub UpdateProductToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        frm_Addtype.Close()
-        frm_ChanegePassword.Close()
-        frm_GenSettings.Close()
-        frm_ListOfProduct.Close()
-        frm_MySales.Close()
-        frm_Profit.Close()
-        frm_Sale.Close()
-        frmAddProduct.Close()
-        frmAddSeler.Close()
-        frmCheck_Stock.Close()
-        frmReport.Close()
-        frmStatics.Close()
+        closings()
 
         Dim f As New frmCheck_Stock
 
@@ -244,18 +177,7 @@ Public Class frm_AdminDas
     End Sub
     Private Sub AddCategoryToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AddCategoryToolStripMenuItem1.Click
         Try
-            frm_Addtype.Close()
-            frm_ChanegePassword.Close()
-            frm_GenSettings.Close()
-            frm_ListOfProduct.Close()
-            frm_MySales.Close()
-            frm_Profit.Close()
-            frm_Sale.Close()
-            frmAddProduct.Close()
-            frmAddSeler.Close()
-            frmCheck_Stock.Close()
-            frmReport.Close()
-            frmStatics.Close()
+            closings()
 
             frm_Addtype.MdiParent = Me
 
@@ -268,18 +190,7 @@ Public Class frm_AdminDas
 
     Private Sub UpdateProductToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles UpdateProductToolStripMenuItem1.Click
         Try
-            frm_Addtype.Close()
-            frm_ChanegePassword.Close()
-            frm_GenSettings.Close()
-            frm_ListOfProduct.Close()
-            frm_MySales.Close()
-            frm_Profit.Close()
-            frm_Sale.Close()
-            frmAddProduct.Close()
-            frmAddSeler.Close()
-            frmCheck_Stock.Close()
-            frmReport.Close()
-            frmStatics.Close()
+            closings()
 
             frmCheck_Stock.MdiParent = Me
 
@@ -299,18 +210,7 @@ Public Class frm_AdminDas
     End Sub
     Private Sub UserListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UserListToolStripMenuItem.Click
         Try
-            frm_Addtype.Close()
-            frm_ChanegePassword.Close()
-            frm_GenSettings.Close()
-            frm_ListOfProduct.Close()
-            frm_MySales.Close()
-            frm_Profit.Close()
-            frm_Sale.Close()
-            frmAddProduct.Close()
-            frmAddSeler.Close()
-            frmCheck_Stock.Close()
-            frmReport.Close()
-            frmStatics.Close()
+            closings()
 
 
             User_Lists.MdiParent = Me
@@ -323,18 +223,7 @@ Public Class frm_AdminDas
 
     Private Sub ListOfProductToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListOfProductToolStripMenuItem.Click
         Try
-            frm_Addtype.Close()
-            frm_ChanegePassword.Close()
-            frm_GenSettings.Close()
-            frm_ListOfProduct.Close()
-            frm_MySales.Close()
-            frm_Profit.Close()
-            frm_Sale.Close()
-            frmAddProduct.Close()
-            frmAddSeler.Close()
-            frmCheck_Stock.Close()
-            frmReport.Close()
-            frmStatics.Close()
+            closings()
 
             frm_ListOfProduct.MdiParent = Me
 
@@ -346,18 +235,7 @@ Public Class frm_AdminDas
 
     Private Sub MyProfitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MyProfitToolStripMenuItem.Click
         Try
-            frm_Addtype.Close()
-            frm_ChanegePassword.Close()
-            frm_GenSettings.Close()
-            frm_ListOfProduct.Close()
-            frm_MySales.Close()
-            frm_Profit.Close()
-            frm_Sale.Close()
-            frmAddProduct.Close()
-            frmAddSeler.Close()
-            frmCheck_Stock.Close()
-            frmReport.Close()
-            frmStatics.Close()
+            closings()
 
             frm_Profit.MdiParent = Me
 
@@ -412,18 +290,7 @@ Public Class frm_AdminDas
 
     Private Sub GeneralSystemSetingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GeneralSystemSetingsToolStripMenuItem.Click
         Try
-            frm_Addtype.Close()
-            frm_ChanegePassword.Close()
-            frm_GenSettings.Close()
-            frm_ListOfProduct.Close()
-            frm_MySales.Close()
-            frm_Profit.Close()
-            frm_Sale.Close()
-            frmAddProduct.Close()
-            frmAddSeler.Close()
-            frmCheck_Stock.Close()
-            frmReport.Close()
-            frmStatics.Close()
+            closings()
 
             frm_GenSettings.MdiParent = Me
             frm_GenSettings.Show()
@@ -434,18 +301,7 @@ Public Class frm_AdminDas
 
     Private Sub StatisticsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StatisticsToolStripMenuItem.Click
         Try
-            frm_Addtype.Close()
-            frm_ChanegePassword.Close()
-            frm_GenSettings.Close()
-            frm_ListOfProduct.Close()
-            frm_MySales.Close()
-            frm_Profit.Close()
-            frm_Sale.Close()
-            frmAddProduct.Close()
-            frmAddSeler.Close()
-            frmCheck_Stock.Close()
-            frmReport.Close()
-            frmStatics.Close()
+            closings()
 
             frmStatics.MdiParent = Me
             frmStatics.Show()
