@@ -53,7 +53,6 @@ Partial Class Frm_Sale
         Me.GunaLabel7 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel8 = New Guna.UI.WinForms.GunaLabel()
         Me.lblSales = New Guna.UI.WinForms.GunaLabel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -70,12 +69,12 @@ Partial Class Frm_Sale
         Me.cmbCost = New System.Windows.Forms.ComboBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.btn_close = New Bunifu.Framework.UI.BunifuImageButton()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.cmb_Hide = New System.Windows.Forms.ComboBox()
         Me.list_hide = New System.Windows.Forms.ListBox()
-        Me.btn_close = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btn_Clear = New Guna.UI.WinForms.GunaButton()
         Me.btn_Done = New Guna.UI.WinForms.GunaButton()
         Me.btn_AddToList = New Guna.UI.WinForms.GunaButton()
@@ -83,8 +82,8 @@ Partial Class Frm_Sale
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txt_Quantity, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GunaLabel1
@@ -142,12 +141,12 @@ Partial Class Frm_Sale
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.item, Me.Qty, Me.pri, Me.amount, Me.dat})
-        Me.DataGridView1.Location = New System.Drawing.Point(13, 534)
+        Me.DataGridView1.Location = New System.Drawing.Point(10, 489)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(1025, 242)
+        Me.DataGridView1.Size = New System.Drawing.Size(1025, 256)
         Me.DataGridView1.TabIndex = 8
         '
         'id
@@ -228,7 +227,7 @@ Partial Class Frm_Sale
         Me.rtxtReceipt.Location = New System.Drawing.Point(499, 112)
         Me.rtxtReceipt.Name = "rtxtReceipt"
         Me.rtxtReceipt.ReadOnly = True
-        Me.rtxtReceipt.Size = New System.Drawing.Size(536, 368)
+        Me.rtxtReceipt.Size = New System.Drawing.Size(536, 327)
         Me.rtxtReceipt.TabIndex = 13
         Me.rtxtReceipt.Text = ""
         '
@@ -271,10 +270,10 @@ Partial Class Frm_Sale
         'lblTotalPrice
         '
         Me.lblTotalPrice.AutoSize = True
-        Me.lblTotalPrice.Font = New System.Drawing.Font("Segoe UI", 30.0!, System.Drawing.FontStyle.Bold)
-        Me.lblTotalPrice.Location = New System.Drawing.Point(199, 432)
+        Me.lblTotalPrice.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalPrice.Location = New System.Drawing.Point(102, 445)
         Me.lblTotalPrice.Name = "lblTotalPrice"
-        Me.lblTotalPrice.Size = New System.Drawing.Size(0, 54)
+        Me.lblTotalPrice.Size = New System.Drawing.Size(0, 37)
         Me.lblTotalPrice.TabIndex = 0
         '
         'cmb_ProductName
@@ -291,7 +290,7 @@ Partial Class Frm_Sale
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.Button1.Location = New System.Drawing.Point(389, 445)
+        Me.Button1.Location = New System.Drawing.Point(242, 445)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(104, 30)
         Me.Button1.TabIndex = 17
@@ -346,10 +345,10 @@ Partial Class Frm_Sale
         'GunaLabel7
         '
         Me.GunaLabel7.AutoSize = True
-        Me.GunaLabel7.Font = New System.Drawing.Font("Segoe UI", 30.0!, System.Drawing.FontStyle.Bold)
-        Me.GunaLabel7.Location = New System.Drawing.Point(81, 437)
+        Me.GunaLabel7.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel7.Location = New System.Drawing.Point(15, 445)
         Me.GunaLabel7.Name = "GunaLabel7"
-        Me.GunaLabel7.Size = New System.Drawing.Size(126, 54)
+        Me.GunaLabel7.Size = New System.Drawing.Size(89, 37)
         Me.GunaLabel7.TabIndex = 0
         Me.GunaLabel7.Text = "Total:"
         '
@@ -372,18 +371,10 @@ Partial Class Frm_Sale
         Me.lblSales.Size = New System.Drawing.Size(0, 54)
         Me.lblSales.TabIndex = 0
         '
-        'Panel1
-        '
-        Me.Panel1.AutoScroll = True
-        Me.Panel1.Location = New System.Drawing.Point(6, 614)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(898, 216)
-        Me.Panel1.TabIndex = 20
-        '
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.Button2.Location = New System.Drawing.Point(812, 486)
+        Me.Button2.Location = New System.Drawing.Point(860, 445)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(61, 30)
         Me.Button2.TabIndex = 17
@@ -486,7 +477,7 @@ Partial Class Frm_Sale
         'btnPrint
         '
         Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.btnPrint.Location = New System.Drawing.Point(684, 486)
+        Me.btnPrint.Location = New System.Drawing.Point(732, 442)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(104, 30)
         Me.btnPrint.TabIndex = 26
@@ -532,7 +523,7 @@ Partial Class Frm_Sale
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel6.Location = New System.Drawing.Point(0, 778)
+        Me.Panel6.Location = New System.Drawing.Point(0, 748)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(1051, 10)
         Me.Panel6.TabIndex = 38
@@ -550,6 +541,18 @@ Partial Class Frm_Sale
         Me.Panel4.Size = New System.Drawing.Size(1051, 29)
         Me.Panel4.TabIndex = 39
         '
+        'btn_close
+        '
+        Me.btn_close.Image = Global.point_of_sale.My.Resources.Resources.close
+        Me.btn_close.ImageActive = Nothing
+        Me.btn_close.Location = New System.Drawing.Point(1021, -1)
+        Me.btn_close.Name = "btn_close"
+        Me.btn_close.Size = New System.Drawing.Size(27, 29)
+        Me.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btn_close.TabIndex = 21
+        Me.btn_close.TabStop = False
+        Me.btn_close.Zoom = 10
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
@@ -557,7 +560,7 @@ Partial Class Frm_Sale
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel2.Location = New System.Drawing.Point(1038, 29)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(13, 749)
+        Me.Panel2.Size = New System.Drawing.Size(13, 719)
         Me.Panel2.TabIndex = 37
         '
         'Panel3
@@ -574,7 +577,7 @@ Partial Class Frm_Sale
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel8.Location = New System.Drawing.Point(0, 29)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(13, 749)
+        Me.Panel8.Size = New System.Drawing.Size(13, 719)
         Me.Panel8.TabIndex = 36
         '
         'cmb_Hide
@@ -595,18 +598,6 @@ Partial Class Frm_Sale
         Me.list_hide.Size = New System.Drawing.Size(104, 214)
         Me.list_hide.TabIndex = 41
         '
-        'btn_close
-        '
-        Me.btn_close.Image = Global.point_of_sale.My.Resources.Resources.close
-        Me.btn_close.ImageActive = Nothing
-        Me.btn_close.Location = New System.Drawing.Point(1021, -1)
-        Me.btn_close.Name = "btn_close"
-        Me.btn_close.Size = New System.Drawing.Size(27, 29)
-        Me.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btn_close.TabIndex = 21
-        Me.btn_close.TabStop = False
-        Me.btn_close.Zoom = 10
-        '
         'btn_Clear
         '
         Me.btn_Clear.AnimationHoverSpeed = 0.07!
@@ -620,14 +611,14 @@ Partial Class Frm_Sale
         Me.btn_Clear.ForeColor = System.Drawing.Color.Black
         Me.btn_Clear.Image = Nothing
         Me.btn_Clear.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btn_Clear.Location = New System.Drawing.Point(29, 486)
+        Me.btn_Clear.Location = New System.Drawing.Point(352, 443)
         Me.btn_Clear.Name = "btn_Clear"
         Me.btn_Clear.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btn_Clear.OnHoverBorderColor = System.Drawing.Color.Black
         Me.btn_Clear.OnHoverForeColor = System.Drawing.Color.White
         Me.btn_Clear.OnHoverImage = Nothing
         Me.btn_Clear.OnPressedColor = System.Drawing.Color.Black
-        Me.btn_Clear.Size = New System.Drawing.Size(232, 42)
+        Me.btn_Clear.Size = New System.Drawing.Size(179, 42)
         Me.btn_Clear.TabIndex = 3
         Me.btn_Clear.Text = "Clear"
         Me.btn_Clear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -645,14 +636,14 @@ Partial Class Frm_Sale
         Me.btn_Done.ForeColor = System.Drawing.Color.Black
         Me.btn_Done.Image = Nothing
         Me.btn_Done.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btn_Done.Location = New System.Drawing.Point(279, 486)
+        Me.btn_Done.Location = New System.Drawing.Point(537, 443)
         Me.btn_Done.Name = "btn_Done"
         Me.btn_Done.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btn_Done.OnHoverBorderColor = System.Drawing.Color.Black
         Me.btn_Done.OnHoverForeColor = System.Drawing.Color.White
         Me.btn_Done.OnHoverImage = Nothing
         Me.btn_Done.OnPressedColor = System.Drawing.Color.Black
-        Me.btn_Done.Size = New System.Drawing.Size(208, 42)
+        Me.btn_Done.Size = New System.Drawing.Size(162, 42)
         Me.btn_Done.TabIndex = 3
         Me.btn_Done.Text = "Confirm Purchase"
         Me.btn_Done.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -705,7 +696,7 @@ Partial Class Frm_Sale
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1051, 788)
+        Me.ClientSize = New System.Drawing.Size(1051, 758)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.cmbType)
@@ -718,7 +709,6 @@ Partial Class Frm_Sale
         Me.Controls.Add(Me.cmb_QuantInstack)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -737,8 +727,6 @@ Partial Class Frm_Sale
         Me.Controls.Add(Me.GunaLabel2)
         Me.Controls.Add(Me.lblSales)
         Me.Controls.Add(Me.GunaLabel8)
-        Me.Controls.Add(Me.GunaLabel7)
-        Me.Controls.Add(Me.lblTotalPrice)
         Me.Controls.Add(Me.lblInStock)
         Me.Controls.Add(Me.GunaLabel9)
         Me.Controls.Add(Me.GunaLabel4)
@@ -752,6 +740,8 @@ Partial Class Frm_Sale
         Me.Controls.Add(Me.cmbCost)
         Me.Controls.Add(Me.lblProf)
         Me.Controls.Add(Me.cmb_Hide)
+        Me.Controls.Add(Me.GunaLabel7)
+        Me.Controls.Add(Me.lblTotalPrice)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Frm_Sale"
@@ -761,8 +751,8 @@ Partial Class Frm_Sale
         CType(Me.txt_Quantity, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -795,7 +785,6 @@ Partial Class Frm_Sale
     Friend WithEvents GunaLabel7 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel8 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents lblSales As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents Button2 As Button
     Friend WithEvents btn_close As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents id As DataGridViewTextBoxColumn

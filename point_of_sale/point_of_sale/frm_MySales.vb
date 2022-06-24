@@ -72,7 +72,7 @@ Public Class Frm_MySales
                     End While
 
 
-                    lblDailySales.Text = "Gh¢" + todaySales.ToString
+                    lblDailySales.Text = "Gh¢" + todaySales.ToString("#,0.00")
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try
