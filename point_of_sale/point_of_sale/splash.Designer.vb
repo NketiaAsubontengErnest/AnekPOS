@@ -38,7 +38,7 @@ Partial Class splash
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(109, 19)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "VERSION: 1.0.1"
+        Me.Label1.Text = "VERSION: 1.0.2"
         Me.Label1.UseWaitCursor = True
         '
         'Timer1
