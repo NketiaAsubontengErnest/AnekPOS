@@ -1,8 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class FrmAddProduct
-    Dim con As New MySqlConnection
-
     Private Sub txt_Quant_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Quant.KeyPress
         e.Handled = ValidateNumbers(e)
 
@@ -243,7 +241,7 @@ Public Class FrmAddProduct
     End Sub
 
     Private Sub btn_close_Click(sender As Object, e As EventArgs) Handles btn_close.Click
-        colorClear()
+        ColorClear()
         Me.Close()
 
     End Sub
