@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class frm_ListOfProduct
+Public Class Frm_ListOfProduct
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         colorClear()
         Me.Close()

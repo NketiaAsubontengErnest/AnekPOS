@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class frmLogin
+Public Class FrmLogin
 
 
     Public Emp_Position, password, EID As String

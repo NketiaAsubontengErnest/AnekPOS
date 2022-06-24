@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class test
+Public Class Test
     Dim MySqlConn As MySqlConnection
     Dim COMMAND As MySqlCommand
     Dim dbDataSet As DataTable
@@ -51,4 +51,7 @@ Public Class test
 
     End Function
 
+    Private Sub Test_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

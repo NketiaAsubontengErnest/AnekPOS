@@ -13,7 +13,7 @@ Module GlobalConfig
     Private EncryptionKey As String = "MAKV2SPBNI99212"
 
 
-    Public Sub openConnection()
+    Public Sub OpenConnection()
         conn = New MySqlConnection(connstring)
         Try
             If conn.State = ConnectionState.Closed Then
@@ -24,18 +24,18 @@ Module GlobalConfig
         End Try
     End Sub
 
-    Public Sub closings()
-        frm_Addtype.Close()
-        frm_GenSettings.Close()
-        frm_ListOfProduct.Close()
-        frm_MySales.Close()
-        frm_Profit.Close()
-        frm_Sale.Close()
-        frmAddProduct.Close()
-        frmAddSeler.Close()
+    Public Sub Closings()
+        Frm_Addtype.Close()
+        Frm_GenSettings.Close()
+        Frm_ListOfProduct.Close()
+        Frm_MySales.Close()
+        Frm_Profit.Close()
+        Frm_Sale.Close()
+        FrmAddProduct.Close()
+        FrmAddSeler.Close()
         frmCheck_Stock.Close()
-        frmReport.Close()
-        frmStatics.Close()
+        FrmReport.Close()
+        FrmStatics.Close()
     End Sub
 
     Function Encrypt(clearText As String) As String
@@ -80,16 +80,16 @@ Module GlobalConfig
         End Using
         Return cipherText
     End Function
-    Public Sub colorClear()
+    Public Sub ColorClear()
 
-        frm_AdminDas.btnMakeSales.FillColor = Color.Gold
-        frm_AdminDas.btnMakeSales.ForeColor = Color.Black
-        frm_AdminDas.btn_AddProduct.FillColor = Color.Gold
-        frm_AdminDas.btn_AddProduct.ForeColor = Color.Black
-        frm_AdminDas.btn_AddSaler.FillColor = Color.Gold
-        frm_AdminDas.btn_AddSaler.ForeColor = Color.Black
-        frm_AdminDas.btn_DailySales.FillColor = Color.Gold
-        frm_AdminDas.btn_DailySales.ForeColor = Color.Black
+        Frm_AdminDas.btnMakeSales.FillColor = Color.Gold
+        Frm_AdminDas.btnMakeSales.ForeColor = Color.Black
+        Frm_AdminDas.btn_AddProduct.FillColor = Color.Gold
+        Frm_AdminDas.btn_AddProduct.ForeColor = Color.Black
+        Frm_AdminDas.Btn_AddSaler.FillColor = Color.Gold
+        Frm_AdminDas.Btn_AddSaler.ForeColor = Color.Black
+        Frm_AdminDas.btn_DailySales.FillColor = Color.Gold
+        Frm_AdminDas.btn_DailySales.ForeColor = Color.Black
 
     End Sub
 End Module

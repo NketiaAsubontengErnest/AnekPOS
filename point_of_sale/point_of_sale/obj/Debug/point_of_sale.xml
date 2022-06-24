@@ -87,13 +87,13 @@ point_of_sale
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="M:point_of_sale.frm_ChanegePassword.checkCurrentPass">
+<member name="M:point_of_sale.Frm_ChanegePassword.checkCurrentPass">
  <summary>
  compare the current password in the database to entered password
  </summary>
  <returns></returns>
 </member>
-<member name="M:point_of_sale.frm_GenSettings.checkCurrentPass">
+<member name="M:point_of_sale.Frm_GenSettings.checkCurrentPass">
  <summary>
  compare the current password in the database to entered password
  </summary>

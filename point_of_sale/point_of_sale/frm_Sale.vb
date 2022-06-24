@@ -1,11 +1,9 @@
 ﻿Imports System.IO
 Imports MySql.Data.MySqlClient
 
-Public Class frm_Sale
+Public Class Frm_Sale
     Dim reader As MySqlDataReader
     Dim count As Integer = 0
-
-    ' Dim ProName, proID, quant, price, catID As New ArrayList
 
     Dim totalPrice As Decimal
     Dim itemName As ArrayList = New ArrayList()
@@ -17,7 +15,7 @@ Public Class frm_Sale
 
     Dim unitPrice, quantity, total As Decimal
     Private Sub frm_Sale_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If isClosed() And frm_AdminDas.lblRole.Text = "Sale"
+        If IsClosed(Frm_AdminDas.lblUserID.Text) And Frm_AdminDas.lblRole.Text = "Sale" Then
             cmb_cID.Enabled = False
             cmb_ProductName.Enabled = False
             Label1.Visible = False
@@ -25,7 +23,7 @@ Public Class frm_Sale
             Label2.Text = "ACCOUNTS CLOSED FOR THE DAY. " + vbCrLf + "CAN'T MAKE SALES."
         End If
 
-        calculateSales(frm_AdminDas.lblUserID.Text)
+        calculateSales(Frm_AdminDas.lblUserID.Text)
         load_Data_Grid()
         txt_Quantity.Enabled = False
         btn_AddToList.Enabled = False
@@ -57,7 +55,7 @@ Public Class frm_Sale
         rtxtReceipt.Clear()
 
         confirmPurchase()
-        calculateSales(frm_AdminDas.lblUserID.Text)
+        calculateSales(Frm_AdminDas.lblUserID.Text)
         updateProducts()
 
         rtxtReceipt.AppendText(vbTab + "ANEK POS" + vbCrLf)
@@ -68,7 +66,7 @@ Public Class frm_Sale
         rtxtReceipt.AppendText("--------------------------------------------------------------------" + vbCrLf)
         rtxtReceipt.AppendText("                                                     Total: " + lblTotalPrice.Text + vbCrLf)
         rtxtReceipt.AppendText("                                                    -----------------------" + vbCrLf + vbCrLf)
-        rtxtReceipt.AppendText("Issued By: " + frm_AdminDas.lblUserName.Text + vbCrLf)
+        rtxtReceipt.AppendText("Issued By: " + Frm_AdminDas.lblUserName.Text + vbCrLf)
         rtxtReceipt.AppendText("Date Issued: " + DateTime.Now.ToString + vbCrLf + vbCrLf)
 
         lblTotalPrice.Text = ""
@@ -102,10 +100,10 @@ Public Class frm_Sale
 
                     If countOut = 0 Then
 
-                        frm_AdminDas.lblAvelable.Visible = False
+                        Frm_AdminDas.lblAvelable.Visible = False
                     Else
-                        frm_AdminDas.lblAvelable.Visible = True
-                        frm_AdminDas.lblAvelable.Text = countOut.ToString + " Products is out of stock!!!"
+                        Frm_AdminDas.lblAvelable.Visible = True
+                        Frm_AdminDas.lblAvelable.Text = countOut.ToString + " Products is out of stock!!!"
 
                     End If
 
@@ -532,7 +530,7 @@ Public Class frm_Sale
             con.Open()
 
             ada = New MySqlDataAdapter("Select ID,item,Qty,price,Amount,month from sales where month='" + Date.Now.ToString("dd/MM/yyyy") + "'
-                                   AND employeeID='" + frm_AdminDas.lblUserID.Text + "' AND hide = 'NO'", con)
+                                   AND employeeID='" + Frm_AdminDas.lblUserID.Text + "' AND hide = 'NO'", con)
             ada.Fill(ds)
             DataGridView1.DataSource = ds.Tables(0)
         Catch ex As Exception
@@ -549,7 +547,7 @@ Public Class frm_Sale
         con.Open()
 
         ada = New MySqlDataAdapter("Select ID,item,Qty,price,Amount,month from sales where month='" + Date.Now.ToString("dd/MM/yyyy") + "'
-                                   AND employeeID='" + frm_AdminDas.lblUserID.Text + "'", con)
+                                   AND employeeID='" + Frm_AdminDas.lblUserID.Text + "'", con)
         ada.Fill(ds)
         DataGridView1.DataSource = ds.Tables(0)
     End Sub
@@ -577,7 +575,7 @@ Public Class frm_Sale
                     End While
 
                     lblSales.Text = "Gh¢" + todaySales.ToString("#,0.00")
-                    frm_PointOfSale.lbl_TotalSales.Text = todaySales.ToString
+                    Frm_PointOfSale.lbl_TotalSales.Text = todaySales.ToString
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try
@@ -614,7 +612,7 @@ Public Class frm_Sale
                                                                 '" + unit.ToArray.GetValue(i).ToString + "', 
                                                                 '" + prize.ToArray.GetValue(i).ToString + "', 
                                                                 '" + track + "', 
-                                                                '" + frm_AdminDas.lblUserID.Text + "', 
+                                                                '" + Frm_AdminDas.lblUserID.Text + "', 
                                                                 '" + DateTime.Now.ToString + "',
                                                                 '" + Date.Now.ToString("dd/MM/yyyy") + "',
                                                                 '" + profit.ToArray.GetValue(i).ToString + "',
@@ -679,40 +677,6 @@ Public Class frm_Sale
 
     End Sub
 
-    Public Function isClosed()
-        Dim conStringg As String = connstring
-        Dim query As String = "SELECT isClosed from dailysales where employeeID='" + frm_AdminDas.lblUserID.Text + "'
-                              AND date='" + Date.Now.ToString("dd/MM/yyyy") + "'"
-
-        Dim closed As Boolean = False
-
-        Using conn As New MySqlConnection(conStringg)
-            Using command As New MySqlCommand
-                With command
-                    .Connection = conn
-                    .CommandText = query
-                End With
-
-                Try
-                    conn.Open()
-                    Dim reader As MySqlDataReader = command.ExecuteReader
-
-                    If reader.Read Then
-                        closed = True
-                    Else
-                        closed = False
-                    End If
-
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
-            End Using
-
-        End Using
-
-        Return closed
-    End Function
-
     Public Sub dailySales()
 
         Dim command As MySqlCommand
@@ -726,7 +690,7 @@ Public Class frm_Sale
 
             connection.Open()
             insertString_EmpDetiles = "INSERT INTO dailysales (employeeID,totalsales,date,datePrepared,isClosed) VALUES (
-                                                                   '" + frm_AdminDas.lblUserID.Text + "',
+                                                                   '" + Frm_AdminDas.lblUserID.Text + "',
                                                                    '" + lblSales.Text + "',
                                                                    '" + Date.Now.ToString("dd/MM/yyyy") + "',
                                                                    '" + DateTime.Now.ToString + "',

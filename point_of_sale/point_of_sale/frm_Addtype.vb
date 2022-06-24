@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class frm_Addtype
+Public Class Frm_Addtype
     Public Sub InsertProduct()
         query = "INSERT INTO `producttype` (`catID`, `category`) VALUES 
                                            ('" & txt_CatID.Text & "',

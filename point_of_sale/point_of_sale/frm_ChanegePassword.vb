@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class frm_ChanegePassword
+Public Class Frm_ChanegePassword
     Private conn As MySqlConnection
     Private command As MySqlCommand
     Private reader As MySqlDataReader
@@ -15,8 +15,6 @@ Public Class frm_ChanegePassword
     End Sub
 
     Private Sub btn_SaveChanges_Click()
-
-
         Try
             conn = New MySqlConnection(connstring)
             conn.Open()
@@ -83,8 +81,6 @@ Public Class frm_ChanegePassword
         Return correct
 
     End Function
-
-
     Private Sub clearHere()
         txt_currentPassword.Clear()
         txt_confPassword.Clear()

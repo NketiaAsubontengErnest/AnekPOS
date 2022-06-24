@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class frmAddProduct
+Public Class FrmAddProduct
     Dim con As New MySqlConnection
 
     Private Sub txt_Quant_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Quant.KeyPress
@@ -27,7 +27,7 @@ Public Class frmAddProduct
                 txt_Quant.Focus()
 
             Else
-                insertProduct()
+                InsertProduct()
 
 
             End If
@@ -35,7 +35,7 @@ Public Class frmAddProduct
     End Sub
 
 
-    Public Sub insertProduct()
+    Public Sub InsertProduct()
 
         Dim check As String = "NO"
         If checkHide.Checked = True Then
@@ -55,11 +55,14 @@ Public Class frmAddProduct
                                                         '" & DateTime.Now & "')"
 
         reader = Inserting(query)
-        If reader.RecordsAffected > 0 Then
-            MsgBox("Product added Successfully", MsgBoxStyle.Information)
-            clearMe()
-        End If
-
+        Try
+            If reader.RecordsAffected > 0 Then
+                MsgBox("Product added Successfully", MsgBoxStyle.Information)
+                clearMe()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical)
+        End Try
         genrateID()
     End Sub
 
@@ -234,7 +237,7 @@ Public Class frmAddProduct
                 Else
                     genrateID()
 
-                    insertProduct()
+                    InsertProduct()
                 End If
             Catch ex As Exception
 

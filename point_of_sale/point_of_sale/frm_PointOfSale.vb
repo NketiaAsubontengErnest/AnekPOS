@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class frm_PointOfSale
+Public Class Frm_PointOfSale
     ' Dim name As String
     Dim ID As String
 

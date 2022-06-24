@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class frm_Profit
+Public Class Frm_Profit
     Private Sub frm_Profit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmbMonth.Text = Date.Now.ToString("MM")
         calculateSales()

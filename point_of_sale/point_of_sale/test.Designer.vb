@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class test
+Partial Class Test
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -61,7 +61,7 @@ Partial Class test
         Me.Chart1.TabIndex = 1
         Me.Chart1.Text = "Chart1"
         '
-        'test
+        'Test
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -69,7 +69,7 @@ Partial Class test
         Me.Controls.Add(Me.Chart1)
         Me.Controls.Add(Me.Button1)
         Me.DoubleBuffered = True
-        Me.Name = "test"
+        Me.Name = "Test"
         Me.Text = "test"
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

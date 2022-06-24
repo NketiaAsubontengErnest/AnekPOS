@@ -1,25 +1,16 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class frmAddSeler
+Public Class FrmAddSeler
 
     Dim connection As MySqlConnection
     Dim reader As MySqlDataReader
 
     Private Sub txt_Name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Name.KeyPress
-        If Not (Asc(e.KeyChar) = 8) Then
-            If Not ((Asc(e.KeyChar) >= 97 And Asc(e.KeyChar) <= 122) Or (Asc(e.KeyChar) >= 65 And Asc(e.KeyChar) <= 90) Or Asc(e.KeyChar) = 32) Then
-                e.KeyChar = ChrW(0)
-                e.Handled = True
-            End If
-        End If
+        e.Handled = ValidateNames(e)
     End Sub
 
     Private Sub txt_Phone_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Phone.KeyPress
-        If Asc(e.KeyChar) <> 8 Then
-            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
-                e.Handled = True
-            End If
-        End If
+        e.Handled = ValidateNumbers(e)
     End Sub
 
     Private Sub btn_Clear_Click(sender As Object, e As EventArgs) Handles btn_Clear.Click
@@ -118,9 +109,7 @@ Public Class frmAddSeler
             number = "0"
         End If
 
-
         count += 1
-
         txt_UserID.Text = "EMP" + number + count.ToString
 
     End Sub

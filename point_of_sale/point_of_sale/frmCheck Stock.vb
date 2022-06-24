@@ -5,7 +5,6 @@ Public Class frmCheck_Stock
         loadInstock()
         loadOutStock()
         txtNewQuant.Text = 0
-
         FillItem()
 
     End Sub
@@ -81,50 +80,37 @@ Public Class frmCheck_Stock
     Private Sub dgvInstock_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInstock.CellContentClick
         If e.RowIndex >= 0 Then
             Dim row As DataGridViewRow = dgvInstock.Rows(e.RowIndex)
-            txtPID.Text = row.Cells(0).Value.ToString
-            txtQuantity.Text = row.Cells(0).Value.ToString
             cmbName.Text = row.Cells(1).Value.ToString
-            txtQuantity.Text = row.Cells(2).Value.ToString
+            FillDetails()
         End If
     End Sub
 
     Private Sub dgvOutStock_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvOutStock.CellContentClick
         If e.RowIndex >= 0 Then
-            Dim row As DataGridViewRow = dgvInstock.Rows(e.RowIndex)
-            txtQuantity.Text = row.Cells(0).Value.ToString
+            Dim row As DataGridViewRow = dgvOutStock.Rows(e.RowIndex)
             cmbName.Text = row.Cells(1).Value.ToString
-            txtQuantity.Text = row.Cells(2).Value.ToString
+            FillDetails()
         End If
     End Sub
 
     Public Sub updateProducts()
         Dim A As Integer = 0
-
-        Dim command As MySqlCommand
-        Dim insertString_EmpDetiles As String = ""
-        Dim connection = New MySqlConnection
-
-        connection.ConnectionString = connstring
-
         Try
             If txtNewQuant.Text = "" Then
                 txtNewQuant.Text = 0
             End If
             Dim quant As Integer = Convert.ToInt64(txtQuantity.Text) + Convert.ToInt64(txtNewQuant.Text)
-            connection.Open()
-            insertString_EmpDetiles = "Update `product` Set `Product_ID` = '" & txtPID.Text & "', `Pro_Name`='" & cmbName.Text & "', `instock`='" & quant & "', `Price`='" & txtPrice.Text & "', `selling_price`='" & txt_CostPrice.Text & "', `Average_Quantity`='" & txtAveQty.Text & "',`New_Quant_Added`='" & txtNewQuant.Text & "', `Date_Updated`='" & Convert.ToString(DateTime.Now) & "' WHERE `Product_ID`='" & cmbID.Text & "'"
-            command = New MySqlCommand(insertString_EmpDetiles, connection)
-            command.ExecuteNonQuery()
-
-            connection.Close()
-
-            MsgBox("Product Updated")
-            txtNewQuant.Text = 0
+            query = "Update `product` Set `Product_ID` = '" & txtPID.Text & "', `Pro_Name`='" & cmbName.Text & "', `instock`='" & quant & "', `Price`='" & txtPrice.Text & "', `selling_price`='" & txt_CostPrice.Text & "', `Average_Quantity`='" & txtAveQty.Text & "',`New_Quant_Added`='" & txtNewQuant.Text & "', `Date_Updated`='" & Convert.ToString(DateTime.Now) & "' WHERE `Product_ID`='" & cmbID.Text & "'"
+            reader = Updating(query)
+            If reader.RecordsAffected > 0 Then
+                MsgBox("Product Updated!!", MsgBoxStyle.Information)
+                txtNewQuant.Text = 0
+                loadInstock()
+                countOutStock()
+                FillDetails()
+            End If
         Catch ex As Exception
             MsgBox(ex.Message)
-        Finally
-
-            connection.Dispose()
         End Try
 
     End Sub
@@ -186,7 +172,6 @@ Public Class frmCheck_Stock
                         txtPrice.Text = reader("Price")
                         txt_CostPrice.Text = reader("selling_price")
                         txtAveQty.Text = reader("Average_Quantity")
-
                     End If
 
                 Catch ex As Exception
@@ -261,50 +246,22 @@ Public Class frmCheck_Stock
     End Sub
 
     Private Sub txtQuantity_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtQuantity.KeyPress
-        If Asc(e.KeyChar) <> 8 Then
-            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
-                e.Handled = True
-            End If
-        End If
+        e.Handled = ValidateNumbers(e)
     End Sub
 
     Private Sub txtPrice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrice.KeyPress
-        If Asc(e.KeyChar) <> 8 Then
-            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
-                If Asc(e.KeyChar) = 46 Then
-
-                Else
-                    e.Handled = True
-                End If
-            End If
-        End If
+        e.Handled = ValidateMoney(e)
     End Sub
 
     Private Sub txt_CostPrice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_CostPrice.KeyPress
-        If Asc(e.KeyChar) <> 8 Then
-            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
-                If Asc(e.KeyChar) = 46 Then
-
-                Else
-                    e.Handled = True
-                End If
-            End If
-        End If
+        e.Handled = ValidateMoney(e)
     End Sub
 
     Private Sub txtAveQty_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAveQty.KeyPress
-        If Asc(e.KeyChar) <> 8 Then
-            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
-                e.Handled = True
-            End If
-        End If
+        e.Handled = ValidateNumbers(e)
     End Sub
 
     Private Sub txtNewQuant_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNewQuant.KeyPress
-        If Asc(e.KeyChar) <> 8 Then
-            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
-                e.Handled = True
-            End If
-        End If
+        e.Handled = ValidateNumbers(e)
     End Sub
 End Class

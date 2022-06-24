@@ -1,12 +1,12 @@
 ﻿
 Imports MySql.Data.MySqlClient
 
-Public Class frmReport
+Public Class FrmReport
     Private Sub frmReport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        If frm_AdminDas.lblRole.Text = "Sale" Then
-            cmbEmployeeID.Text = frm_AdminDas.lblUserID.Text
-            cmbName.Text = frm_AdminDas.lblUserName.Text
+        If Frm_AdminDas.lblRole.Text = "Sale" Then
+            cmbEmployeeID.Text = Frm_AdminDas.lblUserID.Text
+            cmbName.Text = Frm_AdminDas.lblUserName.Text
 
             cmbName.Enabled = False
             cmbEmployeeID.Enabled = False
@@ -145,7 +145,7 @@ Public Class frmReport
         load_Data_Grid()
     End Sub
 
-    Private Sub txt_Print_Click(sender As Object, e As EventArgs) 
+    Private Sub txt_Print_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

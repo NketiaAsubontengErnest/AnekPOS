@@ -1,7 +1,7 @@
 ﻿
 Imports MySql.Data.MySqlClient
 
-Public Class frm_MySales
+Public Class Frm_MySales
     Private Sub frm_MySales_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         If frm_AdminDas.lblRole.Text = "Sale" Then

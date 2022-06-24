@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class frmStatics
+Public Class FrmStatics
 
     Dim MySqlConn As MySqlConnection
     Private Sub frmStatics_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -1,7 +1,7 @@
 ﻿Imports System.Text
 Imports MySql.Data.MySqlClient
 
-Public Class frm_AdminDas
+Public Class Frm_AdminDas
     Private Sub btn_close_Click(sender As Object, e As EventArgs)
 
         Me.Close()
@@ -11,19 +11,17 @@ Public Class frm_AdminDas
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub btn_AddSaler_Click(sender As Object, e As EventArgs) Handles btn_AddSaler.Click
+    Private Sub btn_AddSaler_Click(sender As Object, e As EventArgs) Handles Btn_AddSaler.Click
 
         Try
-            colorClear()
-            btn_AddSaler.FillColor = Color.FromArgb(43, 102, 121)
-            btn_AddSaler.ForeColor = Color.Gold
+            ColorClear()
+            Btn_AddSaler.FillColor = Color.FromArgb(43, 102, 121)
+            Btn_AddSaler.ForeColor = Color.Gold
 
-            closings()
+            Closings()
 
-            frmAddSeler.MdiParent = Me
-            frmAddSeler.Show()
-
-
+            FrmAddSeler.MdiParent = Me
+            FrmAddSeler.Show()
 
         Catch ex As Exception
 
@@ -32,14 +30,14 @@ Public Class frm_AdminDas
     End Sub
     Private Sub btn_AddProduct_Click(sender As Object, e As EventArgs) Handles btn_AddProduct.Click
         Try
-            colorClear()
+            ColorClear()
             btn_AddProduct.FillColor = Color.FromArgb(43, 102, 121)
             btn_AddProduct.ForeColor = Color.Gold
 
-            closings()
+            Closings()
 
-            frmAddProduct.MdiParent = Me
-            frmAddProduct.Show()
+            FrmAddProduct.MdiParent = Me
+            FrmAddProduct.Show()
 
         Catch ex As Exception
 
@@ -50,14 +48,14 @@ Public Class frm_AdminDas
     Private Sub btn_DailySales_Click_1(sender As Object, e As EventArgs) Handles btn_DailySales.Click
         Try
 
-            colorClear()
+            ColorClear()
             btn_DailySales.FillColor = Color.FromArgb(43, 102, 121)
             btn_DailySales.ForeColor = Color.Gold
 
-            closings()
+            Closings()
 
-            frm_MySales.MdiParent = Me
-            frm_MySales.Show()
+            Frm_MySales.MdiParent = Me
+            Frm_MySales.Show()
 
         Catch ex As Exception
 
@@ -66,39 +64,6 @@ Public Class frm_AdminDas
 
     End Sub
 
-    Public Function isClosed()
-        Dim conStringg As String = connstring
-        Dim query As String = "SELECT isClosed from dailysales where employeeID='" + lblUserID.Text + "'
-                              AND date='" + Date.Now.ToString("dd/MM/yyyy") + "'"
-
-        Dim closed As Boolean = False
-
-        Using conn As New MySqlConnection(conStringg)
-            Using command As New MySqlCommand
-                With command
-                    .Connection = conn
-                    .CommandText = query
-                End With
-
-                Try
-                    conn.Open()
-                    Dim reader As MySqlDataReader = command.ExecuteReader
-
-                    If reader.Read Then
-                        closed = True
-                    Else
-                        closed = False
-                    End If
-
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
-            End Using
-
-        End Using
-
-        Return closed
-    End Function
     Private Sub btn_close_Click_1(sender As Object, e As EventArgs) Handles btn_close.Click
 
         Dim ans As DialogResult = MsgBox("Do You Want To  Exit? ", MsgBoxStyle.YesNo, "Exit System")
@@ -107,34 +72,21 @@ Public Class frm_AdminDas
             Me.Close()
         End If
     End Sub
-    Public Sub dailySales()
+    Public Sub DailySales()
 
-        Dim command As MySqlCommand
-        Dim insertString_EmpDetiles As String = ""
-        Dim connection = New MySqlConnection
-
-        connection.ConnectionString = connstring
-
+        query = "INSERT INTO DailySales (employeeID,totalsales,date,datePrepared,isClosed) VALUES (
+                                        '" + lblUserID.Text + "',
+                                        '" + Frm_Sale.lblSales.Text + "',
+                                        '" + Date.Now.ToString("dd/MM/yyyy") + "',
+                                        '" + DateTime.Now.ToString + "',
+                                        'Yes')"
         Try
-            connection.Open()
-            insertString_EmpDetiles = "INSERT INTO dailysales (employeeID,totalsales,date,datePrepared,isClosed) VALUES (
-                                                                   '" + lblUserID.Text + "',
-                                                                   '" + frm_Sale.lblSales.Text + "',
-                                                                   '" + Date.Now.ToString("dd/MM/yyyy") + "',
-                                                                   '" + DateTime.Now.ToString + "',
-                                                                   'Yes')"
-            command = New MySqlCommand(insertString_EmpDetiles, connection)
-            command.ExecuteNonQuery()
-
-            MsgBox("Account Successfully Closed For The Day")
-
-            connection.Close()
-
+            reader = Inserting(query)
+            If reader.RecordsAffected > 0 Then
+                MsgBox("Account Successfully Closed For The Day, See you next day", MsgBoxStyle.Information)
+            End If
         Catch ex As Exception
             MsgBox(ex.Message)
-        Finally
-
-            connection.Dispose()
         End Try
     End Sub
     Private Sub btn_Maximize_Click_1(sender As Object, e As EventArgs) Handles btn_Maximize.Click
@@ -159,18 +111,9 @@ Public Class frm_AdminDas
         Me.Close()
     End Sub
 
-    Private Sub ReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportToolStripMenuItem.Click
-        Try
-            closings()
 
-            frmReport.MdiParent = Me
-            frmReport.Show()
-        Catch ex As Exception
-
-        End Try
-    End Sub
     Private Sub UpdateProductToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        closings()
+        Closings()
 
         Dim f As New frmCheck_Stock
 
@@ -179,87 +122,27 @@ Public Class frm_AdminDas
 
 
     End Sub
-    Private Sub AddCategoryToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AddCategoryToolStripMenuItem1.Click
-        Try
-            closings()
 
-            frm_Addtype.MdiParent = Me
-
-            frm_Addtype.Show()
-        Catch ex As Exception
-
-        End Try
-
-    End Sub
-
-    Private Sub UpdateProductToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles UpdateProductToolStripMenuItem1.Click
-        Try
-            closings()
-
-            frmCheck_Stock.MdiParent = Me
-
-            frmCheck_Stock.Show()
-        Catch ex As Exception
-
-        End Try
-
-    End Sub
 
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-        frmLogin.Show()
+        FrmLogin.Show()
         lblUserID.Text = ""
         lblTime.Text = ""
         lblRole.Text = ""
         Me.Close()
     End Sub
-    Private Sub UserListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UserListToolStripMenuItem.Click
-        Try
-            closings()
 
-
-            User_Lists.MdiParent = Me
-
-            User_Lists.Show()
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-    Private Sub ListOfProductToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListOfProductToolStripMenuItem.Click
-        Try
-            closings()
-
-            frm_ListOfProduct.MdiParent = Me
-
-            frm_ListOfProduct.Show()
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-    Private Sub MyProfitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MyProfitToolStripMenuItem.Click
-        Try
-            closings()
-
-            frm_Profit.MdiParent = Me
-
-            frm_Profit.Show()
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-    Private Sub frm_AdminDas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Frm_AdminDas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
         countOutStock()
-        lblUserID.Text = frmLogin.txt_Username.Text
+        lblUserID.Text = FrmLogin.txt_Username.Text
     End Sub
 
     Public Sub countOutStock()
         Dim conStringg As String = connstring
         Dim query As String = "Select Product_ID FROM product WHERE `instock` < `Average_Quantity`"
 
-        Dim countOut As int16 = 0
+        Dim countOut As Int16 = 0
 
         Using conn As New MySqlConnection(conStringg)
             Using command As New MySqlCommand
@@ -273,7 +156,7 @@ Public Class frm_AdminDas
                     Dim reader As MySqlDataReader = command.ExecuteReader
 
                     While reader.Read
-                       countOut +=1
+                        countOut += 1
                     End While
 
                     If countOut > 0 Then
@@ -294,41 +177,128 @@ Public Class frm_AdminDas
 
     Private Sub GeneralSystemSetingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GeneralSystemSetingsToolStripMenuItem.Click
         Try
-            closings()
+            Closings()
 
-            frm_GenSettings.MdiParent = Me
-            frm_GenSettings.Show()
+            Frm_GenSettings.MdiParent = Me
+            Frm_GenSettings.Show()
         Catch ex As Exception
 
         End Try
     End Sub
-
-    Private Sub StatisticsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StatisticsToolStripMenuItem.Click
-        Try
-            closings()
-
-            frmStatics.MdiParent = Me
-            frmStatics.Show()
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        lblTimer.Text = TimeString
+        lblTimer.Text = Format(Now, "hh:mm:ss tt")
     End Sub
 
-    Private Sub btnMakeSales_Click(sender As Object, e As EventArgs) Handles btnMakeSales.Click
+    Private Sub BtnMakeSales_Click(sender As Object, e As EventArgs) Handles btnMakeSales.Click
         Try
-            colorClear()
+            ColorClear()
             btnMakeSales.FillColor = Color.FromArgb(43, 102, 121)
             btnMakeSales.ForeColor = Color.Gold
 
-            closings()
+            Closings()
 
 
-            frm_Sale.MdiParent = Me
-            frm_Sale.Show()
+            Frm_Sale.MdiParent = Me
+            Frm_Sale.Show()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub UpdateProductToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles UpdateProductToolStripMenuItem.Click
+        Try
+            Closings()
+
+            frmCheck_Stock.MdiParent = Me
+
+            frmCheck_Stock.Show()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub ListOfProductToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ListOfProductToolStripMenuItem1.Click
+        Try
+            Closings()
+
+            Frm_ListOfProduct.MdiParent = Me
+
+            Frm_ListOfProduct.Show()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub StatisticsToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles StatisticsToolStripMenuItem1.Click
+        Try
+            Closings()
+
+            FrmStatics.MdiParent = Me
+            FrmStatics.Show()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub ListOfUsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListOfUsersToolStripMenuItem.Click
+        Try
+            Closings()
+
+
+            User_Lists.MdiParent = Me
+
+            User_Lists.Show()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub MyProfitToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MyProfitToolStripMenuItem1.Click
+        Try
+            Closings()
+
+            Frm_Profit.MdiParent = Me
+
+            Frm_Profit.Show()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub GeneralReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GeneralReportToolStripMenuItem.Click
+        Try
+            Closings()
+
+            FrmReport.MdiParent = Me
+            FrmReport.Show()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub AddCategoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddCategoryToolStripMenuItem.Click
+        Try
+            Closings()
+
+            Frm_Addtype.MdiParent = Me
+            Frm_Addtype.Show()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub AddNewUserToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewUserToolStripMenuItem.Click
+
+        Try
+            ColorClear()
+            Btn_AddSaler.FillColor = Color.FromArgb(43, 102, 121)
+            Btn_AddSaler.ForeColor = Color.Gold
+
+            Closings()
+
+            FrmAddSeler.MdiParent = Me
+            FrmAddSeler.Show()
+
         Catch ex As Exception
 
         End Try

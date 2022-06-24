@@ -191,99 +191,100 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="frmCheck Stock.Designer.vb">
-      <DependentUpon>frmCheck Stock.vb</DependentUpon>
+    <Compile Include="FrmCheck Stock.Designer.vb">
+      <DependentUpon>FrmCheck Stock.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmCheck Stock.vb">
+    <Compile Include="FrmCheck Stock.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.vb">
+    <Compile Include="FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.vb">
-      <DependentUpon>frmLogin.vb</DependentUpon>
+    <Compile Include="FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddProduct.Designer.vb">
-      <DependentUpon>frmAddProduct.vb</DependentUpon>
+    <Compile Include="FrmAddProduct.Designer.vb">
+      <DependentUpon>FrmAddProduct.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmAddProduct.vb">
+    <Compile Include="FrmAddProduct.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddSeler.Designer.vb">
-      <DependentUpon>frmAddSeler.vb</DependentUpon>
+    <Compile Include="FrmAddSeler.Designer.vb">
+      <DependentUpon>FrmAddSeler.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmAddSeler.vb">
+    <Compile Include="FrmAddSeler.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReport.Designer.vb">
-      <DependentUpon>frmReport.vb</DependentUpon>
+    <Compile Include="FrmReport.Designer.vb">
+      <DependentUpon>FrmReport.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmReport.vb">
+    <Compile Include="FrmReport.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStatics.Designer.vb">
-      <DependentUpon>frmStatics.vb</DependentUpon>
+    <Compile Include="FrmStatics.Designer.vb">
+      <DependentUpon>FrmStatics.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmStatics.vb">
+    <Compile Include="FrmStatics.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Addtype.Designer.vb">
-      <DependentUpon>frm_Addtype.vb</DependentUpon>
+    <Compile Include="Frm_Addtype.Designer.vb">
+      <DependentUpon>Frm_Addtype.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_Addtype.vb">
+    <Compile Include="Frm_Addtype.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_AdminDas.Designer.vb">
-      <DependentUpon>frm_AdminDas.vb</DependentUpon>
+    <Compile Include="Frm_AdminDas.Designer.vb">
+      <DependentUpon>Frm_AdminDas.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_AdminDas.vb">
+    <Compile Include="Frm_AdminDas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_ChanegePassword.designer.vb">
-      <DependentUpon>frm_ChanegePassword.vb</DependentUpon>
+    <Compile Include="Frm_ChanegePassword.designer.vb">
+      <DependentUpon>Frm_ChanegePassword.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_ChanegePassword.vb">
+    <Compile Include="Frm_ChanegePassword.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_GenSettings.Designer.vb">
-      <DependentUpon>frm_GenSettings.vb</DependentUpon>
+    <Compile Include="Frm_GenSettings.Designer.vb">
+      <DependentUpon>Frm_GenSettings.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_GenSettings.vb">
+    <Compile Include="Frm_GenSettings.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_ListOfProduct.Designer.vb">
-      <DependentUpon>frm_ListOfProduct.vb</DependentUpon>
+    <Compile Include="Frm_ListOfProduct.Designer.vb">
+      <DependentUpon>Frm_ListOfProduct.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_ListOfProduct.vb">
+    <Compile Include="Frm_ListOfProduct.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_MySales.Designer.vb">
-      <DependentUpon>frm_MySales.vb</DependentUpon>
+    <Compile Include="Frm_MySales.Designer.vb">
+      <DependentUpon>Frm_MySales.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_MySales.vb">
+    <Compile Include="Frm_MySales.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_PointOfSale.Designer.vb">
-      <DependentUpon>frm_PointOfSale.vb</DependentUpon>
+    <Compile Include="Frm_PointOfSale.Designer.vb">
+      <DependentUpon>Frm_PointOfSale.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_PointOfSale.vb">
+    <Compile Include="Frm_PointOfSale.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Profit.Designer.vb">
-      <DependentUpon>frm_Profit.vb</DependentUpon>
+    <Compile Include="Frm_Profit.Designer.vb">
+      <DependentUpon>Frm_Profit.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_Profit.vb">
+    <Compile Include="Frm_Profit.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Sale.Designer.vb">
-      <DependentUpon>frm_Sale.vb</DependentUpon>
+    <Compile Include="Frm_Sale.Designer.vb">
+      <DependentUpon>Frm_Sale.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_Sale.vb">
+    <Compile Include="Frm_Sale.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="globalConfig\GlobalConfig.vb" />
     <Compile Include="globalConfig\QueriesModel.vb" />
+    <Compile Include="globalConfig\ValidateModule.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -306,10 +307,10 @@
     <Compile Include="splash.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="test.Designer.vb">
-      <DependentUpon>test.vb</DependentUpon>
+    <Compile Include="Test.Designer.vb">
+      <DependentUpon>Test.vb</DependentUpon>
     </Compile>
-    <Compile Include="test.vb">
+    <Compile Include="Test.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="User Lists.Designer.vb">
@@ -320,50 +321,50 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmCheck Stock.resx">
-      <DependentUpon>frmCheck Stock.vb</DependentUpon>
+    <EmbeddedResource Include="FrmCheck Stock.resx">
+      <DependentUpon>FrmCheck Stock.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.vb</DependentUpon>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddProduct.resx">
-      <DependentUpon>frmAddProduct.vb</DependentUpon>
+    <EmbeddedResource Include="FrmAddProduct.resx">
+      <DependentUpon>FrmAddProduct.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddSeler.resx">
-      <DependentUpon>frmAddSeler.vb</DependentUpon>
+    <EmbeddedResource Include="FrmAddSeler.resx">
+      <DependentUpon>FrmAddSeler.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReport.resx">
-      <DependentUpon>frmReport.vb</DependentUpon>
+    <EmbeddedResource Include="FrmReport.resx">
+      <DependentUpon>FrmReport.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStatics.resx">
-      <DependentUpon>frmStatics.vb</DependentUpon>
+    <EmbeddedResource Include="FrmStatics.resx">
+      <DependentUpon>FrmStatics.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Addtype.resx">
-      <DependentUpon>frm_Addtype.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_Addtype.resx">
+      <DependentUpon>Frm_Addtype.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_AdminDas.resx">
-      <DependentUpon>frm_AdminDas.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_AdminDas.resx">
+      <DependentUpon>Frm_AdminDas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_ChanegePassword.resx">
-      <DependentUpon>frm_ChanegePassword.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_ChanegePassword.resx">
+      <DependentUpon>Frm_ChanegePassword.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_GenSettings.resx">
-      <DependentUpon>frm_GenSettings.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_GenSettings.resx">
+      <DependentUpon>Frm_GenSettings.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_ListOfProduct.resx">
-      <DependentUpon>frm_ListOfProduct.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_ListOfProduct.resx">
+      <DependentUpon>Frm_ListOfProduct.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_MySales.resx">
-      <DependentUpon>frm_MySales.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_MySales.resx">
+      <DependentUpon>Frm_MySales.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_PointOfSale.resx">
-      <DependentUpon>frm_PointOfSale.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_PointOfSale.resx">
+      <DependentUpon>Frm_PointOfSale.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Profit.resx">
-      <DependentUpon>frm_Profit.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_Profit.resx">
+      <DependentUpon>Frm_Profit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Sale.resx">
-      <DependentUpon>frm_Sale.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_Sale.resx">
+      <DependentUpon>Frm_Sale.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -374,8 +375,8 @@
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="test.resx">
-      <DependentUpon>test.vb</DependentUpon>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Lists.resx">
       <DependentUpon>User Lists.vb</DependentUpon>

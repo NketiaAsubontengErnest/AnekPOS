@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frm_AdminDas
+Partial Class Frm_AdminDas
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class frm_AdminDas
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_AdminDas))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_AdminDas))
         Me.Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblRole = New System.Windows.Forms.Label()
@@ -39,23 +39,24 @@ Partial Class frm_AdminDas
         Me.btn_DailySales = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_AddProduct = New Guna.UI2.WinForms.Guna2Button()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.btn_AddSaler = New Guna.UI2.WinForms.Guna2Button()
+        Me.Btn_AddSaler = New Guna.UI2.WinForms.Guna2Button()
         Me.lblAvelable = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.mnSettings = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProductsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddCategoryToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UpdateProductToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListOfProductToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StatisticsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UserManagmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UserListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SystemManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MyProfitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GeneralSystemSetingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddCategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateProductToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListOfProductToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatisticsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MyProfitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListOfUsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddNewUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_Minimize = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btn_Maximize = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btn_close = New Bunifu.Framework.UI.BunifuImageButton()
@@ -66,6 +67,7 @@ Partial Class frm_AdminDas
         Me.lblSetDash = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.GeneralReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Guna2ShadowPanel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -87,7 +89,7 @@ Partial Class frm_AdminDas
         Me.Guna2ShadowPanel1.Controls.Add(Me.btn_DailySales)
         Me.Guna2ShadowPanel1.Controls.Add(Me.btn_AddProduct)
         Me.Guna2ShadowPanel1.Controls.Add(Me.Label6)
-        Me.Guna2ShadowPanel1.Controls.Add(Me.btn_AddSaler)
+        Me.Guna2ShadowPanel1.Controls.Add(Me.Btn_AddSaler)
         Me.Guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Guna2ShadowPanel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(0, 24)
@@ -289,28 +291,28 @@ Partial Class frm_AdminDas
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "Logout"
         '
-        'btn_AddSaler
+        'Btn_AddSaler
         '
-        Me.btn_AddSaler.Animated = True
-        Me.btn_AddSaler.AutoRoundedCorners = True
-        Me.btn_AddSaler.BackColor = System.Drawing.Color.Transparent
-        Me.btn_AddSaler.BorderRadius = 21
-        Me.btn_AddSaler.CheckedState.Parent = Me.btn_AddSaler
-        Me.btn_AddSaler.CustomImages.Parent = Me.btn_AddSaler
-        Me.btn_AddSaler.FillColor = System.Drawing.Color.Gold
-        Me.btn_AddSaler.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btn_AddSaler.ForeColor = System.Drawing.Color.Black
-        Me.btn_AddSaler.HoverState.BorderColor = System.Drawing.Color.Gold
-        Me.btn_AddSaler.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(123, Byte), Integer))
-        Me.btn_AddSaler.HoverState.ForeColor = System.Drawing.Color.Gold
-        Me.btn_AddSaler.HoverState.Parent = Me.btn_AddSaler
-        Me.btn_AddSaler.Location = New System.Drawing.Point(13, 114)
-        Me.btn_AddSaler.Name = "btn_AddSaler"
-        Me.btn_AddSaler.ShadowDecoration.Parent = Me.btn_AddSaler
-        Me.btn_AddSaler.Size = New System.Drawing.Size(228, 45)
-        Me.btn_AddSaler.TabIndex = 3
-        Me.btn_AddSaler.Text = "Add Employee"
-        Me.btn_AddSaler.UseTransparentBackground = True
+        Me.Btn_AddSaler.Animated = True
+        Me.Btn_AddSaler.AutoRoundedCorners = True
+        Me.Btn_AddSaler.BackColor = System.Drawing.Color.Transparent
+        Me.Btn_AddSaler.BorderRadius = 21
+        Me.Btn_AddSaler.CheckedState.Parent = Me.Btn_AddSaler
+        Me.Btn_AddSaler.CustomImages.Parent = Me.Btn_AddSaler
+        Me.Btn_AddSaler.FillColor = System.Drawing.Color.Gold
+        Me.Btn_AddSaler.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Btn_AddSaler.ForeColor = System.Drawing.Color.Black
+        Me.Btn_AddSaler.HoverState.BorderColor = System.Drawing.Color.Gold
+        Me.Btn_AddSaler.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.Btn_AddSaler.HoverState.ForeColor = System.Drawing.Color.Gold
+        Me.Btn_AddSaler.HoverState.Parent = Me.Btn_AddSaler
+        Me.Btn_AddSaler.Location = New System.Drawing.Point(13, 114)
+        Me.Btn_AddSaler.Name = "Btn_AddSaler"
+        Me.Btn_AddSaler.ShadowDecoration.Parent = Me.Btn_AddSaler
+        Me.Btn_AddSaler.Size = New System.Drawing.Size(228, 45)
+        Me.Btn_AddSaler.TabIndex = 3
+        Me.Btn_AddSaler.Text = "Add Employee"
+        Me.Btn_AddSaler.UseTransparentBackground = True
         '
         'lblAvelable
         '
@@ -339,7 +341,7 @@ Partial Class frm_AdminDas
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnSettings})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnSettings, Me.ProductToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.UsersToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1222, 24)
@@ -348,78 +350,22 @@ Partial Class frm_AdminDas
         '
         'mnSettings
         '
-        Me.mnSettings.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductsToolStripMenuItem, Me.ReportToolStripMenuItem, Me.UserManagmentToolStripMenuItem, Me.SystemManagementToolStripMenuItem, Me.CloseToolStripMenuItem})
+        Me.mnSettings.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SystemManagementToolStripMenuItem, Me.CloseToolStripMenuItem})
         Me.mnSettings.Name = "mnSettings"
         Me.mnSettings.Size = New System.Drawing.Size(61, 20)
         Me.mnSettings.Text = "Settings"
         '
-        'ProductsToolStripMenuItem
-        '
-        Me.ProductsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddCategoryToolStripMenuItem1, Me.UpdateProductToolStripMenuItem1, Me.ListOfProductToolStripMenuItem, Me.StatisticsToolStripMenuItem})
-        Me.ProductsToolStripMenuItem.Name = "ProductsToolStripMenuItem"
-        Me.ProductsToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
-        Me.ProductsToolStripMenuItem.Text = "Products"
-        '
-        'AddCategoryToolStripMenuItem1
-        '
-        Me.AddCategoryToolStripMenuItem1.Name = "AddCategoryToolStripMenuItem1"
-        Me.AddCategoryToolStripMenuItem1.Size = New System.Drawing.Size(157, 22)
-        Me.AddCategoryToolStripMenuItem1.Text = "Add Category"
-        '
-        'UpdateProductToolStripMenuItem1
-        '
-        Me.UpdateProductToolStripMenuItem1.Name = "UpdateProductToolStripMenuItem1"
-        Me.UpdateProductToolStripMenuItem1.Size = New System.Drawing.Size(157, 22)
-        Me.UpdateProductToolStripMenuItem1.Text = "Update Product"
-        '
-        'ListOfProductToolStripMenuItem
-        '
-        Me.ListOfProductToolStripMenuItem.Name = "ListOfProductToolStripMenuItem"
-        Me.ListOfProductToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
-        Me.ListOfProductToolStripMenuItem.Text = "List of Product"
-        '
-        'StatisticsToolStripMenuItem
-        '
-        Me.StatisticsToolStripMenuItem.Name = "StatisticsToolStripMenuItem"
-        Me.StatisticsToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
-        Me.StatisticsToolStripMenuItem.Text = "Statistics"
-        '
-        'ReportToolStripMenuItem
-        '
-        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
-        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
-        Me.ReportToolStripMenuItem.Text = "Report"
-        '
-        'UserManagmentToolStripMenuItem
-        '
-        Me.UserManagmentToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UserListToolStripMenuItem})
-        Me.UserManagmentToolStripMenuItem.Name = "UserManagmentToolStripMenuItem"
-        Me.UserManagmentToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
-        Me.UserManagmentToolStripMenuItem.Text = "User Managment"
-        '
-        'UserListToolStripMenuItem
-        '
-        Me.UserListToolStripMenuItem.Name = "UserListToolStripMenuItem"
-        Me.UserListToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
-        Me.UserListToolStripMenuItem.Text = "User List"
-        '
         'SystemManagementToolStripMenuItem
         '
-        Me.SystemManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MyProfitToolStripMenuItem, Me.GeneralSystemSetingsToolStripMenuItem})
+        Me.SystemManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GeneralSystemSetingsToolStripMenuItem})
         Me.SystemManagementToolStripMenuItem.Name = "SystemManagementToolStripMenuItem"
         Me.SystemManagementToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
         Me.SystemManagementToolStripMenuItem.Text = "System Management"
         '
-        'MyProfitToolStripMenuItem
-        '
-        Me.MyProfitToolStripMenuItem.Name = "MyProfitToolStripMenuItem"
-        Me.MyProfitToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
-        Me.MyProfitToolStripMenuItem.Text = "My Profit"
-        '
         'GeneralSystemSetingsToolStripMenuItem
         '
         Me.GeneralSystemSetingsToolStripMenuItem.Name = "GeneralSystemSetingsToolStripMenuItem"
-        Me.GeneralSystemSetingsToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.GeneralSystemSetingsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.GeneralSystemSetingsToolStripMenuItem.Text = "System Setings"
         '
         'CloseToolStripMenuItem
@@ -427,6 +373,69 @@ Partial Class frm_AdminDas
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
         Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
+        '
+        'ProductToolStripMenuItem
+        '
+        Me.ProductToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddCategoryToolStripMenuItem, Me.UpdateProductToolStripMenuItem, Me.ListOfProductToolStripMenuItem1})
+        Me.ProductToolStripMenuItem.Name = "ProductToolStripMenuItem"
+        Me.ProductToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
+        Me.ProductToolStripMenuItem.Text = "Products"
+        '
+        'AddCategoryToolStripMenuItem
+        '
+        Me.AddCategoryToolStripMenuItem.Name = "AddCategoryToolStripMenuItem"
+        Me.AddCategoryToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AddCategoryToolStripMenuItem.Text = "Add Category"
+        '
+        'UpdateProductToolStripMenuItem
+        '
+        Me.UpdateProductToolStripMenuItem.Name = "UpdateProductToolStripMenuItem"
+        Me.UpdateProductToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UpdateProductToolStripMenuItem.Text = "Update Product"
+        '
+        'ListOfProductToolStripMenuItem1
+        '
+        Me.ListOfProductToolStripMenuItem1.Name = "ListOfProductToolStripMenuItem1"
+        Me.ListOfProductToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ListOfProductToolStripMenuItem1.Text = "List Of Product"
+        '
+        'ReportsToolStripMenuItem
+        '
+        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StatisticsToolStripMenuItem1, Me.MyProfitToolStripMenuItem1, Me.GeneralReportToolStripMenuItem})
+        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
+        Me.ReportsToolStripMenuItem.Text = "Reports"
+        '
+        'StatisticsToolStripMenuItem1
+        '
+        Me.StatisticsToolStripMenuItem1.Name = "StatisticsToolStripMenuItem1"
+        Me.StatisticsToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.StatisticsToolStripMenuItem1.Text = "Statistics"
+        '
+        'MyProfitToolStripMenuItem1
+        '
+        Me.MyProfitToolStripMenuItem1.Name = "MyProfitToolStripMenuItem1"
+        Me.MyProfitToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.MyProfitToolStripMenuItem1.Text = "My Profit"
+        '
+        'UsersToolStripMenuItem
+        '
+        Me.UsersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListOfUsersToolStripMenuItem, Me.AddNewUserToolStripMenuItem})
+        Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
+        Me.UsersToolStripMenuItem.Text = "Users"
+        '
+        'ListOfUsersToolStripMenuItem
+        '
+        Me.ListOfUsersToolStripMenuItem.Name = "ListOfUsersToolStripMenuItem"
+        Me.ListOfUsersToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ListOfUsersToolStripMenuItem.Text = "List Of Users"
+        '
+        'AddNewUserToolStripMenuItem
+        '
+        Me.AddNewUserToolStripMenuItem.Name = "AddNewUserToolStripMenuItem"
+        Me.AddNewUserToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AddNewUserToolStripMenuItem.Text = "Add New User"
         '
         'btn_Minimize
         '
@@ -520,7 +529,13 @@ Partial Class frm_AdminDas
         'Timer1
         '
         '
-        'frm_AdminDas
+        'GeneralReportToolStripMenuItem
+        '
+        Me.GeneralReportToolStripMenuItem.Name = "GeneralReportToolStripMenuItem"
+        Me.GeneralReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GeneralReportToolStripMenuItem.Text = "General Report"
+        '
+        'Frm_AdminDas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -541,7 +556,7 @@ Partial Class frm_AdminDas
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "frm_AdminDas"
+        Me.Name = "Frm_AdminDas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frm_AdminDas"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -566,7 +581,7 @@ Partial Class frm_AdminDas
     Friend WithEvents Guna2ShadowPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
     Friend WithEvents btn_DailySales As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btn_AddProduct As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btn_AddSaler As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Btn_AddSaler As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lblTime As Label
     Friend WithEvents Label4 As Label
@@ -582,22 +597,13 @@ Partial Class frm_AdminDas
     Friend WithEvents btn_Maximize As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents btn_close As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents mnSettings As ToolStripMenuItem
-    Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CloseToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProductsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AddCategoryToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents UpdateProductToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents UserManagmentToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents UserListToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ListOfProductToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SystemManagementToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
-    Friend WithEvents MyProfitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GeneralSystemSetingsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents StatisticsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lblAvelable As Label
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
@@ -605,4 +611,15 @@ Partial Class frm_AdminDas
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lblTimer As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents ProductToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UsersToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddCategoryToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UpdateProductToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ListOfProductToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents StatisticsToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents MyProfitToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ListOfUsersToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddNewUserToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GeneralReportToolStripMenuItem As ToolStripMenuItem
 End Class

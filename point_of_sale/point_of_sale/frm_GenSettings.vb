@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class frm_GenSettings
+Public Class Frm_GenSettings
     Private reader As MySqlDataReader
 
     Dim ListOfTables As ArrayList = New ArrayList()

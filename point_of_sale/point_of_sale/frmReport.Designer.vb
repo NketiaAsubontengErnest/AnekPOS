@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmReport
+Partial Class FrmReport
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -30,11 +30,6 @@ Partial Class frmReport
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.employeeID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.totalSales = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dat = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.closed = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmbDate = New System.Windows.Forms.ComboBox()
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -45,6 +40,11 @@ Partial Class frmReport
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.employeeID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.totalSales = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dat = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Date_closed = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -123,7 +123,7 @@ Partial Class frmReport
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.employeeID, Me.totalSales, Me.dat, Me.closed})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.employeeID, Me.totalSales, Me.dat, Me.Date_closed})
         Me.DataGridView1.Location = New System.Drawing.Point(10, 164)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -131,41 +131,6 @@ Partial Class frmReport
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(716, 390)
         Me.DataGridView1.TabIndex = 46
-        '
-        'id
-        '
-        Me.id.DataPropertyName = "ID"
-        Me.id.HeaderText = "No"
-        Me.id.Name = "id"
-        Me.id.ReadOnly = True
-        '
-        'employeeID
-        '
-        Me.employeeID.DataPropertyName = "employeeID"
-        Me.employeeID.HeaderText = "Employee ID"
-        Me.employeeID.Name = "employeeID"
-        Me.employeeID.ReadOnly = True
-        '
-        'totalSales
-        '
-        Me.totalSales.DataPropertyName = "totalSales"
-        Me.totalSales.HeaderText = "Total Sales"
-        Me.totalSales.Name = "totalSales"
-        Me.totalSales.ReadOnly = True
-        '
-        'dat
-        '
-        Me.dat.DataPropertyName = "date"
-        Me.dat.HeaderText = "Date"
-        Me.dat.Name = "dat"
-        Me.dat.ReadOnly = True
-        '
-        'closed
-        '
-        Me.closed.DataPropertyName = "datePrepared"
-        Me.closed.HeaderText = "Date Closed"
-        Me.closed.Name = "closed"
-        Me.closed.ReadOnly = True
         '
         'cmbDate
         '
@@ -261,6 +226,41 @@ Partial Class frmReport
         Me.Panel1.Size = New System.Drawing.Size(13, 566)
         Me.Panel1.TabIndex = 48
         '
+        'id
+        '
+        Me.id.DataPropertyName = "ID"
+        Me.id.HeaderText = "No"
+        Me.id.Name = "id"
+        Me.id.ReadOnly = True
+        '
+        'employeeID
+        '
+        Me.employeeID.DataPropertyName = "employeeID"
+        Me.employeeID.HeaderText = "Employee ID"
+        Me.employeeID.Name = "employeeID"
+        Me.employeeID.ReadOnly = True
+        '
+        'totalSales
+        '
+        Me.totalSales.DataPropertyName = "totalSales"
+        Me.totalSales.HeaderText = "Total Sales"
+        Me.totalSales.Name = "totalSales"
+        Me.totalSales.ReadOnly = True
+        '
+        'dat
+        '
+        Me.dat.DataPropertyName = "date"
+        Me.dat.HeaderText = "Date"
+        Me.dat.Name = "dat"
+        Me.dat.ReadOnly = True
+        '
+        'Date_closed
+        '
+        Me.Date_closed.DataPropertyName = "datePrepared"
+        Me.Date_closed.HeaderText = "Date Closed"
+        Me.Date_closed.Name = "Date_closed"
+        Me.Date_closed.ReadOnly = True
+        '
         'frmReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -307,10 +307,6 @@ Partial Class frmReport
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents cmbDate As ComboBox
     Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents id As DataGridViewTextBoxColumn
-    Friend WithEvents employeeID As DataGridViewTextBoxColumn
-    Friend WithEvents totalSales As DataGridViewTextBoxColumn
-    Friend WithEvents dat As DataGridViewTextBoxColumn
     Friend WithEvents closedA As DataGridViewTextBoxColumn
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lblReport As Guna.UI.WinForms.GunaLabel
@@ -320,5 +316,9 @@ Partial Class frmReport
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents closed As DataGridViewTextBoxColumn
+    Friend WithEvents id As DataGridViewTextBoxColumn
+    Friend WithEvents employeeID As DataGridViewTextBoxColumn
+    Friend WithEvents totalSales As DataGridViewTextBoxColumn
+    Friend WithEvents dat As DataGridViewTextBoxColumn
+    Friend WithEvents Date_closed As DataGridViewTextBoxColumn
 End Class
