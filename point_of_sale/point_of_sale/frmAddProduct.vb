@@ -4,11 +4,7 @@ Public Class FrmAddProduct
     Dim con As New MySqlConnection
 
     Private Sub txt_Quant_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Quant.KeyPress
-        If Asc(e.KeyChar) <> 8 Then
-            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
-                e.Handled = True
-            End If
-        End If
+        e.Handled = ValidateNumbers(e)
 
         If e.KeyChar = ChrW(Keys.Enter) Then
             If cmb_ProductType.SelectedIndex = -1 Then
@@ -58,7 +54,7 @@ Public Class FrmAddProduct
         Try
             If reader.RecordsAffected > 0 Then
                 MsgBox("Product added Successfully", MsgBoxStyle.Information)
-                clearMe()
+                ClearMe()
             End If
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical)
@@ -72,7 +68,6 @@ Public Class FrmAddProduct
 
         Dim count As Integer = 0
         Dim number As String = ""
-
 
         Using conn As New MySqlConnection(conString)
             Using command As New MySqlCommand
@@ -158,10 +153,7 @@ Public Class FrmAddProduct
 
 
     End Sub
-
-
-
-    Public Sub clearMe()
+    Public Sub ClearMe()
         txt_Quant.Clear()
         txt_ProductName.Clear()
         txt_ProductID.Clear()
@@ -209,7 +201,7 @@ Public Class FrmAddProduct
 
 
     Private Sub btn_Clear_Click(sender As Object, e As EventArgs) Handles btn_Clear.Click
-        clearMe()
+        ClearMe()
     End Sub
 
     Private Sub btn_addProduct_Click(sender As Object, e As EventArgs) Handles btn_addProduct.Click
@@ -259,43 +251,16 @@ Public Class FrmAddProduct
     Private Sub cmb_ProductType_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles cmb_ProductType.SelectedIndexChanged
         cmbCatID.Text = cmbCatID.Items(cmb_ProductType.SelectedIndex)
         txt_ProductName.Focus()
-
-
     End Sub
 
     Private Sub txt_Price_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Price.KeyPress
-        If Asc(e.KeyChar) <> 8 Then
-            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
-                If Asc(e.KeyChar) = 46 Then
-
-                Else
-                    e.Handled = True
-                End If
-            End If
-        End If
+        e.Handled = ValidateMoney(e)
     End Sub
-
-    Private Sub txt_UnitPrice_KeyPress(sender As Object, e As KeyPressEventArgs)
-
-    End Sub
-
     Private Sub txt_UnitPrice_KeyPress_1(sender As Object, e As KeyPressEventArgs) Handles txt_UnitPrice.KeyPress
-        If Asc(e.KeyChar) <> 8 Then
-            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
-                If Asc(e.KeyChar) = 46 Then
-
-                Else
-                    e.Handled = True
-                End If
-            End If
-        End If
+        e.Handled = ValidateMoney(e)
     End Sub
 
     Private Sub txt_Ave_Qty_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Ave_Qty.KeyPress
-        If Asc(e.KeyChar) <> 8 Then
-            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
-                e.Handled = True
-            End If
-        End If
+        e.Handled = ValidateNumbers(e)
     End Sub
 End Class

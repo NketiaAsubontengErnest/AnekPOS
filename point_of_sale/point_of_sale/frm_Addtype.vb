@@ -76,4 +76,5 @@ Public Class Frm_Addtype
         colorClear()
         Me.Close()
     End Sub
+
 End Class

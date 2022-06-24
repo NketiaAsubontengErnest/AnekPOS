@@ -36,31 +36,32 @@ Partial Class Frm_Addtype
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.btn_Close = New Bunifu.Framework.UI.BunifuImageButton()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btn_Close = New Bunifu.Framework.UI.BunifuImageButton()
         Me.Panel6.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         CType(Me.btn_Close, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GunaLabel2
         '
         Me.GunaLabel2.AutoSize = True
         Me.GunaLabel2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel2.Location = New System.Drawing.Point(192, 146)
+        Me.GunaLabel2.Location = New System.Drawing.Point(149, 146)
         Me.GunaLabel2.Name = "GunaLabel2"
-        Me.GunaLabel2.Size = New System.Drawing.Size(54, 25)
+        Me.GunaLabel2.Size = New System.Drawing.Size(151, 25)
         Me.GunaLabel2.TabIndex = 0
-        Me.GunaLabel2.Text = "Type"
+        Me.GunaLabel2.Text = "Category Name"
         '
         'GunaLabel3
         '
         Me.GunaLabel3.AutoSize = True
         Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.GunaLabel3.Location = New System.Drawing.Point(28, 9)
+        Me.GunaLabel3.ForeColor = System.Drawing.Color.Gold
+        Me.GunaLabel3.Location = New System.Drawing.Point(30, 1)
         Me.GunaLabel3.Name = "GunaLabel3"
         Me.GunaLabel3.Size = New System.Drawing.Size(355, 37)
         Me.GunaLabel3.TabIndex = 0
@@ -155,9 +156,9 @@ Partial Class Frm_Addtype
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.Panel6.Controls.Add(Me.Panel7)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel6.Location = New System.Drawing.Point(10, 306)
+        Me.Panel6.Location = New System.Drawing.Point(0, 306)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(412, 10)
+        Me.Panel6.Size = New System.Drawing.Size(432, 10)
         Me.Panel6.TabIndex = 48
         '
         'Panel7
@@ -172,10 +173,12 @@ Partial Class Frm_Addtype
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.Panel4.Controls.Add(Me.Panel5)
+        Me.Panel4.Controls.Add(Me.GunaLabel3)
+        Me.Panel4.Controls.Add(Me.btn_Close)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(10, 0)
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(412, 10)
+        Me.Panel4.Size = New System.Drawing.Size(432, 40)
         Me.Panel4.TabIndex = 49
         '
         'Panel5
@@ -186,14 +189,26 @@ Partial Class Frm_Addtype
         Me.Panel5.Size = New System.Drawing.Size(13, 472)
         Me.Panel5.TabIndex = 34
         '
+        'btn_Close
+        '
+        Me.btn_Close.Image = Global.point_of_sale.My.Resources.Resources.close
+        Me.btn_Close.ImageActive = Nothing
+        Me.btn_Close.Location = New System.Drawing.Point(395, 2)
+        Me.btn_Close.Name = "btn_Close"
+        Me.btn_Close.Size = New System.Drawing.Size(35, 30)
+        Me.btn_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btn_Close.TabIndex = 50
+        Me.btn_Close.TabStop = False
+        Me.btn_Close.Zoom = 10
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(422, 0)
+        Me.Panel2.Location = New System.Drawing.Point(422, 40)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(10, 316)
+        Me.Panel2.Size = New System.Drawing.Size(10, 266)
         Me.Panel2.TabIndex = 47
         '
         'Panel3
@@ -208,34 +223,22 @@ Partial Class Frm_Addtype
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Location = New System.Drawing.Point(0, 40)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(10, 316)
+        Me.Panel1.Size = New System.Drawing.Size(10, 266)
         Me.Panel1.TabIndex = 46
         '
-        'btn_Close
-        '
-        Me.btn_Close.Image = Global.point_of_sale.My.Resources.Resources.close
-        Me.btn_Close.ImageActive = Nothing
-        Me.btn_Close.Location = New System.Drawing.Point(391, 9)
-        Me.btn_Close.Name = "btn_Close"
-        Me.btn_Close.Size = New System.Drawing.Size(35, 30)
-        Me.btn_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btn_Close.TabIndex = 50
-        Me.btn_Close.TabStop = False
-        Me.btn_Close.Zoom = 10
-        '
-        'frm_Addtype
+        'Frm_Addtype
         '
         Me.AcceptButton = Me.btn_Add
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(432, 316)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GunaLabel2)
         Me.Controls.Add(Me.GunaLabel1)
         Me.Controls.Add(Me.Label2)
@@ -243,16 +246,15 @@ Partial Class Frm_Addtype
         Me.Controls.Add(Me.btn_Add)
         Me.Controls.Add(Me.txt_CatName)
         Me.Controls.Add(Me.txt_CatID)
-        Me.Controls.Add(Me.GunaLabel3)
-        Me.Controls.Add(Me.btn_Close)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frm_Addtype"
+        Me.Name = "Frm_Addtype"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frm_Addtype"
         Me.Panel6.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         CType(Me.btn_Close, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

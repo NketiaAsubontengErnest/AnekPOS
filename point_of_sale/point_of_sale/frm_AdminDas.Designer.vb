@@ -357,13 +357,13 @@ Partial Class Frm_AdminDas
         'SystemManagementToolStripMenuItem
         '
         Me.SystemManagementToolStripMenuItem.Name = "SystemManagementToolStripMenuItem"
-        Me.SystemManagementToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.SystemManagementToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SystemManagementToolStripMenuItem.Text = "System Setings"
         '
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
         'ProductToolStripMenuItem
@@ -376,19 +376,19 @@ Partial Class Frm_AdminDas
         'AddCategoryToolStripMenuItem
         '
         Me.AddCategoryToolStripMenuItem.Name = "AddCategoryToolStripMenuItem"
-        Me.AddCategoryToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
+        Me.AddCategoryToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AddCategoryToolStripMenuItem.Text = "Add Category"
         '
         'UpdateProductToolStripMenuItem
         '
         Me.UpdateProductToolStripMenuItem.Name = "UpdateProductToolStripMenuItem"
-        Me.UpdateProductToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
+        Me.UpdateProductToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.UpdateProductToolStripMenuItem.Text = "Update Product"
         '
         'ListOfProductToolStripMenuItem1
         '
         Me.ListOfProductToolStripMenuItem1.Name = "ListOfProductToolStripMenuItem1"
-        Me.ListOfProductToolStripMenuItem1.Size = New System.Drawing.Size(157, 22)
+        Me.ListOfProductToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.ListOfProductToolStripMenuItem1.Text = "List Of Product"
         '
         'ReportsToolStripMenuItem
@@ -401,19 +401,19 @@ Partial Class Frm_AdminDas
         'StatisticsToolStripMenuItem1
         '
         Me.StatisticsToolStripMenuItem1.Name = "StatisticsToolStripMenuItem1"
-        Me.StatisticsToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.StatisticsToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.StatisticsToolStripMenuItem1.Text = "Statistics"
         '
         'MyProfitToolStripMenuItem1
         '
         Me.MyProfitToolStripMenuItem1.Name = "MyProfitToolStripMenuItem1"
-        Me.MyProfitToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.MyProfitToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.MyProfitToolStripMenuItem1.Text = "My Profit"
         '
         'GeneralReportToolStripMenuItem
         '
         Me.GeneralReportToolStripMenuItem.Name = "GeneralReportToolStripMenuItem"
-        Me.GeneralReportToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GeneralReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.GeneralReportToolStripMenuItem.Text = "General Report"
         '
         'UsersToolStripMenuItem
