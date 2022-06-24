@@ -75,7 +75,7 @@ Public Class Frm_Sale
 
         load_Data_Grid()
 
-        Button1.PerformClick()
+        BtnRemoveItem.PerformClick()
     End Sub
     Public Sub countOutStock()
         Dim conStringg As String = connstring
@@ -355,35 +355,6 @@ Public Class Frm_Sale
         End Using
     End Sub
 
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-
-        Try
-            If lstItemID.SelectedIndex > -1 Then
-                lstItemID.Items.RemoveAt(lstItemID.SelectedIndex)
-
-                itemName.RemoveAt(lstTrackPrice.SelectedIndex)
-                unit.RemoveAt(lstTrackPrice.SelectedIndex)
-                prize.RemoveAt(lstTrackPrice.SelectedIndex)
-                quanti.RemoveAt(lstTrackPrice.SelectedIndex)
-                profit.RemoveAt(lstTrackPrice.SelectedIndex)
-                hidden.RemoveAt(lstTrackPrice.SelectedIndex)
-
-                overallTotal -= Convert.ToDecimal(lstTrackPrice.Items(lstTrackPrice.SelectedIndex))
-                lstTrackPrice.Items.RemoveAt(lstTrackPrice.SelectedIndex)
-                lstID.Items.RemoveAt(lstID.SelectedIndex)
-                lstTrackQty.Items.RemoveAt(lstTrackQty.SelectedIndex)
-
-                lblTotalPrice.Text = overallTotal
-
-                txtDeletePrice.Text = ""
-                TextBox1.Text = ""
-            End If
-        Catch ex As Exception
-
-        End Try
-    End Sub
 
     Private Sub list_ShowAdded_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstItemID.SelectedIndexChanged, lstTrackPrice.SelectedIndexChanged, lstTrackQty.SelectedIndexChanged, lstID.SelectedIndexChanged
         Try
@@ -714,7 +685,7 @@ Public Class Frm_Sale
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         rtxtReceipt.ResetText()
-        Button1.PerformClick()
+        BtnRemoveItem.PerformClick()
     End Sub
 
     Private Sub btn_close_Click(sender As Object, e As EventArgs)
@@ -846,6 +817,33 @@ Public Class Frm_Sale
     Private Sub Label1_MouseEnter(sender As Object, e As EventArgs) Handles Label1.MouseEnter
         Label1.ForeColor = Color.Blue
 
+    End Sub
+
+    Private Sub BtnRemoveItem_Click(sender As Object, e As EventArgs) Handles BtnRemoveItem.Click
+        Try
+            If lstItemID.SelectedIndex > -1 Then
+                lstItemID.Items.RemoveAt(lstItemID.SelectedIndex)
+
+                itemName.RemoveAt(lstTrackPrice.SelectedIndex)
+                unit.RemoveAt(lstTrackPrice.SelectedIndex)
+                prize.RemoveAt(lstTrackPrice.SelectedIndex)
+                quanti.RemoveAt(lstTrackPrice.SelectedIndex)
+                profit.RemoveAt(lstTrackPrice.SelectedIndex)
+                hidden.RemoveAt(lstTrackPrice.SelectedIndex)
+
+                overallTotal -= Convert.ToDecimal(lstTrackPrice.Items(lstTrackPrice.SelectedIndex))
+                lstTrackPrice.Items.RemoveAt(lstTrackPrice.SelectedIndex)
+                lstID.Items.RemoveAt(lstID.SelectedIndex)
+                lstTrackQty.Items.RemoveAt(lstTrackQty.SelectedIndex)
+
+                lblTotalPrice.Text = overallTotal
+
+                txtDeletePrice.Text = ""
+                TextBox1.Text = ""
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub Label1_MouseLeave(sender As Object, e As EventArgs) Handles Label1.MouseLeave

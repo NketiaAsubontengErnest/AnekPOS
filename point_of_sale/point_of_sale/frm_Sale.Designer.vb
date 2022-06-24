@@ -44,7 +44,6 @@ Partial Class Frm_Sale
         Me.GunaLabel6 = New Guna.UI.WinForms.GunaLabel()
         Me.lblTotalPrice = New Guna.UI.WinForms.GunaLabel()
         Me.cmb_ProductName = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.txtDeletePrice = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
@@ -79,6 +78,7 @@ Partial Class Frm_Sale
         Me.btn_Done = New Guna.UI.WinForms.GunaButton()
         Me.btn_AddToList = New Guna.UI.WinForms.GunaButton()
         Me.cmbType = New Guna.UI.WinForms.GunaComboBox()
+        Me.BtnRemoveItem = New Guna.UI.WinForms.GunaButton()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txt_Quantity, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
@@ -271,7 +271,7 @@ Partial Class Frm_Sale
         '
         Me.lblTotalPrice.AutoSize = True
         Me.lblTotalPrice.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalPrice.Location = New System.Drawing.Point(102, 445)
+        Me.lblTotalPrice.Location = New System.Drawing.Point(86, 445)
         Me.lblTotalPrice.Name = "lblTotalPrice"
         Me.lblTotalPrice.Size = New System.Drawing.Size(0, 37)
         Me.lblTotalPrice.TabIndex = 0
@@ -286,16 +286,6 @@ Partial Class Frm_Sale
         Me.cmb_ProductName.Name = "cmb_ProductName"
         Me.cmb_ProductName.Size = New System.Drawing.Size(322, 32)
         Me.cmb_ProductName.TabIndex = 0
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.Button1.Location = New System.Drawing.Point(242, 445)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(104, 30)
-        Me.Button1.TabIndex = 17
-        Me.Button1.Text = "Remove"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'txtDeletePrice
         '
@@ -346,7 +336,7 @@ Partial Class Frm_Sale
         '
         Me.GunaLabel7.AutoSize = True
         Me.GunaLabel7.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel7.Location = New System.Drawing.Point(15, 445)
+        Me.GunaLabel7.Location = New System.Drawing.Point(9, 445)
         Me.GunaLabel7.Name = "GunaLabel7"
         Me.GunaLabel7.Size = New System.Drawing.Size(89, 37)
         Me.GunaLabel7.TabIndex = 0
@@ -611,7 +601,7 @@ Partial Class Frm_Sale
         Me.btn_Clear.ForeColor = System.Drawing.Color.Black
         Me.btn_Clear.Image = Nothing
         Me.btn_Clear.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btn_Clear.Location = New System.Drawing.Point(352, 443)
+        Me.btn_Clear.Location = New System.Drawing.Point(314, 444)
         Me.btn_Clear.Name = "btn_Clear"
         Me.btn_Clear.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btn_Clear.OnHoverBorderColor = System.Drawing.Color.Black
@@ -636,7 +626,7 @@ Partial Class Frm_Sale
         Me.btn_Done.ForeColor = System.Drawing.Color.Black
         Me.btn_Done.Image = Nothing
         Me.btn_Done.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btn_Done.Location = New System.Drawing.Point(537, 443)
+        Me.btn_Done.Location = New System.Drawing.Point(499, 444)
         Me.btn_Done.Name = "btn_Done"
         Me.btn_Done.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btn_Done.OnHoverBorderColor = System.Drawing.Color.Black
@@ -691,12 +681,38 @@ Partial Class Frm_Sale
         Me.cmbType.Size = New System.Drawing.Size(322, 26)
         Me.cmbType.TabIndex = 42
         '
+        'BtnRemoveItem
+        '
+        Me.BtnRemoveItem.AnimationHoverSpeed = 0.07!
+        Me.BtnRemoveItem.AnimationSpeed = 0.03!
+        Me.BtnRemoveItem.BaseColor = System.Drawing.Color.Gold
+        Me.BtnRemoveItem.BorderColor = System.Drawing.Color.Black
+        Me.BtnRemoveItem.BorderSize = 2
+        Me.BtnRemoveItem.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnRemoveItem.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnRemoveItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRemoveItem.ForeColor = System.Drawing.Color.Black
+        Me.BtnRemoveItem.Image = Nothing
+        Me.BtnRemoveItem.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnRemoveItem.Location = New System.Drawing.Point(19, 194)
+        Me.BtnRemoveItem.Name = "BtnRemoveItem"
+        Me.BtnRemoveItem.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BtnRemoveItem.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnRemoveItem.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnRemoveItem.OnHoverImage = Nothing
+        Me.BtnRemoveItem.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnRemoveItem.Size = New System.Drawing.Size(146, 42)
+        Me.BtnRemoveItem.TabIndex = 43
+        Me.BtnRemoveItem.Text = "Remove Item"
+        Me.BtnRemoveItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'Frm_Sale
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1051, 758)
+        Me.Controls.Add(Me.BtnRemoveItem)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.cmbType)
@@ -711,7 +727,6 @@ Partial Class Frm_Sale
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.cmb_ProductName)
         Me.Controls.Add(Me.GunaLabel6)
         Me.Controls.Add(Me.txtpri)
@@ -740,8 +755,8 @@ Partial Class Frm_Sale
         Me.Controls.Add(Me.cmbCost)
         Me.Controls.Add(Me.lblProf)
         Me.Controls.Add(Me.cmb_Hide)
-        Me.Controls.Add(Me.GunaLabel7)
         Me.Controls.Add(Me.lblTotalPrice)
+        Me.Controls.Add(Me.GunaLabel7)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Frm_Sale"
@@ -776,7 +791,6 @@ Partial Class Frm_Sale
     Friend WithEvents GunaLabel6 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents lblTotalPrice As Guna.UI.WinForms.GunaLabel
     Friend WithEvents cmb_ProductName As ComboBox
-    Friend WithEvents Button1 As Button
     Friend WithEvents txtDeletePrice As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents ListBox1 As ListBox
@@ -814,4 +828,5 @@ Partial Class Frm_Sale
     Friend WithEvents cmb_Hide As ComboBox
     Friend WithEvents list_hide As ListBox
     Friend WithEvents cmbType As Guna.UI.WinForms.GunaComboBox
+    Friend WithEvents BtnRemoveItem As Guna.UI.WinForms.GunaButton
 End Class

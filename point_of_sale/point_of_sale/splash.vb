@@ -92,7 +92,6 @@ Public Class splash
                               `ID` int(11) NOT NULL AUTO_INCREMENT,
                               `Product_ID` varchar(11) NOT NULL,
                               `Pro_Name` varchar(50) NOT NULL,
-                              `type` varchar(10) NOT NULL,
                               `instock` int(11) NOT NULL,
                               `Price` decimal(11,2) NOT NULL,
                               `date` varchar(20) NOT NULL,
