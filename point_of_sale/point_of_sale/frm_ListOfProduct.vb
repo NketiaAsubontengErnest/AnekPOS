@@ -134,7 +134,11 @@ Public Class Frm_ListOfProduct
     End Sub
 
     Private Sub BunifuButton3_Click(sender As Object, e As EventArgs) Handles BunifuButton3.Click
-        Delete_Product()
+        Dim ans As DialogResult = MsgBox("Do You Want To  Delete the selected Product? ", MsgBoxStyle.YesNo, "Deleting A Product")
+
+        If ans = DialogResult.Yes Then
+            Delete_Product()
+        End If
     End Sub
     Public Sub Delete_Product()
         Dim ans As DialogResult = MsgBox("Do You Want To  Delete this product? ", MsgBoxStyle.YesNo, "Exit System")

@@ -15,7 +15,7 @@ Public Class Frm_Sale
 
     Dim unitPrice, quantity, total As Decimal
     Private Sub frm_Sale_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If IsClosed(Frm_AdminDas.lblUserID.Text) And Frm_AdminDas.lblRole.Text = "Sale" Then
+        If IsClosed(Frm_AdminDas.lblUserID.Text) And (Frm_AdminDas.lblRole.Text).ToLower = "sale" Then
             cmb_cID.Enabled = False
             cmb_ProductName.Enabled = False
             Label1.Visible = False

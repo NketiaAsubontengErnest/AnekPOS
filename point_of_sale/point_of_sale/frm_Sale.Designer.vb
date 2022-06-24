@@ -82,6 +82,7 @@ Partial Class Frm_Sale
         Me.cmbType = New Guna.UI.WinForms.GunaComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txt_Quantity, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -90,7 +91,8 @@ Partial Class Frm_Sale
         '
         Me.GunaLabel1.AutoSize = True
         Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.GunaLabel1.Location = New System.Drawing.Point(391, 8)
+        Me.GunaLabel1.ForeColor = System.Drawing.Color.Gold
+        Me.GunaLabel1.Location = New System.Drawing.Point(419, -4)
         Me.GunaLabel1.Name = "GunaLabel1"
         Me.GunaLabel1.Size = New System.Drawing.Size(163, 32)
         Me.GunaLabel1.TabIndex = 0
@@ -395,7 +397,7 @@ Partial Class Frm_Sale
         Me.Label1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.Label1.ForeColor = System.Drawing.Color.Maroon
-        Me.Label1.Location = New System.Drawing.Point(707, 13)
+        Me.Label1.Location = New System.Drawing.Point(780, 1)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(141, 20)
         Me.Label1.TabIndex = 22
@@ -457,9 +459,9 @@ Partial Class Frm_Sale
         Me.GunaLabel10.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel10.Location = New System.Drawing.Point(22, 48)
         Me.GunaLabel10.Name = "GunaLabel10"
-        Me.GunaLabel10.Size = New System.Drawing.Size(131, 25)
+        Me.GunaLabel10.Size = New System.Drawing.Size(94, 25)
         Me.GunaLabel10.TabIndex = 0
-        Me.GunaLabel10.Text = "Product Type"
+        Me.GunaLabel10.Text = "Category"
         '
         'cmb_QuantInstack
         '
@@ -498,7 +500,7 @@ Partial Class Frm_Sale
         Me.ckShowAll.CheckedState.BorderThickness = 0
         Me.ckShowAll.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ckShowAll.CheckedState.Parent = Me.ckShowAll
-        Me.ckShowAll.Location = New System.Drawing.Point(13, 15)
+        Me.ckShowAll.Location = New System.Drawing.Point(12, 5)
         Me.ckShowAll.Name = "ckShowAll"
         Me.ckShowAll.ShadowDecoration.Parent = Me.ckShowAll
         Me.ckShowAll.Size = New System.Drawing.Size(20, 20)
@@ -530,18 +532,22 @@ Partial Class Frm_Sale
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel6.Location = New System.Drawing.Point(13, 778)
+        Me.Panel6.Location = New System.Drawing.Point(0, 778)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(1025, 10)
+        Me.Panel6.Size = New System.Drawing.Size(1051, 10)
         Me.Panel6.TabIndex = 38
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.Label1)
+        Me.Panel4.Controls.Add(Me.ckShowAll)
+        Me.Panel4.Controls.Add(Me.GunaLabel1)
+        Me.Panel4.Controls.Add(Me.btn_close)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(13, 0)
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1025, 15)
+        Me.Panel4.Size = New System.Drawing.Size(1051, 29)
         Me.Panel4.TabIndex = 39
         '
         'Panel2
@@ -549,9 +555,9 @@ Partial Class Frm_Sale
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(1038, 0)
+        Me.Panel2.Location = New System.Drawing.Point(1038, 29)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(13, 788)
+        Me.Panel2.Size = New System.Drawing.Size(13, 749)
         Me.Panel2.TabIndex = 37
         '
         'Panel3
@@ -566,9 +572,9 @@ Partial Class Frm_Sale
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel8.Location = New System.Drawing.Point(0, 0)
+        Me.Panel8.Location = New System.Drawing.Point(0, 29)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(13, 788)
+        Me.Panel8.Size = New System.Drawing.Size(13, 749)
         Me.Panel8.TabIndex = 36
         '
         'cmb_Hide
@@ -593,7 +599,7 @@ Partial Class Frm_Sale
         '
         Me.btn_close.Image = Global.point_of_sale.My.Resources.Resources.close
         Me.btn_close.ImageActive = Nothing
-        Me.btn_close.Location = New System.Drawing.Point(1022, 2)
+        Me.btn_close.Location = New System.Drawing.Point(1021, -1)
         Me.btn_close.Name = "btn_close"
         Me.btn_close.Size = New System.Drawing.Size(27, 29)
         Me.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -605,7 +611,7 @@ Partial Class Frm_Sale
         '
         Me.btn_Clear.AnimationHoverSpeed = 0.07!
         Me.btn_Clear.AnimationSpeed = 0.03!
-        Me.btn_Clear.BaseColor = System.Drawing.Color.Yellow
+        Me.btn_Clear.BaseColor = System.Drawing.Color.Gold
         Me.btn_Clear.BorderColor = System.Drawing.Color.Black
         Me.btn_Clear.BorderSize = 2
         Me.btn_Clear.DialogResult = System.Windows.Forms.DialogResult.None
@@ -630,7 +636,7 @@ Partial Class Frm_Sale
         '
         Me.btn_Done.AnimationHoverSpeed = 0.07!
         Me.btn_Done.AnimationSpeed = 0.03!
-        Me.btn_Done.BaseColor = System.Drawing.Color.Yellow
+        Me.btn_Done.BaseColor = System.Drawing.Color.Gold
         Me.btn_Done.BorderColor = System.Drawing.Color.Black
         Me.btn_Done.BorderSize = 2
         Me.btn_Done.DialogResult = System.Windows.Forms.DialogResult.None
@@ -655,7 +661,7 @@ Partial Class Frm_Sale
         '
         Me.btn_AddToList.AnimationHoverSpeed = 0.07!
         Me.btn_AddToList.AnimationSpeed = 0.03!
-        Me.btn_AddToList.BaseColor = System.Drawing.Color.Yellow
+        Me.btn_AddToList.BaseColor = System.Drawing.Color.Gold
         Me.btn_AddToList.BorderColor = System.Drawing.Color.Black
         Me.btn_AddToList.BorderSize = 2
         Me.btn_AddToList.DialogResult = System.Windows.Forms.DialogResult.None
@@ -694,27 +700,24 @@ Partial Class Frm_Sale
         Me.cmbType.Size = New System.Drawing.Size(322, 26)
         Me.cmbType.TabIndex = 42
         '
-        'frm_Sale
+        'Frm_Sale
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1051, 788)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.cmbType)
         Me.Controls.Add(Me.rtxtReceipt)
         Me.Controls.Add(Me.list_hide)
-        Me.Controls.Add(Me.btn_close)
-        Me.Controls.Add(Me.ckShowAll)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.GunaLabel11)
         Me.Controls.Add(Me.cmb_QuantInstack)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button2)
@@ -740,7 +743,6 @@ Partial Class Frm_Sale
         Me.Controls.Add(Me.GunaLabel9)
         Me.Controls.Add(Me.GunaLabel4)
         Me.Controls.Add(Me.GunaLabel5)
-        Me.Controls.Add(Me.GunaLabel1)
         Me.Controls.Add(Me.cmb_cID)
         Me.Controls.Add(Me.lstTrackPrice)
         Me.Controls.Add(Me.txtDeletePrice)
@@ -752,11 +754,13 @@ Partial Class Frm_Sale
         Me.Controls.Add(Me.cmb_Hide)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frm_Sale"
+        Me.Name = "Frm_Sale"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frm_Sale"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txt_Quantity, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

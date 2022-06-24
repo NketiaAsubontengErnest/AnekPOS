@@ -35,6 +35,7 @@ Partial Class FrmStatics
         Me.GunaLabel5 = New Guna.UI.WinForms.GunaLabel()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -76,18 +77,19 @@ Partial Class FrmStatics
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel6.Location = New System.Drawing.Point(10, 656)
+        Me.Panel6.Location = New System.Drawing.Point(0, 656)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(1107, 10)
+        Me.Panel6.Size = New System.Drawing.Size(1127, 10)
         Me.Panel6.TabIndex = 54
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.GunaLabel5)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(10, 0)
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1107, 10)
+        Me.Panel4.Size = New System.Drawing.Size(1127, 34)
         Me.Panel4.TabIndex = 55
         '
         'Panel2
@@ -95,9 +97,9 @@ Partial Class FrmStatics
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(1117, 0)
+        Me.Panel2.Location = New System.Drawing.Point(1117, 34)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(10, 666)
+        Me.Panel2.Size = New System.Drawing.Size(10, 622)
         Me.Panel2.TabIndex = 53
         '
         'Panel3
@@ -112,43 +114,44 @@ Partial Class FrmStatics
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Location = New System.Drawing.Point(0, 34)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(10, 666)
+        Me.Panel1.Size = New System.Drawing.Size(10, 622)
         Me.Panel1.TabIndex = 52
         '
         'GunaLabel5
         '
         Me.GunaLabel5.AutoSize = True
-        Me.GunaLabel5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel5.Location = New System.Drawing.Point(545, 16)
+        Me.GunaLabel5.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel5.ForeColor = System.Drawing.Color.Gold
+        Me.GunaLabel5.Location = New System.Drawing.Point(433, -3)
         Me.GunaLabel5.Name = "GunaLabel5"
-        Me.GunaLabel5.Size = New System.Drawing.Size(184, 21)
+        Me.GunaLabel5.Size = New System.Drawing.Size(310, 37)
         Me.GunaLabel5.TabIndex = 50
         Me.GunaLabel5.Text = "General Sales Statistics"
         '
-        'frmStatics
+        'FrmStatics
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1127, 666)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.btn_close)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.GunaLabel5)
         Me.Controls.Add(Me.Chart1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmStatics"
+        Me.Name = "FrmStatics"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmStatics"
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 

@@ -60,13 +60,13 @@ Partial Class splash
         'ProgressBar1
         '
         Me.ProgressBar1.BackColor = System.Drawing.Color.Transparent
-        Me.ProgressBar1.FillThickness = 10
+        Me.ProgressBar1.FillThickness = 5
         Me.ProgressBar1.ForeColor = System.Drawing.Color.Gold
         Me.ProgressBar1.Location = New System.Drawing.Point(627, 327)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ProgressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ProgressBar1.ProgressThickness = 10
+        Me.ProgressBar1.ProgressColor2 = System.Drawing.Color.Gold
+        Me.ProgressBar1.ProgressThickness = 5
         Me.ProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.ProgressBar1.ShadowDecoration.Parent = Me.ProgressBar1
         Me.ProgressBar1.ShowPercentage = True

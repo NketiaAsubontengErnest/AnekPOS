@@ -18,6 +18,8 @@ Public Class User_Lists
         ada = New MySqlDataAdapter("SELECT `employeeID`, `name`, `Phone`, `address`, `position`,`block` FROM `employee`", con)
         ada.Fill(ds)
         dgvUsers.DataSource = ds.Tables(0)
+
+        clear()
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -27,7 +29,7 @@ Public Class User_Lists
     End Sub
 
     Private Sub btn_Clear_Click(sender As Object, e As EventArgs) Handles btn_Clear.Click
-
+        clear()
     End Sub
     Public Sub clear()
         txt_Name.Clear()
@@ -42,6 +44,7 @@ Public Class User_Lists
         Update_User()
         Update_login()
         load_Data_Grid()
+
     End Sub
 
     Public Sub Update_User()
@@ -115,8 +118,11 @@ Public Class User_Lists
             End If
             command = New MySqlCommand(insertString_EmpDetiles, connection)
             command.ExecuteNonQuery()
-
-            MsgBox("Account Successfully Blocked", MsgBoxStyle.Information)
+            If btnBlock.Text = "Unblock" Then
+                MsgBox("Account Successfully Unblock", MsgBoxStyle.Information)
+            Else
+                MsgBox("Account Successfully Blocked", MsgBoxStyle.Information)
+            End If
 
             connection.Close()
 
@@ -165,7 +171,6 @@ Public Class User_Lists
         Dim selectedRow As DataGridViewRow
         selectedRow = dgvUsers.Rows(uid)
 
-
         txt_UserID.Text = selectedRow.Cells(0).Value.ToString
         txt_Name.Text = selectedRow.Cells(1).Value.ToString
         txt_Phone.Text = selectedRow.Cells(2).Value.ToString
@@ -181,9 +186,13 @@ Public Class User_Lists
     End Sub
 
     Private Sub btnBlock_Click(sender As Object, e As EventArgs) Handles btnBlock.Click
-        Block_User_login()
-        Block_User_Emp()
-        load_Data_Grid()
+        Dim ans As DialogResult = MsgBox("Do You Want To  Block the selected user? ", MsgBoxStyle.YesNo, "Blocking A User")
+
+        If ans = DialogResult.Yes Then
+            Block_User_login()
+            Block_User_Emp()
+            load_Data_Grid()
+        End If
     End Sub
 
     Public Sub Delete_User_Emp()
@@ -240,7 +249,12 @@ Public Class User_Lists
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-        Delete_User_login()
-        Delete_User_Emp()
+        Dim ans As DialogResult = MsgBox("Do You Want To  Delete the selected user? ", MsgBoxStyle.YesNo, "Deleting A User")
+
+        If ans = DialogResult.Yes Then
+            Delete_User_login()
+            Delete_User_Emp()
+            load_Data_Grid()
+        End If
     End Sub
 End Class

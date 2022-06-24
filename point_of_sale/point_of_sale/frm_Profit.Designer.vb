@@ -35,15 +35,12 @@ Partial Class Frm_Profit
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Panel7 = New System.Windows.Forms.Panel()
         Me.BunifuLabel6 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.lblGenAmount = New Bunifu.UI.WinForms.BunifuLabel()
         Me.btn_close = New Bunifu.Framework.UI.BunifuImageButton()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        Me.Panel6.SuspendLayout()
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -65,11 +62,12 @@ Partial Class Frm_Profit
         '
         Me.BunifuLabel4.AutoEllipsis = False
         Me.BunifuLabel4.CursorType = Nothing
-        Me.BunifuLabel4.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuLabel4.Location = New System.Drawing.Point(281, 12)
+        Me.BunifuLabel4.Font = New System.Drawing.Font("Calibri", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuLabel4.ForeColor = System.Drawing.Color.Gold
+        Me.BunifuLabel4.Location = New System.Drawing.Point(463, 1)
         Me.BunifuLabel4.Name = "BunifuLabel4"
         Me.BunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.BunifuLabel4.Size = New System.Drawing.Size(103, 28)
+        Me.BunifuLabel4.Size = New System.Drawing.Size(143, 38)
         Me.BunifuLabel4.TabIndex = 4
         Me.BunifuLabel4.Text = "Profit Table"
         Me.BunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft
@@ -116,7 +114,7 @@ Partial Class Frm_Profit
         Me.cmbDate.HoverState.Parent = Me.cmbDate
         Me.cmbDate.ItemHeight = 30
         Me.cmbDate.ItemsAppearance.Parent = Me.cmbDate
-        Me.cmbDate.Location = New System.Drawing.Point(229, 46)
+        Me.cmbDate.Location = New System.Drawing.Point(321, 58)
         Me.cmbDate.Name = "cmbDate"
         Me.cmbDate.ShadowDecoration.Parent = Me.cmbDate
         Me.cmbDate.Size = New System.Drawing.Size(228, 36)
@@ -136,7 +134,7 @@ Partial Class Frm_Profit
         Me.cmbMonth.ItemHeight = 30
         Me.cmbMonth.Items.AddRange(New Object() {"", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"})
         Me.cmbMonth.ItemsAppearance.Parent = Me.cmbMonth
-        Me.cmbMonth.Location = New System.Drawing.Point(570, 46)
+        Me.cmbMonth.Location = New System.Drawing.Point(662, 58)
         Me.cmbMonth.Name = "cmbMonth"
         Me.cmbMonth.ShadowDecoration.Parent = Me.cmbMonth
         Me.cmbMonth.Size = New System.Drawing.Size(87, 36)
@@ -161,7 +159,7 @@ Partial Class Frm_Profit
         Me.BunifuLabel2.AutoEllipsis = False
         Me.BunifuLabel2.CursorType = Nothing
         Me.BunifuLabel2.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuLabel2.Location = New System.Drawing.Point(173, 46)
+        Me.BunifuLabel2.Location = New System.Drawing.Point(265, 58)
         Me.BunifuLabel2.Name = "BunifuLabel2"
         Me.BunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.BunifuLabel2.Size = New System.Drawing.Size(50, 28)
@@ -175,7 +173,7 @@ Partial Class Frm_Profit
         Me.BunifuLabel5.AutoEllipsis = False
         Me.BunifuLabel5.CursorType = Nothing
         Me.BunifuLabel5.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuLabel5.Location = New System.Drawing.Point(497, 48)
+        Me.BunifuLabel5.Location = New System.Drawing.Point(589, 60)
         Me.BunifuLabel5.Name = "BunifuLabel5"
         Me.BunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.BunifuLabel5.Size = New System.Drawing.Size(67, 28)
@@ -198,7 +196,7 @@ Partial Class Frm_Profit
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(670, 0)
+        Me.Panel2.Location = New System.Drawing.Point(1052, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(13, 652)
         Me.Panel2.TabIndex = 33
@@ -214,38 +212,21 @@ Partial Class Frm_Profit
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.Panel4.Controls.Add(Me.Panel5)
+        Me.Panel4.Controls.Add(Me.BunifuLabel4)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(13, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(657, 15)
+        Me.Panel4.Size = New System.Drawing.Size(1039, 42)
         Me.Panel4.TabIndex = 35
-        '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Panel5.Location = New System.Drawing.Point(670, 0)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(13, 472)
-        Me.Panel5.TabIndex = 34
         '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.Panel6.Controls.Add(Me.Panel7)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel6.Location = New System.Drawing.Point(13, 642)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(657, 10)
+        Me.Panel6.Size = New System.Drawing.Size(1039, 10)
         Me.Panel6.TabIndex = 35
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(670, 0)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(13, 472)
-        Me.Panel7.TabIndex = 34
         '
         'BunifuLabel6
         '
@@ -279,7 +260,7 @@ Partial Class Frm_Profit
         '
         Me.btn_close.Image = Global.point_of_sale.My.Resources.Resources.close
         Me.btn_close.ImageActive = Nothing
-        Me.btn_close.Location = New System.Drawing.Point(651, 4)
+        Me.btn_close.Location = New System.Drawing.Point(1038, 3)
         Me.btn_close.Name = "btn_close"
         Me.btn_close.Size = New System.Drawing.Size(27, 29)
         Me.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -287,11 +268,11 @@ Partial Class Frm_Profit
         Me.btn_close.TabStop = False
         Me.btn_close.Zoom = 10
         '
-        'frm_Profit
+        'Frm_Profit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(683, 652)
+        Me.ClientSize = New System.Drawing.Size(1065, 652)
         Me.Controls.Add(Me.btn_close)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel4)
@@ -304,18 +285,17 @@ Partial Class Frm_Profit
         Me.Controls.Add(Me.lblProfit)
         Me.Controls.Add(Me.lblGenAmount)
         Me.Controls.Add(Me.lblCost)
-        Me.Controls.Add(Me.BunifuLabel4)
         Me.Controls.Add(Me.BunifuLabel6)
         Me.Controls.Add(Me.BunifuLabel3)
         Me.Controls.Add(Me.BunifuLabel1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frm_Profit"
+        Me.Name = "Frm_Profit"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frm_Profit"
         Me.Panel2.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
-        Me.Panel6.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -335,9 +315,7 @@ Partial Class Frm_Profit
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents Panel7 As Panel
-    Friend WithEvents BunifuLabel6 As Bunifu.UI.Winforms.BunifuLabel
+    Friend WithEvents BunifuLabel6 As Bunifu.UI.WinForms.BunifuLabel
     Friend WithEvents lblGenAmount As Bunifu.UI.Winforms.BunifuLabel
 End Class

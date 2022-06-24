@@ -175,16 +175,7 @@ Public Class Frm_AdminDas
         End Using
     End Sub
 
-    Private Sub GeneralSystemSetingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GeneralSystemSetingsToolStripMenuItem.Click
-        Try
-            Closings()
 
-            Frm_GenSettings.MdiParent = Me
-            Frm_GenSettings.Show()
-        Catch ex As Exception
-
-        End Try
-    End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblTimer.Text = Format(Now, "hh:mm:ss tt")
     End Sub
@@ -299,6 +290,17 @@ Public Class Frm_AdminDas
             FrmAddSeler.MdiParent = Me
             FrmAddSeler.Show()
 
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub SystemManagementToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SystemManagementToolStripMenuItem.Click
+        Try
+            Closings()
+
+            Frm_GenSettings.MdiParent = Me
+            Frm_GenSettings.Show()
         Catch ex As Exception
 
         End Try

@@ -55,13 +55,13 @@ Partial Class User_Lists
         Me.btnDelete = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.btnBlock = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.dgvUsers, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel6.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -101,9 +101,9 @@ Partial Class User_Lists
         Me.GunaLabel2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel2.Location = New System.Drawing.Point(23, 71)
         Me.GunaLabel2.Name = "GunaLabel2"
-        Me.GunaLabel2.Size = New System.Drawing.Size(77, 25)
+        Me.GunaLabel2.Size = New System.Drawing.Size(123, 25)
         Me.GunaLabel2.TabIndex = 44
-        Me.GunaLabel2.Text = "User ID"
+        Me.GunaLabel2.Text = "Employee ID"
         '
         'GunaLabel3
         '
@@ -111,9 +111,9 @@ Partial Class User_Lists
         Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel3.Location = New System.Drawing.Point(23, 135)
         Me.GunaLabel3.Name = "GunaLabel3"
-        Me.GunaLabel3.Size = New System.Drawing.Size(64, 25)
+        Me.GunaLabel3.Size = New System.Drawing.Size(101, 25)
         Me.GunaLabel3.TabIndex = 45
-        Me.GunaLabel3.Text = "Name"
+        Me.GunaLabel3.Text = "Full Name"
         '
         'cmd_position
         '
@@ -521,34 +521,37 @@ Partial Class User_Lists
         '
         'Panel6
         '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Panel6.Controls.Add(Me.Panel7)
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel6.Location = New System.Drawing.Point(13, 463)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(799, 10)
         Me.Panel6.TabIndex = 58
         '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(670, 0)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(13, 472)
-        Me.Panel7.TabIndex = 34
-        '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.GunaLabel1)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(13, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(799, 15)
+        Me.Panel4.Size = New System.Drawing.Size(799, 38)
         Me.Panel4.TabIndex = 59
+        '
+        'GunaLabel1
+        '
+        Me.GunaLabel1.AutoSize = True
+        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel1.ForeColor = System.Drawing.Color.Gold
+        Me.GunaLabel1.Location = New System.Drawing.Point(316, 2)
+        Me.GunaLabel1.Name = "GunaLabel1"
+        Me.GunaLabel1.Size = New System.Drawing.Size(156, 32)
+        Me.GunaLabel1.TabIndex = 60
+        Me.GunaLabel1.Text = "List Of Users"
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel2.Location = New System.Drawing.Point(812, 0)
@@ -566,7 +569,7 @@ Partial Class User_Lists
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -604,7 +607,8 @@ Partial Class User_Lists
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "User_Lists"
         CType(Me.dgvUsers, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel6.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -627,9 +631,9 @@ Partial Class User_Lists
     Friend WithEvents btnDelete As Bunifu.UI.Winforms.BunifuButton.BunifuButton
     Friend WithEvents btnBlock As Bunifu.UI.Winforms.BunifuButton.BunifuButton
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents Panel7 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
 End Class

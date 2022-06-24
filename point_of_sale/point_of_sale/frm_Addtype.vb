@@ -21,7 +21,7 @@ Public Class Frm_Addtype
 
     Public Sub genrateID()
         Dim conString As String = connstring
-        Dim query As String = "SELECT * FROM producttype"
+        query = "SELECT * FROM producttype"
 
         Dim count As Integer = 0
         Dim number As String = ""
@@ -37,7 +37,6 @@ Public Class Frm_Addtype
                 Try
                     conn.Open()
                     Dim reader As MySqlDataReader = command.ExecuteReader
-
                     While reader.Read
                         count += 1
                     End While
@@ -57,7 +56,7 @@ Public Class Frm_Addtype
 
         count += 1
 
-        txt_CatID.Text = "Cat" + number + count.ToString
+        txt_CatID.Text = "CAT" + number + count.ToString
     End Sub
 
     Private Sub frm_Addtype_Load(sender As Object, e As EventArgs) Handles MyBase.Load
