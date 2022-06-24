@@ -93,5 +93,11 @@ point_of_sale
  </summary>
  <returns></returns>
 </member>
+<member name="M:point_of_sale.frm_GenSettings.checkCurrentPass">
+ <summary>
+ compare the current password in the database to entered password
+ </summary>
+ <returns></returns>
+</member>
 </members>
 </doc>

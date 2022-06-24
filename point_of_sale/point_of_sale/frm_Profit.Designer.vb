@@ -22,15 +22,15 @@ Partial Class frm_Profit
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.BunifuLabel3 = New Bunifu.UI.Winforms.BunifuLabel()
-        Me.BunifuLabel4 = New Bunifu.UI.Winforms.BunifuLabel()
-        Me.lblCost = New Bunifu.UI.Winforms.BunifuLabel()
-        Me.lblProfit = New Bunifu.UI.Winforms.BunifuLabel()
+        Me.BunifuLabel3 = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.BunifuLabel4 = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.lblCost = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.lblProfit = New Bunifu.UI.WinForms.BunifuLabel()
         Me.cmbDate = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.cmbMonth = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.BunifuLabel1 = New Bunifu.UI.Winforms.BunifuLabel()
-        Me.BunifuLabel2 = New Bunifu.UI.Winforms.BunifuLabel()
-        Me.BunifuLabel5 = New Bunifu.UI.Winforms.BunifuLabel()
+        Me.BunifuLabel1 = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.BunifuLabel2 = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.BunifuLabel5 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -38,8 +38,8 @@ Partial Class frm_Profit
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.BunifuLabel6 = New Bunifu.UI.Winforms.BunifuLabel()
-        Me.lblGenAmount = New Bunifu.UI.Winforms.BunifuLabel()
+        Me.BunifuLabel6 = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.lblGenAmount = New Bunifu.UI.WinForms.BunifuLabel()
         Me.btn_close = New Bunifu.Framework.UI.BunifuImageButton()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -59,7 +59,7 @@ Partial Class frm_Profit
         Me.BunifuLabel3.TabIndex = 3
         Me.BunifuLabel3.Text = "Profit:"
         Me.BunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel3.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'BunifuLabel4
         '
@@ -73,7 +73,7 @@ Partial Class frm_Profit
         Me.BunifuLabel4.TabIndex = 4
         Me.BunifuLabel4.Text = "Profit Table"
         Me.BunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel4.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'lblCost
         '
@@ -87,7 +87,7 @@ Partial Class frm_Profit
         Me.lblCost.TabIndex = 5
         Me.lblCost.Text = "General Cost:"
         Me.lblCost.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.lblCost.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.lblCost.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'lblProfit
         '
@@ -101,7 +101,7 @@ Partial Class frm_Profit
         Me.lblProfit.TabIndex = 7
         Me.lblProfit.Text = "General Cost:"
         Me.lblProfit.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.lblProfit.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.lblProfit.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'cmbDate
         '
@@ -154,7 +154,7 @@ Partial Class frm_Profit
         Me.BunifuLabel1.TabIndex = 1
         Me.BunifuLabel1.Text = "General Cost:"
         Me.BunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel1.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'BunifuLabel2
         '
@@ -168,7 +168,7 @@ Partial Class frm_Profit
         Me.BunifuLabel2.TabIndex = 10
         Me.BunifuLabel2.Text = "Date:"
         Me.BunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel2.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'BunifuLabel5
         '
@@ -182,7 +182,7 @@ Partial Class frm_Profit
         Me.BunifuLabel5.TabIndex = 11
         Me.BunifuLabel5.Text = "Month:"
         Me.BunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel5.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'Panel1
         '
@@ -259,7 +259,7 @@ Partial Class frm_Profit
         Me.BunifuLabel6.TabIndex = 1
         Me.BunifuLabel6.Text = "General Amount:"
         Me.BunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel6.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'lblGenAmount
         '
@@ -273,7 +273,7 @@ Partial Class frm_Profit
         Me.lblGenAmount.TabIndex = 5
         Me.lblGenAmount.Text = "General Cost:"
         Me.lblGenAmount.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.lblGenAmount.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.lblGenAmount.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'btn_close
         '
@@ -308,6 +308,7 @@ Partial Class frm_Profit
         Me.Controls.Add(Me.BunifuLabel6)
         Me.Controls.Add(Me.BunifuLabel3)
         Me.Controls.Add(Me.BunifuLabel1)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frm_Profit"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

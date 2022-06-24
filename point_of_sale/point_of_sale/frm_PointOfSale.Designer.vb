@@ -23,18 +23,18 @@ Partial Class frm_PointOfSale
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_PointOfSale))
-        Dim BorderEdges1 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties1 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties2 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim BorderEdges2 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties3 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties4 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Me.GunaGradientPanel2 = New Guna.UI.WinForms.GunaGradientPanel()
         Me.lbl_TotalSales = New System.Windows.Forms.Label()
         Me.lblUserName = New System.Windows.Forms.Label()
         Me.lblUserID = New System.Windows.Forms.Label()
-        Me.btn_MySale = New Bunifu.UI.Winforms.BunifuButton.BunifuButton()
-        Me.btn_Sale = New Bunifu.UI.Winforms.BunifuButton.BunifuButton()
+        Me.btn_MySale = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.btn_Sale = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.SettingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -69,7 +69,7 @@ Partial Class frm_PointOfSale
         Me.GunaGradientPanel2.GradientColor4 = System.Drawing.Color.White
         Me.GunaGradientPanel2.Location = New System.Drawing.Point(0, 29)
         Me.GunaGradientPanel2.Name = "GunaGradientPanel2"
-        Me.GunaGradientPanel2.Size = New System.Drawing.Size(1199, 60)
+        Me.GunaGradientPanel2.Size = New System.Drawing.Size(1199, 48)
         Me.GunaGradientPanel2.TabIndex = 3
         Me.GunaGradientPanel2.Text = "GunaGradientPanel2"
         '
@@ -114,7 +114,7 @@ Partial Class frm_PointOfSale
         Me.btn_MySale.BackColor = System.Drawing.Color.Transparent
         Me.btn_MySale.BackColor1 = System.Drawing.Color.Yellow
         Me.btn_MySale.BackgroundImage = CType(resources.GetObject("btn_MySale.BackgroundImage"), System.Drawing.Image)
-        Me.btn_MySale.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.btn_MySale.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         Me.btn_MySale.ButtonText = "My Sales"
         Me.btn_MySale.ButtonTextMarginLeft = 0
         Me.btn_MySale.ColorContrastOnClick = 45
@@ -129,7 +129,7 @@ Partial Class frm_PointOfSale
         Me.btn_MySale.DisabledBorderColor = System.Drawing.Color.Empty
         Me.btn_MySale.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_MySale.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.btn_MySale.FocusState = Bunifu.UI.Winforms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.btn_MySale.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
         Me.btn_MySale.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btn_MySale.ForeColor = System.Drawing.Color.Black
         Me.btn_MySale.IconLeftCursor = System.Windows.Forms.Cursors.Hand
@@ -147,7 +147,7 @@ Partial Class frm_PointOfSale
         Me.btn_MySale.Name = "btn_MySale"
         StateProperties1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
         StateProperties1.BorderRadius = 3
-        StateProperties1.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         StateProperties1.BorderThickness = 1
         StateProperties1.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
         StateProperties1.ForeColor = System.Drawing.Color.White
@@ -156,14 +156,14 @@ Partial Class frm_PointOfSale
         Me.btn_MySale.onHoverState = StateProperties1
         StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         StateProperties2.BorderRadius = 3
-        StateProperties2.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         StateProperties2.BorderThickness = 1
         StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         StateProperties2.ForeColor = System.Drawing.Color.White
         StateProperties2.IconLeftImage = Nothing
         StateProperties2.IconRightImage = Nothing
         Me.btn_MySale.OnPressedState = StateProperties2
-        Me.btn_MySale.Size = New System.Drawing.Size(172, 45)
+        Me.btn_MySale.Size = New System.Drawing.Size(189, 45)
         Me.btn_MySale.TabIndex = 10
         Me.btn_MySale.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btn_MySale.TextMarginLeft = 0
@@ -178,8 +178,8 @@ Partial Class frm_PointOfSale
         Me.btn_Sale.BackColor = System.Drawing.Color.Transparent
         Me.btn_Sale.BackColor1 = System.Drawing.Color.Yellow
         Me.btn_Sale.BackgroundImage = CType(resources.GetObject("btn_Sale.BackgroundImage"), System.Drawing.Image)
-        Me.btn_Sale.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.btn_Sale.ButtonText = "Sales"
+        Me.btn_Sale.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.btn_Sale.ButtonText = "Make Sales"
         Me.btn_Sale.ButtonTextMarginLeft = 0
         Me.btn_Sale.ColorContrastOnClick = 45
         Me.btn_Sale.ColorContrastOnHover = 45
@@ -193,7 +193,7 @@ Partial Class frm_PointOfSale
         Me.btn_Sale.DisabledBorderColor = System.Drawing.Color.Empty
         Me.btn_Sale.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_Sale.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.btn_Sale.FocusState = Bunifu.UI.Winforms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.btn_Sale.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
         Me.btn_Sale.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btn_Sale.ForeColor = System.Drawing.Color.Black
         Me.btn_Sale.IconLeftCursor = System.Windows.Forms.Cursors.Hand
@@ -211,7 +211,7 @@ Partial Class frm_PointOfSale
         Me.btn_Sale.Name = "btn_Sale"
         StateProperties3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
         StateProperties3.BorderRadius = 3
-        StateProperties3.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         StateProperties3.BorderThickness = 1
         StateProperties3.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
         StateProperties3.ForeColor = System.Drawing.Color.White
@@ -220,14 +220,14 @@ Partial Class frm_PointOfSale
         Me.btn_Sale.onHoverState = StateProperties3
         StateProperties4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         StateProperties4.BorderRadius = 3
-        StateProperties4.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         StateProperties4.BorderThickness = 1
         StateProperties4.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         StateProperties4.ForeColor = System.Drawing.Color.White
         StateProperties4.IconLeftImage = Nothing
         StateProperties4.IconRightImage = Nothing
         Me.btn_Sale.OnPressedState = StateProperties4
-        Me.btn_Sale.Size = New System.Drawing.Size(172, 45)
+        Me.btn_Sale.Size = New System.Drawing.Size(189, 45)
         Me.btn_Sale.TabIndex = 9
         Me.btn_Sale.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btn_Sale.TextMarginLeft = 0
@@ -329,9 +329,9 @@ Partial Class frm_PointOfSale
         Me.Panel1.Controls.Add(Me.btn_MySale)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.ForeColor = System.Drawing.Color.DarkRed
-        Me.Panel1.Location = New System.Drawing.Point(0, 89)
+        Me.Panel1.Location = New System.Drawing.Point(0, 77)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(186, 592)
+        Me.Panel1.Size = New System.Drawing.Size(186, 604)
         Me.Panel1.TabIndex = 11
         '
         'Label7
@@ -361,6 +361,7 @@ Partial Class frm_PointOfSale
         Me.Controls.Add(Me.btn_Minimize)
         Me.Controls.Add(Me.GunaGradientPanel2)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True

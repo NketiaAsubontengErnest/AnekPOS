@@ -389,6 +389,7 @@ Partial Class frmCheck_Stock
         Me.Controls.Add(Me.txtQuantity)
         Me.Controls.Add(Me.dgvOutStock)
         Me.Controls.Add(Me.cmbID)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmCheck_Stock"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

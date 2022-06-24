@@ -102,8 +102,9 @@
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\..\..\Downloads\Compressed\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\..\..\Downloads\Compressed\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    <Reference Include="Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
@@ -239,7 +240,7 @@
     <Compile Include="frm_AdminDas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_ChanegePassword.Designer.vb">
+    <Compile Include="frm_ChanegePassword.designer.vb">
       <DependentUpon>frm_ChanegePassword.vb</DependentUpon>
     </Compile>
     <Compile Include="frm_ChanegePassword.vb">
@@ -282,6 +283,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="globalConfig\GlobalConfig.vb" />
+    <Compile Include="globalConfig\QueriesModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

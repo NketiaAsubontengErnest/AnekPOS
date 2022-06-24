@@ -34,7 +34,7 @@ Partial Class frmReport
         Me.employeeID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.totalSales = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dat = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.closedA = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.closed = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmbDate = New System.Windows.Forms.ComboBox()
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -123,7 +123,7 @@ Partial Class frmReport
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.employeeID, Me.totalSales, Me.dat, Me.closedA})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.employeeID, Me.totalSales, Me.dat, Me.closed})
         Me.DataGridView1.Location = New System.Drawing.Point(10, 164)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -162,10 +162,10 @@ Partial Class frmReport
         '
         'closed
         '
-        Me.closedA.DataPropertyName = "datePrepared"
-        Me.closedA.HeaderText = "Date Closed"
-        Me.closedA.Name = "closed"
-        Me.closedA.ReadOnly = True
+        Me.closed.DataPropertyName = "datePrepared"
+        Me.closed.HeaderText = "Date Closed"
+        Me.closed.Name = "closed"
+        Me.closed.ReadOnly = True
         '
         'cmbDate
         '
@@ -284,6 +284,7 @@ Partial Class frmReport
         Me.Controls.Add(Me.cmbDate)
         Me.Controls.Add(Me.cmbName)
         Me.Controls.Add(Me.cmbEmployeeID)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmReport"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -319,4 +320,5 @@ Partial Class frmReport
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents closed As DataGridViewTextBoxColumn
 End Class

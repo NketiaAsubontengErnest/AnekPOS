@@ -74,9 +74,9 @@ Partial Class frmAddSeler
         Me.GunaLabel2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel2.Location = New System.Drawing.Point(19, 66)
         Me.GunaLabel2.Name = "GunaLabel2"
-        Me.GunaLabel2.Size = New System.Drawing.Size(77, 25)
+        Me.GunaLabel2.Size = New System.Drawing.Size(123, 25)
         Me.GunaLabel2.TabIndex = 0
-        Me.GunaLabel2.Text = "User ID"
+        Me.GunaLabel2.Text = "Employee ID"
         '
         'GunaLabel3
         '
@@ -453,6 +453,7 @@ Partial Class frmAddSeler
         Me.Controls.Add(Me.txt_Name)
         Me.Controls.Add(Me.txt_UserID)
         Me.Controls.Add(Me.GunaLabel1)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmAddSeler"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -2,23 +2,19 @@
 Imports MySql.Data.MySqlClient
 
 Public Class frm_MySales
-
     Private Sub frm_MySales_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        calculateSales()
-        setName()
-        load_Data_Grid()
 
         If frm_AdminDas.lblRole.Text = "Sale" Then
-
             cmbName.Enabled = False
             cmbEmpID.Enabled = False
             PictureBox1.Visible = False
-
             cmbEmpID.Text = frm_AdminDas.lblUserID.Text
             cmbName.Text = frm_AdminDas.lblUserName.Text
-
-
         End If
+
+        calculateSales()
+        setName()
+        load_Data_Grid()
 
     End Sub
 
@@ -128,7 +124,6 @@ Public Class frm_MySales
         Else
             ada = New MySqlDataAdapter("Select ID,item,Qty,price,Amount,month from sales where employeeID='" +
                                        cmbEmpID.Text + "' AND month='" + cmbDate.Text + "'", con)
-
         End If
 
         ada.Fill(ds)
@@ -149,7 +144,6 @@ Public Class frm_MySales
         Else
             ada = New MySqlDataAdapter("Select ID,item,Qty,price,Amount,month from sales where employeeID='" +
                                        cmbEmpID.Text + "' AND month='" + cmbDate.Text + "' AND hide = 'NO'", con)
-
         End If
 
         ada.Fill(ds)
@@ -174,19 +168,10 @@ Public Class frm_MySales
     Private Sub cmbDate_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbDate.SelectedIndexChanged
         load_Data_Grid()
         calculateSales()
-
-
     End Sub
 
-    Private Sub data_MySales_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles data_MySales.CellContentClick
-
-    End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-        'cmbEmpID.SelectedIndex = -1
-        'cmbName.SelectedIndex = -1
-        'cmbDate.SelectedIndex = -1
 
         cmbDate.Text = ""
         cmbEmpID.Text = ""
@@ -196,11 +181,8 @@ Public Class frm_MySales
         calculateSales()
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub btn_close_Click(sender As Object, e As EventArgs) Handles btn_close.Click
+        colorClear()
         Me.Close()
 
     End Sub
@@ -212,4 +194,5 @@ Public Class frm_MySales
             load_Data_Grid()
         End If
     End Sub
+
 End Class

@@ -24,62 +24,62 @@ Partial Class frmAddProduct
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAddProduct))
-        Dim BorderEdges1 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties1 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties2 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim BorderEdges2 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties3 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties4 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties5 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties6 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties7 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties8 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties9 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties10 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties11 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties12 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties13 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties14 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties15 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties16 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties17 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties18 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties19 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties20 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties21 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties22 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties23 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties24 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties25 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties26 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties27 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
-        Dim StateProperties28 As Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties5 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties6 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties7 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties8 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties9 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties10 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties11 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties12 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties13 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties14 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties15 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties16 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties17 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties18 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties19 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties20 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties21 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties22 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties23 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties24 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties25 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties26 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties27 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
+        Dim StateProperties28 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties()
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
-        Me.BunifuLabel4 = New Bunifu.UI.Winforms.BunifuLabel()
-        Me.BunifuLabel1 = New Bunifu.UI.Winforms.BunifuLabel()
+        Me.BunifuLabel4 = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.BunifuLabel1 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.cmb_ProductType = New Guna.UI.WinForms.GunaComboBox()
-        Me.BunifuLabel3 = New Bunifu.UI.Winforms.BunifuLabel()
-        Me.BunifuLabel5 = New Bunifu.UI.Winforms.BunifuLabel()
+        Me.BunifuLabel3 = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.BunifuLabel5 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.cmbCatID = New Guna.UI.WinForms.GunaComboBox()
-        Me.BunifuLabel2 = New Bunifu.UI.Winforms.BunifuLabel()
+        Me.BunifuLabel2 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.BunifuLabel6 = New Bunifu.UI.Winforms.BunifuLabel()
+        Me.BunifuLabel6 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.checkHide = New Guna.UI2.WinForms.Guna2CheckBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.BunifuLabel7 = New Bunifu.UI.Winforms.BunifuLabel()
+        Me.BunifuLabel7 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btn_addProduct = New Bunifu.UI.Winforms.BunifuButton.BunifuButton()
-        Me.btn_Clear = New Bunifu.UI.Winforms.BunifuButton.BunifuButton()
+        Me.btn_addProduct = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.btn_Clear = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.btn_close = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.txt_Ave_Qty = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox()
-        Me.txt_UnitPrice = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox()
-        Me.txt_ProductID = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox()
-        Me.txt_Quant = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox()
-        Me.txt_Price = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox()
-        Me.txt_ProductName = New Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox()
+        Me.txt_Ave_Qty = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox()
+        Me.txt_UnitPrice = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox()
+        Me.txt_ProductID = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox()
+        Me.txt_Quant = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox()
+        Me.txt_Price = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox()
+        Me.txt_ProductName = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox()
         Me.Panel2.SuspendLayout()
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -106,7 +106,7 @@ Partial Class frmAddProduct
         Me.BunifuLabel4.TabIndex = 17
         Me.BunifuLabel4.Text = "Selling Price"
         Me.BunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel4.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'BunifuLabel1
         '
@@ -120,7 +120,7 @@ Partial Class frmAddProduct
         Me.BunifuLabel1.TabIndex = 13
         Me.BunifuLabel1.Text = "Product Name"
         Me.BunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel1.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'cmb_ProductType
         '
@@ -152,7 +152,7 @@ Partial Class frmAddProduct
         Me.BunifuLabel3.TabIndex = 32
         Me.BunifuLabel3.Text = "Product Type"
         Me.BunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel3.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'BunifuLabel5
         '
@@ -166,7 +166,7 @@ Partial Class frmAddProduct
         Me.BunifuLabel5.TabIndex = 34
         Me.BunifuLabel5.Text = "Quantity"
         Me.BunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel5.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'cmbCatID
         '
@@ -199,7 +199,7 @@ Partial Class frmAddProduct
         Me.BunifuLabel2.TabIndex = 36
         Me.BunifuLabel2.Text = "Product ID"
         Me.BunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel2.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'BunifuLabel6
         '
@@ -213,7 +213,7 @@ Partial Class frmAddProduct
         Me.BunifuLabel6.TabIndex = 39
         Me.BunifuLabel6.Text = "Cost Price"
         Me.BunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel6.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'checkHide
         '
@@ -273,7 +273,7 @@ Partial Class frmAddProduct
         Me.BunifuLabel7.TabIndex = 47
         Me.BunifuLabel7.Text = "Average Quantity"
         Me.BunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel7.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'Panel3
         '
@@ -301,7 +301,7 @@ Partial Class frmAddProduct
         Me.btn_addProduct.BackColor = System.Drawing.Color.Transparent
         Me.btn_addProduct.BackColor1 = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.btn_addProduct.BackgroundImage = CType(resources.GetObject("btn_addProduct.BackgroundImage"), System.Drawing.Image)
-        Me.btn_addProduct.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.btn_addProduct.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         Me.btn_addProduct.ButtonText = "Add Product"
         Me.btn_addProduct.ButtonTextMarginLeft = 0
         Me.btn_addProduct.ColorContrastOnClick = 45
@@ -316,7 +316,7 @@ Partial Class frmAddProduct
         Me.btn_addProduct.DisabledBorderColor = System.Drawing.Color.Empty
         Me.btn_addProduct.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_addProduct.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.btn_addProduct.FocusState = Bunifu.UI.Winforms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.btn_addProduct.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
         Me.btn_addProduct.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_addProduct.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btn_addProduct.IconLeftCursor = System.Windows.Forms.Cursors.Hand
@@ -334,7 +334,7 @@ Partial Class frmAddProduct
         Me.btn_addProduct.Name = "btn_addProduct"
         StateProperties1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
         StateProperties1.BorderRadius = 20
-        StateProperties1.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         StateProperties1.BorderThickness = 2
         StateProperties1.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
         StateProperties1.ForeColor = System.Drawing.Color.White
@@ -343,7 +343,7 @@ Partial Class frmAddProduct
         Me.btn_addProduct.onHoverState = StateProperties1
         StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         StateProperties2.BorderRadius = 20
-        StateProperties2.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         StateProperties2.BorderThickness = 2
         StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         StateProperties2.ForeColor = System.Drawing.Color.White
@@ -365,7 +365,7 @@ Partial Class frmAddProduct
         Me.btn_Clear.BackColor = System.Drawing.Color.Transparent
         Me.btn_Clear.BackColor1 = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.btn_Clear.BackgroundImage = CType(resources.GetObject("btn_Clear.BackgroundImage"), System.Drawing.Image)
-        Me.btn_Clear.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.btn_Clear.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         Me.btn_Clear.ButtonText = "Clear"
         Me.btn_Clear.ButtonTextMarginLeft = 0
         Me.btn_Clear.ColorContrastOnClick = 45
@@ -380,7 +380,7 @@ Partial Class frmAddProduct
         Me.btn_Clear.DisabledBorderColor = System.Drawing.Color.Empty
         Me.btn_Clear.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_Clear.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.btn_Clear.FocusState = Bunifu.UI.Winforms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.btn_Clear.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
         Me.btn_Clear.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_Clear.ForeColor = System.Drawing.Color.Black
         Me.btn_Clear.IconLeftCursor = System.Windows.Forms.Cursors.Hand
@@ -398,7 +398,7 @@ Partial Class frmAddProduct
         Me.btn_Clear.Name = "btn_Clear"
         StateProperties3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
         StateProperties3.BorderRadius = 20
-        StateProperties3.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         StateProperties3.BorderThickness = 2
         StateProperties3.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
         StateProperties3.ForeColor = System.Drawing.Color.White
@@ -407,7 +407,7 @@ Partial Class frmAddProduct
         Me.btn_Clear.onHoverState = StateProperties3
         StateProperties4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         StateProperties4.BorderRadius = 20
-        StateProperties4.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         StateProperties4.BorderThickness = 2
         StateProperties4.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         StateProperties4.ForeColor = System.Drawing.Color.White
@@ -496,7 +496,7 @@ Partial Class frmAddProduct
         Me.txt_Ave_Qty.SelectionStart = 0
         Me.txt_Ave_Qty.ShortcutsEnabled = True
         Me.txt_Ave_Qty.Size = New System.Drawing.Size(286, 40)
-        Me.txt_Ave_Qty.Style = Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox._Style.Bunifu
+        Me.txt_Ave_Qty.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu
         Me.txt_Ave_Qty.TabIndex = 5
         Me.txt_Ave_Qty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txt_Ave_Qty.TextMarginBottom = 0
@@ -569,7 +569,7 @@ Partial Class frmAddProduct
         Me.txt_UnitPrice.SelectionStart = 0
         Me.txt_UnitPrice.ShortcutsEnabled = True
         Me.txt_UnitPrice.Size = New System.Drawing.Size(286, 38)
-        Me.txt_UnitPrice.Style = Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox._Style.Bunifu
+        Me.txt_UnitPrice.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu
         Me.txt_UnitPrice.TabIndex = 3
         Me.txt_UnitPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txt_UnitPrice.TextMarginBottom = 0
@@ -643,7 +643,7 @@ Partial Class frmAddProduct
         Me.txt_ProductID.SelectionStart = 0
         Me.txt_ProductID.ShortcutsEnabled = True
         Me.txt_ProductID.Size = New System.Drawing.Size(286, 38)
-        Me.txt_ProductID.Style = Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox._Style.Bunifu
+        Me.txt_ProductID.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu
         Me.txt_ProductID.TabIndex = 22
         Me.txt_ProductID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txt_ProductID.TextMarginBottom = 0
@@ -716,7 +716,7 @@ Partial Class frmAddProduct
         Me.txt_Quant.SelectionStart = 0
         Me.txt_Quant.ShortcutsEnabled = True
         Me.txt_Quant.Size = New System.Drawing.Size(286, 40)
-        Me.txt_Quant.Style = Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox._Style.Bunifu
+        Me.txt_Quant.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu
         Me.txt_Quant.TabIndex = 4
         Me.txt_Quant.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txt_Quant.TextMarginBottom = 0
@@ -789,7 +789,7 @@ Partial Class frmAddProduct
         Me.txt_Price.SelectionStart = 0
         Me.txt_Price.ShortcutsEnabled = True
         Me.txt_Price.Size = New System.Drawing.Size(286, 38)
-        Me.txt_Price.Style = Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox._Style.Bunifu
+        Me.txt_Price.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu
         Me.txt_Price.TabIndex = 2
         Me.txt_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txt_Price.TextMarginBottom = 0
@@ -862,7 +862,7 @@ Partial Class frmAddProduct
         Me.txt_ProductName.SelectionStart = 0
         Me.txt_ProductName.ShortcutsEnabled = True
         Me.txt_ProductName.Size = New System.Drawing.Size(286, 38)
-        Me.txt_ProductName.Style = Bunifu.UI.Winforms.BunifuTextbox.BunifuTextBox._Style.Bunifu
+        Me.txt_ProductName.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu
         Me.txt_ProductName.TabIndex = 1
         Me.txt_ProductName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txt_ProductName.TextMarginBottom = 0
@@ -904,6 +904,7 @@ Partial Class frmAddProduct
         Me.Controls.Add(Me.txt_Price)
         Me.Controls.Add(Me.txt_ProductName)
         Me.Controls.Add(Me.cmbCatID)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmAddProduct"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

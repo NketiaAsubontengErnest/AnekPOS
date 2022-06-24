@@ -750,6 +750,7 @@ Partial Class frm_Sale
         Me.Controls.Add(Me.cmbCost)
         Me.Controls.Add(Me.lblProf)
         Me.Controls.Add(Me.cmb_Hide)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frm_Sale"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

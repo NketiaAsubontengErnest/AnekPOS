@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class frmAddProduct
-    Dim connection As MySqlConnection = New MySqlConnection
+    Dim con As New MySqlConnection
 
     Private Sub txt_Quant_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Quant.KeyPress
         If Asc(e.KeyChar) <> 8 Then
@@ -41,17 +41,7 @@ Public Class frmAddProduct
         If checkHide.Checked = True Then
             check = "YES"
         End If
-        Try
-            Dim cmd As MySqlCommand
-
-            connection.ConnectionString = connstring
-
-
-            connection.Open()
-
-
-
-            query = "INSERT INTO `product`(`Product_ID`, `Pro_Name`, `instock`, `Price`,`date`,`catID`,`selling_price`, `hide`, `Average_Quantity`, `New_Quant_Added`, `Date_Updated`) VALUES
+        query = "INSERT INTO `product`(`Product_ID`, `Pro_Name`, `instock`, `Price`,`date`,`catID`,`selling_price`, `hide`, `Average_Quantity`, `New_Quant_Added`, `Date_Updated`) VALUES
                                                         ('" & txt_ProductID.Text & "', 
                                                         '" & (txt_ProductName.Text).ToUpper & "',
                                                         '" & txt_Quant.Text & "', 
@@ -64,33 +54,21 @@ Public Class frmAddProduct
                                                         '" & txt_Quant.Text & "',
                                                         '" & DateTime.Now & "')"
 
-            cmd = New MySqlCommand(query, connection)
-
-            Dim reader = cmd.ExecuteNonQuery
-
+        reader = Inserting(query)
+        If reader.RecordsAffected > 0 Then
             MsgBox("Product added Successfully", MsgBoxStyle.Information)
-
-            connection.Close()
             clearMe()
+        End If
 
-        Catch ex As MySqlException
-            MsgBox(ex.Message, MsgBoxStyle.Critical)
-        Finally
-
-            connection.Dispose()
-
-            genrateID()
-
-        End Try
+        genrateID()
     End Sub
 
     Public Sub genrateID()
         Dim conString As String = connstring
-        Dim query As String = "SELECT * FROM  product"
+        query = "SELECT * FROM  product"
 
         Dim count As Integer = 0
         Dim number As String = ""
-        Dim cmd As MySqlCommand
 
 
         Using conn As New MySqlConnection(conString)
@@ -138,7 +116,7 @@ Public Class frmAddProduct
 
         Dim queryex As String = "SELECT * FROM  product where Product_ID = '" + proId + "'"
 
-        cmd = New MySqlCommand(queryex, connection)
+        cmd = New MySqlCommand(queryex, conn)
 
         Using conn As New MySqlConnection(conString)
             Using command As New MySqlCommand
@@ -202,14 +180,13 @@ Public Class frmAddProduct
     Public Sub data_fill_Product_type()
 
         Dim conString As String = connstring
-        Dim query As String = "SELECT * FROM producttype"
+        query = "SELECT * FROM producttype"
 
         Using conn As New MySqlConnection(conString)
             Using command As New MySqlCommand
                 With command
                     .Connection = conn
                     .CommandText = query
-
                 End With
 
                 Try
@@ -262,10 +239,6 @@ Public Class frmAddProduct
             Catch ex As Exception
 
             End Try
-
-
-
-
         End If
 
     End Sub
@@ -275,6 +248,7 @@ Public Class frmAddProduct
     End Sub
 
     Private Sub btn_close_Click(sender As Object, e As EventArgs) Handles btn_close.Click
+        colorClear()
         Me.Close()
 
     End Sub

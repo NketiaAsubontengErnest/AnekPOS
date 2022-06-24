@@ -48,6 +48,8 @@ Public Class frmLogin
                             frm_AdminDas.lblUserID.Text = (txt_Username.Text).ToUpper
                             frm_AdminDas.lblTime.Text = DateTime.Now.ToString
                             frm_AdminDas.lblRole.Text = role
+
+
                             selectUsername()
 
                             Me.Close()
@@ -120,6 +122,7 @@ Public Class frmLogin
 
                     If reader.Read Then
                         frm_AdminDas.lblUserName.Text = reader("name")
+                        frm_AdminDas.lblSetDash.Text = reader("name") + " / Dashbord"
                         frm_PointOfSale.lblUserName.Text = reader("name")
                     End If
 

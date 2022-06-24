@@ -16,19 +16,16 @@ Module GlobalConfig
     Public Sub openConnection()
         conn = New MySqlConnection(connstring)
         Try
-            If (conn.State = ConnectionState.Closed) Then
+            If conn.State = ConnectionState.Closed Then
                 conn.Open()
-
             End If
         Catch ex As Exception
             MsgBox(ex.Message.ToString())
-
         End Try
     End Sub
 
     Public Sub closings()
         frm_Addtype.Close()
-        frm_ChanegePassword.Close()
         frm_GenSettings.Close()
         frm_ListOfProduct.Close()
         frm_MySales.Close()
@@ -83,5 +80,16 @@ Module GlobalConfig
         End Using
         Return cipherText
     End Function
+    Public Sub colorClear()
 
+        frm_AdminDas.btnMakeSales.FillColor = Color.Gold
+        frm_AdminDas.btnMakeSales.ForeColor = Color.Black
+        frm_AdminDas.btn_AddProduct.FillColor = Color.Gold
+        frm_AdminDas.btn_AddProduct.ForeColor = Color.Black
+        frm_AdminDas.btn_AddSaler.FillColor = Color.Gold
+        frm_AdminDas.btn_AddSaler.ForeColor = Color.Black
+        frm_AdminDas.btn_DailySales.FillColor = Color.Gold
+        frm_AdminDas.btn_DailySales.ForeColor = Color.Black
+
+    End Sub
 End Module

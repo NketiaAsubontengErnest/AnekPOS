@@ -22,15 +22,17 @@ Partial Class frm_MySales
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.lbl_EmpName = New Guna.UI.WinForms.GunaLabel()
         Me.lbl_EmpID = New Guna.UI.WinForms.GunaLabel()
-        Me.data_MySales = New Bunifu.UI.Winforms.BunifuDataGridView()
+        Me.data_MySales = New Bunifu.UI.WinForms.BunifuDataGridView()
         Me.GunaShadowPanel1 = New Guna.UI.WinForms.GunaShadowPanel()
+        Me.btn_close = New Bunifu.Framework.UI.BunifuImageButton()
         Me.chk_show_Hide = New System.Windows.Forms.CheckBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
         Me.lblDailySales = New Guna.UI.WinForms.GunaLabel()
@@ -43,14 +45,12 @@ Partial Class frm_MySales
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.btn_close = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.data_MySales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GunaShadowPanel1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GunaLabel1
@@ -89,9 +89,9 @@ Partial Class frm_MySales
         Me.data_MySales.AllowDrop = True
         Me.data_MySales.AllowUserToAddRows = False
         Me.data_MySales.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        Me.data_MySales.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        Me.data_MySales.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.data_MySales.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -99,14 +99,14 @@ Partial Class frm_MySales
         Me.data_MySales.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.data_MySales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.data_MySales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 11.75!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.data_MySales.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI Semibold", 11.75!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.data_MySales.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.data_MySales.ColumnHeadersHeight = 40
         Me.data_MySales.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.data_MySales.CurrentTheme.AlternatingRowsStyle.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
@@ -124,14 +124,14 @@ Partial Class frm_MySales
         Me.data_MySales.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black
         Me.data_MySales.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.data_MySales.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.data_MySales.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.data_MySales.DefaultCellStyle = DataGridViewCellStyle6
         Me.data_MySales.EnableHeadersVisualStyles = False
         Me.data_MySales.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.data_MySales.HeaderBackColor = System.Drawing.Color.DodgerBlue
@@ -146,14 +146,14 @@ Partial Class frm_MySales
         Me.data_MySales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.data_MySales.Size = New System.Drawing.Size(794, 301)
         Me.data_MySales.TabIndex = 2
-        Me.data_MySales.Theme = Bunifu.UI.Winforms.BunifuDataGridView.PresetThemes.Light
+        Me.data_MySales.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
         '
         'GunaShadowPanel1
         '
         Me.GunaShadowPanel1.BackColor = System.Drawing.Color.Transparent
         Me.GunaShadowPanel1.BaseColor = System.Drawing.Color.White
-        Me.GunaShadowPanel1.Controls.Add(Me.chk_show_Hide)
         Me.GunaShadowPanel1.Controls.Add(Me.btn_close)
+        Me.GunaShadowPanel1.Controls.Add(Me.chk_show_Hide)
         Me.GunaShadowPanel1.Controls.Add(Me.PictureBox1)
         Me.GunaShadowPanel1.Controls.Add(Me.Panel1)
         Me.GunaShadowPanel1.Controls.Add(Me.cmbDate)
@@ -164,20 +164,43 @@ Partial Class frm_MySales
         Me.GunaShadowPanel1.Controls.Add(Me.GunaLabel2)
         Me.GunaShadowPanel1.Controls.Add(Me.lbl_EmpID)
         Me.GunaShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GunaShadowPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.GunaShadowPanel1.Location = New System.Drawing.Point(0, 15)
         Me.GunaShadowPanel1.Name = "GunaShadowPanel1"
         Me.GunaShadowPanel1.ShadowColor = System.Drawing.Color.Black
-        Me.GunaShadowPanel1.Size = New System.Drawing.Size(822, 514)
+        Me.GunaShadowPanel1.Size = New System.Drawing.Size(809, 499)
         Me.GunaShadowPanel1.TabIndex = 3
+        '
+        'btn_close
+        '
+        Me.btn_close.Image = Global.point_of_sale.My.Resources.Resources.close
+        Me.btn_close.ImageActive = Nothing
+        Me.btn_close.Location = New System.Drawing.Point(779, 1)
+        Me.btn_close.Name = "btn_close"
+        Me.btn_close.Size = New System.Drawing.Size(27, 29)
+        Me.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btn_close.TabIndex = 6
+        Me.btn_close.TabStop = False
+        Me.btn_close.Zoom = 10
         '
         'chk_show_Hide
         '
         Me.chk_show_Hide.AutoSize = True
-        Me.chk_show_Hide.Location = New System.Drawing.Point(18, 19)
+        Me.chk_show_Hide.Location = New System.Drawing.Point(18, 6)
         Me.chk_show_Hide.Name = "chk_show_Hide"
         Me.chk_show_Hide.Size = New System.Drawing.Size(15, 14)
         Me.chk_show_Hide.TabIndex = 7
         Me.chk_show_Hide.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Image = Global.point_of_sale.My.Resources.Resources.reload
+        Me.PictureBox1.Location = New System.Drawing.Point(288, 158)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(26, 28)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
         '
         'Panel1
         '
@@ -265,9 +288,9 @@ Partial Class frm_MySales
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(13, 0)
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(796, 15)
+        Me.Panel4.Size = New System.Drawing.Size(809, 15)
         Me.Panel4.TabIndex = 39
         '
         'Panel2
@@ -292,33 +315,10 @@ Partial Class frm_MySales
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel8.Location = New System.Drawing.Point(0, 0)
+        Me.Panel8.Location = New System.Drawing.Point(0, 15)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(13, 514)
+        Me.Panel8.Size = New System.Drawing.Size(13, 499)
         Me.Panel8.TabIndex = 36
-        '
-        'btn_close
-        '
-        Me.btn_close.Image = Global.point_of_sale.My.Resources.Resources.close
-        Me.btn_close.ImageActive = Nothing
-        Me.btn_close.Location = New System.Drawing.Point(780, 16)
-        Me.btn_close.Name = "btn_close"
-        Me.btn_close.Size = New System.Drawing.Size(27, 29)
-        Me.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btn_close.TabIndex = 6
-        Me.btn_close.TabStop = False
-        Me.btn_close.Zoom = 10
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox1.Image = Global.point_of_sale.My.Resources.Resources.reload
-        Me.PictureBox1.Location = New System.Drawing.Point(288, 158)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(26, 28)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
         '
         'frm_MySales
         '
@@ -326,11 +326,12 @@ Partial Class frm_MySales
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(822, 514)
         Me.Controls.Add(Me.Panel6)
-        Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.data_MySales)
         Me.Controls.Add(Me.GunaShadowPanel1)
+        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.Panel2)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frm_MySales"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -338,11 +339,11 @@ Partial Class frm_MySales
         CType(Me.data_MySales, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GunaShadowPanel1.ResumeLayout(False)
         Me.GunaShadowPanel1.PerformLayout()
+        CType(Me.btn_close, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
-        CType(Me.btn_close, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

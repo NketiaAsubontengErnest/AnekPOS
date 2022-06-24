@@ -14,10 +14,17 @@ Public Class frm_AdminDas
     Private Sub btn_AddSaler_Click(sender As Object, e As EventArgs) Handles btn_AddSaler.Click
 
         Try
+            colorClear()
+            btn_AddSaler.FillColor = Color.FromArgb(43, 102, 121)
+            btn_AddSaler.ForeColor = Color.Gold
+
             closings()
 
             frmAddSeler.MdiParent = Me
             frmAddSeler.Show()
+
+
+
         Catch ex As Exception
 
         End Try
@@ -25,6 +32,9 @@ Public Class frm_AdminDas
     End Sub
     Private Sub btn_AddProduct_Click(sender As Object, e As EventArgs) Handles btn_AddProduct.Click
         Try
+            colorClear()
+            btn_AddProduct.FillColor = Color.FromArgb(43, 102, 121)
+            btn_AddProduct.ForeColor = Color.Gold
 
             closings()
 
@@ -37,19 +47,13 @@ Public Class frm_AdminDas
 
     End Sub
 
-    Private Sub btn_DailySales_Click(sender As Object, e As EventArgs) Handles btnMakeSales.Click
-        Try
-            closings()
-
-
-            frm_Sale.MdiParent = Me
-            frm_Sale.Show()
-        Catch ex As Exception
-
-        End Try
-    End Sub
     Private Sub btn_DailySales_Click_1(sender As Object, e As EventArgs) Handles btn_DailySales.Click
         Try
+
+            colorClear()
+            btn_DailySales.FillColor = Color.FromArgb(43, 102, 121)
+            btn_DailySales.ForeColor = Color.Gold
+
             closings()
 
             frm_MySales.MdiParent = Me
@@ -246,7 +250,7 @@ Public Class frm_AdminDas
     End Sub
 
     Private Sub frm_AdminDas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Timer1.Start()
         countOutStock()
         lblUserID.Text = frmLogin.txt_Username.Text
     End Sub
@@ -310,4 +314,23 @@ Public Class frm_AdminDas
         End Try
     End Sub
 
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        lblTimer.Text = TimeString
+    End Sub
+
+    Private Sub btnMakeSales_Click(sender As Object, e As EventArgs) Handles btnMakeSales.Click
+        Try
+            colorClear()
+            btnMakeSales.FillColor = Color.FromArgb(43, 102, 121)
+            btnMakeSales.ForeColor = Color.Gold
+
+            closings()
+
+
+            frm_Sale.MdiParent = Me
+            frm_Sale.Show()
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

@@ -22,19 +22,30 @@ Partial Class frm_GenSettings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_GenSettings))
-        Dim BorderEdges1 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties1 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties2 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim BorderEdges2 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties3 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties4 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties5 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties6 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties7 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties8 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
+        Me.btn_change = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.txt_confPassword = New Guna.UI.WinForms.GunaTextBox()
+        Me.txt_NewPassword = New Guna.UI.WinForms.GunaTextBox()
+        Me.txt_currentPassword = New Guna.UI.WinForms.GunaTextBox()
+        Me.GunaLabel4 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
+        Me.txtUserID = New Guna.UI.WinForms.GunaTextBox()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.btnBack_up = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -48,8 +59,8 @@ Partial Class frm_GenSettings
         Me.Button1 = New System.Windows.Forms.Button()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.btnChaPass = New Bunifu.UI.Winforms.BunifuButton.BunifuButton()
-        Me.btnBack_up = New Bunifu.UI.Winforms.BunifuButton.BunifuButton()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.GunaLabel5 = New Guna.UI.WinForms.GunaLabel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         Me.TabPage5.SuspendLayout()
@@ -106,7 +117,15 @@ Partial Class frm_GenSettings
         '
         'TabPage4
         '
-        Me.TabPage4.Controls.Add(Me.btnChaPass)
+        Me.TabPage4.Controls.Add(Me.GunaLabel1)
+        Me.TabPage4.Controls.Add(Me.GunaLabel2)
+        Me.TabPage4.Controls.Add(Me.btn_change)
+        Me.TabPage4.Controls.Add(Me.txt_confPassword)
+        Me.TabPage4.Controls.Add(Me.txt_NewPassword)
+        Me.TabPage4.Controls.Add(Me.txt_currentPassword)
+        Me.TabPage4.Controls.Add(Me.GunaLabel4)
+        Me.TabPage4.Controls.Add(Me.GunaLabel3)
+        Me.TabPage4.Controls.Add(Me.txtUserID)
         Me.TabPage4.Location = New System.Drawing.Point(4, 28)
         Me.TabPage4.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage4.Name = "TabPage4"
@@ -115,6 +134,178 @@ Partial Class frm_GenSettings
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Change Password"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'GunaLabel1
+        '
+        Me.GunaLabel1.AutoSize = True
+        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel1.Location = New System.Drawing.Point(352, 39)
+        Me.GunaLabel1.Name = "GunaLabel1"
+        Me.GunaLabel1.Size = New System.Drawing.Size(65, 21)
+        Me.GunaLabel1.TabIndex = 5
+        Me.GunaLabel1.Text = "User ID"
+        '
+        'GunaLabel2
+        '
+        Me.GunaLabel2.AutoSize = True
+        Me.GunaLabel2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel2.Location = New System.Drawing.Point(313, 123)
+        Me.GunaLabel2.Name = "GunaLabel2"
+        Me.GunaLabel2.Size = New System.Drawing.Size(143, 21)
+        Me.GunaLabel2.TabIndex = 6
+        Me.GunaLabel2.Text = "Current Password"
+        '
+        'btn_change
+        '
+        Me.btn_change.AllowToggling = False
+        Me.btn_change.AnimationSpeed = 200
+        Me.btn_change.AutoGenerateColors = False
+        Me.btn_change.BackColor = System.Drawing.Color.Transparent
+        Me.btn_change.BackColor1 = System.Drawing.Color.Yellow
+        Me.btn_change.BackgroundImage = CType(resources.GetObject("btn_change.BackgroundImage"), System.Drawing.Image)
+        Me.btn_change.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.btn_change.ButtonText = "change"
+        Me.btn_change.ButtonTextMarginLeft = 0
+        Me.btn_change.ColorContrastOnClick = 45
+        Me.btn_change.ColorContrastOnHover = 45
+        Me.btn_change.Cursor = System.Windows.Forms.Cursors.Hand
+        BorderEdges3.BottomLeft = True
+        BorderEdges3.BottomRight = True
+        BorderEdges3.TopLeft = True
+        BorderEdges3.TopRight = True
+        Me.btn_change.CustomizableEdges = BorderEdges3
+        Me.btn_change.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.btn_change.DisabledBorderColor = System.Drawing.Color.Empty
+        Me.btn_change.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_change.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.btn_change.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.btn_change.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.btn_change.ForeColor = System.Drawing.Color.Black
+        Me.btn_change.IconLeftCursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_change.IconMarginLeft = 11
+        Me.btn_change.IconPadding = 10
+        Me.btn_change.IconRightCursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_change.IdleBorderColor = System.Drawing.Color.Black
+        Me.btn_change.IdleBorderRadius = 3
+        Me.btn_change.IdleBorderThickness = 1
+        Me.btn_change.IdleFillColor = System.Drawing.Color.Yellow
+        Me.btn_change.IdleIconLeftImage = Nothing
+        Me.btn_change.IdleIconRightImage = Nothing
+        Me.btn_change.IndicateFocus = False
+        Me.btn_change.Location = New System.Drawing.Point(191, 369)
+        Me.btn_change.Name = "btn_change"
+        StateProperties5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties5.BorderRadius = 3
+        StateProperties5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties5.BorderThickness = 1
+        StateProperties5.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties5.ForeColor = System.Drawing.Color.White
+        StateProperties5.IconLeftImage = Nothing
+        StateProperties5.IconRightImage = Nothing
+        Me.btn_change.onHoverState = StateProperties5
+        StateProperties6.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties6.BorderRadius = 3
+        StateProperties6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties6.BorderThickness = 1
+        StateProperties6.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties6.ForeColor = System.Drawing.Color.White
+        StateProperties6.IconLeftImage = Nothing
+        StateProperties6.IconRightImage = Nothing
+        Me.btn_change.OnPressedState = StateProperties6
+        Me.btn_change.Size = New System.Drawing.Size(396, 59)
+        Me.btn_change.TabIndex = 13
+        Me.btn_change.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btn_change.TextMarginLeft = 0
+        Me.btn_change.UseDefaultRadiusAndThickness = True
+        '
+        'txt_confPassword
+        '
+        Me.txt_confPassword.BaseColor = System.Drawing.Color.White
+        Me.txt_confPassword.BorderColor = System.Drawing.Color.Silver
+        Me.txt_confPassword.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txt_confPassword.FocusedBaseColor = System.Drawing.Color.White
+        Me.txt_confPassword.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_confPassword.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txt_confPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_confPassword.Location = New System.Drawing.Point(191, 309)
+        Me.txt_confPassword.Name = "txt_confPassword"
+        Me.txt_confPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_confPassword.SelectedText = ""
+        Me.txt_confPassword.Size = New System.Drawing.Size(396, 41)
+        Me.txt_confPassword.TabIndex = 12
+        Me.txt_confPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txt_NewPassword
+        '
+        Me.txt_NewPassword.BaseColor = System.Drawing.Color.White
+        Me.txt_NewPassword.BorderColor = System.Drawing.Color.Silver
+        Me.txt_NewPassword.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txt_NewPassword.FocusedBaseColor = System.Drawing.Color.White
+        Me.txt_NewPassword.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_NewPassword.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txt_NewPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_NewPassword.Location = New System.Drawing.Point(191, 225)
+        Me.txt_NewPassword.Name = "txt_NewPassword"
+        Me.txt_NewPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_NewPassword.SelectedText = ""
+        Me.txt_NewPassword.Size = New System.Drawing.Size(396, 45)
+        Me.txt_NewPassword.TabIndex = 11
+        Me.txt_NewPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txt_currentPassword
+        '
+        Me.txt_currentPassword.BaseColor = System.Drawing.Color.White
+        Me.txt_currentPassword.BorderColor = System.Drawing.Color.Silver
+        Me.txt_currentPassword.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txt_currentPassword.FocusedBaseColor = System.Drawing.Color.White
+        Me.txt_currentPassword.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_currentPassword.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txt_currentPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_currentPassword.Location = New System.Drawing.Point(191, 146)
+        Me.txt_currentPassword.Name = "txt_currentPassword"
+        Me.txt_currentPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_currentPassword.SelectedText = ""
+        Me.txt_currentPassword.Size = New System.Drawing.Size(396, 43)
+        Me.txt_currentPassword.TabIndex = 10
+        Me.txt_currentPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'GunaLabel4
+        '
+        Me.GunaLabel4.AutoSize = True
+        Me.GunaLabel4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel4.Location = New System.Drawing.Point(316, 285)
+        Me.GunaLabel4.Name = "GunaLabel4"
+        Me.GunaLabel4.Size = New System.Drawing.Size(148, 21)
+        Me.GunaLabel4.TabIndex = 7
+        Me.GunaLabel4.Text = "Confirm Password"
+        '
+        'GunaLabel3
+        '
+        Me.GunaLabel3.AutoSize = True
+        Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel3.Location = New System.Drawing.Point(328, 201)
+        Me.GunaLabel3.Name = "GunaLabel3"
+        Me.GunaLabel3.Size = New System.Drawing.Size(121, 21)
+        Me.GunaLabel3.TabIndex = 8
+        Me.GunaLabel3.Text = "New Password"
+        '
+        'txtUserID
+        '
+        Me.txtUserID.BaseColor = System.Drawing.Color.White
+        Me.txtUserID.BorderColor = System.Drawing.Color.Silver
+        Me.txtUserID.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtUserID.Enabled = False
+        Me.txtUserID.FocusedBaseColor = System.Drawing.Color.White
+        Me.txtUserID.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtUserID.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtUserID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUserID.Location = New System.Drawing.Point(191, 61)
+        Me.txtUserID.Name = "txtUserID"
+        Me.txtUserID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtUserID.SelectedText = ""
+        Me.txtUserID.Size = New System.Drawing.Size(396, 43)
+        Me.txtUserID.TabIndex = 9
+        Me.txtUserID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TabPage5
         '
@@ -127,6 +318,69 @@ Partial Class frm_GenSettings
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Back Up"
         Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'btnBack_up
+        '
+        Me.btnBack_up.AllowToggling = False
+        Me.btnBack_up.AnimationSpeed = 200
+        Me.btnBack_up.AutoGenerateColors = False
+        Me.btnBack_up.BackColor = System.Drawing.Color.Transparent
+        Me.btnBack_up.BackColor1 = System.Drawing.Color.DodgerBlue
+        Me.btnBack_up.BackgroundImage = CType(resources.GetObject("btnBack_up.BackgroundImage"), System.Drawing.Image)
+        Me.btnBack_up.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.btnBack_up.ButtonText = "Back Up"
+        Me.btnBack_up.ButtonTextMarginLeft = 0
+        Me.btnBack_up.ColorContrastOnClick = 45
+        Me.btnBack_up.ColorContrastOnHover = 45
+        Me.btnBack_up.Cursor = System.Windows.Forms.Cursors.Hand
+        BorderEdges4.BottomLeft = True
+        BorderEdges4.BottomRight = True
+        BorderEdges4.TopLeft = True
+        BorderEdges4.TopRight = True
+        Me.btnBack_up.CustomizableEdges = BorderEdges4
+        Me.btnBack_up.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.btnBack_up.DisabledBorderColor = System.Drawing.Color.Empty
+        Me.btnBack_up.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btnBack_up.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.btnBack_up.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.btnBack_up.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!)
+        Me.btnBack_up.ForeColor = System.Drawing.Color.White
+        Me.btnBack_up.IconLeftCursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBack_up.IconMarginLeft = 11
+        Me.btnBack_up.IconPadding = 10
+        Me.btnBack_up.IconRightCursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBack_up.IdleBorderColor = System.Drawing.Color.DodgerBlue
+        Me.btnBack_up.IdleBorderRadius = 20
+        Me.btnBack_up.IdleBorderThickness = 1
+        Me.btnBack_up.IdleFillColor = System.Drawing.Color.DodgerBlue
+        Me.btnBack_up.IdleIconLeftImage = Nothing
+        Me.btnBack_up.IdleIconRightImage = Nothing
+        Me.btnBack_up.IndicateFocus = False
+        Me.btnBack_up.Location = New System.Drawing.Point(268, 151)
+        Me.btnBack_up.Name = "btnBack_up"
+        StateProperties7.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties7.BorderRadius = 20
+        StateProperties7.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties7.BorderThickness = 1
+        StateProperties7.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties7.ForeColor = System.Drawing.Color.White
+        StateProperties7.IconLeftImage = Nothing
+        StateProperties7.IconRightImage = Nothing
+        Me.btnBack_up.onHoverState = StateProperties7
+        StateProperties8.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties8.BorderRadius = 20
+        StateProperties8.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties8.BorderThickness = 1
+        StateProperties8.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties8.ForeColor = System.Drawing.Color.White
+        StateProperties8.IconLeftImage = Nothing
+        StateProperties8.IconRightImage = Nothing
+        Me.btnBack_up.OnPressedState = StateProperties8
+        Me.btnBack_up.Size = New System.Drawing.Size(210, 45)
+        Me.btnBack_up.TabIndex = 0
+        Me.btnBack_up.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnBack_up.TextMarginLeft = 0
+        Me.btnBack_up.UseDefaultRadiusAndThickness = True
         '
         'TabPage6
         '
@@ -268,131 +522,16 @@ Partial Class frm_GenSettings
         Me.Button3.TabIndex = 1
         Me.Button3.UseVisualStyleBackColor = False
         '
-        'btnChaPass
+        'GunaLabel5
         '
-        Me.btnChaPass.AllowToggling = False
-        Me.btnChaPass.AnimationSpeed = 200
-        Me.btnChaPass.AutoGenerateColors = False
-        Me.btnChaPass.BackColor = System.Drawing.Color.Transparent
-        Me.btnChaPass.BackColor1 = System.Drawing.Color.DodgerBlue
-        Me.btnChaPass.BackgroundImage = CType(resources.GetObject("btnChaPass.BackgroundImage"), System.Drawing.Image)
-        Me.btnChaPass.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.btnChaPass.ButtonText = "Change Password"
-        Me.btnChaPass.ButtonTextMarginLeft = 0
-        Me.btnChaPass.ColorContrastOnClick = 45
-        Me.btnChaPass.ColorContrastOnHover = 45
-        Me.btnChaPass.Cursor = System.Windows.Forms.Cursors.Hand
-        BorderEdges1.BottomLeft = True
-        BorderEdges1.BottomRight = True
-        BorderEdges1.TopLeft = True
-        BorderEdges1.TopRight = True
-        Me.btnChaPass.CustomizableEdges = BorderEdges1
-        Me.btnChaPass.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.btnChaPass.DisabledBorderColor = System.Drawing.Color.Empty
-        Me.btnChaPass.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.btnChaPass.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.btnChaPass.FocusState = Bunifu.UI.Winforms.BunifuButton.BunifuButton.ButtonStates.Pressed
-        Me.btnChaPass.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!)
-        Me.btnChaPass.ForeColor = System.Drawing.Color.White
-        Me.btnChaPass.IconLeftCursor = System.Windows.Forms.Cursors.Hand
-        Me.btnChaPass.IconMarginLeft = 11
-        Me.btnChaPass.IconPadding = 10
-        Me.btnChaPass.IconRightCursor = System.Windows.Forms.Cursors.Hand
-        Me.btnChaPass.IdleBorderColor = System.Drawing.Color.DodgerBlue
-        Me.btnChaPass.IdleBorderRadius = 3
-        Me.btnChaPass.IdleBorderThickness = 1
-        Me.btnChaPass.IdleFillColor = System.Drawing.Color.DodgerBlue
-        Me.btnChaPass.IdleIconLeftImage = Nothing
-        Me.btnChaPass.IdleIconRightImage = Nothing
-        Me.btnChaPass.IndicateFocus = False
-        Me.btnChaPass.Location = New System.Drawing.Point(294, 162)
-        Me.btnChaPass.Name = "btnChaPass"
-        StateProperties1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties1.BorderRadius = 3
-        StateProperties1.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties1.BorderThickness = 1
-        StateProperties1.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties1.ForeColor = System.Drawing.Color.White
-        StateProperties1.IconLeftImage = Nothing
-        StateProperties1.IconRightImage = Nothing
-        Me.btnChaPass.onHoverState = StateProperties1
-        StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties2.BorderRadius = 3
-        StateProperties2.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties2.BorderThickness = 1
-        StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties2.ForeColor = System.Drawing.Color.White
-        StateProperties2.IconLeftImage = Nothing
-        StateProperties2.IconRightImage = Nothing
-        Me.btnChaPass.OnPressedState = StateProperties2
-        Me.btnChaPass.Size = New System.Drawing.Size(210, 45)
-        Me.btnChaPass.TabIndex = 0
-        Me.btnChaPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnChaPass.TextMarginLeft = 0
-        Me.btnChaPass.UseDefaultRadiusAndThickness = True
-        '
-        'btnBack_up
-        '
-        Me.btnBack_up.AllowToggling = False
-        Me.btnBack_up.AnimationSpeed = 200
-        Me.btnBack_up.AutoGenerateColors = False
-        Me.btnBack_up.BackColor = System.Drawing.Color.Transparent
-        Me.btnBack_up.BackColor1 = System.Drawing.Color.DodgerBlue
-        Me.btnBack_up.BackgroundImage = CType(resources.GetObject("btnBack_up.BackgroundImage"), System.Drawing.Image)
-        Me.btnBack_up.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
-        Me.btnBack_up.ButtonText = "Back Up"
-        Me.btnBack_up.ButtonTextMarginLeft = 0
-        Me.btnBack_up.ColorContrastOnClick = 45
-        Me.btnBack_up.ColorContrastOnHover = 45
-        Me.btnBack_up.Cursor = System.Windows.Forms.Cursors.Hand
-        BorderEdges2.BottomLeft = True
-        BorderEdges2.BottomRight = True
-        BorderEdges2.TopLeft = True
-        BorderEdges2.TopRight = True
-        Me.btnBack_up.CustomizableEdges = BorderEdges2
-        Me.btnBack_up.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.btnBack_up.DisabledBorderColor = System.Drawing.Color.Empty
-        Me.btnBack_up.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.btnBack_up.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.btnBack_up.FocusState = Bunifu.UI.Winforms.BunifuButton.BunifuButton.ButtonStates.Pressed
-        Me.btnBack_up.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!)
-        Me.btnBack_up.ForeColor = System.Drawing.Color.White
-        Me.btnBack_up.IconLeftCursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBack_up.IconMarginLeft = 11
-        Me.btnBack_up.IconPadding = 10
-        Me.btnBack_up.IconRightCursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBack_up.IdleBorderColor = System.Drawing.Color.DodgerBlue
-        Me.btnBack_up.IdleBorderRadius = 20
-        Me.btnBack_up.IdleBorderThickness = 1
-        Me.btnBack_up.IdleFillColor = System.Drawing.Color.DodgerBlue
-        Me.btnBack_up.IdleIconLeftImage = Nothing
-        Me.btnBack_up.IdleIconRightImage = Nothing
-        Me.btnBack_up.IndicateFocus = False
-        Me.btnBack_up.Location = New System.Drawing.Point(268, 151)
-        Me.btnBack_up.Name = "btnBack_up"
-        StateProperties3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties3.BorderRadius = 20
-        StateProperties3.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties3.BorderThickness = 1
-        StateProperties3.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties3.ForeColor = System.Drawing.Color.White
-        StateProperties3.IconLeftImage = Nothing
-        StateProperties3.IconRightImage = Nothing
-        Me.btnBack_up.onHoverState = StateProperties3
-        StateProperties4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties4.BorderRadius = 20
-        StateProperties4.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties4.BorderThickness = 1
-        StateProperties4.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties4.ForeColor = System.Drawing.Color.White
-        StateProperties4.IconLeftImage = Nothing
-        StateProperties4.IconRightImage = Nothing
-        Me.btnBack_up.OnPressedState = StateProperties4
-        Me.btnBack_up.Size = New System.Drawing.Size(210, 45)
-        Me.btnBack_up.TabIndex = 0
-        Me.btnBack_up.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnBack_up.TextMarginLeft = 0
-        Me.btnBack_up.UseDefaultRadiusAndThickness = True
+        Me.GunaLabel5.AutoSize = True
+        Me.GunaLabel5.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel5.ForeColor = System.Drawing.Color.Gold
+        Me.GunaLabel5.Location = New System.Drawing.Point(326, -2)
+        Me.GunaLabel5.Name = "GunaLabel5"
+        Me.GunaLabel5.Size = New System.Drawing.Size(168, 30)
+        Me.GunaLabel5.TabIndex = 2
+        Me.GunaLabel5.Text = "System Settings"
         '
         'frm_GenSettings
         '
@@ -400,8 +539,10 @@ Partial Class frm_GenSettings
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(813, 547)
+        Me.Controls.Add(Me.GunaLabel5)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.TabControl1)
+        Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4)
@@ -410,10 +551,12 @@ Partial Class frm_GenSettings
         Me.Text = "frm_GenSettings"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
         Me.TabPage5.ResumeLayout(False)
         Me.TabPage6.ResumeLayout(False)
         Me.TabPage6.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -437,5 +580,15 @@ Partial Class frm_GenSettings
     Friend WithEvents Label1 As Label
     Friend WithEvents btnBack_up As Bunifu.UI.Winforms.BunifuButton.BunifuButton
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
-    Friend WithEvents btnChaPass As Bunifu.UI.Winforms.BunifuButton.BunifuButton
+    Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel2 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents btn_change As Bunifu.UI.WinForms.BunifuButton.BunifuButton
+    Friend WithEvents txt_confPassword As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents txt_NewPassword As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents txt_currentPassword As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents GunaLabel4 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel3 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents txtUserID As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents GunaLabel5 As Guna.UI.WinForms.GunaLabel
 End Class

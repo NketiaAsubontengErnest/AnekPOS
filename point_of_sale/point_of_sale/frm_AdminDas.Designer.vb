@@ -22,6 +22,7 @@ Partial Class frm_AdminDas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_AdminDas))
         Me.Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -39,9 +40,7 @@ Partial Class frm_AdminDas
         Me.btn_AddProduct = New Guna.UI2.WinForms.Guna2Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btn_AddSaler = New Guna.UI2.WinForms.Guna2Button()
-        Me.BunifuGradientPanel1 = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.lblAvelable = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.mnSettings = New System.Windows.Forms.ToolStripMenuItem()
@@ -62,19 +61,25 @@ Partial Class frm_AdminDas
         Me.btn_close = New Bunifu.Framework.UI.BunifuImageButton()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblTimer = New System.Windows.Forms.Label()
+        Me.lblSetDash = New System.Windows.Forms.Label()
+        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2ShadowPanel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        Me.BunifuGradientPanel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.btn_Minimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_Maximize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel1.SuspendLayout()
+        Me.Guna2Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2ShadowPanel1
         '
-        Me.Guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Guna2ShadowPanel1.Controls.Add(Me.PictureBox1)
         Me.Guna2ShadowPanel1.Controls.Add(Me.lblRole)
         Me.Guna2ShadowPanel1.Controls.Add(Me.Panel1)
@@ -84,17 +89,17 @@ Partial Class frm_AdminDas
         Me.Guna2ShadowPanel1.Controls.Add(Me.Label6)
         Me.Guna2ShadowPanel1.Controls.Add(Me.btn_AddSaler)
         Me.Guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Guna2ShadowPanel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Guna2ShadowPanel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(0, 24)
         Me.Guna2ShadowPanel1.Name = "Guna2ShadowPanel1"
         Me.Guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black
-        Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(225, 694)
+        Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(225, 677)
         Me.Guna2ShadowPanel1.TabIndex = 2
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.point_of_sale.My.Resources.Resources.pos_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(52, 14)
+        Me.PictureBox1.Location = New System.Drawing.Point(55, 4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(115, 93)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -204,48 +209,72 @@ Partial Class frm_AdminDas
         '
         'btnMakeSales
         '
+        Me.btnMakeSales.Animated = True
+        Me.btnMakeSales.AutoRoundedCorners = True
+        Me.btnMakeSales.BackColor = System.Drawing.Color.Transparent
+        Me.btnMakeSales.BorderRadius = 21
         Me.btnMakeSales.CheckedState.Parent = Me.btnMakeSales
         Me.btnMakeSales.CustomImages.Parent = Me.btnMakeSales
-        Me.btnMakeSales.FillColor = System.Drawing.Color.Yellow
-        Me.btnMakeSales.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMakeSales.FillColor = System.Drawing.Color.Gold
+        Me.btnMakeSales.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btnMakeSales.ForeColor = System.Drawing.Color.Black
+        Me.btnMakeSales.HoverState.BorderColor = System.Drawing.Color.Gold
+        Me.btnMakeSales.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.btnMakeSales.HoverState.ForeColor = System.Drawing.Color.Gold
         Me.btnMakeSales.HoverState.Parent = Me.btnMakeSales
-        Me.btnMakeSales.Location = New System.Drawing.Point(12, 216)
+        Me.btnMakeSales.Location = New System.Drawing.Point(13, 216)
         Me.btnMakeSales.Name = "btnMakeSales"
         Me.btnMakeSales.ShadowDecoration.Parent = Me.btnMakeSales
-        Me.btnMakeSales.Size = New System.Drawing.Size(202, 45)
+        Me.btnMakeSales.Size = New System.Drawing.Size(228, 45)
         Me.btnMakeSales.TabIndex = 5
         Me.btnMakeSales.Text = "Make Sales"
+        Me.btnMakeSales.UseTransparentBackground = True
         '
         'btn_DailySales
         '
+        Me.btn_DailySales.Animated = True
+        Me.btn_DailySales.AutoRoundedCorners = True
+        Me.btn_DailySales.BackColor = System.Drawing.Color.Transparent
+        Me.btn_DailySales.BorderRadius = 21
         Me.btn_DailySales.CheckedState.Parent = Me.btn_DailySales
         Me.btn_DailySales.CustomImages.Parent = Me.btn_DailySales
-        Me.btn_DailySales.FillColor = System.Drawing.Color.Yellow
-        Me.btn_DailySales.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_DailySales.FillColor = System.Drawing.Color.Gold
+        Me.btn_DailySales.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_DailySales.ForeColor = System.Drawing.Color.Black
+        Me.btn_DailySales.HoverState.BorderColor = System.Drawing.Color.Gold
+        Me.btn_DailySales.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.btn_DailySales.HoverState.ForeColor = System.Drawing.Color.Gold
         Me.btn_DailySales.HoverState.Parent = Me.btn_DailySales
-        Me.btn_DailySales.Location = New System.Drawing.Point(12, 267)
+        Me.btn_DailySales.Location = New System.Drawing.Point(13, 267)
         Me.btn_DailySales.Name = "btn_DailySales"
         Me.btn_DailySales.ShadowDecoration.Parent = Me.btn_DailySales
-        Me.btn_DailySales.Size = New System.Drawing.Size(202, 45)
+        Me.btn_DailySales.Size = New System.Drawing.Size(228, 45)
         Me.btn_DailySales.TabIndex = 5
         Me.btn_DailySales.Text = "Daily Sales"
+        Me.btn_DailySales.UseTransparentBackground = True
         '
         'btn_AddProduct
         '
+        Me.btn_AddProduct.Animated = True
+        Me.btn_AddProduct.AutoRoundedCorners = True
+        Me.btn_AddProduct.BackColor = System.Drawing.Color.Transparent
+        Me.btn_AddProduct.BorderRadius = 21
         Me.btn_AddProduct.CheckedState.Parent = Me.btn_AddProduct
         Me.btn_AddProduct.CustomImages.Parent = Me.btn_AddProduct
-        Me.btn_AddProduct.FillColor = System.Drawing.Color.Yellow
-        Me.btn_AddProduct.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_AddProduct.FillColor = System.Drawing.Color.Gold
+        Me.btn_AddProduct.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_AddProduct.ForeColor = System.Drawing.Color.Black
+        Me.btn_AddProduct.HoverState.BorderColor = System.Drawing.Color.Gold
+        Me.btn_AddProduct.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.btn_AddProduct.HoverState.ForeColor = System.Drawing.Color.Gold
         Me.btn_AddProduct.HoverState.Parent = Me.btn_AddProduct
-        Me.btn_AddProduct.Location = New System.Drawing.Point(12, 165)
+        Me.btn_AddProduct.Location = New System.Drawing.Point(13, 165)
         Me.btn_AddProduct.Name = "btn_AddProduct"
         Me.btn_AddProduct.ShadowDecoration.Parent = Me.btn_AddProduct
-        Me.btn_AddProduct.Size = New System.Drawing.Size(202, 45)
+        Me.btn_AddProduct.Size = New System.Drawing.Size(228, 45)
         Me.btn_AddProduct.TabIndex = 4
         Me.btn_AddProduct.Text = "Add Product"
+        Me.btn_AddProduct.UseTransparentBackground = True
         '
         'Label6
         '
@@ -253,8 +282,8 @@ Partial Class frm_AdminDas
         Me.Label6.AutoSize = True
         Me.Label6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label6.Font = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(65, 666)
+        Me.Label6.ForeColor = System.Drawing.Color.Snow
+        Me.Label6.Location = New System.Drawing.Point(77, 655)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(66, 19)
         Me.Label6.TabIndex = 1
@@ -262,62 +291,39 @@ Partial Class frm_AdminDas
         '
         'btn_AddSaler
         '
+        Me.btn_AddSaler.Animated = True
+        Me.btn_AddSaler.AutoRoundedCorners = True
+        Me.btn_AddSaler.BackColor = System.Drawing.Color.Transparent
+        Me.btn_AddSaler.BorderRadius = 21
         Me.btn_AddSaler.CheckedState.Parent = Me.btn_AddSaler
         Me.btn_AddSaler.CustomImages.Parent = Me.btn_AddSaler
-        Me.btn_AddSaler.FillColor = System.Drawing.Color.Yellow
-        Me.btn_AddSaler.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_AddSaler.FillColor = System.Drawing.Color.Gold
+        Me.btn_AddSaler.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btn_AddSaler.ForeColor = System.Drawing.Color.Black
+        Me.btn_AddSaler.HoverState.BorderColor = System.Drawing.Color.Gold
+        Me.btn_AddSaler.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.btn_AddSaler.HoverState.ForeColor = System.Drawing.Color.Gold
         Me.btn_AddSaler.HoverState.Parent = Me.btn_AddSaler
-        Me.btn_AddSaler.Location = New System.Drawing.Point(12, 114)
+        Me.btn_AddSaler.Location = New System.Drawing.Point(13, 114)
         Me.btn_AddSaler.Name = "btn_AddSaler"
         Me.btn_AddSaler.ShadowDecoration.Parent = Me.btn_AddSaler
-        Me.btn_AddSaler.Size = New System.Drawing.Size(202, 45)
+        Me.btn_AddSaler.Size = New System.Drawing.Size(228, 45)
         Me.btn_AddSaler.TabIndex = 3
         Me.btn_AddSaler.Text = "Add Employee"
-        '
-        'BunifuGradientPanel1
-        '
-        Me.BunifuGradientPanel1.BackColor = System.Drawing.Color.Gold
-        Me.BunifuGradientPanel1.BackgroundImage = CType(resources.GetObject("BunifuGradientPanel1.BackgroundImage"), System.Drawing.Image)
-        Me.BunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuGradientPanel1.Controls.Add(Me.lblAvelable)
-        Me.BunifuGradientPanel1.Controls.Add(Me.Label5)
-        Me.BunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BunifuGradientPanel1.GradientBottomLeft = System.Drawing.SystemColors.HotTrack
-        Me.BunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White
-        Me.BunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White
-        Me.BunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White
-        Me.BunifuGradientPanel1.Location = New System.Drawing.Point(225, 24)
-        Me.BunifuGradientPanel1.Name = "BunifuGradientPanel1"
-        Me.BunifuGradientPanel1.Quality = 10
-        Me.BunifuGradientPanel1.Size = New System.Drawing.Size(997, 29)
-        Me.BunifuGradientPanel1.TabIndex = 1
+        Me.btn_AddSaler.UseTransparentBackground = True
         '
         'lblAvelable
         '
         Me.lblAvelable.AutoSize = True
         Me.lblAvelable.BackColor = System.Drawing.Color.Transparent
-        Me.lblAvelable.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAvelable.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAvelable.ForeColor = System.Drawing.Color.Red
-        Me.lblAvelable.Location = New System.Drawing.Point(338, 2)
+        Me.lblAvelable.Location = New System.Drawing.Point(596, -4)
         Me.lblAvelable.Name = "lblAvelable"
-        Me.lblAvelable.Size = New System.Drawing.Size(69, 26)
+        Me.lblAvelable.Size = New System.Drawing.Size(62, 23)
         Me.lblAvelable.TabIndex = 9
         Me.lblAvelable.Text = "Label8"
         Me.lblAvelable.Visible = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(0, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(177, 24)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = "ADMINISTRATOR"
         '
         'Label7
         '
@@ -325,7 +331,7 @@ Partial Class frm_AdminDas
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.White
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(518, -1)
+        Me.Label7.Location = New System.Drawing.Point(583, 2)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(114, 24)
         Me.Label7.TabIndex = 10
@@ -430,7 +436,7 @@ Partial Class frm_AdminDas
         Me.btn_Minimize.ImageActive = Nothing
         Me.btn_Minimize.Location = New System.Drawing.Point(1135, 0)
         Me.btn_Minimize.Name = "btn_Minimize"
-        Me.btn_Minimize.Size = New System.Drawing.Size(29, 29)
+        Me.btn_Minimize.Size = New System.Drawing.Size(29, 26)
         Me.btn_Minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btn_Minimize.TabIndex = 5
         Me.btn_Minimize.TabStop = False
@@ -442,9 +448,9 @@ Partial Class frm_AdminDas
         Me.btn_Maximize.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.btn_Maximize.Image = Global.point_of_sale.My.Resources.Resources.ew
         Me.btn_Maximize.ImageActive = Nothing
-        Me.btn_Maximize.Location = New System.Drawing.Point(1164, 0)
+        Me.btn_Maximize.Location = New System.Drawing.Point(1165, 0)
         Me.btn_Maximize.Name = "btn_Maximize"
-        Me.btn_Maximize.Size = New System.Drawing.Size(28, 29)
+        Me.btn_Maximize.Size = New System.Drawing.Size(28, 26)
         Me.btn_Maximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btn_Maximize.TabIndex = 6
         Me.btn_Maximize.TabStop = False
@@ -455,13 +461,64 @@ Partial Class frm_AdminDas
         Me.btn_close.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_close.Image = Global.point_of_sale.My.Resources.Resources.close
         Me.btn_close.ImageActive = Nothing
-        Me.btn_close.Location = New System.Drawing.Point(1192, 0)
+        Me.btn_close.Location = New System.Drawing.Point(1194, 0)
         Me.btn_close.Name = "btn_close"
-        Me.btn_close.Size = New System.Drawing.Size(27, 29)
+        Me.btn_close.Size = New System.Drawing.Size(27, 26)
         Me.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btn_close.TabIndex = 7
         Me.btn_close.TabStop = False
         Me.btn_close.Zoom = 10
+        '
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.Guna2Panel1.Controls.Add(Me.lblTimer)
+        Me.Guna2Panel1.Controls.Add(Me.lblSetDash)
+        Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Guna2Panel1.Location = New System.Drawing.Point(225, 24)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
+        Me.Guna2Panel1.Size = New System.Drawing.Size(997, 35)
+        Me.Guna2Panel1.TabIndex = 12
+        '
+        'lblTimer
+        '
+        Me.lblTimer.AutoSize = True
+        Me.lblTimer.BackColor = System.Drawing.Color.Transparent
+        Me.lblTimer.Dock = System.Windows.Forms.DockStyle.Right
+        Me.lblTimer.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTimer.ForeColor = System.Drawing.Color.Gold
+        Me.lblTimer.Location = New System.Drawing.Point(945, 0)
+        Me.lblTimer.Name = "lblTimer"
+        Me.lblTimer.Size = New System.Drawing.Size(52, 26)
+        Me.lblTimer.TabIndex = 14
+        Me.lblTimer.Text = "time"
+        '
+        'lblSetDash
+        '
+        Me.lblSetDash.AutoSize = True
+        Me.lblSetDash.BackColor = System.Drawing.Color.Transparent
+        Me.lblSetDash.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSetDash.ForeColor = System.Drawing.Color.Gold
+        Me.lblSetDash.Location = New System.Drawing.Point(7, 4)
+        Me.lblSetDash.Name = "lblSetDash"
+        Me.lblSetDash.Size = New System.Drawing.Size(210, 26)
+        Me.lblSetDash.TabIndex = 13
+        Me.lblSetDash.Text = "usuername / Dashbord"
+        '
+        'Guna2Panel2
+        '
+        Me.Guna2Panel2.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel2.Controls.Add(Me.lblAvelable)
+        Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Guna2Panel2.Location = New System.Drawing.Point(0, 701)
+        Me.Guna2Panel2.Name = "Guna2Panel2"
+        Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
+        Me.Guna2Panel2.Size = New System.Drawing.Size(1222, 17)
+        Me.Guna2Panel2.TabIndex = 14
+        '
+        'Timer1
+        '
         '
         'frm_AdminDas
         '
@@ -471,13 +528,15 @@ Partial Class frm_AdminDas
         Me.BackgroundImage = Global.point_of_sale.My.Resources.Resources.flickr_marco_verch
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1222, 718)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.btn_Minimize)
-        Me.Controls.Add(Me.btn_Maximize)
         Me.Controls.Add(Me.btn_close)
-        Me.Controls.Add(Me.BunifuGradientPanel1)
+        Me.Controls.Add(Me.btn_Maximize)
+        Me.Controls.Add(Me.btn_Minimize)
+        Me.Controls.Add(Me.Guna2Panel1)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Guna2ShadowPanel1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.Guna2Panel2)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
@@ -491,18 +550,19 @@ Partial Class frm_AdminDas
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.BunifuGradientPanel1.ResumeLayout(False)
-        Me.BunifuGradientPanel1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.btn_Minimize, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_Maximize, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel1.ResumeLayout(False)
+        Me.Guna2Panel1.PerformLayout()
+        Me.Guna2Panel2.ResumeLayout(False)
+        Me.Guna2Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents BunifuGradientPanel1 As Bunifu.Framework.UI.BunifuGradientPanel
     Friend WithEvents Guna2ShadowPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
     Friend WithEvents btn_DailySales As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btn_AddProduct As Guna.UI2.WinForms.Guna2Button
@@ -524,7 +584,6 @@ Partial Class frm_AdminDas
     Friend WithEvents mnSettings As ToolStripMenuItem
     Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CloseToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Label5 As Label
     Friend WithEvents ProductsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AddCategoryToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents UpdateProductToolStripMenuItem1 As ToolStripMenuItem
@@ -541,4 +600,9 @@ Partial Class frm_AdminDas
     Friend WithEvents StatisticsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lblAvelable As Label
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents lblSetDash As Label
+    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents lblTimer As Label
+    Friend WithEvents Timer1 As Timer
 End Class

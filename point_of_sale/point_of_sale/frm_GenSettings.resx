@@ -118,15 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnChaPass.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_change.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAANIAAAAtCAYAAADbXTWOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEmSURBVHhe7dOxTQNRFETR38h6KYUKaG0XUQYxKaW4ASIa
-        +IstTbiyLA3hGekkTy+9w8z+aet2vKz7/LzsxwE86X1+3dtJRmNctvl9+gg8tGzzmoxuIZ08AM9JRkKC
-        RjISEjSSkZCgkYyEBI1kJCRoJCMhQSMZCQkayUhI0EhGQoJGMhISNJKRkKCRjIQEjWQkJGgkIyFBIxkJ
-        CRrJSEjQSEZCgkYyEhI0kpGQoJGMhASNZCQkaCQjIUEjGQkJGslISNBIRkKCRjISEjSSkZCgkYyEBI1k
-        JCRoJCMhQSMZCQkayUhI0EhGQoJGMhISNJKRkKCRjIQEjWQkJGgkIyFBIxmNsWzzevYAPLbs8zcZjbFu
-        x+vt8HP2CJy7R7R8zLdkZGbdxvgDb3JaKK8opj8AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAYwAAAA7CAYAAABogb0zAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIbSURBVHhe7dexbRVhFITRjS05eHouwKVQAW25DBdATErq
+        LuwCiKjgseOxRTIBxJyRjv4Nbv5pDzMzs3/Z4+VyfDvfGwB8ul6P7+f7eOoeHo4fT0/H7XYDgD+en4/b
+        +UPx+pGL981DAEgjmopuHgFAGtFUdPMIANKIpqKbRwCQRjQV3TwCgDSiqejmEQCkEU1FN48AII1oKrp5
+        BABpRFPRzSMASCOaim4eAUAa0VR08wgA0oimoptHAJBGNBXdPAKANKKp6OYRAKQRTUU3jwAgjWgqunkE
+        AGlEU9HNIwBII5qKbh4BQBrRVHTzCADSiKaim0cAkEY0Fd08AoA0oqno5hEApBFNRTePACCNaCq6eQQA
+        aURT0c0jAEgjmopuHgFAGtFUdPMIANKIpqKbRwCQRjQV3TwCgDSiqejmEQCkEU1FN48AII1oKrp5BABp
+        RFPRzSMASCOaim4eAUAa0VR08wgA0oimoptHAJBGNBXdPAKANKKp6OYRAKQRTUU3jwAgjWgqunkEAGlE
+        U9HNIwBII5qKbh4BQBrRVHTzCADSiKaim0cAkEY0Fd08AoA0oqno5hEApBFNRTePACCNaCq6eQQAaURT
+        0c0jAEgjmopuHgFAGtFUdPMIANKIpqKbRwCQRjQV3TwCgDSiqTh3uRyvLy/7EID/19vbcbu7O3595OJ9
+        X+7vj5/n+1kSAHiPxfV6fD2/zczM/mbH8RvntTMFkzmJjQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnBack_up.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -147,5 +151,8 @@
   </data>
   <metadata name="FolderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>188, 17</value>
   </metadata>
 </root>

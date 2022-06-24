@@ -24,9 +24,9 @@ Partial Class frm_ChanegePassword
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_ChanegePassword))
-        Dim BorderEdges1 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties1 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties2 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
@@ -47,7 +47,7 @@ Partial Class frm_ChanegePassword
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btn_close = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.btn_change = New Bunifu.UI.Winforms.BunifuButton.BunifuButton()
+        Me.btn_change = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.Panel6.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -270,7 +270,7 @@ Partial Class frm_ChanegePassword
         Me.btn_change.BackColor = System.Drawing.Color.Transparent
         Me.btn_change.BackColor1 = System.Drawing.Color.Yellow
         Me.btn_change.BackgroundImage = CType(resources.GetObject("btn_change.BackgroundImage"), System.Drawing.Image)
-        Me.btn_change.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.btn_change.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         Me.btn_change.ButtonText = "change"
         Me.btn_change.ButtonTextMarginLeft = 0
         Me.btn_change.ColorContrastOnClick = 45
@@ -285,7 +285,7 @@ Partial Class frm_ChanegePassword
         Me.btn_change.DisabledBorderColor = System.Drawing.Color.Empty
         Me.btn_change.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_change.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.btn_change.FocusState = Bunifu.UI.Winforms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.btn_change.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
         Me.btn_change.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
         Me.btn_change.ForeColor = System.Drawing.Color.Black
         Me.btn_change.IconLeftCursor = System.Windows.Forms.Cursors.Hand
@@ -303,7 +303,7 @@ Partial Class frm_ChanegePassword
         Me.btn_change.Name = "btn_change"
         StateProperties1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
         StateProperties1.BorderRadius = 3
-        StateProperties1.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         StateProperties1.BorderThickness = 1
         StateProperties1.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
         StateProperties1.ForeColor = System.Drawing.Color.White
@@ -312,7 +312,7 @@ Partial Class frm_ChanegePassword
         Me.btn_change.onHoverState = StateProperties1
         StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         StateProperties2.BorderRadius = 3
-        StateProperties2.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         StateProperties2.BorderThickness = 1
         StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         StateProperties2.ForeColor = System.Drawing.Color.White
@@ -348,6 +348,8 @@ Partial Class frm_ChanegePassword
         Me.Controls.Add(Me.GunaLabel3)
         Me.Controls.Add(Me.GunaLabel5)
         Me.Controls.Add(Me.txtUserID)
+        Me.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frm_ChanegePassword"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

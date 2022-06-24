@@ -2,16 +2,13 @@
 Public Class frmStatics
 
     Dim MySqlConn As MySqlConnection
-    Dim COMMAND As MySqlCommand
-    Dim dbDataSet As DataTable
-    Dim conn As String = "server=localhost;user id=root;password=0554013980A@;database=point_of_sale"
     Private Sub frmStatics_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        loadA()
+        LoadA()
     End Sub
 
-    Private Sub loadA()
+    Private Sub LoadA()
         MySqlConn = New MySqlConnection
-        MySqlConn.ConnectionString = conn
+        MySqlConn.ConnectionString = connstring
 
         Dim READER As MySqlDataReader
         Try
@@ -37,6 +34,7 @@ Public Class frmStatics
     End Sub
 
     Private Sub btn_close_Click(sender As Object, e As EventArgs) Handles btn_close.Click
+        colorClear()
         Me.Close()
     End Sub
 End Class

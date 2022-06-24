@@ -21,7 +21,7 @@ Public Class frm_ChanegePassword
             conn = New MySqlConnection(connstring)
             conn.Open()
 
-            command = New MySqlCommand("Update `login` Set `Password` = '" + txt_NewPassword.Text + "' WHERE employeeID = '" + txtUserID.Text + "'", conn)
+            command = New MySqlCommand("Update `login` Set `Password` = '" + Encrypt(txt_NewPassword.Text) + "' WHERE employeeID = '" + txtUserID.Text + "'", conn)
 
         Catch ex As Exception
             MsgBox("Fatal Error -> Database Not Reacheable")
@@ -41,7 +41,7 @@ Public Class frm_ChanegePassword
     ''' </summary>
     ''' <returns></returns>
     Public Function checkCurrentPass()
-        Dim conString As String = "server=localhost;user id=root;password=0554013980A@;database=point_of_sale"
+        Dim conString As String = connstring
         Dim query As String
         query = "SELECT * FROM login WHERE employeeID = '" + txtUserID.Text + "'"
 
@@ -63,12 +63,11 @@ Public Class frm_ChanegePassword
                     While reader.Read
                         password = reader.Item("password")
                     End While
-
+                    Dim pass As String = Decrypt(password)
                     conn.Close()
                     reader.Close()
-                    If password = txt_currentPassword.Text Then
+                    If pass = txt_currentPassword.Text Then
                         btn_SaveChanges_Click()
-
                     Else
                         correct = False
                         MsgBox("Old password Invalid")
@@ -99,7 +98,7 @@ Public Class frm_ChanegePassword
 
     Private Sub btn_close_Click(sender As Object, e As EventArgs) Handles btn_close.Click
         Me.Close()
-
+        colorClear()
     End Sub
 
 

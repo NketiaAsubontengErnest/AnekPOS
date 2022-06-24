@@ -21,6 +21,7 @@ Public Class User_Lists
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        colorClear()
         Me.Close()
 
     End Sub

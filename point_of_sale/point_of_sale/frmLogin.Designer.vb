@@ -63,12 +63,17 @@ Partial Class frmLogin
         '
         Me.btnLogin.CheckedState.Parent = Me.btnLogin
         Me.btnLogin.CustomImages.Parent = Me.btnLogin
-        Me.btnLogin.FillColor = System.Drawing.Color.Yellow
+        Me.btnLogin.FillColor = System.Drawing.Color.Gold
         Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.ForeColor = System.Drawing.Color.Black
+        Me.btnLogin.HoverState.BorderColor = System.Drawing.Color.Gold
+        Me.btnLogin.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.btnLogin.HoverState.ForeColor = System.Drawing.Color.Gold
         Me.btnLogin.HoverState.Parent = Me.btnLogin
         Me.btnLogin.Location = New System.Drawing.Point(157, 243)
         Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Padding = New System.Windows.Forms.Padding(5)
+        Me.btnLogin.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.btnLogin.ShadowDecoration.Parent = Me.btnLogin
         Me.btnLogin.Size = New System.Drawing.Size(324, 45)
         Me.btnLogin.TabIndex = 2
@@ -110,7 +115,7 @@ Partial Class frmLogin
         Me.ProgressBar1.Location = New System.Drawing.Point(134, 297)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.ProgressMaxColor = System.Drawing.Color.Goldenrod
-        Me.ProgressBar1.ProgressMinColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.ProgressBar1.ProgressMinColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.ProgressBar1.Size = New System.Drawing.Size(357, 10)
         Me.ProgressBar1.TabIndex = 49
         '
@@ -224,7 +229,7 @@ Partial Class frmLogin
         '
         'GunaPanel1
         '
-        Me.GunaPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.GunaPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.GunaPanel1.Controls.Add(Me.PictureBox1)
         Me.GunaPanel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.GunaPanel1.Location = New System.Drawing.Point(0, 0)
@@ -234,7 +239,7 @@ Partial Class frmLogin
         '
         'GunaPanel2
         '
-        Me.GunaPanel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.GunaPanel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.GunaPanel2.Dock = System.Windows.Forms.DockStyle.Right
         Me.GunaPanel2.Location = New System.Drawing.Point(491, 0)
         Me.GunaPanel2.Name = "GunaPanel2"
@@ -248,6 +253,7 @@ Partial Class frmLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(503, 307)
         Me.Controls.Add(Me.BunifuGradientPanel2)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmLogin"

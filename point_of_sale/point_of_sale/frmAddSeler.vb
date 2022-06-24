@@ -32,95 +32,53 @@ Public Class frmAddSeler
         txt_Name.Clear()
         txt_Password.Clear()
         txt_Phone.Clear()
-        txt_UserID.Focus()
+        txt_Name.Focus()
         txt_Address.Clear()
         cmd_position.Text = ""
     End Sub
 
     Private Sub btn_Add_Click(sender As Object, e As EventArgs) Handles btn_Add.Click
-        insert_to_Empdetails()
-        insert_to_login()
+        Insert_to_Empdetails()
     End Sub
-    Public Sub insert_to_login()
-
-        Dim command1 As MySqlCommand
-        Dim insertString_login As String
-        connection = New MySqlConnection
-
-        connection.ConnectionString = connstring
-
+    Public Sub Insert_to_login()
         Dim Pass As String = Encrypt(txt_Password.Text)
-        MsgBox(Pass)
-
-        Try
-            connection.Open()
-            insertString_login = "INSERT INTO `login` (`employeeID`, `password`, `position`, `block`) VALUES 
+        query = "INSERT INTO `login` (`employeeID`, `password`, `position`, `block`) VALUES 
                                                       ('" & (txt_UserID.Text).ToUpper & "', 
                                                       '" & Pass & "', 
                                                       '" & (cmd_position.Text).ToUpper & "',
                                                       'NO')"
-
-            command1 = New MySqlCommand(insertString_login, connection)
-
-            reader = command1.ExecuteReader
-
-            connection.Close()
-
-            generateID()
-            txt_Name.Clear()
-            txt_Password.Clear()
-            txt_Phone.Clear()
-            txt_UserID.Focus()
-            txt_Address.Clear()
-            cmd_position.Text = ""
-
-
-        Catch ex As MySqlException
-            MsgBox(ex.Message)
-        Finally
-
-            connection.Dispose()
-
+        Try
+            reader = Inserting(query)
+            If reader.RecordsAffected > 0 Then
+                MsgBox("Employee added Successfully", MsgBoxStyle.Information)
+                clear()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical)
         End Try
+        generateID()
+
     End Sub
 
-    Public Sub insert_to_Empdetails()
-        Dim command As MySqlCommand
-        Dim insertString_EmpDetiles As String
-        connection = New MySqlConnection
-
-        connection.ConnectionString = connstring
-
-        Try
-            connection.Open()
-            insertString_EmpDetiles = "INSERT INTO `employee` (`employeeID`, `name`, `phone`, `address`, `position`,`block`) VALUES  
+    Public Sub Insert_to_Empdetails()
+        query = "INSERT INTO `employee` (`employeeID`, `name`, `phone`, `address`, `position`,`block`) VALUES  
                                                               ('" & (txt_UserID.Text).ToUpper & "', 
                                                               '" & (txt_Name.Text).ToUpper & "', 
                                                               '" & (txt_Phone.Text).ToUpper & "', 
                                                               '" & (txt_Address.Text).ToUpper & "',
                                                               '" & (cmd_position.Text).ToUpper & "',
-                                                              'NO')"
-
-            command = New MySqlCommand(insertString_EmpDetiles, connection)
-
-            reader = command.ExecuteReader
-            connection.Close()
-
+                                                              'NO'
+                                                              )"
+        Try
+            reader = Inserting(query)
+            If reader.RecordsAffected > 0 Then
+                Insert_to_login()
+            End If
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical)
-        Finally
-
-            connection.Dispose()
         End Try
-    End Sub
 
-    Private Sub txt_Address_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Address.KeyPress
-        'If Not (Asc(e.KeyChar) = 8) Then
-        '    If Not ((Asc(e.KeyChar) >= 97 And Asc(e.KeyChar) <= 122) Or (Asc(e.KeyChar) >= 65 And Asc(e.KeyChar) <= 90) Or Asc(e.KeyChar) = 32) Then
-        '        e.KeyChar = ChrW(0)
-        '        e.Handled = True
-        '    End If
-        'End If
+
     End Sub
 
     Public Sub generateID()
@@ -170,9 +128,8 @@ Public Class frmAddSeler
     Private Sub frmAddSeler_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         generateID()
     End Sub
-
-
     Private Sub btn_close_Click(sender As Object, e As EventArgs) Handles btn_close.Click
+        colorClear()
         Me.Close()
 
     End Sub

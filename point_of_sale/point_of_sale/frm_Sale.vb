@@ -760,6 +760,7 @@ Public Class frm_Sale
     End Sub
 
     Private Sub btn_close_Click_1(sender As Object, e As EventArgs) Handles btn_close.Click
+        colorClear()
         Me.Close()
 
     End Sub

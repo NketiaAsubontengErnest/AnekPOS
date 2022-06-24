@@ -68,6 +68,7 @@ Partial Class test
         Me.ClientSize = New System.Drawing.Size(923, 594)
         Me.Controls.Add(Me.Chart1)
         Me.Controls.Add(Me.Button1)
+        Me.DoubleBuffered = True
         Me.Name = "test"
         Me.Text = "test"
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -9,8 +9,6 @@ Public Class splash
         Else
             ProgressBar1.Value += 10
             lblCreateD.Text = "Database Creating " + (ProgressBar1.Value).ToString + " %"
-            lblPersent.Text = (ProgressBar1.Value).ToString + " %"
-
         End If
     End Sub
 

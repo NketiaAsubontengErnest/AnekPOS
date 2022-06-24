@@ -123,6 +123,7 @@ Public Class frm_Profit
     End Sub
 
     Private Sub btn_close_Click(sender As Object, e As EventArgs) Handles btn_close.Click
+        colorClear()
         Me.Close()
     End Sub
 End Class

@@ -26,12 +26,12 @@ Partial Class frm_ListOfProduct
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_ListOfProduct))
-        Dim BorderEdges1 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties1 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties2 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Me.dgv_Peoduct = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.cmb_ProductName = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.BunifuLabel1 = New Bunifu.UI.Winforms.BunifuLabel()
+        Me.BunifuLabel1 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.lblPid = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -40,7 +40,7 @@ Partial Class frm_ListOfProduct
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.chkHide = New System.Windows.Forms.CheckBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.BunifuButton3 = New Bunifu.UI.Winforms.BunifuButton.BunifuButton()
+        Me.BunifuButton3 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         CType(Me.dgv_Peoduct, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -136,7 +136,7 @@ Partial Class frm_ListOfProduct
         Me.BunifuLabel1.TabIndex = 6
         Me.BunifuLabel1.Text = "Name: "
         Me.BunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel1.TextFormat = Bunifu.UI.Winforms.BunifuLabel.TextFormattingOptions.[Default]
+        Me.BunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'lblPid
         '
@@ -208,7 +208,7 @@ Partial Class frm_ListOfProduct
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(1044, 14)
+        Me.Button1.Location = New System.Drawing.Point(1055, 2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(29, 28)
         Me.Button1.TabIndex = 4
@@ -222,7 +222,7 @@ Partial Class frm_ListOfProduct
         Me.BunifuButton3.BackColor = System.Drawing.Color.Transparent
         Me.BunifuButton3.BackColor1 = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.BunifuButton3.BackgroundImage = CType(resources.GetObject("BunifuButton3.BackgroundImage"), System.Drawing.Image)
-        Me.BunifuButton3.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.BunifuButton3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         Me.BunifuButton3.ButtonText = "Delete"
         Me.BunifuButton3.ButtonTextMarginLeft = 0
         Me.BunifuButton3.ColorContrastOnClick = 45
@@ -237,7 +237,7 @@ Partial Class frm_ListOfProduct
         Me.BunifuButton3.DisabledBorderColor = System.Drawing.Color.Empty
         Me.BunifuButton3.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.BunifuButton3.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.BunifuButton3.FocusState = Bunifu.UI.Winforms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.BunifuButton3.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
         Me.BunifuButton3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!)
         Me.BunifuButton3.ForeColor = System.Drawing.Color.White
         Me.BunifuButton3.IconLeftCursor = System.Windows.Forms.Cursors.Hand
@@ -255,7 +255,7 @@ Partial Class frm_ListOfProduct
         Me.BunifuButton3.Name = "BunifuButton3"
         StateProperties1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
         StateProperties1.BorderRadius = 3
-        StateProperties1.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         StateProperties1.BorderThickness = 1
         StateProperties1.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
         StateProperties1.ForeColor = System.Drawing.Color.White
@@ -264,7 +264,7 @@ Partial Class frm_ListOfProduct
         Me.BunifuButton3.onHoverState = StateProperties1
         StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         StateProperties2.BorderRadius = 3
-        StateProperties2.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         StateProperties2.BorderThickness = 1
         StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
         StateProperties2.ForeColor = System.Drawing.Color.White
@@ -293,6 +293,7 @@ Partial Class frm_ListOfProduct
         Me.Controls.Add(Me.BunifuButton3)
         Me.Controls.Add(Me.dgv_Peoduct)
         Me.Controls.Add(Me.lblPid)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frm_ListOfProduct"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

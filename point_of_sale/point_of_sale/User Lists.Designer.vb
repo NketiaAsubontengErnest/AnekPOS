@@ -23,47 +23,45 @@ Partial Class User_Lists
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(User_Lists))
-        Dim BorderEdges5 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties9 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties10 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim BorderEdges6 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties11 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties12 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim BorderEdges7 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties13 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties14 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim BorderEdges8 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties15 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties16 As Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.Winforms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim BorderEdges3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties5 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties6 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties7 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties8 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Me.GunaLabel6 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel7 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel4 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
         Me.cmd_position = New System.Windows.Forms.ComboBox()
-        Me.btn_Clear = New Bunifu.UI.Winforms.BunifuButton.BunifuButton()
-        Me.btn_Add = New Bunifu.UI.Winforms.BunifuButton.BunifuButton()
+        Me.btn_Clear = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.btn_Add = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.txt_Address = New Guna.UI.WinForms.GunaTextBox()
         Me.txt_Phone = New Guna.UI.WinForms.GunaTextBox()
         Me.txt_Name = New Guna.UI.WinForms.GunaTextBox()
         Me.txt_UserID = New Guna.UI.WinForms.GunaTextBox()
         Me.dgvUsers = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.btnClose = New System.Windows.Forms.Button()
-        Me.btnDelete = New Bunifu.UI.Winforms.BunifuButton.BunifuButton()
-        Me.btnBlock = New Bunifu.UI.Winforms.BunifuButton.BunifuButton()
+        Me.btnDelete = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.btnBlock = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.dgvUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
-        Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -135,22 +133,22 @@ Partial Class User_Lists
         Me.btn_Clear.BackColor = System.Drawing.Color.Transparent
         Me.btn_Clear.BackColor1 = System.Drawing.Color.DodgerBlue
         Me.btn_Clear.BackgroundImage = CType(resources.GetObject("btn_Clear.BackgroundImage"), System.Drawing.Image)
-        Me.btn_Clear.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.btn_Clear.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         Me.btn_Clear.ButtonText = "Clear"
         Me.btn_Clear.ButtonTextMarginLeft = 0
         Me.btn_Clear.ColorContrastOnClick = 45
         Me.btn_Clear.ColorContrastOnHover = 45
         Me.btn_Clear.Cursor = System.Windows.Forms.Cursors.Hand
-        BorderEdges5.BottomLeft = True
-        BorderEdges5.BottomRight = True
-        BorderEdges5.TopLeft = True
-        BorderEdges5.TopRight = True
-        Me.btn_Clear.CustomizableEdges = BorderEdges5
+        BorderEdges1.BottomLeft = True
+        BorderEdges1.BottomRight = True
+        BorderEdges1.TopLeft = True
+        BorderEdges1.TopRight = True
+        Me.btn_Clear.CustomizableEdges = BorderEdges1
         Me.btn_Clear.DialogResult = System.Windows.Forms.DialogResult.None
         Me.btn_Clear.DisabledBorderColor = System.Drawing.Color.Empty
         Me.btn_Clear.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_Clear.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.btn_Clear.FocusState = Bunifu.UI.Winforms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.btn_Clear.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
         Me.btn_Clear.Font = New System.Drawing.Font("Segoe UI Semibold", 14.0!)
         Me.btn_Clear.ForeColor = System.Drawing.Color.White
         Me.btn_Clear.IconLeftCursor = System.Windows.Forms.Cursors.Hand
@@ -166,24 +164,24 @@ Partial Class User_Lists
         Me.btn_Clear.IndicateFocus = False
         Me.btn_Clear.Location = New System.Drawing.Point(161, 405)
         Me.btn_Clear.Name = "btn_Clear"
-        StateProperties9.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties9.BorderRadius = 3
-        StateProperties9.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties9.BorderThickness = 1
-        StateProperties9.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties9.ForeColor = System.Drawing.Color.White
-        StateProperties9.IconLeftImage = Nothing
-        StateProperties9.IconRightImage = Nothing
-        Me.btn_Clear.onHoverState = StateProperties9
-        StateProperties10.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties10.BorderRadius = 3
-        StateProperties10.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties10.BorderThickness = 1
-        StateProperties10.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties10.ForeColor = System.Drawing.Color.White
-        StateProperties10.IconLeftImage = Nothing
-        StateProperties10.IconRightImage = Nothing
-        Me.btn_Clear.OnPressedState = StateProperties10
+        StateProperties1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties1.BorderRadius = 3
+        StateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties1.BorderThickness = 1
+        StateProperties1.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties1.ForeColor = System.Drawing.Color.White
+        StateProperties1.IconLeftImage = Nothing
+        StateProperties1.IconRightImage = Nothing
+        Me.btn_Clear.onHoverState = StateProperties1
+        StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties2.BorderRadius = 3
+        StateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties2.BorderThickness = 1
+        StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties2.ForeColor = System.Drawing.Color.White
+        StateProperties2.IconLeftImage = Nothing
+        StateProperties2.IconRightImage = Nothing
+        Me.btn_Clear.OnPressedState = StateProperties2
         Me.btn_Clear.Size = New System.Drawing.Size(146, 49)
         Me.btn_Clear.TabIndex = 5
         Me.btn_Clear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -198,22 +196,22 @@ Partial Class User_Lists
         Me.btn_Add.BackColor = System.Drawing.Color.Transparent
         Me.btn_Add.BackColor1 = System.Drawing.Color.DodgerBlue
         Me.btn_Add.BackgroundImage = CType(resources.GetObject("btn_Add.BackgroundImage"), System.Drawing.Image)
-        Me.btn_Add.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.btn_Add.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         Me.btn_Add.ButtonText = "Update"
         Me.btn_Add.ButtonTextMarginLeft = 0
         Me.btn_Add.ColorContrastOnClick = 45
         Me.btn_Add.ColorContrastOnHover = 45
         Me.btn_Add.Cursor = System.Windows.Forms.Cursors.Hand
-        BorderEdges6.BottomLeft = True
-        BorderEdges6.BottomRight = True
-        BorderEdges6.TopLeft = True
-        BorderEdges6.TopRight = True
-        Me.btn_Add.CustomizableEdges = BorderEdges6
+        BorderEdges2.BottomLeft = True
+        BorderEdges2.BottomRight = True
+        BorderEdges2.TopLeft = True
+        BorderEdges2.TopRight = True
+        Me.btn_Add.CustomizableEdges = BorderEdges2
         Me.btn_Add.DialogResult = System.Windows.Forms.DialogResult.None
         Me.btn_Add.DisabledBorderColor = System.Drawing.Color.Empty
         Me.btn_Add.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btn_Add.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.btn_Add.FocusState = Bunifu.UI.Winforms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.btn_Add.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
         Me.btn_Add.Font = New System.Drawing.Font("Segoe UI Semibold", 14.0!)
         Me.btn_Add.ForeColor = System.Drawing.Color.White
         Me.btn_Add.IconLeftCursor = System.Windows.Forms.Cursors.Hand
@@ -229,24 +227,24 @@ Partial Class User_Lists
         Me.btn_Add.IndicateFocus = False
         Me.btn_Add.Location = New System.Drawing.Point(15, 405)
         Me.btn_Add.Name = "btn_Add"
-        StateProperties11.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties11.BorderRadius = 3
-        StateProperties11.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties11.BorderThickness = 1
-        StateProperties11.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties11.ForeColor = System.Drawing.Color.White
-        StateProperties11.IconLeftImage = Nothing
-        StateProperties11.IconRightImage = Nothing
-        Me.btn_Add.onHoverState = StateProperties11
-        StateProperties12.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties12.BorderRadius = 3
-        StateProperties12.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties12.BorderThickness = 1
-        StateProperties12.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties12.ForeColor = System.Drawing.Color.White
-        StateProperties12.IconLeftImage = Nothing
-        StateProperties12.IconRightImage = Nothing
-        Me.btn_Add.OnPressedState = StateProperties12
+        StateProperties3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties3.BorderRadius = 3
+        StateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties3.BorderThickness = 1
+        StateProperties3.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties3.ForeColor = System.Drawing.Color.White
+        StateProperties3.IconLeftImage = Nothing
+        StateProperties3.IconRightImage = Nothing
+        Me.btn_Add.onHoverState = StateProperties3
+        StateProperties4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties4.BorderRadius = 3
+        StateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties4.BorderThickness = 1
+        StateProperties4.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties4.ForeColor = System.Drawing.Color.White
+        StateProperties4.IconLeftImage = Nothing
+        StateProperties4.IconRightImage = Nothing
+        Me.btn_Add.OnPressedState = StateProperties4
         Me.btn_Add.Size = New System.Drawing.Size(140, 49)
         Me.btn_Add.TabIndex = 4
         Me.btn_Add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -327,30 +325,30 @@ Partial Class User_Lists
         '
         Me.dgvUsers.AllowUserToAddRows = False
         Me.dgvUsers.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.dgvUsers.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgvUsers.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvUsers.BackgroundColor = System.Drawing.Color.White
         Me.dgvUsers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dgvUsers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvUsers.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvUsers.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvUsers.ColumnHeadersHeight = 4
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvUsers.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvUsers.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvUsers.EnableHeadersVisualStyles = False
         Me.dgvUsers.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvUsers.Location = New System.Drawing.Point(312, 99)
@@ -403,22 +401,22 @@ Partial Class User_Lists
         Me.btnDelete.BackColor = System.Drawing.Color.Transparent
         Me.btnDelete.BackColor1 = System.Drawing.Color.Red
         Me.btnDelete.BackgroundImage = CType(resources.GetObject("btnDelete.BackgroundImage"), System.Drawing.Image)
-        Me.btnDelete.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.btnDelete.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         Me.btnDelete.ButtonText = "Delete"
         Me.btnDelete.ButtonTextMarginLeft = 0
         Me.btnDelete.ColorContrastOnClick = 45
         Me.btnDelete.ColorContrastOnHover = 45
         Me.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand
-        BorderEdges7.BottomLeft = True
-        BorderEdges7.BottomRight = True
-        BorderEdges7.TopLeft = True
-        BorderEdges7.TopRight = True
-        Me.btnDelete.CustomizableEdges = BorderEdges7
+        BorderEdges3.BottomLeft = True
+        BorderEdges3.BottomRight = True
+        BorderEdges3.TopLeft = True
+        BorderEdges3.TopRight = True
+        Me.btnDelete.CustomizableEdges = BorderEdges3
         Me.btnDelete.DialogResult = System.Windows.Forms.DialogResult.None
         Me.btnDelete.DisabledBorderColor = System.Drawing.Color.Empty
         Me.btnDelete.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnDelete.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.btnDelete.FocusState = Bunifu.UI.Winforms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.btnDelete.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
         Me.btnDelete.Font = New System.Drawing.Font("Segoe UI Semibold", 14.0!)
         Me.btnDelete.ForeColor = System.Drawing.Color.White
         Me.btnDelete.IconLeftCursor = System.Windows.Forms.Cursors.Hand
@@ -434,24 +432,24 @@ Partial Class User_Lists
         Me.btnDelete.IndicateFocus = False
         Me.btnDelete.Location = New System.Drawing.Point(569, 405)
         Me.btnDelete.Name = "btnDelete"
-        StateProperties13.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties13.BorderRadius = 3
-        StateProperties13.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties13.BorderThickness = 1
-        StateProperties13.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties13.ForeColor = System.Drawing.Color.White
-        StateProperties13.IconLeftImage = Nothing
-        StateProperties13.IconRightImage = Nothing
-        Me.btnDelete.onHoverState = StateProperties13
-        StateProperties14.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties14.BorderRadius = 3
-        StateProperties14.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties14.BorderThickness = 1
-        StateProperties14.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties14.ForeColor = System.Drawing.Color.White
-        StateProperties14.IconLeftImage = Nothing
-        StateProperties14.IconRightImage = Nothing
-        Me.btnDelete.OnPressedState = StateProperties14
+        StateProperties5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties5.BorderRadius = 3
+        StateProperties5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties5.BorderThickness = 1
+        StateProperties5.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties5.ForeColor = System.Drawing.Color.White
+        StateProperties5.IconLeftImage = Nothing
+        StateProperties5.IconRightImage = Nothing
+        Me.btnDelete.onHoverState = StateProperties5
+        StateProperties6.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties6.BorderRadius = 3
+        StateProperties6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties6.BorderThickness = 1
+        StateProperties6.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties6.ForeColor = System.Drawing.Color.White
+        StateProperties6.IconLeftImage = Nothing
+        StateProperties6.IconRightImage = Nothing
+        Me.btnDelete.OnPressedState = StateProperties6
         Me.btnDelete.Size = New System.Drawing.Size(146, 49)
         Me.btnDelete.TabIndex = 7
         Me.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -466,22 +464,22 @@ Partial Class User_Lists
         Me.btnBlock.BackColor = System.Drawing.Color.Transparent
         Me.btnBlock.BackColor1 = System.Drawing.Color.BlueViolet
         Me.btnBlock.BackgroundImage = CType(resources.GetObject("btnBlock.BackgroundImage"), System.Drawing.Image)
-        Me.btnBlock.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
+        Me.btnBlock.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         Me.btnBlock.ButtonText = "Block"
         Me.btnBlock.ButtonTextMarginLeft = 0
         Me.btnBlock.ColorContrastOnClick = 45
         Me.btnBlock.ColorContrastOnHover = 45
         Me.btnBlock.Cursor = System.Windows.Forms.Cursors.Hand
-        BorderEdges8.BottomLeft = True
-        BorderEdges8.BottomRight = True
-        BorderEdges8.TopLeft = True
-        BorderEdges8.TopRight = True
-        Me.btnBlock.CustomizableEdges = BorderEdges8
+        BorderEdges4.BottomLeft = True
+        BorderEdges4.BottomRight = True
+        BorderEdges4.TopLeft = True
+        BorderEdges4.TopRight = True
+        Me.btnBlock.CustomizableEdges = BorderEdges4
         Me.btnBlock.DialogResult = System.Windows.Forms.DialogResult.None
         Me.btnBlock.DisabledBorderColor = System.Drawing.Color.Empty
         Me.btnBlock.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnBlock.DisabledForecolor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(168, Byte), Integer))
-        Me.btnBlock.FocusState = Bunifu.UI.Winforms.BunifuButton.BunifuButton.ButtonStates.Pressed
+        Me.btnBlock.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed
         Me.btnBlock.Font = New System.Drawing.Font("Segoe UI Semibold", 14.0!)
         Me.btnBlock.ForeColor = System.Drawing.Color.White
         Me.btnBlock.IconLeftCursor = System.Windows.Forms.Cursors.Hand
@@ -497,24 +495,24 @@ Partial Class User_Lists
         Me.btnBlock.IndicateFocus = False
         Me.btnBlock.Location = New System.Drawing.Point(423, 405)
         Me.btnBlock.Name = "btnBlock"
-        StateProperties15.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties15.BorderRadius = 3
-        StateProperties15.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties15.BorderThickness = 1
-        StateProperties15.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties15.ForeColor = System.Drawing.Color.White
-        StateProperties15.IconLeftImage = Nothing
-        StateProperties15.IconRightImage = Nothing
-        Me.btnBlock.onHoverState = StateProperties15
-        StateProperties16.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties16.BorderRadius = 3
-        StateProperties16.BorderStyle = Bunifu.UI.Winforms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties16.BorderThickness = 1
-        StateProperties16.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties16.ForeColor = System.Drawing.Color.White
-        StateProperties16.IconLeftImage = Nothing
-        StateProperties16.IconRightImage = Nothing
-        Me.btnBlock.OnPressedState = StateProperties16
+        StateProperties7.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties7.BorderRadius = 3
+        StateProperties7.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties7.BorderThickness = 1
+        StateProperties7.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties7.ForeColor = System.Drawing.Color.White
+        StateProperties7.IconLeftImage = Nothing
+        StateProperties7.IconRightImage = Nothing
+        Me.btnBlock.onHoverState = StateProperties7
+        StateProperties8.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties8.BorderRadius = 3
+        StateProperties8.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties8.BorderThickness = 1
+        StateProperties8.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties8.ForeColor = System.Drawing.Color.White
+        StateProperties8.IconLeftImage = Nothing
+        StateProperties8.IconRightImage = Nothing
+        Me.btnBlock.OnPressedState = StateProperties8
         Me.btnBlock.Size = New System.Drawing.Size(140, 49)
         Me.btnBlock.TabIndex = 6
         Me.btnBlock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -542,20 +540,11 @@ Partial Class User_Lists
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Panel4.Controls.Add(Me.Panel5)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(13, 0)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(799, 15)
         Me.Panel4.TabIndex = 59
-        '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Panel5.Location = New System.Drawing.Point(670, 0)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(13, 472)
-        Me.Panel5.TabIndex = 34
         '
         'Panel2
         '
@@ -609,13 +598,13 @@ Partial Class User_Lists
         Me.Controls.Add(Me.txt_Phone)
         Me.Controls.Add(Me.txt_Name)
         Me.Controls.Add(Me.txt_UserID)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "User_Lists"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "User_Lists"
         CType(Me.dgvUsers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -640,7 +629,6 @@ Partial Class User_Lists
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel1 As Panel
