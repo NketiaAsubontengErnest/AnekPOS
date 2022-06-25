@@ -24,7 +24,7 @@ Public Class Frm_Sale
         End If
 
         calculateSales(Frm_AdminDas.lblUserID.Text)
-        load_Data_Grid()
+        LoadGrid()
         txt_Quantity.Enabled = False
         btn_AddToList.Enabled = False
         btn_Done.Enabled = False
@@ -37,7 +37,7 @@ Public Class Frm_Sale
         ProductDetails()
         cmbType.Items.Add("Show All Products...")
 
-        'load_Data_Grid()    "Unit Price" + vbTab + vbTab +
+        'LoadGrid()    "Unit Price" + vbTab + vbTab +
         'list_ShowAdded.Items.Add("Product       unitPrice       Quantity")
         'list_ShowAdded.Items.Add("***************************************")
     End Sub
@@ -58,7 +58,7 @@ Public Class Frm_Sale
         calculateSales(Frm_AdminDas.lblUserID.Text)
         updateProducts()
 
-        rtxtReceipt.AppendText(vbTab + "ANEK POS" + vbCrLf)
+        rtxtReceipt.AppendText(vbTab + CompanyName1 + vbCrLf)
         rtxtReceipt.AppendText("        Sales Receipt" + vbCrLf)
         rtxtReceipt.AppendText("--------------------------------------------------------------------" + vbCrLf)
         rtxtReceipt.AppendText("Item" + "                                " + "Price" + "          " + "Qty" + "        " + "Amount" + vbCrLf)
@@ -73,7 +73,7 @@ Public Class Frm_Sale
         overallTotal = 0
         countOutStock()
 
-        load_Data_Grid()
+        LoadGrid()
 
         BtnRemoveItem.PerformClick()
     End Sub
@@ -394,6 +394,7 @@ Public Class Frm_Sale
             profit.Add(lblProf.Text)
             hidden.Add(cmb_Hide.Text)
 
+            cmb_QuantInstack.Text = Convert.ToInt32(cmb_QuantInstack.Text) - Convert.ToInt32(txt_Quantity.Value)
             lblTotalPrice.Text = "Gh¢" + overallTotal.ToString
         Catch ex As Exception
 
@@ -441,8 +442,6 @@ Public Class Frm_Sale
 
     End Sub
 
-    '"Unit Price" + vbTab + vbTab +  cmd_unitPrice.Text +
-
     Public Sub fillReceipt()
 
 
@@ -455,6 +454,7 @@ Public Class Frm_Sale
                                        unit.ToArray.GetValue(i).ToString + "            " +
                                        quanti.ToArray.GetValue(i).ToString + "                " +
                                        prize.ToArray.GetValue(i).ToString + vbCrLf)
+                GunaDataGridView1.Rows.Add(itemName.ToArray.GetValue(i), unit.ToArray.GetValue(i).ToString, quanti.ToArray.GetValue(i).ToString, prize.ToArray.GetValue(i).ToString)
                 i += 1
             End While
 
@@ -468,7 +468,7 @@ Public Class Frm_Sale
             lstID.Items.Clear()
             lstTrackQty.Items.Clear()
 
-            load_Data_Grid()
+            LoadGrid()
 
             TextBox1.Text = itemName.Count
 
@@ -490,37 +490,17 @@ Public Class Frm_Sale
         End Try
     End Sub
 
-    Public Sub load_Data_Grid()
+    Public Sub LoadGrid()
         Try
-            Dim con As MySqlConnection
-
-            Dim ada As New MySqlDataAdapter
-            Dim ds As New DataSet
-
-            con = New MySqlConnection(connstring)
-            con.Open()
-
-            ada = New MySqlDataAdapter("Select ID,item,Qty,price,Amount,month from sales where month='" + Date.Now.ToString("dd/MM/yyyy") + "'
-                                   AND employeeID='" + Frm_AdminDas.lblUserID.Text + "' AND hide = 'NO'", con)
-            ada.Fill(ds)
-            DataGridView1.DataSource = ds.Tables(0)
+            DataGridView1.DataSource = Load_Data_Grid("Select ID,item,Qty,price,Amount,month from sales where month='" + Date.Now.ToString("dd/MM/yyyy") + "'
+                                   AND employeeID='" + Frm_AdminDas.lblUserID.Text + "' AND hide = 'NO'").Tables(0)
         Catch ex As Exception
 
         End Try
     End Sub
-    Public Sub load_Data_Grid_All()
-        Dim con As MySqlConnection
-
-        Dim ada As New MySqlDataAdapter
-        Dim ds As New DataSet
-
-        con = New MySqlConnection(connstring)
-        con.Open()
-
-        ada = New MySqlDataAdapter("Select ID,item,Qty,price,Amount,month from sales where month='" + Date.Now.ToString("dd/MM/yyyy") + "'
-                                   AND employeeID='" + Frm_AdminDas.lblUserID.Text + "'", con)
-        ada.Fill(ds)
-        DataGridView1.DataSource = ds.Tables(0)
+    Public Sub LoadGrid_All()
+        DataGridView1.DataSource = Load_Data_Grid("Select ID,item,Qty,price,Amount,month from sales where month='" + Date.Now.ToString("dd/MM/yyyy") + "'
+                                   AND employeeID='" + Frm_AdminDas.lblUserID.Text + "'").Tables(0)
     End Sub
 
     Public Sub calculateSales(ByVal ids As String)
@@ -558,26 +538,17 @@ Public Class Frm_Sale
     Public Sub confirmPurchase()
         Dim A As Integer = 0
 
-        Dim command As MySqlCommand
-        Dim insertString_EmpDetiles As String = ""
-        Dim connection = New MySqlConnection
-
-        connection.ConnectionString = connstring
-
         Dim track As String = Path.GetRandomFileName()
         track.Replace(".", "")
         track.Replace("/", "")
         track.Replace("\", "")
 
         Try
-
-
             Dim count As Integer = itemName.Count
             Dim i As Integer = 0
 
             While i < count
-                connection.Open()
-                insertString_EmpDetiles = "INSERT INTO sales (item, Qty, price, amount, trackRec, employeeID,date,month,profit,	Gen_Mount, hide) VALUES (
+                query = "INSERT INTO sales (item, Qty, price, amount, trackRec, employeeID,date,month,profit,	Gen_Mount, hide) VALUES (
                                                                 '" + itemName.ToArray.GetValue(i).ToString + "', 
                                                                 '" + quanti.ToArray.GetValue(i).ToString + "', 
                                                                 '" + unit.ToArray.GetValue(i).ToString + "', 
@@ -589,20 +560,17 @@ Public Class Frm_Sale
                                                                 '" + profit.ToArray.GetValue(i).ToString + "',
                                                                 '" + Date.Now.ToString("MM") + "',
                                                                 '" + hidden.ToArray.GetValue(i).ToString + "')"
-                command = New MySqlCommand(insertString_EmpDetiles, connection)
-                command.ExecuteNonQuery()
+                reader = Inserting(query)
+                If Not reader.RecordsAffected > 0 Then
+                    MsgBox("Check confirmPurchase in sales")
+                End If
 
-                connection.Close()
 
                 i += 1
             End While
 
 
         Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-
-            connection.Dispose()
         End Try
         'End While
 
@@ -610,74 +578,38 @@ Public Class Frm_Sale
 
     Public Sub updateProducts()
         Dim A As Integer = 0
-
-        Dim command As MySqlCommand
-        Dim insertString_EmpDetiles As String = ""
-        Dim connection = New MySqlConnection
-
-        connection.ConnectionString = connstring
-
         Try
-
-
             Dim count As Integer = itemName.Count
             Dim i As Integer = 0
 
             While i < count
                 Dim Qty As String = lstTrackQty.Items(i).ToString
-                connection.Open()
-                'MsgBox("Quantity: " + quanti.ToArray.GetValue(i).ToString + "Name: " + itemName.ToArray.GetValue(i).ToString) 
-                insertString_EmpDetiles = "UPDATE `product` SET `instock`= instock - '" & Convert.ToInt32(quanti.ToArray.GetValue(i).ToString) & "', `quant_soldq`= quant_soldq + '" & Convert.ToInt32(quanti.ToArray.GetValue(i).ToString) & "' WHERE `Pro_Name`= '" & itemName.ToArray.GetValue(i).ToString & "'"
-
-                command = New MySqlCommand(insertString_EmpDetiles, connection)
-                command.ExecuteNonQuery()
-
-                connection.Close()
-
+                reader = Updating("UPDATE `product` SET `instock`= instock - '" & Convert.ToInt32(quanti.ToArray.GetValue(i).ToString) & "', `quant_soldq`= quant_soldq + '" & Convert.ToInt32(quanti.ToArray.GetValue(i).ToString) & "' WHERE `Pro_Name`= '" & itemName.ToArray.GetValue(i).ToString & "'")
+                If Not reader.RecordsAffected > 0 Then
+                    MsgBox("check Update update in sales", MsgBoxStyle.Critical)
+                End If
                 i += 1
             End While
-
-
         Catch ex As Exception
             MsgBox(ex.Message)
-        Finally
-
-            connection.Dispose()
         End Try
-        'End While
-
     End Sub
 
     Public Sub dailySales()
 
-        Dim command As MySqlCommand
-        Dim insertString_EmpDetiles As String = ""
-        Dim connection = New MySqlConnection
-
-        connection.ConnectionString = connstring
-
         Try
-
-
-            connection.Open()
-            insertString_EmpDetiles = "INSERT INTO dailysales (employeeID,totalsales,date,datePrepared,isClosed) VALUES (
+            query = "INSERT INTO dailysales (employeeID,totalsales,date,datePrepared,isClosed) VALUES (
                                                                    '" + Frm_AdminDas.lblUserID.Text + "',
                                                                    '" + lblSales.Text + "',
                                                                    '" + Date.Now.ToString("dd/MM/yyyy") + "',
                                                                    '" + DateTime.Now.ToString + "',
                                                                    'Yes')"
-            command = New MySqlCommand(insertString_EmpDetiles, connection)
-            command.ExecuteNonQuery()
-
-            MsgBox("Sales Confirmed")
-
-            connection.Close()
-
+            reader = Inserting(query)
+            If reader.RecordsAffected > 0 Then
+                MsgBox("Sales Confirmed", MsgBoxStyle.Information)
+            End If
         Catch ex As Exception
             MsgBox(ex.Message)
-        Finally
-
-            connection.Dispose()
         End Try
         'End While
 
@@ -695,16 +627,9 @@ Public Class Frm_Sale
     End Sub
 
     Private Sub btn_close_Click_1(sender As Object, e As EventArgs) Handles btn_close.Click
-        colorClear()
+        ColorClear()
         Me.Close()
 
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        'If e.RowIndex >= 0 Then
-        '    Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
-        '    TextBox2.Text = row.Cells(0).Value.ToString
-        'End If
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
@@ -788,10 +713,10 @@ Public Class Frm_Sale
         Finally
             If ckShowAll.Checked = True Then
                 ProductDetailsAllHiden()
-                load_Data_Grid_All()
+                LoadGrid_All()
             Else
                 ProductDetails()
-                load_Data_Grid()
+                LoadGrid()
             End If
         End Try
     End Sub

@@ -13,7 +13,7 @@ Public Class splash
     End Sub
 
     Private Sub splash_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        LoadCompanyDetails()
         Dim conn As String = "server=localhost;user id=root;password=0554013980A@;"
         Dim mey = DoesDBExist(conn)
         If mey.ToString = "True" Then
@@ -24,6 +24,8 @@ Public Class splash
 
         Timer1.Start()
     End Sub
+
+
     Function DoesDBExist(DBConnectionString As String) As Boolean
 
         Dim conn As MySqlConnection = New MySqlConnection(DBConnectionString)

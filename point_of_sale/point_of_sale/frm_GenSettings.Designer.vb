@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Frm_GenSettings
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,18 +20,46 @@ Partial Class Frm_GenSettings
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_GenSettings))
-        Dim BorderEdges3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties5 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties6 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim BorderEdges4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties7 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties8 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.BtnUpdate = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnSet = New Guna.UI2.WinForms.Guna2Button()
+        Me.TxtCountry = New Guna.UI.WinForms.GunaTextBox()
+        Me.TxtEmail = New Guna.UI.WinForms.GunaTextBox()
+        Me.TxtLocation = New Guna.UI.WinForms.GunaTextBox()
+        Me.TxtAddress = New Guna.UI.WinForms.GunaTextBox()
+        Me.TxtPhone3 = New Guna.UI.WinForms.GunaTextBox()
+        Me.TxtPhone2 = New Guna.UI.WinForms.GunaTextBox()
+        Me.TxtPhone1 = New Guna.UI.WinForms.GunaTextBox()
+        Me.TxtCompanyName = New Guna.UI.WinForms.GunaTextBox()
+        Me.PicCompanyLogo = New Guna.UI.WinForms.GunaCirclePictureBox()
+        Me.GunaLabel23 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel21 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel20 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel19 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel18 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel17 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel16 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel15 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel14 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel12 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel11 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel10 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel9 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel8 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel7 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel6 = New Guna.UI.WinForms.GunaLabel()
+        Me.LblID = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
@@ -62,6 +90,8 @@ Partial Class Frm_GenSettings
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GunaLabel5 = New Guna.UI.WinForms.GunaLabel()
         Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        CType(Me.PicCompanyLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage4.SuspendLayout()
         Me.TabPage5.SuspendLayout()
         Me.TabPage6.SuspendLayout()
@@ -84,14 +114,378 @@ Partial Class Frm_GenSettings
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.BtnUpdate)
+        Me.TabPage1.Controls.Add(Me.BtnSet)
+        Me.TabPage1.Controls.Add(Me.TxtCountry)
+        Me.TabPage1.Controls.Add(Me.TxtEmail)
+        Me.TabPage1.Controls.Add(Me.TxtLocation)
+        Me.TabPage1.Controls.Add(Me.TxtAddress)
+        Me.TabPage1.Controls.Add(Me.TxtPhone3)
+        Me.TabPage1.Controls.Add(Me.TxtPhone2)
+        Me.TabPage1.Controls.Add(Me.TxtPhone1)
+        Me.TabPage1.Controls.Add(Me.TxtCompanyName)
+        Me.TabPage1.Controls.Add(Me.PicCompanyLogo)
+        Me.TabPage1.Controls.Add(Me.GunaLabel23)
+        Me.TabPage1.Controls.Add(Me.GunaLabel21)
+        Me.TabPage1.Controls.Add(Me.GunaLabel20)
+        Me.TabPage1.Controls.Add(Me.GunaLabel19)
+        Me.TabPage1.Controls.Add(Me.GunaLabel18)
+        Me.TabPage1.Controls.Add(Me.GunaLabel17)
+        Me.TabPage1.Controls.Add(Me.GunaLabel16)
+        Me.TabPage1.Controls.Add(Me.GunaLabel15)
+        Me.TabPage1.Controls.Add(Me.GunaLabel14)
+        Me.TabPage1.Controls.Add(Me.GunaLabel12)
+        Me.TabPage1.Controls.Add(Me.GunaLabel11)
+        Me.TabPage1.Controls.Add(Me.GunaLabel10)
+        Me.TabPage1.Controls.Add(Me.GunaLabel9)
+        Me.TabPage1.Controls.Add(Me.GunaLabel8)
+        Me.TabPage1.Controls.Add(Me.GunaLabel7)
+        Me.TabPage1.Controls.Add(Me.GunaLabel6)
+        Me.TabPage1.Controls.Add(Me.LblID)
         Me.TabPage1.Location = New System.Drawing.Point(4, 28)
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(4)
         Me.TabPage1.Size = New System.Drawing.Size(779, 466)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
+        Me.TabPage1.Text = "Company Details"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'BtnUpdate
+        '
+        Me.BtnUpdate.CheckedState.Parent = Me.BtnUpdate
+        Me.BtnUpdate.CustomImages.Parent = Me.BtnUpdate
+        Me.BtnUpdate.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnUpdate.ForeColor = System.Drawing.Color.White
+        Me.BtnUpdate.HoverState.Parent = Me.BtnUpdate
+        Me.BtnUpdate.Location = New System.Drawing.Point(407, 406)
+        Me.BtnUpdate.Name = "BtnUpdate"
+        Me.BtnUpdate.ShadowDecoration.Parent = Me.BtnUpdate
+        Me.BtnUpdate.Size = New System.Drawing.Size(180, 45)
+        Me.BtnUpdate.TabIndex = 20
+        Me.BtnUpdate.Text = "Update"
+        '
+        'BtnSet
+        '
+        Me.BtnSet.CheckedState.Parent = Me.BtnSet
+        Me.BtnSet.CustomImages.Parent = Me.BtnSet
+        Me.BtnSet.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSet.ForeColor = System.Drawing.Color.White
+        Me.BtnSet.HoverState.Parent = Me.BtnSet
+        Me.BtnSet.Location = New System.Drawing.Point(198, 406)
+        Me.BtnSet.Name = "BtnSet"
+        Me.BtnSet.ShadowDecoration.Parent = Me.BtnSet
+        Me.BtnSet.Size = New System.Drawing.Size(180, 45)
+        Me.BtnSet.TabIndex = 20
+        Me.BtnSet.Text = "Set"
+        '
+        'TxtCountry
+        '
+        Me.TxtCountry.BaseColor = System.Drawing.Color.White
+        Me.TxtCountry.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.TxtCountry.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtCountry.FocusedBaseColor = System.Drawing.Color.White
+        Me.TxtCountry.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtCountry.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.TxtCountry.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCountry.Location = New System.Drawing.Point(151, 368)
+        Me.TxtCountry.Name = "TxtCountry"
+        Me.TxtCountry.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtCountry.SelectedText = ""
+        Me.TxtCountry.Size = New System.Drawing.Size(490, 32)
+        Me.TxtCountry.TabIndex = 7
+        '
+        'TxtEmail
+        '
+        Me.TxtEmail.BaseColor = System.Drawing.Color.White
+        Me.TxtEmail.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.TxtEmail.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtEmail.FocusedBaseColor = System.Drawing.Color.White
+        Me.TxtEmail.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtEmail.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.TxtEmail.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtEmail.Location = New System.Drawing.Point(151, 324)
+        Me.TxtEmail.Name = "TxtEmail"
+        Me.TxtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtEmail.SelectedText = ""
+        Me.TxtEmail.Size = New System.Drawing.Size(490, 32)
+        Me.TxtEmail.TabIndex = 6
+        '
+        'TxtLocation
+        '
+        Me.TxtLocation.BaseColor = System.Drawing.Color.White
+        Me.TxtLocation.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.TxtLocation.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtLocation.FocusedBaseColor = System.Drawing.Color.White
+        Me.TxtLocation.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtLocation.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.TxtLocation.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtLocation.Location = New System.Drawing.Point(151, 278)
+        Me.TxtLocation.Name = "TxtLocation"
+        Me.TxtLocation.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtLocation.SelectedText = ""
+        Me.TxtLocation.Size = New System.Drawing.Size(490, 32)
+        Me.TxtLocation.TabIndex = 5
+        '
+        'TxtAddress
+        '
+        Me.TxtAddress.BaseColor = System.Drawing.Color.White
+        Me.TxtAddress.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.TxtAddress.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtAddress.FocusedBaseColor = System.Drawing.Color.White
+        Me.TxtAddress.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtAddress.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.TxtAddress.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtAddress.Location = New System.Drawing.Point(151, 235)
+        Me.TxtAddress.Name = "TxtAddress"
+        Me.TxtAddress.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtAddress.SelectedText = ""
+        Me.TxtAddress.Size = New System.Drawing.Size(490, 32)
+        Me.TxtAddress.TabIndex = 4
+        '
+        'TxtPhone3
+        '
+        Me.TxtPhone3.BaseColor = System.Drawing.Color.White
+        Me.TxtPhone3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.TxtPhone3.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtPhone3.FocusedBaseColor = System.Drawing.Color.White
+        Me.TxtPhone3.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtPhone3.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.TxtPhone3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPhone3.Location = New System.Drawing.Point(151, 195)
+        Me.TxtPhone3.Name = "TxtPhone3"
+        Me.TxtPhone3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtPhone3.SelectedText = ""
+        Me.TxtPhone3.Size = New System.Drawing.Size(490, 32)
+        Me.TxtPhone3.TabIndex = 3
+        '
+        'TxtPhone2
+        '
+        Me.TxtPhone2.BaseColor = System.Drawing.Color.White
+        Me.TxtPhone2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.TxtPhone2.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtPhone2.FocusedBaseColor = System.Drawing.Color.White
+        Me.TxtPhone2.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtPhone2.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.TxtPhone2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPhone2.Location = New System.Drawing.Point(151, 151)
+        Me.TxtPhone2.Name = "TxtPhone2"
+        Me.TxtPhone2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtPhone2.SelectedText = ""
+        Me.TxtPhone2.Size = New System.Drawing.Size(490, 32)
+        Me.TxtPhone2.TabIndex = 2
+        '
+        'TxtPhone1
+        '
+        Me.TxtPhone1.BaseColor = System.Drawing.Color.White
+        Me.TxtPhone1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.TxtPhone1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtPhone1.FocusedBaseColor = System.Drawing.Color.White
+        Me.TxtPhone1.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtPhone1.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.TxtPhone1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPhone1.Location = New System.Drawing.Point(151, 109)
+        Me.TxtPhone1.Name = "TxtPhone1"
+        Me.TxtPhone1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtPhone1.SelectedText = ""
+        Me.TxtPhone1.Size = New System.Drawing.Size(490, 32)
+        Me.TxtPhone1.TabIndex = 1
+        '
+        'TxtCompanyName
+        '
+        Me.TxtCompanyName.BaseColor = System.Drawing.Color.White
+        Me.TxtCompanyName.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.TxtCompanyName.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtCompanyName.FocusedBaseColor = System.Drawing.Color.White
+        Me.TxtCompanyName.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TxtCompanyName.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.TxtCompanyName.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCompanyName.Location = New System.Drawing.Point(151, 67)
+        Me.TxtCompanyName.Name = "TxtCompanyName"
+        Me.TxtCompanyName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtCompanyName.SelectedText = ""
+        Me.TxtCompanyName.Size = New System.Drawing.Size(490, 32)
+        Me.TxtCompanyName.TabIndex = 0
+        '
+        'PicCompanyLogo
+        '
+        Me.PicCompanyLogo.BaseColor = System.Drawing.Color.White
+        Me.PicCompanyLogo.Location = New System.Drawing.Point(649, 84)
+        Me.PicCompanyLogo.Name = "PicCompanyLogo"
+        Me.PicCompanyLogo.Size = New System.Drawing.Size(109, 102)
+        Me.PicCompanyLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicCompanyLogo.TabIndex = 18
+        Me.PicCompanyLogo.TabStop = False
+        Me.PicCompanyLogo.UseTransfarantBackground = False
+        '
+        'GunaLabel23
+        '
+        Me.GunaLabel23.AutoSize = True
+        Me.GunaLabel23.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel23.Location = New System.Drawing.Point(131, 370)
+        Me.GunaLabel23.Name = "GunaLabel23"
+        Me.GunaLabel23.Size = New System.Drawing.Size(14, 21)
+        Me.GunaLabel23.TabIndex = 17
+        Me.GunaLabel23.Text = ":"
+        '
+        'GunaLabel21
+        '
+        Me.GunaLabel21.AutoSize = True
+        Me.GunaLabel21.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel21.Location = New System.Drawing.Point(131, 324)
+        Me.GunaLabel21.Name = "GunaLabel21"
+        Me.GunaLabel21.Size = New System.Drawing.Size(14, 21)
+        Me.GunaLabel21.TabIndex = 15
+        Me.GunaLabel21.Text = ":"
+        '
+        'GunaLabel20
+        '
+        Me.GunaLabel20.AutoSize = True
+        Me.GunaLabel20.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel20.Location = New System.Drawing.Point(131, 278)
+        Me.GunaLabel20.Name = "GunaLabel20"
+        Me.GunaLabel20.Size = New System.Drawing.Size(14, 21)
+        Me.GunaLabel20.TabIndex = 14
+        Me.GunaLabel20.Text = ":"
+        '
+        'GunaLabel19
+        '
+        Me.GunaLabel19.AutoSize = True
+        Me.GunaLabel19.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel19.Location = New System.Drawing.Point(131, 235)
+        Me.GunaLabel19.Name = "GunaLabel19"
+        Me.GunaLabel19.Size = New System.Drawing.Size(14, 21)
+        Me.GunaLabel19.TabIndex = 13
+        Me.GunaLabel19.Text = ":"
+        '
+        'GunaLabel18
+        '
+        Me.GunaLabel18.AutoSize = True
+        Me.GunaLabel18.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel18.Location = New System.Drawing.Point(131, 195)
+        Me.GunaLabel18.Name = "GunaLabel18"
+        Me.GunaLabel18.Size = New System.Drawing.Size(14, 21)
+        Me.GunaLabel18.TabIndex = 12
+        Me.GunaLabel18.Text = ":"
+        '
+        'GunaLabel17
+        '
+        Me.GunaLabel17.AutoSize = True
+        Me.GunaLabel17.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel17.Location = New System.Drawing.Point(131, 151)
+        Me.GunaLabel17.Name = "GunaLabel17"
+        Me.GunaLabel17.Size = New System.Drawing.Size(14, 21)
+        Me.GunaLabel17.TabIndex = 11
+        Me.GunaLabel17.Text = ":"
+        '
+        'GunaLabel16
+        '
+        Me.GunaLabel16.AutoSize = True
+        Me.GunaLabel16.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel16.Location = New System.Drawing.Point(131, 115)
+        Me.GunaLabel16.Name = "GunaLabel16"
+        Me.GunaLabel16.Size = New System.Drawing.Size(14, 21)
+        Me.GunaLabel16.TabIndex = 10
+        Me.GunaLabel16.Text = ":"
+        '
+        'GunaLabel15
+        '
+        Me.GunaLabel15.AutoSize = True
+        Me.GunaLabel15.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel15.Location = New System.Drawing.Point(680, 60)
+        Me.GunaLabel15.Name = "GunaLabel15"
+        Me.GunaLabel15.Size = New System.Drawing.Size(48, 21)
+        Me.GunaLabel15.TabIndex = 9
+        Me.GunaLabel15.Text = "Logo"
+        '
+        'GunaLabel14
+        '
+        Me.GunaLabel14.AutoSize = True
+        Me.GunaLabel14.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel14.Location = New System.Drawing.Point(13, 370)
+        Me.GunaLabel14.Name = "GunaLabel14"
+        Me.GunaLabel14.Size = New System.Drawing.Size(69, 21)
+        Me.GunaLabel14.TabIndex = 8
+        Me.GunaLabel14.Text = "Country"
+        '
+        'GunaLabel12
+        '
+        Me.GunaLabel12.AutoSize = True
+        Me.GunaLabel12.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel12.Location = New System.Drawing.Point(13, 324)
+        Me.GunaLabel12.Name = "GunaLabel12"
+        Me.GunaLabel12.Size = New System.Drawing.Size(48, 21)
+        Me.GunaLabel12.TabIndex = 6
+        Me.GunaLabel12.Text = "Email"
+        '
+        'GunaLabel11
+        '
+        Me.GunaLabel11.AutoSize = True
+        Me.GunaLabel11.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel11.Location = New System.Drawing.Point(13, 278)
+        Me.GunaLabel11.Name = "GunaLabel11"
+        Me.GunaLabel11.Size = New System.Drawing.Size(73, 21)
+        Me.GunaLabel11.TabIndex = 5
+        Me.GunaLabel11.Text = "Location"
+        '
+        'GunaLabel10
+        '
+        Me.GunaLabel10.AutoSize = True
+        Me.GunaLabel10.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel10.Location = New System.Drawing.Point(13, 235)
+        Me.GunaLabel10.Name = "GunaLabel10"
+        Me.GunaLabel10.Size = New System.Drawing.Size(70, 21)
+        Me.GunaLabel10.TabIndex = 4
+        Me.GunaLabel10.Text = "Address"
+        '
+        'GunaLabel9
+        '
+        Me.GunaLabel9.AutoSize = True
+        Me.GunaLabel9.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel9.Location = New System.Drawing.Point(13, 195)
+        Me.GunaLabel9.Name = "GunaLabel9"
+        Me.GunaLabel9.Size = New System.Drawing.Size(69, 21)
+        Me.GunaLabel9.TabIndex = 3
+        Me.GunaLabel9.Text = "Phone 3"
+        '
+        'GunaLabel8
+        '
+        Me.GunaLabel8.AutoSize = True
+        Me.GunaLabel8.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel8.Location = New System.Drawing.Point(13, 151)
+        Me.GunaLabel8.Name = "GunaLabel8"
+        Me.GunaLabel8.Size = New System.Drawing.Size(69, 21)
+        Me.GunaLabel8.TabIndex = 2
+        Me.GunaLabel8.Text = "Phone 2"
+        '
+        'GunaLabel7
+        '
+        Me.GunaLabel7.AutoSize = True
+        Me.GunaLabel7.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel7.Location = New System.Drawing.Point(13, 115)
+        Me.GunaLabel7.Name = "GunaLabel7"
+        Me.GunaLabel7.Size = New System.Drawing.Size(66, 21)
+        Me.GunaLabel7.TabIndex = 1
+        Me.GunaLabel7.Text = "Phone 1"
+        '
+        'GunaLabel6
+        '
+        Me.GunaLabel6.AutoSize = True
+        Me.GunaLabel6.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel6.Location = New System.Drawing.Point(13, 67)
+        Me.GunaLabel6.Name = "GunaLabel6"
+        Me.GunaLabel6.Size = New System.Drawing.Size(134, 21)
+        Me.GunaLabel6.TabIndex = 0
+        Me.GunaLabel6.Text = "Company Name :"
+        '
+        'LblID
+        '
+        Me.LblID.AutoSize = True
+        Me.LblID.Location = New System.Drawing.Point(480, 73)
+        Me.LblID.Name = "LblID"
+        Me.LblID.Size = New System.Drawing.Size(53, 19)
+        Me.LblID.TabIndex = 21
+        Me.LblID.Text = "Label2"
         '
         'TabPage2
         '
@@ -169,11 +563,11 @@ Partial Class Frm_GenSettings
         Me.btn_change.ColorContrastOnClick = 45
         Me.btn_change.ColorContrastOnHover = 45
         Me.btn_change.Cursor = System.Windows.Forms.Cursors.Hand
-        BorderEdges3.BottomLeft = True
-        BorderEdges3.BottomRight = True
-        BorderEdges3.TopLeft = True
-        BorderEdges3.TopRight = True
-        Me.btn_change.CustomizableEdges = BorderEdges3
+        BorderEdges1.BottomLeft = True
+        BorderEdges1.BottomRight = True
+        BorderEdges1.TopLeft = True
+        BorderEdges1.TopRight = True
+        Me.btn_change.CustomizableEdges = BorderEdges1
         Me.btn_change.DialogResult = System.Windows.Forms.DialogResult.None
         Me.btn_change.DisabledBorderColor = System.Drawing.Color.Empty
         Me.btn_change.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -194,24 +588,24 @@ Partial Class Frm_GenSettings
         Me.btn_change.IndicateFocus = False
         Me.btn_change.Location = New System.Drawing.Point(191, 369)
         Me.btn_change.Name = "btn_change"
-        StateProperties5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties5.BorderRadius = 3
-        StateProperties5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties5.BorderThickness = 1
-        StateProperties5.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties5.ForeColor = System.Drawing.Color.White
-        StateProperties5.IconLeftImage = Nothing
-        StateProperties5.IconRightImage = Nothing
-        Me.btn_change.onHoverState = StateProperties5
-        StateProperties6.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties6.BorderRadius = 3
-        StateProperties6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties6.BorderThickness = 1
-        StateProperties6.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties6.ForeColor = System.Drawing.Color.White
-        StateProperties6.IconLeftImage = Nothing
-        StateProperties6.IconRightImage = Nothing
-        Me.btn_change.OnPressedState = StateProperties6
+        StateProperties1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties1.BorderRadius = 3
+        StateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties1.BorderThickness = 1
+        StateProperties1.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties1.ForeColor = System.Drawing.Color.White
+        StateProperties1.IconLeftImage = Nothing
+        StateProperties1.IconRightImage = Nothing
+        Me.btn_change.onHoverState = StateProperties1
+        StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties2.BorderRadius = 3
+        StateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties2.BorderThickness = 1
+        StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties2.ForeColor = System.Drawing.Color.White
+        StateProperties2.IconLeftImage = Nothing
+        StateProperties2.IconRightImage = Nothing
+        Me.btn_change.OnPressedState = StateProperties2
         Me.btn_change.Size = New System.Drawing.Size(396, 59)
         Me.btn_change.TabIndex = 13
         Me.btn_change.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -333,11 +727,11 @@ Partial Class Frm_GenSettings
         Me.btnBack_up.ColorContrastOnClick = 45
         Me.btnBack_up.ColorContrastOnHover = 45
         Me.btnBack_up.Cursor = System.Windows.Forms.Cursors.Hand
-        BorderEdges4.BottomLeft = True
-        BorderEdges4.BottomRight = True
-        BorderEdges4.TopLeft = True
-        BorderEdges4.TopRight = True
-        Me.btnBack_up.CustomizableEdges = BorderEdges4
+        BorderEdges2.BottomLeft = True
+        BorderEdges2.BottomRight = True
+        BorderEdges2.TopLeft = True
+        BorderEdges2.TopRight = True
+        Me.btnBack_up.CustomizableEdges = BorderEdges2
         Me.btnBack_up.DialogResult = System.Windows.Forms.DialogResult.None
         Me.btnBack_up.DisabledBorderColor = System.Drawing.Color.Empty
         Me.btnBack_up.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -358,24 +752,24 @@ Partial Class Frm_GenSettings
         Me.btnBack_up.IndicateFocus = False
         Me.btnBack_up.Location = New System.Drawing.Point(268, 151)
         Me.btnBack_up.Name = "btnBack_up"
-        StateProperties7.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties7.BorderRadius = 20
-        StateProperties7.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties7.BorderThickness = 1
-        StateProperties7.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties7.ForeColor = System.Drawing.Color.White
-        StateProperties7.IconLeftImage = Nothing
-        StateProperties7.IconRightImage = Nothing
-        Me.btnBack_up.onHoverState = StateProperties7
-        StateProperties8.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties8.BorderRadius = 20
-        StateProperties8.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties8.BorderThickness = 1
-        StateProperties8.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties8.ForeColor = System.Drawing.Color.White
-        StateProperties8.IconLeftImage = Nothing
-        StateProperties8.IconRightImage = Nothing
-        Me.btnBack_up.OnPressedState = StateProperties8
+        StateProperties3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties3.BorderRadius = 20
+        StateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties3.BorderThickness = 1
+        StateProperties3.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties3.ForeColor = System.Drawing.Color.White
+        StateProperties3.IconLeftImage = Nothing
+        StateProperties3.IconRightImage = Nothing
+        Me.btnBack_up.onHoverState = StateProperties3
+        StateProperties4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties4.BorderRadius = 20
+        StateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties4.BorderThickness = 1
+        StateProperties4.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties4.ForeColor = System.Drawing.Color.White
+        StateProperties4.IconLeftImage = Nothing
+        StateProperties4.IconRightImage = Nothing
+        Me.btnBack_up.OnPressedState = StateProperties4
         Me.btnBack_up.Size = New System.Drawing.Size(210, 45)
         Me.btnBack_up.TabIndex = 0
         Me.btnBack_up.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -533,7 +927,7 @@ Partial Class Frm_GenSettings
         Me.GunaLabel5.TabIndex = 2
         Me.GunaLabel5.Text = "System Settings"
         '
-        'frm_GenSettings
+        'Frm_GenSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -546,10 +940,13 @@ Partial Class Frm_GenSettings
         Me.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "frm_GenSettings"
+        Me.Name = "Frm_GenSettings"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frm_GenSettings"
         Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
+        CType(Me.PicCompanyLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
         Me.TabPage5.ResumeLayout(False)
@@ -591,4 +988,32 @@ Partial Class Frm_GenSettings
     Friend WithEvents txtUserID As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents GunaLabel5 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel16 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel15 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel14 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel12 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel11 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel10 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel9 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel8 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel7 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel6 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents PicCompanyLogo As Guna.UI.WinForms.GunaCirclePictureBox
+    Friend WithEvents GunaLabel23 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel21 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel20 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel19 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel18 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel17 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents TxtCountry As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents TxtEmail As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents TxtLocation As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents TxtAddress As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents TxtPhone3 As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents TxtPhone2 As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents TxtPhone1 As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents TxtCompanyName As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents BtnUpdate As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnSet As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents LblID As Label
 End Class

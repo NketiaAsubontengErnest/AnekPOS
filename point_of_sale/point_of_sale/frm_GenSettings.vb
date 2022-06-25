@@ -44,24 +44,13 @@ Public Class Frm_GenSettings
     End Sub
 
     Public Sub insert_to_login()
-
-        Dim command1 As MySqlCommand
-        Dim insertString_login As String
-        con = New MySqlConnection
-
-        con.ConnectionString = connstring
-
         Try
-            con.Open()
-            insertString_login = "INSERT INTO `login` (`employeeID`, `password`, `position`, `block`) VALUES 
-                                                      ('guest', 
+            query = "INSERT INTO `login` (`employeeID`, `password`, `position`, `block`) VALUES 
+                                                      ('Emp0001', 
                                                       'guest', 
                                                       'guest',
                                                       'NO')"
-
-            command1 = New MySqlCommand(insertString_login, con)
-
-            command1.ExecuteNonQuery()
+            Inserting(query)
         Catch ex As MySqlException
             MsgBox(ex.Message, MsgBoxStyle.Critical)
         Finally
@@ -72,32 +61,20 @@ Public Class Frm_GenSettings
     End Sub
 
     Public Sub insert_to_Empdetails()
-        Dim command As MySqlCommand
-        Dim insertString_EmpDetiles As String
-        con = New MySqlConnection
-
-        con.ConnectionString = connstring
-
         Try
-            con.Open()
-            insertString_EmpDetiles = "INSERT INTO `employee` (`employeeID`, `name`, `phone`, `address`, `position`,`block`) VALUES  
-                                                              ('guest', 
+            query = "INSERT INTO `employee` (`employeeID`, `name`, `phone`, `address`, `position`,`block`) VALUES  
+                                                              ('Emp0001', 
                                                               'guest', 
                                                               '0554013980', 
                                                               'ANEK IT CONSULT',
                                                               'guest',
                                                               'NO')"
 
-            command = New MySqlCommand(insertString_EmpDetiles, con)
-
-            command.ExecuteNonQuery()
-            con.Close()
+            reader = Inserting(query)
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical)
         Finally
-
-            con.Dispose()
         End Try
     End Sub
 
@@ -183,21 +160,16 @@ Public Class Frm_GenSettings
 
     Private Sub btn_SaveChanges_Click()
         Try
-            conn = New MySqlConnection(connstring)
-            conn.Open()
+            query = "Update `login` Set `Password` = '" + Encrypt(txt_NewPassword.Text) + "' WHERE employeeID = '" + txtUserID.Text + "'"
 
-            cmd = New MySqlCommand("Update `login` Set `Password` = '" + Encrypt(txt_NewPassword.Text) + "' WHERE employeeID = '" + txtUserID.Text + "'", conn)
-
+            reader = Updating(query)
+            If reader.RecordsAffected > 0 Then
+                MsgBox("Password Changed Successfully", MsgBoxStyle.Information)
+            End If
         Catch ex As Exception
             MsgBox("Fatal Error -> Database Not Reacheable")
         End Try
 
-        reader = cmd.ExecuteReader
-
-        MsgBox("Password Changed Successfully", MsgBoxStyle.Information)
-
-        conn.Close()
-        reader.Close()
 
     End Sub
 
@@ -256,7 +228,7 @@ Public Class Frm_GenSettings
 
     Private Sub frm_ChanegePassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtUserID.Text = frm_AdminDas.lblUserID.Text
-
+        LoadCompanyDetails1()
     End Sub
 
     Private Sub txt_confPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_confPassword.KeyPress
@@ -271,11 +243,123 @@ Public Class Frm_GenSettings
         End If
     End Sub
 
-    Private Sub txt_confPassword_TextChanged(sender As Object, e As EventArgs) Handles txt_confPassword.TextChanged
+    Private Sub BtnSet_Click(sender As Object, e As EventArgs) Handles BtnSet.Click
+        If TxtCompanyName.Text = "" Then
+            ToolTip1.Show("Company Name required", TxtCompanyName, 2000)
+            TxtCompanyName.Focus()
 
+        ElseIf TxtPhone1.Text = "" Then
+            ToolTip1.Show("This field is required", TxtPhone1, 2000)
+            TxtPhone1.Focus()
+
+        ElseIf TxtLocation.Text = "" Then
+            ToolTip1.Show("This field is required", TxtLocation, 2000)
+            TxtLocation.Focus()
+
+        ElseIf TxtCountry.Text = "" Then
+            ToolTip1.Show("This field is required", TxtCountry, 2000)
+            TxtCountry.Focus()
+        Else
+            Try
+                query = "INSERT INTO `companydetails` (`CompanyName`, `CompanyPhone1`, `CompanyPhone2`, `CompanyPhone3`, `CompanyAddress`,`CompanyLocation`,`CompanyEmail`,`Country`,`CompanyLog`) VALUES  
+                                                    ('" + TxtCompanyName.Text + "', 
+                                                    '" + TxtPhone1.Text + "', 
+                                                    '" + TxtPhone2.Text + "', 
+                                                    '" + TxtPhone3.Text + "',
+                                                    '" + TxtAddress.Text + "',
+                                                    '" + TxtLocation.Text + "',
+                                                    '" + TxtEmail.Text + "',
+                                                    '" + TxtCountry.Text + "',
+                                                    '" + "" + "')"
+                reader = Inserting(query)
+                If reader.RecordsAffected > 0 Then
+                    MsgBox("Company Set Successfully", MsgBoxStyle.Information)
+                End If
+
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical)
+            Finally
+            End Try
+        End If
+        LoadCompanyDetails1()
     End Sub
 
-    Private Sub GunaLabel4_Click(sender As Object, e As EventArgs) Handles GunaLabel4.Click
+    Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
+        If TxtCompanyName.Text = "" Then
+            ToolTip1.Show("Company Name required", TxtCompanyName, 2000)
+            TxtCompanyName.Focus()
 
+        ElseIf TxtPhone1.Text = "" Then
+            ToolTip1.Show("This field is required", TxtPhone1, 2000)
+            TxtPhone1.Focus()
+
+        ElseIf TxtLocation.Text = "" Then
+            ToolTip1.Show("This field is required", TxtLocation, 2000)
+            TxtLocation.Focus()
+
+        ElseIf TxtCountry.Text = "" Then
+            ToolTip1.Show("This field is required", TxtCountry, 2000)
+            TxtCountry.Focus()
+        Else
+            Try
+                query = "Update `companydetails` Set `CompanyName` = '" + TxtCompanyName.Text + "',`CompanyPhone1` = '" + TxtPhone1.Text + "',`CompanyPhone2` = '" + TxtPhone2.Text + "',`CompanyPhone3` = '" + TxtPhone3.Text + "',`CompanyAddress` = '" + TxtAddress.Text + "',`CompanyLocation` = '" + TxtLocation.Text + "',`CompanyEmail` = '" + TxtEmail.Text + "',`Country` = '" + TxtCountry.Text + "',`CompanyLog` = '" + "" + "' WHERE id = '" + LblID.Text + "'"
+
+                reader = Updating(query)
+
+                If reader.RecordsAffected > 0 Then
+                    MsgBox("Company Updated Successfully", MsgBoxStyle.Information)
+                End If
+            Catch ex As Exception
+                MsgBox("Fatal Error -> Database Not Reacheable")
+            End Try
+            LoadCompanyDetails1()
+        End If
     End Sub
+
+    Private Sub LoadCompanyDetails1()
+
+        Dim conString As String = connstring
+        query = "SELECT * FROM companydetails order by id desc"
+        Using conn As New MySqlConnection(conString)
+            Using command As New MySqlCommand
+                With command
+                    .Connection = conn
+                    .CommandText = query
+                End With
+
+                Try
+                    conn.Open()
+                    Dim reader As MySqlDataReader = command.ExecuteReader
+                    While reader.Read
+                        LblID.Text = reader("id")
+                        TxtCompanyName.Text = reader("CompanyName")
+                        TxtPhone1.Text = reader("CompanyPhone1")
+                        TxtPhone2.Text = reader("CompanyPhone2")
+                        TxtPhone3.Text = reader("CompanyPhone3")
+                        TxtAddress.Text = reader("CompanyAddress")
+                        TxtLocation.Text = reader("CompanyLocation")
+                        TxtEmail.Text = reader("CompanyEmail")
+                        TxtCountry.Text = reader("Country")
+                        'PicCompanyLogo.Image = reader("CompanyLog")
+                    End While
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+                LoadCompanyDetails()
+            End Using
+        End Using
+    End Sub
+
+    Private Sub TxtPhone1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtPhone1.KeyPress
+        e.Handled = ValidateNumbers(e)
+    End Sub
+
+    Private Sub TxtPhone2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtPhone2.KeyPress
+        e.Handled = ValidateNumbers(e)
+    End Sub
+
+    Private Sub TxtPhone3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtPhone3.KeyPress
+        e.Handled = ValidateNumbers(e)
+    End Sub
+
 End Class

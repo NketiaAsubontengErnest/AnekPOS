@@ -3,22 +3,11 @@ Imports MySql.Data.MySqlClient
 Public Class User_Lists
     Private Block As String
     Private Sub User_Lists_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        load_Data_Grid()
+        LoadGrid()
     End Sub
 
-    Public Sub load_Data_Grid()
-        Dim con As MySqlConnection
-
-        Dim ada As New MySqlDataAdapter
-        Dim ds As New DataSet
-
-        con = New MySqlConnection(connstring)
-        con.Open()
-
-        ada = New MySqlDataAdapter("SELECT `employeeID`, `name`, `Phone`, `address`, `position`,`block` FROM `employee`", con)
-        ada.Fill(ds)
-        dgvUsers.DataSource = ds.Tables(0)
-
+    Public Sub LoadGrid()
+        dgvUsers.DataSource = Load_Data_Grid("SELECT `employeeID`, `name`, `Phone`, `address`, `position`,`block` FROM `employee`").Tables(0)
         clear()
     End Sub
 
@@ -43,7 +32,7 @@ Public Class User_Lists
     Private Sub btn_Add_Click(sender As Object, e As EventArgs) Handles btn_Add.Click
         Update_User()
         Update_login()
-        load_Data_Grid()
+        loadGrid()
 
     End Sub
 
@@ -191,7 +180,7 @@ Public Class User_Lists
         If ans = DialogResult.Yes Then
             Block_User_login()
             Block_User_Emp()
-            load_Data_Grid()
+            loadGrid()
         End If
     End Sub
 
@@ -254,7 +243,7 @@ Public Class User_Lists
         If ans = DialogResult.Yes Then
             Delete_User_login()
             Delete_User_Emp()
-            load_Data_Grid()
+            loadGrid()
         End If
     End Sub
 End Class

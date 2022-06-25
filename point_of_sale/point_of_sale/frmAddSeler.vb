@@ -52,7 +52,11 @@ Public Class FrmAddSeler
     End Sub
 
     Public Sub Insert_to_Empdetails()
-        query = "INSERT INTO `employee` (`employeeID`, `name`, `phone`, `address`, `position`,`block`) VALUES  
+        If Not CheckExist("SELECT * FROM `employee` where employeeID = '" + (txt_UserID.Text).ToUpper + "'") Then
+            If CheckExist("SELECT * FROM `employee` where Phone = '" + (txt_Phone.Text).ToUpper + "'") Then
+                MsgBox("The Number is used by another employee!!!", MsgBoxStyle.Critical)
+            Else
+                query = "INSERT INTO `employee` (`employeeID`, `name`, `phone`, `address`, `position`,`block`) VALUES  
                                                               ('" & (txt_UserID.Text).ToUpper & "', 
                                                               '" & (txt_Name.Text).ToUpper & "', 
                                                               '" & (txt_Phone.Text).ToUpper & "', 
@@ -60,16 +64,60 @@ Public Class FrmAddSeler
                                                               '" & (cmd_position.Text).ToUpper & "',
                                                               'NO'
                                                               )"
-        Try
-            reader = Inserting(query)
-            If reader.RecordsAffected > 0 Then
-                Insert_to_login()
+                Try
+                    reader = Inserting(query)
+                    If reader.RecordsAffected > 0 Then
+                        Insert_to_login()
+                    End If
+                Catch ex As Exception
+                    MsgBox(ex.Message, MsgBoxStyle.Critical)
+                End Try
             End If
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical)
-        End Try
+        Else
 
+        End If
 
+    End Sub
+
+    Public Sub check_id(ByVal EmpId As String, ByVal Number As String, ByVal oldc As Integer)
+        Dim count As Integer
+        Dim conString As String = connstring
+
+        Dim queryex As String = "SELECT * FROM  employee where employeeID = '" + EmpId + "'"
+
+        cmd = New MySqlCommand(queryex, conn)
+
+        Using conn As New MySqlConnection(conString)
+            Using command As New MySqlCommand
+                With command
+                    .Connection = conn
+                    .CommandText = queryex
+
+                End With
+
+                Try
+                    conn.Open()
+                    Dim reader As MySqlDataReader = command.ExecuteReader
+
+                    While reader.Read
+                        count += 1
+                    End While
+                Catch ex As Exception
+
+                Finally
+                    conn.Close()
+
+                End Try
+            End Using
+        End Using
+
+        If count > 0 Then
+            oldc += 1
+            EmpId = "EMP" + Number + oldc.ToString
+            check_id(EmpId, Number, count)
+        Else
+            txt_UserID.Text = EmpId
+        End If
     End Sub
 
     Public Sub generateID()
@@ -110,7 +158,8 @@ Public Class FrmAddSeler
         End If
 
         count += 1
-        txt_UserID.Text = "EMP" + number + count.ToString
+        Dim proId As String = "EMP" + number + count.ToString
+        check_id(proId, number, count)
 
     End Sub
 

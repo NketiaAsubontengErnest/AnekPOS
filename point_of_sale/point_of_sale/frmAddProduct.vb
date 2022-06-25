@@ -29,13 +29,17 @@ Public Class FrmAddProduct
     End Sub
 
 
+
     Public Sub InsertProduct()
 
-        Dim check As String = "NO"
-        If checkHide.Checked = True Then
-            check = "YES"
-        End If
-        query = "INSERT INTO `product`(`Product_ID`, `Pro_Name`, `instock`, `Price`,`date`,`catID`,`selling_price`, `hide`, `Average_Quantity`, `New_Quant_Added`, `Date_Updated`) VALUES
+        If CheckExist("SELECT * FROM product where Pro_Name = '" + (txt_ProductName.Text).ToUpper + "'") Then
+            MsgBox("Product Already Exist", MsgBoxStyle.Critical)
+        Else
+            Dim check As String = "NO"
+            If checkHide.Checked = True Then
+                check = "YES"
+            End If
+            query = "INSERT INTO `product`(`Product_ID`, `Pro_Name`, `instock`, `Price`,`date`,`catID`,`selling_price`, `hide`, `Average_Quantity`, `New_Quant_Added`, `Date_Updated`) VALUES
                                                         ('" & txt_ProductID.Text & "', 
                                                         '" & (txt_ProductName.Text).ToUpper & "',
                                                         '" & txt_Quant.Text & "', 
@@ -48,15 +52,16 @@ Public Class FrmAddProduct
                                                         '" & txt_Quant.Text & "',
                                                         '" & DateTime.Now & "')"
 
-        reader = Inserting(query)
-        Try
-            If reader.RecordsAffected > 0 Then
-                MsgBox("Product added Successfully", MsgBoxStyle.Information)
-                ClearMe()
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical)
-        End Try
+            reader = Inserting(query)
+            Try
+                If reader.RecordsAffected > 0 Then
+                    MsgBox("Product added Successfully", MsgBoxStyle.Information)
+                    ClearMe()
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical)
+            End Try
+        End If
         genrateID()
     End Sub
 
@@ -138,18 +143,14 @@ Public Class FrmAddProduct
             End Using
         End Using
 
-
         If count > 0 Then
             oldc += 1
             proId = "PRD" + Number + oldc.ToString
-            txt_ProductID.Text = proId
+            check_id(proId, Number, count)
         Else
 
             txt_ProductID.Text = proId
         End If
-
-
-
     End Sub
     Public Sub ClearMe()
         txt_Quant.Clear()

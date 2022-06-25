@@ -136,6 +136,7 @@ Public Class Frm_AdminDas
         Timer1.Start()
         countOutStock()
         lblUserID.Text = FrmLogin.txt_Username.Text
+        LblCompanyName.Text = CompanyName1
     End Sub
 
     Public Sub countOutStock()
@@ -178,6 +179,7 @@ Public Class Frm_AdminDas
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblTimer.Text = Format(Now, "hh:mm:ss tt")
+        LblCompanyName.Text = CompanyName1
     End Sub
 
     Private Sub BtnMakeSales_Click(sender As Object, e As EventArgs) Handles btnMakeSales.Click

@@ -41,7 +41,7 @@ Partial Class Frm_AdminDas
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Btn_AddSaler = New Guna.UI2.WinForms.Guna2Button()
         Me.lblAvelable = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.LblCompanyName = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.mnSettings = New System.Windows.Forms.ToolStripMenuItem()
         Me.SystemManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -326,17 +326,17 @@ Partial Class Frm_AdminDas
         Me.lblAvelable.Text = "Label8"
         Me.lblAvelable.Visible = False
         '
-        'Label7
+        'LblCompanyName
         '
-        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.White
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(583, 2)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(114, 24)
-        Me.Label7.TabIndex = 10
-        Me.Label7.Text = "ANEK POS"
+        Me.LblCompanyName.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.LblCompanyName.AutoSize = True
+        Me.LblCompanyName.BackColor = System.Drawing.Color.White
+        Me.LblCompanyName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCompanyName.Location = New System.Drawing.Point(583, 2)
+        Me.LblCompanyName.Name = "LblCompanyName"
+        Me.LblCompanyName.Size = New System.Drawing.Size(114, 24)
+        Me.LblCompanyName.TabIndex = 10
+        Me.LblCompanyName.Text = "ANEK POS"
         '
         'MenuStrip1
         '
@@ -357,13 +357,13 @@ Partial Class Frm_AdminDas
         'SystemManagementToolStripMenuItem
         '
         Me.SystemManagementToolStripMenuItem.Name = "SystemManagementToolStripMenuItem"
-        Me.SystemManagementToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SystemManagementToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.SystemManagementToolStripMenuItem.Text = "System Setings"
         '
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
         'ProductToolStripMenuItem
@@ -376,19 +376,19 @@ Partial Class Frm_AdminDas
         'AddCategoryToolStripMenuItem
         '
         Me.AddCategoryToolStripMenuItem.Name = "AddCategoryToolStripMenuItem"
-        Me.AddCategoryToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AddCategoryToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
         Me.AddCategoryToolStripMenuItem.Text = "Add Category"
         '
         'UpdateProductToolStripMenuItem
         '
         Me.UpdateProductToolStripMenuItem.Name = "UpdateProductToolStripMenuItem"
-        Me.UpdateProductToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UpdateProductToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
         Me.UpdateProductToolStripMenuItem.Text = "Update Product"
         '
         'ListOfProductToolStripMenuItem1
         '
         Me.ListOfProductToolStripMenuItem1.Name = "ListOfProductToolStripMenuItem1"
-        Me.ListOfProductToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ListOfProductToolStripMenuItem1.Size = New System.Drawing.Size(157, 22)
         Me.ListOfProductToolStripMenuItem1.Text = "List Of Product"
         '
         'ReportsToolStripMenuItem
@@ -401,19 +401,19 @@ Partial Class Frm_AdminDas
         'StatisticsToolStripMenuItem1
         '
         Me.StatisticsToolStripMenuItem1.Name = "StatisticsToolStripMenuItem1"
-        Me.StatisticsToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.StatisticsToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.StatisticsToolStripMenuItem1.Text = "Statistics"
         '
         'MyProfitToolStripMenuItem1
         '
         Me.MyProfitToolStripMenuItem1.Name = "MyProfitToolStripMenuItem1"
-        Me.MyProfitToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.MyProfitToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.MyProfitToolStripMenuItem1.Text = "My Profit"
         '
         'GeneralReportToolStripMenuItem
         '
         Me.GeneralReportToolStripMenuItem.Name = "GeneralReportToolStripMenuItem"
-        Me.GeneralReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GeneralReportToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.GeneralReportToolStripMenuItem.Text = "General Report"
         '
         'UsersToolStripMenuItem
@@ -538,7 +538,7 @@ Partial Class Frm_AdminDas
         Me.Controls.Add(Me.btn_Maximize)
         Me.Controls.Add(Me.btn_Minimize)
         Me.Controls.Add(Me.Guna2Panel1)
-        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.LblCompanyName)
         Me.Controls.Add(Me.Guna2ShadowPanel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Guna2Panel2)
@@ -590,7 +590,7 @@ Partial Class Frm_AdminDas
     Friend WithEvents mnSettings As ToolStripMenuItem
     Friend WithEvents CloseToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents LblCompanyName As Label
     Friend WithEvents SystemManagementToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
