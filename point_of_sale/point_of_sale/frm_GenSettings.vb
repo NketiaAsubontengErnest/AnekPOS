@@ -1,10 +1,13 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.IO
+Imports MySql.Data.MySqlClient
 Public Class Frm_GenSettings
     Private reader As MySqlDataReader
 
     Dim ListOfTables As ArrayList = New ArrayList()
     Dim cmd As MySqlCommand = New MySqlCommand
     Dim con As MySqlConnection = New MySqlConnection
+    Dim pathstring As String = CompanyLogo
+    Dim filextend As String = ""
 
 
     Private Sub btn_ResetAll_Click(sender As Object, e As EventArgs) Handles btn_ResetAll.Click
@@ -122,7 +125,7 @@ Public Class Frm_GenSettings
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        colorClear()
+        ColorClear()
         Me.Close()
     End Sub
 
@@ -227,7 +230,7 @@ Public Class Frm_GenSettings
     End Sub
 
     Private Sub frm_ChanegePassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtUserID.Text = frm_AdminDas.lblUserID.Text
+        txtUserID.Text = Frm_AdminDas.lblUserID.Text
         LoadCompanyDetails1()
     End Sub
 
@@ -260,6 +263,14 @@ Public Class Frm_GenSettings
             ToolTip1.Show("This field is required", TxtCountry, 2000)
             TxtCountry.Focus()
         Else
+            Dim word = TxtCompanyName.Text.Split
+            Dim filename = ""
+            If Not PicCompanyLogo.Image Is Nothing Then
+                filename = word(0) & filextend
+                pathstring = Path.Combine(folder, filename)
+                Dim a As Image = PicCompanyLogo.Image
+                a.Save(pathstring)
+            End If
             Try
                 query = "INSERT INTO `companydetails` (`CompanyName`, `CompanyPhone1`, `CompanyPhone2`, `CompanyPhone3`, `CompanyAddress`,`CompanyLocation`,`CompanyEmail`,`Country`,`CompanyLog`) VALUES  
                                                     ('" + TxtCompanyName.Text + "', 
@@ -270,7 +281,7 @@ Public Class Frm_GenSettings
                                                     '" + TxtLocation.Text + "',
                                                     '" + TxtEmail.Text + "',
                                                     '" + TxtCountry.Text + "',
-                                                    '" + "" + "')"
+                                                    '" + filename + "')"
                 reader = Inserting(query)
                 If reader.RecordsAffected > 0 Then
                     MsgBox("Company Set Successfully", MsgBoxStyle.Information)
@@ -281,6 +292,7 @@ Public Class Frm_GenSettings
             Finally
             End Try
         End If
+        LoadCompanyDetails()
         LoadCompanyDetails1()
     End Sub
 
@@ -301,8 +313,26 @@ Public Class Frm_GenSettings
             ToolTip1.Show("This field is required", TxtCountry, 2000)
             TxtCountry.Focus()
         Else
-            Try
-                query = "Update `companydetails` Set `CompanyName` = '" + TxtCompanyName.Text + "',`CompanyPhone1` = '" + TxtPhone1.Text + "',`CompanyPhone2` = '" + TxtPhone2.Text + "',`CompanyPhone3` = '" + TxtPhone3.Text + "',`CompanyAddress` = '" + TxtAddress.Text + "',`CompanyLocation` = '" + TxtLocation.Text + "',`CompanyEmail` = '" + TxtEmail.Text + "',`Country` = '" + TxtCountry.Text + "',`CompanyLog` = '" + "" + "' WHERE id = '" + LblID.Text + "'"
+            Dim filename = ""
+            Dim word = TxtCompanyName.Text.Split
+            If Not PicCompanyLogo.Image Is Nothing Then
+                filename = word(0) & filextend
+                Dim a As Image = PicCompanyLogo.Image
+                If File.Exists(Path.Combine(folder, filename)) Then
+                    Dim i As Int16
+                    For Each filepath As String In Directory.GetFiles(folder)
+                        If filepath = filename Then
+                            i += 1
+                            filename = word(0) & i & filextend
+                        End If
+                    Next
+                End If
+                pathstring = Path.Combine(folder, filename)
+                a.Save(pathstring)
+                filextend = ""
+            End If
+                Try
+                query = "Update `companydetails` Set `CompanyName` = '" + TxtCompanyName.Text + "',`CompanyPhone1` = '" + TxtPhone1.Text + "',`CompanyPhone2` = '" + TxtPhone2.Text + "',`CompanyPhone3` = '" + TxtPhone3.Text + "',`CompanyAddress` = '" + TxtAddress.Text + "',`CompanyLocation` = '" + TxtLocation.Text + "',`CompanyEmail` = '" + TxtEmail.Text + "',`Country` = '" + TxtCountry.Text + "',`CompanyLog` = '" + filename + "' WHERE id = '" + LblID.Text + "'"
 
                 reader = Updating(query)
 
@@ -312,42 +342,34 @@ Public Class Frm_GenSettings
             Catch ex As Exception
                 MsgBox("Fatal Error -> Database Not Reacheable")
             End Try
+            LoadCompanyDetails()
             LoadCompanyDetails1()
         End If
     End Sub
 
     Private Sub LoadCompanyDetails1()
+        LblID.Text = Companyid
+        If BtnSet.Text = "" Then
+            BtnSet.Enabled = False
+            BtnUpdate.Enabled = True
+        Else
+            BtnSet.Enabled = False
+            TxtCompanyName.Text = CompanyName1
+            TxtPhone1.Text = CompanyPhone1
+            TxtPhone2.Text = CompanyPhone2
+            TxtPhone3.Text = CompanyPhone3
+            TxtAddress.Text = CompanyAddress
+            TxtLocation.Text = CompanyLocation
+            TxtEmail.Text = CompanyEmail
+            TxtCountry.Text = Country
+            If Not CompanyLogo = "" Then
+                Dim pathstring As String = Path.Combine(folder, CompanyLogo)
+                PicCompanyLogo.Image = Image.FromFile(pathstring)
+            End If
 
-        Dim conString As String = connstring
-        query = "SELECT * FROM companydetails order by id desc"
-        Using conn As New MySqlConnection(conString)
-            Using command As New MySqlCommand
-                With command
-                    .Connection = conn
-                    .CommandText = query
-                End With
 
-                Try
-                    conn.Open()
-                    Dim reader As MySqlDataReader = command.ExecuteReader
-                    While reader.Read
-                        LblID.Text = reader("id")
-                        TxtCompanyName.Text = reader("CompanyName")
-                        TxtPhone1.Text = reader("CompanyPhone1")
-                        TxtPhone2.Text = reader("CompanyPhone2")
-                        TxtPhone3.Text = reader("CompanyPhone3")
-                        TxtAddress.Text = reader("CompanyAddress")
-                        TxtLocation.Text = reader("CompanyLocation")
-                        TxtEmail.Text = reader("CompanyEmail")
-                        TxtCountry.Text = reader("Country")
-                        'PicCompanyLogo.Image = reader("CompanyLog")
-                    End While
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
-                LoadCompanyDetails()
-            End Using
-        End Using
+        End If
+
     End Sub
 
     Private Sub TxtPhone1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtPhone1.KeyPress
@@ -362,4 +384,13 @@ Public Class Frm_GenSettings
         e.Handled = ValidateNumbers(e)
     End Sub
 
+    Private Sub PicCompanyLogos_Click(sender As Object, e As EventArgs) Handles PicCompanyLogo.Click
+        Dim op As OpenFileDialog = New OpenFileDialog
+        If op.ShowDialog = DialogResult.OK Then
+            filextend = Path.GetExtension(op.FileName)
+            If filextend = ".jpg" Or filextend = ".png" Or filextend = ".jpeg" Then
+                PicCompanyLogo.Image = Image.FromFile(op.FileName)
+            End If
+        End If
+    End Sub
 End Class

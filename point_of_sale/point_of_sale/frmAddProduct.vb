@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Text
+Imports MySql.Data.MySqlClient
 
 Public Class FrmAddProduct
     Private Sub txt_Quant_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Quant.KeyPress
@@ -66,48 +67,24 @@ Public Class FrmAddProduct
     End Sub
 
     Public Sub genrateID()
-        Dim conString As String = connstring
         query = "SELECT * FROM  product"
 
         Dim count As Integer = 0
         Dim number As String = ""
+        Dim validchars As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 
-        Using conn As New MySqlConnection(conString)
-            Using command As New MySqlCommand
-                With command
-                    .Connection = conn
-                    .CommandText = query
-
-                End With
-
-                Try
-                    conn.Open()
-                    Dim reader As MySqlDataReader = command.ExecuteReader
-
-                    While reader.Read
-                        count += 1
-                    End While
-                Catch ex As Exception
-
-                Finally
-                    conn.Close()
-
-                End Try
-            End Using
-        End Using
-
-        If count < 10 Then
-            number = "000"
-        ElseIf count < 100 Then
-            number = "00"
-        ElseIf count < 1000 Then
-            number = "0"
-        End If
-
+        count = SelectingCount(query)
+        Dim sb As New StringBuilder()
+        Dim rand As New Random()
+        For i As Integer = 1 To 7
+            Dim idx As Integer = rand.Next(0, validchars.Length)
+            Dim randomChar As Char = validchars(idx)
+            sb.Append(randomChar)
+        Next i
         count += 1
 
-        Dim proId As String = "PRD" + number + count.ToString
-        check_id(proId, number, count)
+        Dim proId As String = "P" + sb.ToString() + count.ToString
+        check_id(proId, sb.ToString(), count)
 
     End Sub
 
@@ -115,34 +92,8 @@ Public Class FrmAddProduct
         Dim count As Integer
         Dim conString As String = connstring
 
-        Dim queryex As String = "SELECT * FROM  product where Product_ID = '" + proId + "'"
-
-        cmd = New MySqlCommand(queryex, conn)
-
-        Using conn As New MySqlConnection(conString)
-            Using command As New MySqlCommand
-                With command
-                    .Connection = conn
-                    .CommandText = queryex
-
-                End With
-
-                Try
-                    conn.Open()
-                    Dim reader As MySqlDataReader = command.ExecuteReader
-
-                    While reader.Read
-                        count += 1
-                    End While
-                Catch ex As Exception
-
-                Finally
-                    conn.Close()
-
-                End Try
-            End Using
-        End Using
-
+        query = "SELECT * FROM  product where Product_ID = '" + proId + "'"
+        count = SelectingCount(query)
         If count > 0 Then
             oldc += 1
             proId = "PRD" + Number + oldc.ToString

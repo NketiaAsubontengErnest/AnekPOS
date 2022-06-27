@@ -493,11 +493,11 @@ Partial Class Frm_AdminDas
         Me.lblTimer.AutoSize = True
         Me.lblTimer.BackColor = System.Drawing.Color.Transparent
         Me.lblTimer.Dock = System.Windows.Forms.DockStyle.Right
-        Me.lblTimer.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTimer.Font = New System.Drawing.Font("Calibri", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTimer.ForeColor = System.Drawing.Color.Gold
-        Me.lblTimer.Location = New System.Drawing.Point(945, 0)
+        Me.lblTimer.Location = New System.Drawing.Point(926, 0)
         Me.lblTimer.Name = "lblTimer"
-        Me.lblTimer.Size = New System.Drawing.Size(52, 26)
+        Me.lblTimer.Size = New System.Drawing.Size(71, 36)
         Me.lblTimer.TabIndex = 14
         Me.lblTimer.Text = "time"
         '

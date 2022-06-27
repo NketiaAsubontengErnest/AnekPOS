@@ -42,6 +42,7 @@ Partial Class frmCheck_Stock
         Me.txtPrice = New System.Windows.Forms.TextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -54,7 +55,6 @@ Partial Class frmCheck_Stock
         Me.txtNewQuant = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btn_close = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.Label9 = New System.Windows.Forms.Label()
         CType(Me.dgvInstock, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOutStock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
@@ -183,10 +183,10 @@ Partial Class frmCheck_Stock
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.Yellow
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
-        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.ForeColor = System.Drawing.Color.Gold
         Me.Button1.Location = New System.Drawing.Point(556, 65)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(163, 84)
@@ -232,7 +232,7 @@ Partial Class frmCheck_Stock
         '
         'Panel6
         '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel6.Location = New System.Drawing.Point(0, 608)
         Me.Panel6.Name = "Panel6"
@@ -241,7 +241,7 @@ Partial Class frmCheck_Stock
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel4.Controls.Add(Me.Label9)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
@@ -249,9 +249,20 @@ Partial Class frmCheck_Stock
         Me.Panel4.Size = New System.Drawing.Size(966, 33)
         Me.Panel4.TabIndex = 39
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Gold
+        Me.Label9.Location = New System.Drawing.Point(404, -4)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(196, 37)
+        Me.Label9.TabIndex = 40
+        Me.Label9.Text = "STOCK CHECK"
+        '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel2.Location = New System.Drawing.Point(953, 33)
@@ -269,7 +280,7 @@ Partial Class frmCheck_Stock
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 33)
         Me.Panel1.Name = "Panel1"
@@ -360,17 +371,6 @@ Partial Class frmCheck_Stock
         Me.btn_close.TabIndex = 8
         Me.btn_close.TabStop = False
         Me.btn_close.Zoom = 10
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Gold
-        Me.Label9.Location = New System.Drawing.Point(404, -4)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(196, 37)
-        Me.Label9.TabIndex = 40
-        Me.Label9.Text = "STOCK CHECK"
         '
         'frmCheck_Stock
         '

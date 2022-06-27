@@ -22,10 +22,12 @@ Partial Class Frm_Sale
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_Sale))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
@@ -40,7 +42,6 @@ Partial Class Frm_Sale
         Me.cmd_unitPrice = New System.Windows.Forms.ComboBox()
         Me.txt_Quantity = New System.Windows.Forms.NumericUpDown()
         Me.cmb_pID = New System.Windows.Forms.ComboBox()
-        Me.rtxtReceipt = New System.Windows.Forms.RichTextBox()
         Me.GunaLabel5 = New Guna.UI.WinForms.GunaLabel()
         Me.cmb_cID = New System.Windows.Forms.ComboBox()
         Me.txtpri = New System.Windows.Forms.TextBox()
@@ -49,13 +50,11 @@ Partial Class Frm_Sale
         Me.cmb_ProductName = New System.Windows.Forms.ComboBox()
         Me.txtDeletePrice = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.lstItemID = New System.Windows.Forms.ListBox()
         Me.lstTrackPrice = New System.Windows.Forms.ListBox()
         Me.GunaLabel7 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel8 = New Guna.UI.WinForms.GunaLabel()
         Me.lblSales = New Guna.UI.WinForms.GunaLabel()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GunaLabel9 = New Guna.UI.WinForms.GunaLabel()
@@ -65,7 +64,6 @@ Partial Class Frm_Sale
         Me.GunaLabel10 = New Guna.UI.WinForms.GunaLabel()
         Me.cmb_QuantInstack = New System.Windows.Forms.ComboBox()
         Me.GunaLabel11 = New Guna.UI.WinForms.GunaLabel()
-        Me.btnPrint = New System.Windows.Forms.Button()
         Me.ckShowAll = New Guna.UI2.WinForms.Guna2CustomCheckBox()
         Me.lblProf = New System.Windows.Forms.Label()
         Me.cmbCost = New System.Windows.Forms.ComboBox()
@@ -82,17 +80,25 @@ Partial Class Frm_Sale
         Me.btn_AddToList = New Guna.UI.WinForms.GunaButton()
         Me.cmbType = New Guna.UI.WinForms.GunaComboBox()
         Me.BtnRemoveItem = New Guna.UI.WinForms.GunaButton()
-        Me.GunaDataGridView1 = New Guna.UI.WinForms.GunaDataGridView()
+        Me.DataGridViewPrint = New Guna.UI.WinForms.GunaDataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BtnPrint = New Guna.UI.WinForms.GunaButton()
+        Me.BtnReset = New Guna.UI.WinForms.GunaButton()
+        Me.DataGridViewListItem = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txt_Quantity, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.GunaDataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewPrint, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewListItem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GunaLabel1
@@ -229,22 +235,11 @@ Partial Class Frm_Sale
         Me.cmb_pID.Size = New System.Drawing.Size(121, 21)
         Me.cmb_pID.TabIndex = 11
         '
-        'rtxtReceipt
-        '
-        Me.rtxtReceipt.AutoWordSelection = True
-        Me.rtxtReceipt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.rtxtReceipt.Location = New System.Drawing.Point(499, 112)
-        Me.rtxtReceipt.Name = "rtxtReceipt"
-        Me.rtxtReceipt.ReadOnly = True
-        Me.rtxtReceipt.Size = New System.Drawing.Size(536, 327)
-        Me.rtxtReceipt.TabIndex = 13
-        Me.rtxtReceipt.Text = ""
-        '
         'GunaLabel5
         '
         Me.GunaLabel5.AutoSize = True
         Me.GunaLabel5.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel5.Location = New System.Drawing.Point(727, 86)
+        Me.GunaLabel5.Location = New System.Drawing.Point(727, 91)
         Me.GunaLabel5.Name = "GunaLabel5"
         Me.GunaLabel5.Size = New System.Drawing.Size(77, 25)
         Me.GunaLabel5.TabIndex = 0
@@ -280,7 +275,7 @@ Partial Class Frm_Sale
         '
         Me.lblTotalPrice.AutoSize = True
         Me.lblTotalPrice.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalPrice.Location = New System.Drawing.Point(86, 445)
+        Me.lblTotalPrice.Location = New System.Drawing.Point(150, 446)
         Me.lblTotalPrice.Name = "lblTotalPrice"
         Me.lblTotalPrice.Size = New System.Drawing.Size(0, 37)
         Me.lblTotalPrice.TabIndex = 0
@@ -310,25 +305,14 @@ Partial Class Frm_Sale
         Me.TextBox1.Size = New System.Drawing.Size(257, 20)
         Me.TextBox1.TabIndex = 18
         '
-        'ListBox1
-        '
-        Me.ListBox1.Enabled = False
-        Me.ListBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 21
-        Me.ListBox1.Location = New System.Drawing.Point(19, 240)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(474, 25)
-        Me.ListBox1.TabIndex = 19
-        '
         'lstItemID
         '
         Me.lstItemID.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstItemID.FormattingEnabled = True
         Me.lstItemID.ItemHeight = 21
-        Me.lstItemID.Location = New System.Drawing.Point(19, 267)
+        Me.lstItemID.Location = New System.Drawing.Point(19, 246)
         Me.lstItemID.Name = "lstItemID"
-        Me.lstItemID.Size = New System.Drawing.Size(474, 172)
+        Me.lstItemID.Size = New System.Drawing.Size(474, 193)
         Me.lstItemID.TabIndex = 4
         '
         'lstTrackPrice
@@ -345,11 +329,11 @@ Partial Class Frm_Sale
         '
         Me.GunaLabel7.AutoSize = True
         Me.GunaLabel7.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel7.Location = New System.Drawing.Point(9, 445)
+        Me.GunaLabel7.Location = New System.Drawing.Point(7, 445)
         Me.GunaLabel7.Name = "GunaLabel7"
-        Me.GunaLabel7.Size = New System.Drawing.Size(89, 37)
+        Me.GunaLabel7.Size = New System.Drawing.Size(147, 37)
         Me.GunaLabel7.TabIndex = 0
-        Me.GunaLabel7.Text = "Total:"
+        Me.GunaLabel7.Text = "Total: Gh¢"
         '
         'GunaLabel8
         '
@@ -369,16 +353,6 @@ Partial Class Frm_Sale
         Me.lblSales.Name = "lblSales"
         Me.lblSales.Size = New System.Drawing.Size(0, 54)
         Me.lblSales.TabIndex = 0
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.Button2.Location = New System.Drawing.Point(860, 445)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(61, 30)
-        Me.Button2.TabIndex = 17
-        Me.Button2.Text = "Reset"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -473,16 +447,6 @@ Partial Class Frm_Sale
         Me.GunaLabel11.TabIndex = 25
         Me.GunaLabel11.Text = "Available Qty:"
         '
-        'btnPrint
-        '
-        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.btnPrint.Location = New System.Drawing.Point(732, 442)
-        Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(104, 30)
-        Me.btnPrint.TabIndex = 26
-        Me.btnPrint.Text = "Print"
-        Me.btnPrint.UseVisualStyleBackColor = True
-        '
         'ckShowAll
         '
         Me.ckShowAll.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -490,7 +454,7 @@ Partial Class Frm_Sale
         Me.ckShowAll.CheckedState.BorderThickness = 0
         Me.ckShowAll.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ckShowAll.CheckedState.Parent = Me.ckShowAll
-        Me.ckShowAll.Location = New System.Drawing.Point(12, 5)
+        Me.ckShowAll.Location = New System.Drawing.Point(8, 3)
         Me.ckShowAll.Name = "ckShowAll"
         Me.ckShowAll.ShadowDecoration.Parent = Me.ckShowAll
         Me.ckShowAll.Size = New System.Drawing.Size(20, 20)
@@ -520,7 +484,7 @@ Partial Class Frm_Sale
         '
         'Panel6
         '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel6.Location = New System.Drawing.Point(0, 748)
         Me.Panel6.Name = "Panel6"
@@ -529,7 +493,7 @@ Partial Class Frm_Sale
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Controls.Add(Me.ckShowAll)
         Me.Panel4.Controls.Add(Me.GunaLabel1)
@@ -554,7 +518,7 @@ Partial Class Frm_Sale
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel2.Location = New System.Drawing.Point(1038, 29)
@@ -572,7 +536,7 @@ Partial Class Frm_Sale
         '
         'Panel8
         '
-        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel8.Location = New System.Drawing.Point(0, 29)
         Me.Panel8.Name = "Panel8"
@@ -658,7 +622,7 @@ Partial Class Frm_Sale
         Me.btn_AddToList.FocusedColor = System.Drawing.Color.Empty
         Me.btn_AddToList.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_AddToList.ForeColor = System.Drawing.Color.Black
-        Me.btn_AddToList.Image = CType(resources.GetObject("btn_AddToList.Image"), System.Drawing.Image)
+        Me.btn_AddToList.Image = Nothing
         Me.btn_AddToList.ImageSize = New System.Drawing.Size(20, 20)
         Me.btn_AddToList.Location = New System.Drawing.Point(171, 194)
         Me.btn_AddToList.Name = "btn_AddToList"
@@ -715,27 +679,27 @@ Partial Class Frm_Sale
         Me.BtnRemoveItem.Text = "Remove Item"
         Me.BtnRemoveItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'GunaDataGridView1
+        'DataGridViewPrint
         '
-        Me.GunaDataGridView1.AllowUserToAddRows = False
-        Me.GunaDataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridViewPrint.AllowUserToAddRows = False
+        Me.DataGridViewPrint.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.GunaDataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.GunaDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.GunaDataGridView1.BackgroundColor = System.Drawing.Color.White
-        Me.GunaDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.GunaDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.GunaDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DataGridViewPrint.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridViewPrint.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridViewPrint.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridViewPrint.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.DataGridViewPrint.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gold
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.GunaDataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.GunaDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GunaDataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4})
+        Me.DataGridViewPrint.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridViewPrint.ColumnHeadersHeight = 21
+        Me.DataGridViewPrint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridViewPrint.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -743,38 +707,39 @@ Partial Class Frm_Sale
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.GunaDataGridView1.DefaultCellStyle = DataGridViewCellStyle3
-        Me.GunaDataGridView1.EnableHeadersVisualStyles = False
-        Me.GunaDataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaDataGridView1.Location = New System.Drawing.Point(502, 148)
-        Me.GunaDataGridView1.Name = "GunaDataGridView1"
-        Me.GunaDataGridView1.ReadOnly = True
-        Me.GunaDataGridView1.RowHeadersVisible = False
-        Me.GunaDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.GunaDataGridView1.Size = New System.Drawing.Size(533, 255)
-        Me.GunaDataGridView1.TabIndex = 44
-        Me.GunaDataGridView1.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
-        Me.GunaDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.GunaDataGridView1.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.GunaDataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.GunaDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.GunaDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.GunaDataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.GunaDataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaDataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaDataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.GunaDataGridView1.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.GunaDataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.GunaDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GunaDataGridView1.ThemeStyle.HeaderStyle.Height = 21
-        Me.GunaDataGridView1.ThemeStyle.ReadOnly = True
-        Me.GunaDataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.GunaDataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.GunaDataGridView1.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.GunaDataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.GunaDataGridView1.ThemeStyle.RowsStyle.Height = 22
-        Me.GunaDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.DataGridViewPrint.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridViewPrint.Enabled = False
+        Me.DataGridViewPrint.EnableHeadersVisualStyles = False
+        Me.DataGridViewPrint.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DataGridViewPrint.Location = New System.Drawing.Point(502, 116)
+        Me.DataGridViewPrint.Name = "DataGridViewPrint"
+        Me.DataGridViewPrint.ReadOnly = True
+        Me.DataGridViewPrint.RowHeadersVisible = False
+        Me.DataGridViewPrint.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridViewPrint.Size = New System.Drawing.Size(533, 325)
+        Me.DataGridViewPrint.TabIndex = 44
+        Me.DataGridViewPrint.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
+        Me.DataGridViewPrint.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.DataGridViewPrint.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.DataGridViewPrint.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.DataGridViewPrint.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.DataGridViewPrint.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.DataGridViewPrint.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.DataGridViewPrint.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DataGridViewPrint.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.DataGridViewPrint.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised
+        Me.DataGridViewPrint.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewPrint.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Gold
+        Me.DataGridViewPrint.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridViewPrint.ThemeStyle.HeaderStyle.Height = 21
+        Me.DataGridViewPrint.ThemeStyle.ReadOnly = True
+        Me.DataGridViewPrint.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.DataGridViewPrint.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DataGridViewPrint.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DataGridViewPrint.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.DataGridViewPrint.ThemeStyle.RowsStyle.Height = 22
+        Me.DataGridViewPrint.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DataGridViewPrint.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
         'Column1
         '
@@ -800,28 +765,160 @@ Partial Class Frm_Sale
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
         '
+        'BtnPrint
+        '
+        Me.BtnPrint.AnimationHoverSpeed = 0.07!
+        Me.BtnPrint.AnimationSpeed = 0.03!
+        Me.BtnPrint.BaseColor = System.Drawing.Color.Gold
+        Me.BtnPrint.BorderColor = System.Drawing.Color.Black
+        Me.BtnPrint.BorderSize = 2
+        Me.BtnPrint.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnPrint.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnPrint.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPrint.ForeColor = System.Drawing.Color.Black
+        Me.BtnPrint.Image = Nothing
+        Me.BtnPrint.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnPrint.Location = New System.Drawing.Point(667, 444)
+        Me.BtnPrint.Name = "BtnPrint"
+        Me.BtnPrint.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BtnPrint.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnPrint.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnPrint.OnHoverImage = Nothing
+        Me.BtnPrint.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnPrint.Size = New System.Drawing.Size(162, 42)
+        Me.BtnPrint.TabIndex = 3
+        Me.BtnPrint.Text = "Print"
+        Me.BtnPrint.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'BtnReset
+        '
+        Me.BtnReset.AnimationHoverSpeed = 0.07!
+        Me.BtnReset.AnimationSpeed = 0.03!
+        Me.BtnReset.BaseColor = System.Drawing.Color.Gold
+        Me.BtnReset.BorderColor = System.Drawing.Color.Black
+        Me.BtnReset.BorderSize = 2
+        Me.BtnReset.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnReset.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnReset.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnReset.ForeColor = System.Drawing.Color.Black
+        Me.BtnReset.Image = Nothing
+        Me.BtnReset.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnReset.Location = New System.Drawing.Point(835, 444)
+        Me.BtnReset.Name = "BtnReset"
+        Me.BtnReset.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BtnReset.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnReset.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnReset.OnHoverImage = Nothing
+        Me.BtnReset.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnReset.Size = New System.Drawing.Size(162, 42)
+        Me.BtnReset.TabIndex = 3
+        Me.BtnReset.Text = "Reset"
+        Me.BtnReset.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'DataGridViewListItem
+        '
+        Me.DataGridViewListItem.AllowUserToAddRows = False
+        Me.DataGridViewListItem.AllowUserToDeleteRows = False
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(194, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(207, Byte), Integer))
+        Me.DataGridViewListItem.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.DataGridViewListItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridViewListItem.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridViewListItem.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.DataGridViewListItem.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DataGridViewListItem.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Gold
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewListItem.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.DataGridViewListItem.ColumnHeadersHeight = 21
+        Me.DataGridViewListItem.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(147, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewListItem.DefaultCellStyle = DataGridViewCellStyle6
+        Me.DataGridViewListItem.EnableHeadersVisualStyles = False
+        Me.DataGridViewListItem.GridColor = System.Drawing.Color.FromArgb(CType(CType(193, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.DataGridViewListItem.Location = New System.Drawing.Point(19, 240)
+        Me.DataGridViewListItem.Name = "DataGridViewListItem"
+        Me.DataGridViewListItem.ReadOnly = True
+        Me.DataGridViewListItem.RowHeadersVisible = False
+        Me.DataGridViewListItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridViewListItem.Size = New System.Drawing.Size(474, 202)
+        Me.DataGridViewListItem.TabIndex = 45
+        Me.DataGridViewListItem.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WetAsphalt
+        Me.DataGridViewListItem.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(194, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(207, Byte), Integer))
+        Me.DataGridViewListItem.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.DataGridViewListItem.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.DataGridViewListItem.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.DataGridViewListItem.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.DataGridViewListItem.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.DataGridViewListItem.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(193, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.DataGridViewListItem.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.DataGridViewListItem.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DataGridViewListItem.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DataGridViewListItem.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Gold
+        Me.DataGridViewListItem.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.DataGridViewListItem.ThemeStyle.HeaderStyle.Height = 21
+        Me.DataGridViewListItem.ThemeStyle.ReadOnly = True
+        Me.DataGridViewListItem.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.DataGridViewListItem.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DataGridViewListItem.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DataGridViewListItem.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black
+        Me.DataGridViewListItem.ThemeStyle.RowsStyle.Height = 22
+        Me.DataGridViewListItem.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(133, Byte), Integer), CType(CType(147, Byte), Integer))
+        Me.DataGridViewListItem.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "ID"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Product"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Qty"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Price"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        '
         'Frm_Sale
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1051, 758)
-        Me.Controls.Add(Me.GunaDataGridView1)
+        Me.Controls.Add(Me.DataGridViewListItem)
+        Me.Controls.Add(Me.DataGridViewPrint)
         Me.Controls.Add(Me.BtnRemoveItem)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.cmbType)
-        Me.Controls.Add(Me.rtxtReceipt)
         Me.Controls.Add(Me.list_hide)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.GunaLabel11)
         Me.Controls.Add(Me.cmb_QuantInstack)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ListBox1)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.cmb_ProductName)
         Me.Controls.Add(Me.GunaLabel6)
         Me.Controls.Add(Me.txtpri)
@@ -829,6 +926,8 @@ Partial Class Frm_Sale
         Me.Controls.Add(Me.txt_Quantity)
         Me.Controls.Add(Me.cmd_unitPrice)
         Me.Controls.Add(Me.btn_Clear)
+        Me.Controls.Add(Me.BtnReset)
+        Me.Controls.Add(Me.BtnPrint)
         Me.Controls.Add(Me.btn_Done)
         Me.Controls.Add(Me.btn_AddToList)
         Me.Controls.Add(Me.lstItemID)
@@ -863,7 +962,8 @@ Partial Class Frm_Sale
         Me.Panel4.PerformLayout()
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
-        CType(Me.GunaDataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewPrint, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewListItem, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -880,7 +980,6 @@ Partial Class Frm_Sale
     Friend WithEvents cmd_unitPrice As ComboBox
     Friend WithEvents txt_Quantity As NumericUpDown
     Friend WithEvents cmb_pID As ComboBox
-    Friend WithEvents rtxtReceipt As RichTextBox
     Friend WithEvents GunaLabel5 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents cmb_cID As ComboBox
     Friend WithEvents txtpri As TextBox
@@ -889,13 +988,11 @@ Partial Class Frm_Sale
     Friend WithEvents cmb_ProductName As ComboBox
     Friend WithEvents txtDeletePrice As TextBox
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ListBox1 As ListBox
     Friend WithEvents lstItemID As ListBox
     Friend WithEvents lstTrackPrice As ListBox
     Friend WithEvents GunaLabel7 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel8 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents lblSales As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents Button2 As Button
     Friend WithEvents btn_close As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents id As DataGridViewTextBoxColumn
     Friend WithEvents item As DataGridViewTextBoxColumn
@@ -912,7 +1009,6 @@ Partial Class Frm_Sale
     Friend WithEvents GunaLabel10 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents cmb_QuantInstack As ComboBox
     Friend WithEvents GunaLabel11 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents btnPrint As Button
     Friend WithEvents ckShowAll As Guna.UI2.WinForms.Guna2CustomCheckBox
     Friend WithEvents lblProf As Label
     Friend WithEvents cmbCost As ComboBox
@@ -925,9 +1021,16 @@ Partial Class Frm_Sale
     Friend WithEvents list_hide As ListBox
     Friend WithEvents cmbType As Guna.UI.WinForms.GunaComboBox
     Friend WithEvents BtnRemoveItem As Guna.UI.WinForms.GunaButton
-    Friend WithEvents GunaDataGridView1 As Guna.UI.WinForms.GunaDataGridView
+    Friend WithEvents DataGridViewPrint As Guna.UI.WinForms.GunaDataGridView
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents BtnPrint As Guna.UI.WinForms.GunaButton
+    Friend WithEvents BtnReset As Guna.UI.WinForms.GunaButton
+    Friend WithEvents DataGridViewListItem As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
 End Class

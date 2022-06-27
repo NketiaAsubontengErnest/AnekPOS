@@ -29,10 +29,10 @@ Partial Class FrmStatics
         Me.btn_close = New Bunifu.Framework.UI.BunifuImageButton()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.GunaLabel5 = New Guna.UI.WinForms.GunaLabel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.GunaLabel5 = New Guna.UI.WinForms.GunaLabel()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
@@ -75,7 +75,7 @@ Partial Class FrmStatics
         '
         'Panel6
         '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel6.Location = New System.Drawing.Point(0, 656)
         Me.Panel6.Name = "Panel6"
@@ -84,7 +84,7 @@ Partial Class FrmStatics
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel4.Controls.Add(Me.GunaLabel5)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
@@ -92,9 +92,20 @@ Partial Class FrmStatics
         Me.Panel4.Size = New System.Drawing.Size(1127, 34)
         Me.Panel4.TabIndex = 55
         '
+        'GunaLabel5
+        '
+        Me.GunaLabel5.AutoSize = True
+        Me.GunaLabel5.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel5.ForeColor = System.Drawing.Color.Gold
+        Me.GunaLabel5.Location = New System.Drawing.Point(433, -3)
+        Me.GunaLabel5.Name = "GunaLabel5"
+        Me.GunaLabel5.Size = New System.Drawing.Size(310, 37)
+        Me.GunaLabel5.TabIndex = 50
+        Me.GunaLabel5.Text = "General Sales Statistics"
+        '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel2.Location = New System.Drawing.Point(1117, 34)
@@ -112,23 +123,12 @@ Partial Class FrmStatics
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 34)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(10, 622)
         Me.Panel1.TabIndex = 52
-        '
-        'GunaLabel5
-        '
-        Me.GunaLabel5.AutoSize = True
-        Me.GunaLabel5.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel5.ForeColor = System.Drawing.Color.Gold
-        Me.GunaLabel5.Location = New System.Drawing.Point(433, -3)
-        Me.GunaLabel5.Name = "GunaLabel5"
-        Me.GunaLabel5.Size = New System.Drawing.Size(310, 37)
-        Me.GunaLabel5.TabIndex = 50
-        Me.GunaLabel5.Text = "General Sales Statistics"
         '
         'FrmStatics
         '

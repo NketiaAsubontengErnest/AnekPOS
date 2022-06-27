@@ -9,10 +9,12 @@ Module GlobalConfig
     Public adapter As MySqlDataAdapter
     Public reader As MySqlDataReader
     Public conn As MySqlConnection
-    Public connstring As String = "server=localhost;userid=root;password=0554013980A@;database=point_of_sale"
+    Public DBserver As String = "localhost"
+    Public DBuserids As String = "root"
+    Public DBpassword As String = "0554013980A@"
+    Public DBdatabase As String = "point_of_sale"
+    Public connstring As String = "server=" & DBserver & ";userid=" & DBuserids & ";password=" & DBpassword & ";database=" & DBdatabase & ""
     Private EncryptionKey As String = "MAKV2SPBNI99212"
-
-
     Public Sub OpenConnection()
         conn = New MySqlConnection(connstring)
         Try

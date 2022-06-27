@@ -69,7 +69,7 @@ Partial Class User_Lists
         '
         Me.GunaLabel6.AutoSize = True
         Me.GunaLabel6.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel6.Location = New System.Drawing.Point(22, 325)
+        Me.GunaLabel6.Location = New System.Drawing.Point(22, 303)
         Me.GunaLabel6.Name = "GunaLabel6"
         Me.GunaLabel6.Size = New System.Drawing.Size(84, 25)
         Me.GunaLabel6.TabIndex = 41
@@ -79,7 +79,7 @@ Partial Class User_Lists
         '
         Me.GunaLabel7.AutoSize = True
         Me.GunaLabel7.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel7.Location = New System.Drawing.Point(22, 261)
+        Me.GunaLabel7.Location = New System.Drawing.Point(22, 239)
         Me.GunaLabel7.Name = "GunaLabel7"
         Me.GunaLabel7.Size = New System.Drawing.Size(83, 25)
         Me.GunaLabel7.TabIndex = 42
@@ -89,7 +89,7 @@ Partial Class User_Lists
         '
         Me.GunaLabel4.AutoSize = True
         Me.GunaLabel4.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel4.Location = New System.Drawing.Point(23, 198)
+        Me.GunaLabel4.Location = New System.Drawing.Point(23, 176)
         Me.GunaLabel4.Name = "GunaLabel4"
         Me.GunaLabel4.Size = New System.Drawing.Size(69, 25)
         Me.GunaLabel4.TabIndex = 43
@@ -99,7 +99,7 @@ Partial Class User_Lists
         '
         Me.GunaLabel2.AutoSize = True
         Me.GunaLabel2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel2.Location = New System.Drawing.Point(23, 71)
+        Me.GunaLabel2.Location = New System.Drawing.Point(23, 49)
         Me.GunaLabel2.Name = "GunaLabel2"
         Me.GunaLabel2.Size = New System.Drawing.Size(123, 25)
         Me.GunaLabel2.TabIndex = 44
@@ -109,7 +109,7 @@ Partial Class User_Lists
         '
         Me.GunaLabel3.AutoSize = True
         Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel3.Location = New System.Drawing.Point(23, 135)
+        Me.GunaLabel3.Location = New System.Drawing.Point(23, 113)
         Me.GunaLabel3.Name = "GunaLabel3"
         Me.GunaLabel3.Size = New System.Drawing.Size(101, 25)
         Me.GunaLabel3.TabIndex = 45
@@ -120,7 +120,7 @@ Partial Class User_Lists
         Me.cmd_position.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmd_position.FormattingEnabled = True
         Me.cmd_position.Items.AddRange(New Object() {"", "Admin", "Sale"})
-        Me.cmd_position.Location = New System.Drawing.Point(15, 353)
+        Me.cmd_position.Location = New System.Drawing.Point(15, 331)
         Me.cmd_position.Name = "cmd_position"
         Me.cmd_position.Size = New System.Drawing.Size(292, 33)
         Me.cmd_position.TabIndex = 3
@@ -162,7 +162,7 @@ Partial Class User_Lists
         Me.btn_Clear.IdleIconLeftImage = Nothing
         Me.btn_Clear.IdleIconRightImage = Nothing
         Me.btn_Clear.IndicateFocus = False
-        Me.btn_Clear.Location = New System.Drawing.Point(161, 405)
+        Me.btn_Clear.Location = New System.Drawing.Point(162, 378)
         Me.btn_Clear.Name = "btn_Clear"
         StateProperties1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
         StateProperties1.BorderRadius = 3
@@ -194,7 +194,7 @@ Partial Class User_Lists
         Me.btn_Add.AnimationSpeed = 200
         Me.btn_Add.AutoGenerateColors = False
         Me.btn_Add.BackColor = System.Drawing.Color.Transparent
-        Me.btn_Add.BackColor1 = System.Drawing.Color.DodgerBlue
+        Me.btn_Add.BackColor1 = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.btn_Add.BackgroundImage = CType(resources.GetObject("btn_Add.BackgroundImage"), System.Drawing.Image)
         Me.btn_Add.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
         Me.btn_Add.ButtonText = "Update"
@@ -218,14 +218,14 @@ Partial Class User_Lists
         Me.btn_Add.IconMarginLeft = 11
         Me.btn_Add.IconPadding = 10
         Me.btn_Add.IconRightCursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_Add.IdleBorderColor = System.Drawing.Color.DodgerBlue
+        Me.btn_Add.IdleBorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.btn_Add.IdleBorderRadius = 3
         Me.btn_Add.IdleBorderThickness = 1
-        Me.btn_Add.IdleFillColor = System.Drawing.Color.DodgerBlue
+        Me.btn_Add.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.btn_Add.IdleIconLeftImage = Nothing
         Me.btn_Add.IdleIconRightImage = Nothing
         Me.btn_Add.IndicateFocus = False
-        Me.btn_Add.Location = New System.Drawing.Point(15, 405)
+        Me.btn_Add.Location = New System.Drawing.Point(16, 378)
         Me.btn_Add.Name = "btn_Add"
         StateProperties3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
         StateProperties3.BorderRadius = 3
@@ -260,7 +260,7 @@ Partial Class User_Lists
         Me.txt_Address.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txt_Address.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txt_Address.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_Address.Location = New System.Drawing.Point(15, 289)
+        Me.txt_Address.Location = New System.Drawing.Point(15, 267)
         Me.txt_Address.Name = "txt_Address"
         Me.txt_Address.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txt_Address.SelectedText = ""
@@ -277,7 +277,7 @@ Partial Class User_Lists
         Me.txt_Phone.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txt_Phone.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txt_Phone.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_Phone.Location = New System.Drawing.Point(15, 226)
+        Me.txt_Phone.Location = New System.Drawing.Point(15, 204)
         Me.txt_Phone.MaxLength = 10
         Me.txt_Phone.Name = "txt_Phone"
         Me.txt_Phone.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -295,7 +295,7 @@ Partial Class User_Lists
         Me.txt_Name.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txt_Name.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txt_Name.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_Name.Location = New System.Drawing.Point(15, 160)
+        Me.txt_Name.Location = New System.Drawing.Point(15, 138)
         Me.txt_Name.Name = "txt_Name"
         Me.txt_Name.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txt_Name.SelectedText = ""
@@ -313,7 +313,7 @@ Partial Class User_Lists
         Me.txt_UserID.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txt_UserID.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txt_UserID.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_UserID.Location = New System.Drawing.Point(15, 99)
+        Me.txt_UserID.Location = New System.Drawing.Point(15, 77)
         Me.txt_UserID.Name = "txt_UserID"
         Me.txt_UserID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txt_UserID.SelectedText = ""
@@ -351,7 +351,7 @@ Partial Class User_Lists
         Me.dgvUsers.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvUsers.EnableHeadersVisualStyles = False
         Me.dgvUsers.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvUsers.Location = New System.Drawing.Point(312, 99)
+        Me.dgvUsers.Location = New System.Drawing.Point(312, 77)
         Me.dgvUsers.Name = "dgvUsers"
         Me.dgvUsers.ReadOnly = True
         Me.dgvUsers.RowHeadersVisible = False
@@ -430,7 +430,7 @@ Partial Class User_Lists
         Me.btnDelete.IdleIconLeftImage = Nothing
         Me.btnDelete.IdleIconRightImage = Nothing
         Me.btnDelete.IndicateFocus = False
-        Me.btnDelete.Location = New System.Drawing.Point(569, 405)
+        Me.btnDelete.Location = New System.Drawing.Point(570, 378)
         Me.btnDelete.Name = "btnDelete"
         StateProperties5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
         StateProperties5.BorderRadius = 3
@@ -493,7 +493,7 @@ Partial Class User_Lists
         Me.btnBlock.IdleIconLeftImage = Nothing
         Me.btnBlock.IdleIconRightImage = Nothing
         Me.btnBlock.IndicateFocus = False
-        Me.btnBlock.Location = New System.Drawing.Point(423, 405)
+        Me.btnBlock.Location = New System.Drawing.Point(424, 378)
         Me.btnBlock.Name = "btnBlock"
         StateProperties7.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
         StateProperties7.BorderRadius = 3
@@ -523,9 +523,9 @@ Partial Class User_Lists
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel6.Location = New System.Drawing.Point(13, 463)
+        Me.Panel6.Location = New System.Drawing.Point(0, 435)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(799, 10)
+        Me.Panel6.Size = New System.Drawing.Size(825, 10)
         Me.Panel6.TabIndex = 58
         '
         'Panel4
@@ -533,9 +533,9 @@ Partial Class User_Lists
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel4.Controls.Add(Me.GunaLabel1)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(13, 0)
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(799, 38)
+        Me.Panel4.Size = New System.Drawing.Size(825, 38)
         Me.Panel4.TabIndex = 59
         '
         'GunaLabel1
@@ -554,9 +554,9 @@ Partial Class User_Lists
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(812, 0)
+        Me.Panel2.Location = New System.Drawing.Point(812, 38)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(13, 473)
+        Me.Panel2.Size = New System.Drawing.Size(13, 397)
         Me.Panel2.TabIndex = 57
         '
         'Panel3
@@ -571,21 +571,21 @@ Partial Class User_Lists
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Location = New System.Drawing.Point(0, 38)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(13, 473)
+        Me.Panel1.Size = New System.Drawing.Size(13, 397)
         Me.Panel1.TabIndex = 56
         '
         'User_Lists
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(825, 473)
+        Me.ClientSize = New System.Drawing.Size(825, 445)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnBlock)
         Me.Controls.Add(Me.dgvUsers)

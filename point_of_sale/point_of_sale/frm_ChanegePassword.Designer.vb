@@ -24,9 +24,9 @@ Partial Class Frm_ChanegePassword
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_ChanegePassword))
-        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
@@ -149,7 +149,8 @@ Partial Class Frm_ChanegePassword
         '
         Me.GunaLabel5.AutoSize = True
         Me.GunaLabel5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel5.Location = New System.Drawing.Point(164, 16)
+        Me.GunaLabel5.ForeColor = System.Drawing.Color.Gold
+        Me.GunaLabel5.Location = New System.Drawing.Point(167, 3)
         Me.GunaLabel5.Name = "GunaLabel5"
         Me.GunaLabel5.Size = New System.Drawing.Size(166, 21)
         Me.GunaLabel5.TabIndex = 0
@@ -189,12 +190,12 @@ Partial Class Frm_ChanegePassword
         '
         'Panel6
         '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel6.Controls.Add(Me.Panel7)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel6.Location = New System.Drawing.Point(10, 451)
+        Me.Panel6.Location = New System.Drawing.Point(0, 451)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(454, 10)
+        Me.Panel6.Size = New System.Drawing.Size(474, 10)
         Me.Panel6.TabIndex = 48
         '
         'Panel7
@@ -207,12 +208,13 @@ Partial Class Frm_ChanegePassword
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel4.Controls.Add(Me.Panel5)
+        Me.Panel4.Controls.Add(Me.GunaLabel5)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(10, 0)
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(454, 10)
+        Me.Panel4.Size = New System.Drawing.Size(474, 30)
         Me.Panel4.TabIndex = 49
         '
         'Panel5
@@ -225,12 +227,12 @@ Partial Class Frm_ChanegePassword
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(464, 0)
+        Me.Panel2.Location = New System.Drawing.Point(464, 30)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(10, 461)
+        Me.Panel2.Size = New System.Drawing.Size(10, 421)
         Me.Panel2.TabIndex = 47
         '
         'Panel3
@@ -243,11 +245,11 @@ Partial Class Frm_ChanegePassword
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Location = New System.Drawing.Point(0, 30)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(10, 461)
+        Me.Panel1.Size = New System.Drawing.Size(10, 421)
         Me.Panel1.TabIndex = 46
         '
         'btn_close
@@ -276,11 +278,11 @@ Partial Class Frm_ChanegePassword
         Me.btn_change.ColorContrastOnClick = 45
         Me.btn_change.ColorContrastOnHover = 45
         Me.btn_change.Cursor = System.Windows.Forms.Cursors.Hand
-        BorderEdges1.BottomLeft = True
-        BorderEdges1.BottomRight = True
-        BorderEdges1.TopLeft = True
-        BorderEdges1.TopRight = True
-        Me.btn_change.CustomizableEdges = BorderEdges1
+        BorderEdges2.BottomLeft = True
+        BorderEdges2.BottomRight = True
+        BorderEdges2.TopLeft = True
+        BorderEdges2.TopRight = True
+        Me.btn_change.CustomizableEdges = BorderEdges2
         Me.btn_change.DialogResult = System.Windows.Forms.DialogResult.None
         Me.btn_change.DisabledBorderColor = System.Drawing.Color.Empty
         Me.btn_change.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -301,41 +303,41 @@ Partial Class Frm_ChanegePassword
         Me.btn_change.IndicateFocus = False
         Me.btn_change.Location = New System.Drawing.Point(42, 390)
         Me.btn_change.Name = "btn_change"
-        StateProperties1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties1.BorderRadius = 3
-        StateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties1.BorderThickness = 1
-        StateProperties1.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties1.ForeColor = System.Drawing.Color.White
-        StateProperties1.IconLeftImage = Nothing
-        StateProperties1.IconRightImage = Nothing
-        Me.btn_change.onHoverState = StateProperties1
-        StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties2.BorderRadius = 3
-        StateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties2.BorderThickness = 1
-        StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties2.ForeColor = System.Drawing.Color.White
-        StateProperties2.IconLeftImage = Nothing
-        StateProperties2.IconRightImage = Nothing
-        Me.btn_change.OnPressedState = StateProperties2
+        StateProperties3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties3.BorderRadius = 3
+        StateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties3.BorderThickness = 1
+        StateProperties3.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties3.ForeColor = System.Drawing.Color.White
+        StateProperties3.IconLeftImage = Nothing
+        StateProperties3.IconRightImage = Nothing
+        Me.btn_change.onHoverState = StateProperties3
+        StateProperties4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties4.BorderRadius = 3
+        StateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties4.BorderThickness = 1
+        StateProperties4.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties4.ForeColor = System.Drawing.Color.White
+        StateProperties4.IconLeftImage = Nothing
+        StateProperties4.IconRightImage = Nothing
+        Me.btn_change.OnPressedState = StateProperties4
         Me.btn_change.Size = New System.Drawing.Size(396, 59)
         Me.btn_change.TabIndex = 4
         Me.btn_change.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btn_change.TextMarginLeft = 0
         Me.btn_change.UseDefaultRadiusAndThickness = True
         '
-        'frm_ChanegePassword
+        'Frm_ChanegePassword
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(474, 461)
         Me.Controls.Add(Me.btn_close)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GunaLabel1)
         Me.Controls.Add(Me.GunaLabel2)
         Me.Controls.Add(Me.Label8)
@@ -346,16 +348,16 @@ Partial Class Frm_ChanegePassword
         Me.Controls.Add(Me.txt_currentPassword)
         Me.Controls.Add(Me.GunaLabel4)
         Me.Controls.Add(Me.GunaLabel3)
-        Me.Controls.Add(Me.GunaLabel5)
         Me.Controls.Add(Me.txtUserID)
         Me.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frm_ChanegePassword"
+        Me.Name = "Frm_ChanegePassword"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frm_ChanegePassword"
         Me.Panel6.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         CType(Me.btn_close, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

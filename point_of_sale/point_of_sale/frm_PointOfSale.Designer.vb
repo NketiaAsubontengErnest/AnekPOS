@@ -324,7 +324,7 @@ Partial Class Frm_PointOfSale
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel1.Controls.Add(Me.btn_Sale)
         Me.Panel1.Controls.Add(Me.btn_MySale)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
@@ -346,7 +346,7 @@ Partial Class Frm_PointOfSale
         Me.Label7.TabIndex = 12
         Me.Label7.Text = "ANEK POS"
         '
-        'frm_PointOfSale
+        'Frm_PointOfSale
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -366,7 +366,7 @@ Partial Class Frm_PointOfSale
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "frm_PointOfSale"
+        Me.Name = "Frm_PointOfSale"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GunaGradientPanel2.ResumeLayout(False)
         Me.GunaGradientPanel2.PerformLayout()

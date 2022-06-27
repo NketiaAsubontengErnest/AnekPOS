@@ -178,7 +178,11 @@ Public Class Frm_AdminDas
 
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        lblTimer.Text = Format(Now, "hh:mm:ss tt")
+        Dim H As String = Convert.ToInt16(DateTime.Now.ToString("hh")) + 1
+        Dim M As String = DateTime.Now.ToString("mm")
+        Dim S As String = DateTime.Now.ToString("ss")
+        Dim T As String = DateTime.Now.ToString("tt")
+        lblTimer.Text = H + ":" + M + ":" + S + " " + T
         LblCompanyName.Text = CompanyName1
     End Sub
 

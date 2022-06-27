@@ -22,26 +22,26 @@ Partial Class Frm_ListOfProduct
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_ListOfProduct))
-        Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Me.dgv_Peoduct = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.cmb_ProductName = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.BunifuLabel1 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.lblPid = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.BunifuLabel2 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.chkHide = New System.Windows.Forms.CheckBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.BunifuButton3 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
-        Me.BunifuLabel2 = New Bunifu.UI.WinForms.BunifuLabel()
         CType(Me.dgv_Peoduct, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -51,30 +51,30 @@ Partial Class Frm_ListOfProduct
         '
         Me.dgv_Peoduct.AllowUserToAddRows = False
         Me.dgv_Peoduct.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.dgv_Peoduct.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgv_Peoduct.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgv_Peoduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_Peoduct.BackgroundColor = System.Drawing.Color.White
         Me.dgv_Peoduct.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgv_Peoduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgv_Peoduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv_Peoduct.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv_Peoduct.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgv_Peoduct.ColumnHeadersHeight = 4
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgv_Peoduct.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv_Peoduct.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgv_Peoduct.EnableHeadersVisualStyles = False
         Me.dgv_Peoduct.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgv_Peoduct.Location = New System.Drawing.Point(15, 80)
@@ -151,31 +151,46 @@ Partial Class Frm_ListOfProduct
         '
         'Panel6
         '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel6.Location = New System.Drawing.Point(13, 678)
+        Me.Panel6.Location = New System.Drawing.Point(0, 678)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(1060, 10)
+        Me.Panel6.Size = New System.Drawing.Size(1086, 10)
         Me.Panel6.TabIndex = 38
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel4.Controls.Add(Me.BunifuLabel2)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(13, 0)
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1060, 32)
+        Me.Panel4.Size = New System.Drawing.Size(1086, 32)
         Me.Panel4.TabIndex = 39
+        '
+        'BunifuLabel2
+        '
+        Me.BunifuLabel2.AutoEllipsis = False
+        Me.BunifuLabel2.CursorType = Nothing
+        Me.BunifuLabel2.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuLabel2.ForeColor = System.Drawing.Color.Gold
+        Me.BunifuLabel2.Location = New System.Drawing.Point(442, -3)
+        Me.BunifuLabel2.Name = "BunifuLabel2"
+        Me.BunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.BunifuLabel2.Size = New System.Drawing.Size(174, 34)
+        Me.BunifuLabel2.TabIndex = 41
+        Me.BunifuLabel2.Text = "List Of Product"
+        Me.BunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.BunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(1073, 0)
+        Me.Panel2.Location = New System.Drawing.Point(1073, 32)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(13, 688)
+        Me.Panel2.Size = New System.Drawing.Size(13, 646)
         Me.Panel2.TabIndex = 37
         '
         'Panel3
@@ -188,11 +203,11 @@ Partial Class Frm_ListOfProduct
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Location = New System.Drawing.Point(0, 32)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(13, 688)
+        Me.Panel1.Size = New System.Drawing.Size(13, 646)
         Me.Panel1.TabIndex = 36
         '
         'chkHide
@@ -231,11 +246,11 @@ Partial Class Frm_ListOfProduct
         Me.BunifuButton3.ColorContrastOnClick = 45
         Me.BunifuButton3.ColorContrastOnHover = 45
         Me.BunifuButton3.Cursor = System.Windows.Forms.Cursors.Hand
-        BorderEdges2.BottomLeft = True
-        BorderEdges2.BottomRight = True
-        BorderEdges2.TopLeft = True
-        BorderEdges2.TopRight = True
-        Me.BunifuButton3.CustomizableEdges = BorderEdges2
+        BorderEdges1.BottomLeft = True
+        BorderEdges1.BottomRight = True
+        BorderEdges1.TopLeft = True
+        BorderEdges1.TopRight = True
+        Me.BunifuButton3.CustomizableEdges = BorderEdges1
         Me.BunifuButton3.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton3.DisabledBorderColor = System.Drawing.Color.Empty
         Me.BunifuButton3.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -256,56 +271,41 @@ Partial Class Frm_ListOfProduct
         Me.BunifuButton3.IndicateFocus = False
         Me.BunifuButton3.Location = New System.Drawing.Point(894, 637)
         Me.BunifuButton3.Name = "BunifuButton3"
-        StateProperties3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties3.BorderRadius = 3
-        StateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties3.BorderThickness = 1
-        StateProperties3.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties3.ForeColor = System.Drawing.Color.White
-        StateProperties3.IconLeftImage = Nothing
-        StateProperties3.IconRightImage = Nothing
-        Me.BunifuButton3.onHoverState = StateProperties3
-        StateProperties4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties4.BorderRadius = 3
-        StateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties4.BorderThickness = 1
-        StateProperties4.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties4.ForeColor = System.Drawing.Color.White
-        StateProperties4.IconLeftImage = Nothing
-        StateProperties4.IconRightImage = Nothing
-        Me.BunifuButton3.OnPressedState = StateProperties4
+        StateProperties1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties1.BorderRadius = 3
+        StateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties1.BorderThickness = 1
+        StateProperties1.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties1.ForeColor = System.Drawing.Color.White
+        StateProperties1.IconLeftImage = Nothing
+        StateProperties1.IconRightImage = Nothing
+        Me.BunifuButton3.onHoverState = StateProperties1
+        StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties2.BorderRadius = 3
+        StateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties2.BorderThickness = 1
+        StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties2.ForeColor = System.Drawing.Color.White
+        StateProperties2.IconLeftImage = Nothing
+        StateProperties2.IconRightImage = Nothing
+        Me.BunifuButton3.OnPressedState = StateProperties2
         Me.BunifuButton3.Size = New System.Drawing.Size(161, 40)
         Me.BunifuButton3.TabIndex = 1
         Me.BunifuButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.BunifuButton3.TextMarginLeft = 0
         Me.BunifuButton3.UseDefaultRadiusAndThickness = True
         '
-        'BunifuLabel2
-        '
-        Me.BunifuLabel2.AutoEllipsis = False
-        Me.BunifuLabel2.CursorType = Nothing
-        Me.BunifuLabel2.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuLabel2.ForeColor = System.Drawing.Color.Gold
-        Me.BunifuLabel2.Location = New System.Drawing.Point(442, -3)
-        Me.BunifuLabel2.Name = "BunifuLabel2"
-        Me.BunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.BunifuLabel2.Size = New System.Drawing.Size(174, 34)
-        Me.BunifuLabel2.TabIndex = 41
-        Me.BunifuLabel2.Text = "List Of Product"
-        Me.BunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.BunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
-        '
         'Frm_ListOfProduct
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1086, 688)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.chkHide)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BunifuLabel1)
         Me.Controls.Add(Me.cmb_ProductName)
         Me.Controls.Add(Me.BunifuButton3)

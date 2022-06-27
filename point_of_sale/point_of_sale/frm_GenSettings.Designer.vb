@@ -24,14 +24,15 @@ Partial Class Frm_GenSettings
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_GenSettings))
-        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges5 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties9 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties10 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges6 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties11 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties12 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.PicCompanyLogo = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.BtnUpdate = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnSet = New Guna.UI2.WinForms.Guna2Button()
         Me.TxtCountry = New Guna.UI.WinForms.GunaTextBox()
@@ -42,7 +43,6 @@ Partial Class Frm_GenSettings
         Me.TxtPhone2 = New Guna.UI.WinForms.GunaTextBox()
         Me.TxtPhone1 = New Guna.UI.WinForms.GunaTextBox()
         Me.TxtCompanyName = New Guna.UI.WinForms.GunaTextBox()
-        Me.PicCompanyLogo = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.GunaLabel23 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel21 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel20 = New Guna.UI.WinForms.GunaLabel()
@@ -50,7 +50,6 @@ Partial Class Frm_GenSettings
         Me.GunaLabel18 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel17 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel16 = New Guna.UI.WinForms.GunaLabel()
-        Me.GunaLabel15 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel14 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel12 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel11 = New Guna.UI.WinForms.GunaLabel()
@@ -89,6 +88,7 @@ Partial Class Frm_GenSettings
         Me.Button3 = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GunaLabel5 = New Guna.UI.WinForms.GunaLabel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PicCompanyLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -114,6 +114,8 @@ Partial Class Frm_GenSettings
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.Controls.Add(Me.PicCompanyLogo)
         Me.TabPage1.Controls.Add(Me.BtnUpdate)
         Me.TabPage1.Controls.Add(Me.BtnSet)
         Me.TabPage1.Controls.Add(Me.TxtCountry)
@@ -124,7 +126,6 @@ Partial Class Frm_GenSettings
         Me.TabPage1.Controls.Add(Me.TxtPhone2)
         Me.TabPage1.Controls.Add(Me.TxtPhone1)
         Me.TabPage1.Controls.Add(Me.TxtCompanyName)
-        Me.TabPage1.Controls.Add(Me.PicCompanyLogo)
         Me.TabPage1.Controls.Add(Me.GunaLabel23)
         Me.TabPage1.Controls.Add(Me.GunaLabel21)
         Me.TabPage1.Controls.Add(Me.GunaLabel20)
@@ -132,7 +133,6 @@ Partial Class Frm_GenSettings
         Me.TabPage1.Controls.Add(Me.GunaLabel18)
         Me.TabPage1.Controls.Add(Me.GunaLabel17)
         Me.TabPage1.Controls.Add(Me.GunaLabel16)
-        Me.TabPage1.Controls.Add(Me.GunaLabel15)
         Me.TabPage1.Controls.Add(Me.GunaLabel14)
         Me.TabPage1.Controls.Add(Me.GunaLabel12)
         Me.TabPage1.Controls.Add(Me.GunaLabel11)
@@ -150,6 +150,17 @@ Partial Class Frm_GenSettings
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Company Details"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'PicCompanyLogo
+        '
+        Me.PicCompanyLogo.BaseColor = System.Drawing.Color.White
+        Me.PicCompanyLogo.Location = New System.Drawing.Point(652, 89)
+        Me.PicCompanyLogo.Name = "PicCompanyLogo"
+        Me.PicCompanyLogo.Size = New System.Drawing.Size(120, 120)
+        Me.PicCompanyLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicCompanyLogo.TabIndex = 22
+        Me.PicCompanyLogo.TabStop = False
+        Me.PicCompanyLogo.UseTransfarantBackground = False
         '
         'BtnUpdate
         '
@@ -169,6 +180,7 @@ Partial Class Frm_GenSettings
         '
         Me.BtnSet.CheckedState.Parent = Me.BtnSet
         Me.BtnSet.CustomImages.Parent = Me.BtnSet
+        Me.BtnSet.FillColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.BtnSet.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSet.ForeColor = System.Drawing.Color.White
         Me.BtnSet.HoverState.Parent = Me.BtnSet
@@ -307,17 +319,6 @@ Partial Class Frm_GenSettings
         Me.TxtCompanyName.Size = New System.Drawing.Size(490, 32)
         Me.TxtCompanyName.TabIndex = 0
         '
-        'PicCompanyLogo
-        '
-        Me.PicCompanyLogo.BaseColor = System.Drawing.Color.White
-        Me.PicCompanyLogo.Location = New System.Drawing.Point(649, 84)
-        Me.PicCompanyLogo.Name = "PicCompanyLogo"
-        Me.PicCompanyLogo.Size = New System.Drawing.Size(109, 102)
-        Me.PicCompanyLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PicCompanyLogo.TabIndex = 18
-        Me.PicCompanyLogo.TabStop = False
-        Me.PicCompanyLogo.UseTransfarantBackground = False
-        '
         'GunaLabel23
         '
         Me.GunaLabel23.AutoSize = True
@@ -387,16 +388,6 @@ Partial Class Frm_GenSettings
         Me.GunaLabel16.Size = New System.Drawing.Size(14, 21)
         Me.GunaLabel16.TabIndex = 10
         Me.GunaLabel16.Text = ":"
-        '
-        'GunaLabel15
-        '
-        Me.GunaLabel15.AutoSize = True
-        Me.GunaLabel15.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel15.Location = New System.Drawing.Point(680, 60)
-        Me.GunaLabel15.Name = "GunaLabel15"
-        Me.GunaLabel15.Size = New System.Drawing.Size(48, 21)
-        Me.GunaLabel15.TabIndex = 9
-        Me.GunaLabel15.Text = "Logo"
         '
         'GunaLabel14
         '
@@ -563,11 +554,11 @@ Partial Class Frm_GenSettings
         Me.btn_change.ColorContrastOnClick = 45
         Me.btn_change.ColorContrastOnHover = 45
         Me.btn_change.Cursor = System.Windows.Forms.Cursors.Hand
-        BorderEdges1.BottomLeft = True
-        BorderEdges1.BottomRight = True
-        BorderEdges1.TopLeft = True
-        BorderEdges1.TopRight = True
-        Me.btn_change.CustomizableEdges = BorderEdges1
+        BorderEdges5.BottomLeft = True
+        BorderEdges5.BottomRight = True
+        BorderEdges5.TopLeft = True
+        BorderEdges5.TopRight = True
+        Me.btn_change.CustomizableEdges = BorderEdges5
         Me.btn_change.DialogResult = System.Windows.Forms.DialogResult.None
         Me.btn_change.DisabledBorderColor = System.Drawing.Color.Empty
         Me.btn_change.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -588,24 +579,24 @@ Partial Class Frm_GenSettings
         Me.btn_change.IndicateFocus = False
         Me.btn_change.Location = New System.Drawing.Point(191, 369)
         Me.btn_change.Name = "btn_change"
-        StateProperties1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties1.BorderRadius = 3
-        StateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties1.BorderThickness = 1
-        StateProperties1.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties1.ForeColor = System.Drawing.Color.White
-        StateProperties1.IconLeftImage = Nothing
-        StateProperties1.IconRightImage = Nothing
-        Me.btn_change.onHoverState = StateProperties1
-        StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties2.BorderRadius = 3
-        StateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties2.BorderThickness = 1
-        StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties2.ForeColor = System.Drawing.Color.White
-        StateProperties2.IconLeftImage = Nothing
-        StateProperties2.IconRightImage = Nothing
-        Me.btn_change.OnPressedState = StateProperties2
+        StateProperties9.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties9.BorderRadius = 3
+        StateProperties9.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties9.BorderThickness = 1
+        StateProperties9.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties9.ForeColor = System.Drawing.Color.White
+        StateProperties9.IconLeftImage = Nothing
+        StateProperties9.IconRightImage = Nothing
+        Me.btn_change.onHoverState = StateProperties9
+        StateProperties10.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties10.BorderRadius = 3
+        StateProperties10.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties10.BorderThickness = 1
+        StateProperties10.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties10.ForeColor = System.Drawing.Color.White
+        StateProperties10.IconLeftImage = Nothing
+        StateProperties10.IconRightImage = Nothing
+        Me.btn_change.OnPressedState = StateProperties10
         Me.btn_change.Size = New System.Drawing.Size(396, 59)
         Me.btn_change.TabIndex = 13
         Me.btn_change.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -727,11 +718,11 @@ Partial Class Frm_GenSettings
         Me.btnBack_up.ColorContrastOnClick = 45
         Me.btnBack_up.ColorContrastOnHover = 45
         Me.btnBack_up.Cursor = System.Windows.Forms.Cursors.Hand
-        BorderEdges2.BottomLeft = True
-        BorderEdges2.BottomRight = True
-        BorderEdges2.TopLeft = True
-        BorderEdges2.TopRight = True
-        Me.btnBack_up.CustomizableEdges = BorderEdges2
+        BorderEdges6.BottomLeft = True
+        BorderEdges6.BottomRight = True
+        BorderEdges6.TopLeft = True
+        BorderEdges6.TopRight = True
+        Me.btnBack_up.CustomizableEdges = BorderEdges6
         Me.btnBack_up.DialogResult = System.Windows.Forms.DialogResult.None
         Me.btnBack_up.DisabledBorderColor = System.Drawing.Color.Empty
         Me.btnBack_up.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -752,24 +743,24 @@ Partial Class Frm_GenSettings
         Me.btnBack_up.IndicateFocus = False
         Me.btnBack_up.Location = New System.Drawing.Point(268, 151)
         Me.btnBack_up.Name = "btnBack_up"
-        StateProperties3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties3.BorderRadius = 20
-        StateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties3.BorderThickness = 1
-        StateProperties3.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
-        StateProperties3.ForeColor = System.Drawing.Color.White
-        StateProperties3.IconLeftImage = Nothing
-        StateProperties3.IconRightImage = Nothing
-        Me.btnBack_up.onHoverState = StateProperties3
-        StateProperties4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties4.BorderRadius = 20
-        StateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties4.BorderThickness = 1
-        StateProperties4.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
-        StateProperties4.ForeColor = System.Drawing.Color.White
-        StateProperties4.IconLeftImage = Nothing
-        StateProperties4.IconRightImage = Nothing
-        Me.btnBack_up.OnPressedState = StateProperties4
+        StateProperties11.BorderColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties11.BorderRadius = 20
+        StateProperties11.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties11.BorderThickness = 1
+        StateProperties11.FillColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(255, Byte), Integer))
+        StateProperties11.ForeColor = System.Drawing.Color.White
+        StateProperties11.IconLeftImage = Nothing
+        StateProperties11.IconRightImage = Nothing
+        Me.btnBack_up.onHoverState = StateProperties11
+        StateProperties12.BorderColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties12.BorderRadius = 20
+        StateProperties12.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties12.BorderThickness = 1
+        StateProperties12.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        StateProperties12.ForeColor = System.Drawing.Color.White
+        StateProperties12.IconLeftImage = Nothing
+        StateProperties12.IconRightImage = Nothing
+        Me.btnBack_up.OnPressedState = StateProperties12
         Me.btnBack_up.Size = New System.Drawing.Size(210, 45)
         Me.btnBack_up.TabIndex = 0
         Me.btnBack_up.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -927,11 +918,20 @@ Partial Class Frm_GenSettings
         Me.GunaLabel5.TabIndex = 2
         Me.GunaLabel5.Text = "System Settings"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(656, 67)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(110, 19)
+        Me.Label2.TabIndex = 23
+        Me.Label2.Text = "Company Logo"
+        '
         'Frm_GenSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(813, 547)
         Me.Controls.Add(Me.GunaLabel5)
         Me.Controls.Add(Me.Button3)
@@ -989,7 +989,6 @@ Partial Class Frm_GenSettings
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents GunaLabel5 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel16 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents GunaLabel15 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel14 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel12 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel11 As Guna.UI.WinForms.GunaLabel
@@ -998,7 +997,6 @@ Partial Class Frm_GenSettings
     Friend WithEvents GunaLabel8 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel7 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel6 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents PicCompanyLogo As Guna.UI.WinForms.GunaCirclePictureBox
     Friend WithEvents GunaLabel23 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel21 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel20 As Guna.UI.WinForms.GunaLabel
@@ -1016,4 +1014,6 @@ Partial Class Frm_GenSettings
     Friend WithEvents BtnUpdate As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnSet As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents LblID As Label
+    Friend WithEvents PicCompanyLogo As Guna.UI.WinForms.GunaCirclePictureBox
+    Friend WithEvents Label2 As Label
 End Class

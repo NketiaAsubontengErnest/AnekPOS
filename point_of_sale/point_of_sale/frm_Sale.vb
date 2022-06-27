@@ -1,10 +1,12 @@
 ﻿Imports System.IO
 Imports MySql.Data.MySqlClient
+Imports System.Drawing.Printing
 
 Public Class Frm_Sale
     Dim reader As MySqlDataReader
     Dim count As Integer = 0
 
+    Dim g_Total As Decimal
     Dim totalPrice As Decimal
     Dim itemName As ArrayList = New ArrayList()
     Dim quanti As ArrayList = New ArrayList()
@@ -20,7 +22,7 @@ Public Class Frm_Sale
             cmb_ProductName.Enabled = False
             Label1.Visible = False
 
-            Label2.Text = "ACCOUNTS CLOSED FOR THE DAY. " + vbCrLf + "CAN'T MAKE SALES."
+
         End If
 
         calculateSales(Frm_AdminDas.lblUserID.Text)
@@ -29,7 +31,6 @@ Public Class Frm_Sale
         btn_AddToList.Enabled = False
         btn_Done.Enabled = False
 
-        ListBox1.Items.Add("ID" + vbTab + "Name" + vbTab + vbTab + "Qty" + vbTab + vbTab + "Price")
 
 
         fillReceipt()
@@ -42,32 +43,20 @@ Public Class Frm_Sale
         'list_ShowAdded.Items.Add("***************************************")
     End Sub
 
-    Private Sub txt_UnitPrice_KeyPress(sender As Object, e As KeyPressEventArgs)
-        If Asc(e.KeyChar) <> 8 Then
-            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
-                e.Handled = True
-            End If
-        End If
-    End Sub
-
-
     Private Sub btn_Done_Click(sender As Object, e As EventArgs) Handles btn_Done.Click
-        rtxtReceipt.Clear()
+        DataGridViewPrint.Rows.Clear()
 
         confirmPurchase()
         calculateSales(Frm_AdminDas.lblUserID.Text)
         updateProducts()
 
-        rtxtReceipt.AppendText(vbTab + CompanyName1 + vbCrLf)
-        rtxtReceipt.AppendText("        Sales Receipt" + vbCrLf)
-        rtxtReceipt.AppendText("--------------------------------------------------------------------" + vbCrLf)
-        rtxtReceipt.AppendText("Item" + "                                " + "Price" + "          " + "Qty" + "        " + "Amount" + vbCrLf)
         fillReceipt()
-        rtxtReceipt.AppendText("--------------------------------------------------------------------" + vbCrLf)
-        rtxtReceipt.AppendText("                                                     Total: " + lblTotalPrice.Text + vbCrLf)
-        rtxtReceipt.AppendText("                                                    -----------------------" + vbCrLf + vbCrLf)
-        rtxtReceipt.AppendText("Issued By: " + Frm_AdminDas.lblUserName.Text + vbCrLf)
-        rtxtReceipt.AppendText("Date Issued: " + DateTime.Now.ToString + vbCrLf + vbCrLf)
+
+        If lblTotalPrice.Text = "" Then
+            g_Total = 0.0
+        Else
+            g_Total = Convert.ToDecimal(lblTotalPrice.Text)
+        End If
 
         lblTotalPrice.Text = ""
         overallTotal = 0
@@ -301,7 +290,8 @@ Public Class Frm_Sale
             If lblInStock.Text = 0 Then
                 btn_AddToList.Enabled = False
                 txt_Quantity.Enabled = False
-
+            Else
+                txt_Quantity.Value = 1
             End If
             cal_Price()
 
@@ -395,7 +385,7 @@ Public Class Frm_Sale
             hidden.Add(cmb_Hide.Text)
 
             cmb_QuantInstack.Text = Convert.ToInt32(cmb_QuantInstack.Text) - Convert.ToInt32(txt_Quantity.Value)
-            lblTotalPrice.Text = "Gh¢" + overallTotal.ToString
+            lblTotalPrice.Text = overallTotal.ToString
         Catch ex As Exception
 
         End Try
@@ -415,6 +405,7 @@ Public Class Frm_Sale
                                      txt_Quantity.Value.ToString +
                                      "          " +
                                      amount.ToString + vbCrLf)
+            DataGridViewListItem.Rows.Add(cmb_pID.Text, cmb_ProductName.Text, txt_Quantity.Value.ToString, amount.ToString)
 
             lstTrackPrice.Items.Add(amount)
         Catch ex As Exception
@@ -450,11 +441,7 @@ Public Class Frm_Sale
             Dim i As Integer = 0
 
             While i < count
-                rtxtReceipt.AppendText(itemName.ToArray.GetValue(i) + "                     " +
-                                       unit.ToArray.GetValue(i).ToString + "            " +
-                                       quanti.ToArray.GetValue(i).ToString + "                " +
-                                       prize.ToArray.GetValue(i).ToString + vbCrLf)
-                GunaDataGridView1.Rows.Add(itemName.ToArray.GetValue(i), unit.ToArray.GetValue(i).ToString, quanti.ToArray.GetValue(i).ToString, prize.ToArray.GetValue(i).ToString)
+                DataGridViewPrint.Rows.Add(itemName.ToArray.GetValue(i), unit.ToArray.GetValue(i).ToString, quanti.ToArray.GetValue(i).ToString, prize.ToArray.GetValue(i).ToString)
                 i += 1
             End While
 
@@ -466,6 +453,7 @@ Public Class Frm_Sale
             profit.Clear()
 
             lstID.Items.Clear()
+            DataGridViewListItem.Rows.Clear()
             lstTrackQty.Items.Clear()
 
             LoadGrid()
@@ -615,10 +603,6 @@ Public Class Frm_Sale
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        rtxtReceipt.ResetText()
-        BtnRemoveItem.PerformClick()
-    End Sub
 
     Private Sub btn_close_Click(sender As Object, e As EventArgs)
 
@@ -748,6 +732,7 @@ Public Class Frm_Sale
         Try
             If lstItemID.SelectedIndex > -1 Then
                 lstItemID.Items.RemoveAt(lstItemID.SelectedIndex)
+                DataGridViewListItem.Rows.RemoveAt(DataGridViewListItem.CurrentRow.Index)
 
                 itemName.RemoveAt(lstTrackPrice.SelectedIndex)
                 unit.RemoveAt(lstTrackPrice.SelectedIndex)
@@ -771,6 +756,16 @@ Public Class Frm_Sale
         End Try
     End Sub
 
+    Private Sub BtnPrint_Click(sender As Object, e As EventArgs) Handles BtnPrint.Click
+        Print()
+        DataGridViewPrint.Rows.Clear()
+    End Sub
+
+    Private Sub BtnReset_Click(sender As Object, e As EventArgs) Handles BtnReset.Click
+        DataGridViewPrint.Rows.Clear()
+        BtnRemoveItem.PerformClick()
+    End Sub
+
     Private Sub Label1_MouseLeave(sender As Object, e As EventArgs) Handles Label1.MouseLeave
         Label1.ForeColor = Color.Maroon
 
@@ -790,5 +785,114 @@ Public Class Frm_Sale
         txtpri.Text = ""
         txt_Quantity.Value = 1
         cmb_cID.Text = cmb_cID.Items(cmbType.SelectedIndex)
+    End Sub
+
+    Dim WithEvents PD As New PrintDocument
+    Dim PPD As New PrintPreviewDialog
+    Dim LongPaper As Integer
+
+    Sub changelongpaper()
+        Dim rowcount As Integer
+        LongPaper = 0
+        rowcount = DataGridViewPrint.Rows.Count
+        LongPaper = rowcount * 15
+        LongPaper = LongPaper + 500
+    End Sub
+    Private Sub Print()
+        changelongpaper()
+        PPD.Document = PD
+        PPD.ShowDialog()
+    End Sub
+
+    Private Sub DataGridViewListItem_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewListItem.CellContentClick
+
+        lstItemID.SelectedIndex = e.RowIndex
+    End Sub
+
+    Private Sub PD_BeginPrint(sender As Object, e As PrintEventArgs) Handles PD.BeginPrint
+        Dim pagesetup As New PageSettings
+        pagesetup.PaperSize = New PaperSize("Custom", 250, LongPaper)
+        PD.DefaultPageSettings = pagesetup
+    End Sub
+
+    Private Sub PD_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PD.PrintPage
+        Dim f8 As New Font("Segoe UI", 8, FontStyle.Regular)
+        Dim f12b As New Font("Segoe UI", 12, FontStyle.Bold)
+        Dim f10 As New Font("Segoe UI", 10, FontStyle.Regular)
+        Dim f10b As New Font("Segoe UI", 10, FontStyle.Bold)
+        Dim f14 As New Font("Segoe UI", 14, FontStyle.Bold)
+
+        Dim leftmargin As Integer = PD.DefaultPageSettings.Margins.Left
+        Dim centermagin As Integer = PD.DefaultPageSettings.PaperSize.Width / 2
+        Dim rightmagin As Integer = PD.DefaultPageSettings.PaperSize.Width
+
+        Dim right As New StringFormat
+        Dim center As New StringFormat
+
+        right.Alignment = StringAlignment.Far
+        center.Alignment = StringAlignment.Center
+
+        Dim line As String
+        line = "________________________________________________________________________________"
+
+        Dim logoImage As Image
+        If Not CompanyLogo = "" Then
+            Dim pathstring As String = Path.Combine(folder, CompanyLogo)
+            logoImage = Image.FromFile(pathstring)
+            e.Graphics.DrawImage(logoImage, 5, 5, 35, 35)
+        End If
+
+        e.Graphics.DrawString(CompanyName1, f14, Brushes.Black, centermagin, 5, center)
+        e.Graphics.DrawString("Tel: " & CompanyPhone1 & ", " & CompanyPhone2 & ", " & CompanyPhone3, f10, Brushes.Black, centermagin, 25, center)
+        Dim rn As New Random
+        Dim randnum As String = ""
+        Dim b As Integer
+        For b = 1 To 4
+            randnum = randnum & rn.Next(10, 99)
+        Next
+
+        e.Graphics.DrawString("Invoice #: " + randnum, f8, Brushes.Black, 0, 40)
+
+        e.Graphics.DrawString("Casher   : " + Frm_AdminDas.lblUserName.Text, f8, Brushes.Black, 0, 55)
+
+        e.Graphics.DrawString("Date      : " & Date.Now, f8, Brushes.Black, 0, 70)
+        e.Graphics.DrawString(line, f12b, Brushes.Black, -5, 65)
+
+        Dim height As Integer
+        Dim i As Decimal
+
+
+        DataGridViewPrint.AllowUserToAddRows = False
+        e.Graphics.DrawString("Item", f10, Brushes.Black, 0, 82)
+        e.Graphics.DrawString("Unit Price", f10, Brushes.Black, centermagin - 15, 82)
+        e.Graphics.DrawString("Qty", f10, Brushes.Black, centermagin + 55, 82)
+        e.Graphics.DrawString("Cost", f10, Brushes.Black, centermagin + 95, 82)
+        e.Graphics.DrawString(line, f8, Brushes.Black, -5, 85)
+
+        For row As Integer = 0 To DataGridViewPrint.RowCount - 1
+            height += 15
+            e.Graphics.DrawString(DataGridViewPrint.Rows(row).Cells(0).Value.ToString, f8, Brushes.Black, 0, 82 + height)
+            e.Graphics.DrawString(DataGridViewPrint.Rows(row).Cells(1).Value.ToString, f8, Brushes.Black, centermagin + 5, 82 + height)
+            e.Graphics.DrawString(DataGridViewPrint.Rows(row).Cells(2).Value.ToString, f8, Brushes.Black, centermagin + 60, 82 + height)
+
+
+            i = DataGridViewPrint.Rows(row).Cells(3).Value
+
+            DataGridViewPrint.Rows(row).Cells(3).Value = Format(i, "#,0.00")
+            e.Graphics.DrawString(DataGridViewPrint.Rows(row).Cells(3).Value.ToString, f8, Brushes.Black, rightmagin, 82 + height, right)
+
+        Next
+
+        Dim height2 As Integer
+        height2 = 83 + height
+
+        e.Graphics.DrawString(line, f8, Brushes.Black, -5, height2 + 5)
+        e.Graphics.DrawString("Total: Gh¢" & Format(g_Total, "#,0.00"), f10b, Brushes.Black, rightmagin, 15 + height2, right)
+        e.Graphics.DrawString(line, f8, Brushes.Black, -5, height2 + 20)
+
+        e.Graphics.DrawString("Thanks For Shoping", f10, Brushes.Black, centermagin, 35 + height2, center)
+        e.Graphics.DrawString("~~see you next time~~", f8, Brushes.Black, centermagin, 50 + height2, center)
+
+
     End Sub
 End Class
