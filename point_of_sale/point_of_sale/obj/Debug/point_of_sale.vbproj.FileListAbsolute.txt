@@ -339,3 +339,4 @@ C:\Users\OHOTEENI ERNEST\Source\Repos\NketiaAsubontengErnest\AnekPOS\point_of_sa
 C:\Users\OHOTEENI ERNEST\Source\Repos\NketiaAsubontengErnest\AnekPOS\point_of_sale\point_of_sale\obj\Debug\point_of_sale.exe
 C:\Users\OHOTEENI ERNEST\Source\Repos\NketiaAsubontengErnest\AnekPOS\point_of_sale\point_of_sale\obj\Debug\point_of_sale.xml
 C:\Users\OHOTEENI ERNEST\Source\Repos\NketiaAsubontengErnest\AnekPOS\point_of_sale\point_of_sale\obj\Debug\point_of_sale.pdb
+C:\Users\OHOTEENI ERNEST\Source\Repos\NketiaAsubontengErnest\AnekPOS\point_of_sale\point_of_sale\obj\Debug\point_of_sale.FrmInoiceCheck.resources

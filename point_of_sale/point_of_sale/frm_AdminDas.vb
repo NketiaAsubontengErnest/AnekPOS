@@ -204,6 +204,7 @@ Public Class Frm_AdminDas
 
     Private Sub UpdateProductToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles UpdateProductToolStripMenuItem.Click
         Try
+            ColorClear()
             Closings()
 
             frmCheck_Stock.MdiParent = Me
@@ -216,6 +217,7 @@ Public Class Frm_AdminDas
 
     Private Sub ListOfProductToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ListOfProductToolStripMenuItem1.Click
         Try
+            ColorClear()
             Closings()
 
             Frm_ListOfProduct.MdiParent = Me
@@ -228,6 +230,7 @@ Public Class Frm_AdminDas
 
     Private Sub StatisticsToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles StatisticsToolStripMenuItem1.Click
         Try
+            ColorClear()
             Closings()
 
             FrmStatics.MdiParent = Me
@@ -239,6 +242,7 @@ Public Class Frm_AdminDas
 
     Private Sub ListOfUsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListOfUsersToolStripMenuItem.Click
         Try
+            ColorClear()
             Closings()
 
 
@@ -252,6 +256,7 @@ Public Class Frm_AdminDas
 
     Private Sub MyProfitToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MyProfitToolStripMenuItem1.Click
         Try
+            ColorClear()
             Closings()
 
             Frm_Profit.MdiParent = Me
@@ -264,6 +269,7 @@ Public Class Frm_AdminDas
 
     Private Sub GeneralReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GeneralReportToolStripMenuItem.Click
         Try
+            ColorClear()
             Closings()
 
             FrmReport.MdiParent = Me
@@ -275,6 +281,7 @@ Public Class Frm_AdminDas
 
     Private Sub AddCategoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddCategoryToolStripMenuItem.Click
         Try
+            ColorClear()
             Closings()
 
             Frm_Addtype.MdiParent = Me
@@ -303,10 +310,22 @@ Public Class Frm_AdminDas
 
     Private Sub SystemManagementToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SystemManagementToolStripMenuItem.Click
         Try
+            ColorClear()
             Closings()
 
             Frm_GenSettings.MdiParent = Me
             Frm_GenSettings.Show()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub CheckInvoicesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckInvoicesToolStripMenuItem.Click
+        Try
+            ColorClear()
+            Closings()
+            FrmInoiceCheck.MdiParent = Me
+            FrmInoiceCheck.Show()
         Catch ex As Exception
 
         End Try

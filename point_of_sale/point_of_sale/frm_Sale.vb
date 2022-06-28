@@ -14,6 +14,7 @@ Public Class Frm_Sale
     Dim prize As ArrayList = New ArrayList()
     Dim profit As ArrayList = New ArrayList()
     Dim hidden As ArrayList = New ArrayList()
+    Dim invoiceCodes As String
 
     Dim unitPrice, quantity, total As Decimal
     Private Sub frm_Sale_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -31,8 +32,6 @@ Public Class Frm_Sale
         btn_AddToList.Enabled = False
         btn_Done.Enabled = False
 
-
-
         fillReceipt()
         setCategory()
         ProductDetails()
@@ -45,8 +44,9 @@ Public Class Frm_Sale
 
     Private Sub btn_Done_Click(sender As Object, e As EventArgs) Handles btn_Done.Click
         DataGridViewPrint.Rows.Clear()
+        invoiceCodes = loadInvoiceCode()
 
-        confirmPurchase()
+        confirmPurchase(invoiceCodes)
         calculateSales(Frm_AdminDas.lblUserID.Text)
         updateProducts()
 
@@ -121,14 +121,11 @@ Public Class Frm_Sale
                     Dim reader As MySqlDataReader = command.ExecuteReader
 
                     While reader.Read
-                        CHECK = reader.Item("hide")
-                        If CHECK = "NO" Then
-                            cmd_unitPrice.Text = reader.Item("price")
-                            'cmb_pID.Text = reader.Item("Product_ID")
-                            cmbCost.Text = reader("selling_price")
-                            cmb_QuantInstack.Text = reader("instock")
-                            cmb_Hide.Text = reader("hide")
-                        End If
+                        cmd_unitPrice.Text = reader.Item("price")
+                        'cmb_pID.Text = reader.Item("Product_ID")
+                        cmbCost.Text = reader("selling_price")
+                        cmb_QuantInstack.Text = reader("instock")
+                        cmb_Hide.Text = reader("hide")
                     End While
                 Catch ex As Exception
                     MsgBox(ex.Message)
@@ -523,7 +520,7 @@ Public Class Frm_Sale
         End Using
     End Sub
 
-    Public Sub confirmPurchase()
+    Public Sub confirmPurchase(invoiceCode As String)
         Dim A As Integer = 0
 
         Dim track As String = Path.GetRandomFileName()
@@ -536,7 +533,7 @@ Public Class Frm_Sale
             Dim i As Integer = 0
 
             While i < count
-                query = "INSERT INTO sales (item, Qty, price, amount, trackRec, employeeID,date,month,profit,	Gen_Mount, hide) VALUES (
+                query = "INSERT INTO sales (item, Qty, price, amount, trackRec, employeeID,date,month,profit,	Gen_Mount,invoiceCode, hide) VALUES (
                                                                 '" + itemName.ToArray.GetValue(i).ToString + "', 
                                                                 '" + quanti.ToArray.GetValue(i).ToString + "', 
                                                                 '" + unit.ToArray.GetValue(i).ToString + "', 
@@ -547,6 +544,7 @@ Public Class Frm_Sale
                                                                 '" + Date.Now.ToString("dd/MM/yyyy") + "',
                                                                 '" + profit.ToArray.GetValue(i).ToString + "',
                                                                 '" + Date.Now.ToString("MM") + "',
+                                                                '" + invoiceCode + "',
                                                                 '" + hidden.ToArray.GetValue(i).ToString + "')"
                 reader = Inserting(query)
                 If Not reader.RecordsAffected > 0 Then
@@ -809,6 +807,10 @@ Public Class Frm_Sale
         lstItemID.SelectedIndex = e.RowIndex
     End Sub
 
+    Private Sub DataGridViewListItem_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewListItem.CellClick
+        lstItemID.SelectedIndex = e.RowIndex
+    End Sub
+
     Private Sub PD_BeginPrint(sender As Object, e As PrintEventArgs) Handles PD.BeginPrint
         Dim pagesetup As New PageSettings
         pagesetup.PaperSize = New PaperSize("Custom", 250, LongPaper)
@@ -816,11 +818,12 @@ Public Class Frm_Sale
     End Sub
 
     Private Sub PD_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PD.PrintPage
-        Dim f8 As New Font("Segoe UI", 8, FontStyle.Regular)
-        Dim f12b As New Font("Segoe UI", 12, FontStyle.Bold)
-        Dim f10 As New Font("Segoe UI", 10, FontStyle.Regular)
-        Dim f10b As New Font("Segoe UI", 10, FontStyle.Bold)
-        Dim f14 As New Font("Segoe UI", 14, FontStyle.Bold)
+        Dim f8 As New Font("Calibri", 8, FontStyle.Regular)
+        Dim f8b As New Font("Calibri", 8, FontStyle.Bold)
+        Dim f12b As New Font("Calibri", 12, FontStyle.Bold)
+        Dim f10 As New Font("Calibri", 10, FontStyle.Regular)
+        Dim f10b As New Font("Calibri", 10, FontStyle.Bold)
+        Dim f14 As New Font("Calibri", 14, FontStyle.Bold)
 
         Dim leftmargin As Integer = PD.DefaultPageSettings.Margins.Left
         Dim centermagin As Integer = PD.DefaultPageSettings.PaperSize.Width / 2
@@ -842,35 +845,27 @@ Public Class Frm_Sale
             e.Graphics.DrawImage(logoImage, 5, 5, 35, 35)
         End If
 
-        e.Graphics.DrawString(CompanyName1, f14, Brushes.Black, centermagin, 5, center)
-        e.Graphics.DrawString("Tel: " & CompanyPhone1 & ", " & CompanyPhone2 & ", " & CompanyPhone3, f10, Brushes.Black, centermagin, 25, center)
-        Dim rn As New Random
-        Dim randnum As String = ""
-        Dim b As Integer
-        For b = 1 To 4
-            randnum = randnum & rn.Next(10, 99)
-        Next
-
-        e.Graphics.DrawString("Invoice #: " + randnum, f8, Brushes.Black, 0, 40)
-
-        e.Graphics.DrawString("Casher   : " + Frm_AdminDas.lblUserName.Text, f8, Brushes.Black, 0, 55)
-
-        e.Graphics.DrawString("Date      : " & Date.Now, f8, Brushes.Black, 0, 70)
-        e.Graphics.DrawString(line, f12b, Brushes.Black, -5, 65)
+        e.Graphics.DrawString(CompanyName1, f14, Brushes.Black, centermagin, 2, center)
+        e.Graphics.DrawString("Tel: " & CompanyPhone1 & ", " & CompanyPhone2, f8, Brushes.Black, centermagin, 22, center)
+        e.Graphics.DrawString("Email: " & CompanyEmail, f8, Brushes.Black, centermagin, 32, center)
+        e.Graphics.DrawString("Invoice #: " + invoiceCodes, f8, Brushes.Black, 0, 42)
+        e.Graphics.DrawString("Employee : " + Frm_AdminDas.lblUserName.Text, f8, Brushes.Black, 0, 52)
+        e.Graphics.DrawString("Date      : " & Date.Now, f8, Brushes.Black, 0, 62)
+        e.Graphics.DrawString(line, f12b, Brushes.Black, -5, 57)
 
         Dim height As Integer
         Dim i As Decimal
 
 
         DataGridViewPrint.AllowUserToAddRows = False
-        e.Graphics.DrawString("Item", f10, Brushes.Black, 0, 82)
-        e.Graphics.DrawString("Unit Price", f10, Brushes.Black, centermagin - 15, 82)
-        e.Graphics.DrawString("Qty", f10, Brushes.Black, centermagin + 55, 82)
-        e.Graphics.DrawString("Cost", f10, Brushes.Black, centermagin + 95, 82)
-        e.Graphics.DrawString(line, f8, Brushes.Black, -5, 85)
+        e.Graphics.DrawString("Item", f8b, Brushes.Black, 0, 74)
+        e.Graphics.DrawString("Unit Price", f8b, Brushes.Black, centermagin - 15, 74)
+        e.Graphics.DrawString("Qty", f8b, Brushes.Black, centermagin + 55, 74)
+        e.Graphics.DrawString("Cost", f8b, Brushes.Black, centermagin + 95, 74)
+        e.Graphics.DrawString(line, f8b, Brushes.Black, -5, 75)
 
         For row As Integer = 0 To DataGridViewPrint.RowCount - 1
-            height += 15
+            height += 7
             e.Graphics.DrawString(DataGridViewPrint.Rows(row).Cells(0).Value.ToString, f8, Brushes.Black, 0, 82 + height)
             e.Graphics.DrawString(DataGridViewPrint.Rows(row).Cells(1).Value.ToString, f8, Brushes.Black, centermagin + 5, 82 + height)
             e.Graphics.DrawString(DataGridViewPrint.Rows(row).Cells(2).Value.ToString, f8, Brushes.Black, centermagin + 60, 82 + height)
@@ -884,11 +879,11 @@ Public Class Frm_Sale
         Next
 
         Dim height2 As Integer
-        height2 = 83 + height
+        height2 = 77 + height
 
         e.Graphics.DrawString(line, f8, Brushes.Black, -5, height2 + 5)
         e.Graphics.DrawString("Total: Gh¢" & Format(g_Total, "#,0.00"), f10b, Brushes.Black, rightmagin, 15 + height2, right)
-        e.Graphics.DrawString(line, f8, Brushes.Black, -5, height2 + 20)
+        e.Graphics.DrawString(line, f12b, Brushes.Black, 150, height2 + 13)
 
         e.Graphics.DrawString("Thanks For Shoping", f10, Brushes.Black, centermagin, 35 + height2, center)
         e.Graphics.DrawString("~~see you next time~~", f8, Brushes.Black, centermagin, 50 + height2, center)

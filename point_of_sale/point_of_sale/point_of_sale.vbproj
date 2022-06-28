@@ -197,6 +197,12 @@
     <Compile Include="FrmCheck Stock.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmInoiceCheck.Designer.vb">
+      <DependentUpon>FrmInoiceCheck.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInoiceCheck.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +329,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FrmCheck Stock.resx">
       <DependentUpon>FrmCheck Stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInoiceCheck.resx">
+      <DependentUpon>FrmInoiceCheck.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>

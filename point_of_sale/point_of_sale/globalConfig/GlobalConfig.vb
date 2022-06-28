@@ -15,6 +15,7 @@ Module GlobalConfig
     Public DBdatabase As String = "point_of_sale"
     Public connstring As String = "server=" & DBserver & ";userid=" & DBuserids & ";password=" & DBpassword & ";database=" & DBdatabase & ""
     Private EncryptionKey As String = "MAKV2SPBNI99212"
+
     Public Sub OpenConnection()
         conn = New MySqlConnection(connstring)
         Try
@@ -25,6 +26,15 @@ Module GlobalConfig
             MsgBox(ex.Message.ToString())
         End Try
     End Sub
+    Function loadInvoiceCode() As String
+        Dim rn As New Random
+        Dim randnum As String = ""
+        Dim b As Integer
+        For b = 1 To 4
+            randnum = randnum & rn.Next(10, 99)
+        Next
+        Return randnum
+    End Function
 
     Public Sub Closings()
         Frm_Addtype.Close()
@@ -38,6 +48,8 @@ Module GlobalConfig
         frmCheck_Stock.Close()
         FrmReport.Close()
         FrmStatics.Close()
+        User_Lists.Close()
+        FrmInoiceCheck.Close()
     End Sub
 
     Function Encrypt(clearText As String) As String

@@ -4,7 +4,6 @@ Module QueriesModel
     Public CompanyName1 As String
     Public CompanyPhone1 As String
     Public CompanyPhone2 As String
-    Public CompanyPhone3 As String
     Public CompanyAddress As String
     Public CompanyLocation As String
     Public CompanyEmail As String
@@ -99,14 +98,16 @@ Module QueriesModel
                               `price` decimal(11,2) NOT NULL,
                               `amount` decimal(11,2) NOT NULL,
                               `trackRec` varchar(50) NOT NULL,
-                              `employeeID` varchar(10) NOT NULL,
+                              `employeeID` varchar(100) NOT NULL,
                               `date` varchar(25) NOT NULL,
                               `month` varchar(10) NOT NULL,
                               `profit` decimal(11,2) NOT NULL,
                               `Gen_Mount` varchar(2) NOT NULL,
+                              `invoiceCode` varchar(25) NOT NULL,
                               `hide` varchar(3) NOT NULL,
                               PRIMARY KEY (`ID`)
                             );"
+
 
     Public companydetailsTable As String = "
                             USE point_of_sale;
@@ -316,7 +317,6 @@ Module QueriesModel
                         CompanyName1 = reader("CompanyName")
                         CompanyPhone1 = reader("CompanyPhone1")
                         CompanyPhone2 = reader("CompanyPhone2")
-                        CompanyPhone3 = reader("CompanyPhone3")
                         CompanyAddress = reader("CompanyAddress")
                         CompanyLocation = reader("CompanyLocation")
                         CompanyEmail = reader("CompanyEmail")
@@ -379,25 +379,6 @@ Module QueriesModel
         Next
 
     End Sub
-
-    Sub AlterTables(tablename As String, colname As String, datatype As String, typevalue As String)
-        Dim Tablenames() As Object = {dailysalesTable, employeeTable, loginTable, productTable, producttypeTable, salesTable, companydetailsTable}
-        query = "ALTER TABLE" & tablename & "ADD COLUMN IF NOT EXISTS" & colname & datatype & "(" & typevalue & ")"
-        Dim con As MySqlConnection = New MySqlConnection(connstring)
-        For i As Int16 = 0 To Tablenames.Length - 1
-            Try
-                con.Open()
-                Dim cmd As New MySqlCommand(query, con)
-                cmd.ExecuteNonQuery()
-                cmd.Dispose()
-            Catch ex As Exception
-            Finally
-                con.Close()
-            End Try
-        Next
-
-    End Sub
-
 
 
 End Module

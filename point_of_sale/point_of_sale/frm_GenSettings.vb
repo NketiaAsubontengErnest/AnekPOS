@@ -272,11 +272,10 @@ Public Class Frm_GenSettings
                 a.Save(pathstring)
             End If
             Try
-                query = "INSERT INTO `companydetails` (`CompanyName`, `CompanyPhone1`, `CompanyPhone2`, `CompanyPhone3`, `CompanyAddress`,`CompanyLocation`,`CompanyEmail`,`Country`,`CompanyLog`) VALUES  
+                query = "INSERT INTO `companydetails` (`CompanyName`, `CompanyPhone1`, `CompanyPhone2`, `CompanyAddress`,`CompanyLocation`,`CompanyEmail`,`Country`,`CompanyLog`) VALUES  
                                                     ('" + TxtCompanyName.Text + "', 
                                                     '" + TxtPhone1.Text + "', 
                                                     '" + TxtPhone2.Text + "', 
-                                                    '" + TxtPhone3.Text + "',
                                                     '" + TxtAddress.Text + "',
                                                     '" + TxtLocation.Text + "',
                                                     '" + TxtEmail.Text + "',
@@ -332,7 +331,7 @@ Public Class Frm_GenSettings
                 filextend = ""
             End If
                 Try
-                query = "Update `companydetails` Set `CompanyName` = '" + TxtCompanyName.Text + "',`CompanyPhone1` = '" + TxtPhone1.Text + "',`CompanyPhone2` = '" + TxtPhone2.Text + "',`CompanyPhone3` = '" + TxtPhone3.Text + "',`CompanyAddress` = '" + TxtAddress.Text + "',`CompanyLocation` = '" + TxtLocation.Text + "',`CompanyEmail` = '" + TxtEmail.Text + "',`Country` = '" + TxtCountry.Text + "',`CompanyLog` = '" + filename + "' WHERE id = '" + LblID.Text + "'"
+                query = "Update `companydetails` Set `CompanyName` = '" + TxtCompanyName.Text + "',`CompanyPhone1` = '" + TxtPhone1.Text + "',`CompanyPhone2` = '" + TxtPhone2.Text + "',`CompanyAddress` = '" + TxtAddress.Text + "',`CompanyLocation` = '" + TxtLocation.Text + "',`CompanyEmail` = '" + TxtEmail.Text + "',`Country` = '" + TxtCountry.Text + "',`CompanyLog` = '" + filename + "' WHERE id = '" + LblID.Text + "'"
 
                 reader = Updating(query)
 
@@ -349,15 +348,14 @@ Public Class Frm_GenSettings
 
     Private Sub LoadCompanyDetails1()
         LblID.Text = Companyid
-        If BtnSet.Text = "" Then
-            BtnSet.Enabled = False
-            BtnUpdate.Enabled = True
+        If LblID.Text = "" Then
+            BtnSet.Enabled = True
+            BtnUpdate.Enabled = False
         Else
             BtnSet.Enabled = False
             TxtCompanyName.Text = CompanyName1
             TxtPhone1.Text = CompanyPhone1
             TxtPhone2.Text = CompanyPhone2
-            TxtPhone3.Text = CompanyPhone3
             TxtAddress.Text = CompanyAddress
             TxtLocation.Text = CompanyLocation
             TxtEmail.Text = CompanyEmail
@@ -380,7 +378,7 @@ Public Class Frm_GenSettings
         e.Handled = ValidateNumbers(e)
     End Sub
 
-    Private Sub TxtPhone3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtPhone3.KeyPress
+    Private Sub TxtPhone3_KeyPress(sender As Object, e As KeyPressEventArgs)
         e.Handled = ValidateNumbers(e)
     End Sub
 

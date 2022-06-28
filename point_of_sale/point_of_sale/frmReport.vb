@@ -16,7 +16,7 @@ Public Class FrmReport
             PictureBox1.Visible = False
         End If
 
-        load_Data_Grid()
+        load_Data_Grid1()
         employeeDetails()
         setDate()
 
@@ -93,33 +93,19 @@ Public Class FrmReport
 
     End Sub
 
-    Public Sub load_Data_Grid()
-        Dim con As MySqlConnection
-
-        Dim ada As New MySqlDataAdapter
-        Dim ds As New DataSet
-
-        con = New MySqlConnection(connstring)
-        con.Open()
-
+    Public Sub load_Data_Grid1()
         If cmbDate.Text = "" And cmbEmployeeID.Text = "" Then
-            ada = New MySqlDataAdapter("Select ID,employeeID,totalSales,date,datePrepared from dailysales ", con)
+            DataGridView1.DataSource = Load_Data_Grid("Select ID,employeeID,totalSales,date,datePrepared from dailysales ").Tables(0)
         ElseIf cmbEmployeeID.Text = "" Then
-            ada = New MySqlDataAdapter("Select ID,employeeID,totalSales,date,datePrepared from dailysales where 
-                                       date='" + cmbDate.Text + "'", con)
+            DataGridView1.DataSource = Load_Data_Grid("Select ID,employeeID,totalSales,date,datePrepared from dailysales where 
+                                       date='" + cmbDate.Text + "'").Tables(0)
         ElseIf cmbDate.Text = "" Then
-            ada = New MySqlDataAdapter("Select ID,employeeID,totalSales,date,datePrepared from dailysales where 
-                                       employeeID='" + cmbEmployeeID.Text + "'", con)
+            DataGridView1.DataSource = Load_Data_Grid("Select ID,employeeID,totalSales,date,datePrepared from dailysales where 
+                                       employeeID='" + cmbEmployeeID.Text + "'").Tables(0)
         Else
-            ada = New MySqlDataAdapter("Select ID,employeeID,totalSales,date,datePrepared from dailysales where 
-                                       date='" + cmbDate.Text + "' AND employeeID='" + cmbEmployeeID.Text + "'", con)
-
+            DataGridView1.DataSource = Load_Data_Grid("Select ID,employeeID,totalSales,date,datePrepared from dailysales where 
+                                       date='" + cmbDate.Text + "' AND employeeID='" + cmbEmployeeID.Text + "'").Tables(0)
         End If
-
-
-
-        ada.Fill(ds)
-        DataGridView1.DataSource = ds.Tables(0)
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
@@ -127,22 +113,22 @@ Public Class FrmReport
         cmbEmployeeID.Text = ""
         cmbName.Text = ""
 
-        load_Data_Grid()
+        load_Data_Grid1()
     End Sub
 
     Private Sub cmbEmployeeID_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbEmployeeID.SelectedIndexChanged
         cmbName.Text = cmbName.Items(cmbEmployeeID.SelectedIndex)
-        load_Data_Grid()
+        load_Data_Grid1()
     End Sub
 
     Private Sub cmbDate_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbDate.SelectedIndexChanged
-        load_Data_Grid()
+        load_Data_Grid1()
     End Sub
 
     Private Sub cmbName_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbName.SelectedIndexChanged
 
         cmbEmployeeID.Text = cmbEmployeeID.Items(cmbName.SelectedIndex)
-        load_Data_Grid()
+        load_Data_Grid1()
     End Sub
 
     Private Sub txt_Print_Click(sender As Object, e As EventArgs)
