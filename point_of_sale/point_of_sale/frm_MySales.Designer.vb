@@ -136,7 +136,7 @@ Partial Class Frm_MySales
         Me.data_MySales.EnableHeadersVisualStyles = False
         Me.data_MySales.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.data_MySales.HeaderBackColor = System.Drawing.Color.DodgerBlue
-        Me.data_MySales.HeaderBgColor = System.Drawing.Color.Empty
+        Me.data_MySales.HeaderBackColor = System.Drawing.Color.Empty
         Me.data_MySales.HeaderForeColor = System.Drawing.Color.White
         Me.data_MySales.Location = New System.Drawing.Point(13, 209)
         Me.data_MySales.Name = "data_MySales"

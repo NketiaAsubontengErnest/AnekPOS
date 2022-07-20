@@ -222,6 +222,12 @@
     <Compile Include="FrmAddSeler.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmProductAnalysis.Designer.vb">
+      <DependentUpon>FrmProductAnalysis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProductAnalysis.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmReport.Designer.vb">
       <DependentUpon>FrmReport.vb</DependentUpon>
     </Compile>
@@ -341,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddSeler.resx">
       <DependentUpon>FrmAddSeler.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductAnalysis.resx">
+      <DependentUpon>FrmProductAnalysis.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReport.resx">
       <DependentUpon>FrmReport.vb</DependentUpon>

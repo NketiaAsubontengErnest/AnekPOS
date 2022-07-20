@@ -330,4 +330,15 @@ Public Class Frm_AdminDas
 
         End Try
     End Sub
+
+    Private Sub ProductStatisticsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductStatisticsToolStripMenuItem.Click
+        Try
+            ColorClear()
+            Closings()
+            FrmProductAnalysis.MdiParent = Me
+            FrmProductAnalysis.Show()
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

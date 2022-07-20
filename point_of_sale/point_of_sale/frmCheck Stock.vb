@@ -100,7 +100,7 @@ Public Class frmCheck_Stock
                 txtNewQuant.Text = 0
             End If
             Dim quant As Integer = Convert.ToInt64(txtQuantity.Text) + Convert.ToInt64(txtNewQuant.Text)
-            query = "Update `product` Set `Product_ID` = '" & txtPID.Text & "', `Pro_Name`='" & cmbName.Text & "', `instock`='" & quant & "', `Price`='" & txtPrice.Text & "', `selling_price`='" & txt_CostPrice.Text & "', `Average_Quantity`='" & txtAveQty.Text & "',`New_Quant_Added`='" & txtNewQuant.Text & "', `Date_Updated`='" & Convert.ToString(DateTime.Now) & "' WHERE `Product_ID`='" & cmbID.Text & "'"
+            query = "Update `product` Set `Product_ID` = '" & txtPID.Text & "', `Pro_Name`='" & cmbName.Text & "', `instock`='" & quant & "', `Price`='" & txtPrice.Text & "', `selling_price`='" & txt_CostPrice.Text & "', `Average_Quantity`='" & txtAveQty.Text & "', `New_Quant_Added`='" & txtNewQuant.Text & "',tot_num_add = tot_num_add +'" & Convert.ToInt64(txtNewQuant.Text) & "', `Date_Updated`='" & Convert.ToString(DateTime.Now) & "' WHERE `Product_ID`='" & cmbID.Text & "'"
             reader = Updating(query)
             If reader.RecordsAffected > 0 Then
                 MsgBox("Product Updated!!", MsgBoxStyle.Information)

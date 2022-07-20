@@ -50,6 +50,7 @@ Module GlobalConfig
         FrmStatics.Close()
         User_Lists.Close()
         FrmInoiceCheck.Close()
+        FrmProductAnalysis.Close()
     End Sub
 
     Function Encrypt(clearText As String) As String

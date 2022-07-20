@@ -41,7 +41,7 @@ Public Class FrmInoiceCheck
 
     Private Sub BtnReset_Click(sender As Object, e As EventArgs) Handles BtnReset.Click
         CmbInvoiceCode.Text = ""
-        loadInvoiceCode()
+        load_Data_Grid1()
     End Sub
 
     Private Sub loadDetails()

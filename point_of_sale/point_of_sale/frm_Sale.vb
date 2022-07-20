@@ -368,7 +368,6 @@ Public Class Frm_Sale
 
 
     Public Sub addItemsToList()
-
         Try
             totalPrice = Convert.ToDecimal(cmd_unitPrice.Text) * Convert.ToDecimal(txt_Quantity.Value)
 
@@ -533,7 +532,7 @@ Public Class Frm_Sale
             Dim i As Integer = 0
 
             While i < count
-                query = "INSERT INTO sales (item, Qty, price, amount, trackRec, employeeID,date,month,profit,	Gen_Mount,invoiceCode, hide) VALUES (
+                query = "INSERT INTO sales (item, Qty, price, amount, trackRec, employeeID,date,month,profit, Gen_Mount,SoldYear, invoiceCode, hide) VALUES (
                                                                 '" + itemName.ToArray.GetValue(i).ToString + "', 
                                                                 '" + quanti.ToArray.GetValue(i).ToString + "', 
                                                                 '" + unit.ToArray.GetValue(i).ToString + "', 
@@ -544,6 +543,7 @@ Public Class Frm_Sale
                                                                 '" + Date.Now.ToString("dd/MM/yyyy") + "',
                                                                 '" + profit.ToArray.GetValue(i).ToString + "',
                                                                 '" + Date.Now.ToString("MM") + "',
+                                                                '" + Date.Now.ToString("yyyy") + "',
                                                                 '" + invoiceCode + "',
                                                                 '" + hidden.ToArray.GetValue(i).ToString + "')"
                 reader = Inserting(query)

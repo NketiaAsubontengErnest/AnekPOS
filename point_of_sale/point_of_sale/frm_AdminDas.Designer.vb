@@ -54,6 +54,8 @@ Partial Class Frm_AdminDas
         Me.StatisticsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MyProfitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.GeneralReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckInvoicesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductStatisticsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListOfUsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -67,7 +69,6 @@ Partial Class Frm_AdminDas
         Me.lblSetDash = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.CheckInvoicesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Guna2ShadowPanel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -394,7 +395,7 @@ Partial Class Frm_AdminDas
         '
         'ReportsToolStripMenuItem
         '
-        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StatisticsToolStripMenuItem1, Me.MyProfitToolStripMenuItem1, Me.GeneralReportToolStripMenuItem, Me.CheckInvoicesToolStripMenuItem})
+        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StatisticsToolStripMenuItem1, Me.MyProfitToolStripMenuItem1, Me.GeneralReportToolStripMenuItem, Me.CheckInvoicesToolStripMenuItem, Me.ProductStatisticsToolStripMenuItem})
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
         Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
         Me.ReportsToolStripMenuItem.Text = "Reports"
@@ -402,20 +403,32 @@ Partial Class Frm_AdminDas
         'StatisticsToolStripMenuItem1
         '
         Me.StatisticsToolStripMenuItem1.Name = "StatisticsToolStripMenuItem1"
-        Me.StatisticsToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.StatisticsToolStripMenuItem1.Size = New System.Drawing.Size(165, 22)
         Me.StatisticsToolStripMenuItem1.Text = "Statistics"
         '
         'MyProfitToolStripMenuItem1
         '
         Me.MyProfitToolStripMenuItem1.Name = "MyProfitToolStripMenuItem1"
-        Me.MyProfitToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.MyProfitToolStripMenuItem1.Size = New System.Drawing.Size(165, 22)
         Me.MyProfitToolStripMenuItem1.Text = "My Profit"
         '
         'GeneralReportToolStripMenuItem
         '
         Me.GeneralReportToolStripMenuItem.Name = "GeneralReportToolStripMenuItem"
-        Me.GeneralReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GeneralReportToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.GeneralReportToolStripMenuItem.Text = "General Report"
+        '
+        'CheckInvoicesToolStripMenuItem
+        '
+        Me.CheckInvoicesToolStripMenuItem.Name = "CheckInvoicesToolStripMenuItem"
+        Me.CheckInvoicesToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.CheckInvoicesToolStripMenuItem.Text = "Check Invoices"
+        '
+        'ProductStatisticsToolStripMenuItem
+        '
+        Me.ProductStatisticsToolStripMenuItem.Name = "ProductStatisticsToolStripMenuItem"
+        Me.ProductStatisticsToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.ProductStatisticsToolStripMenuItem.Text = "Product Statistics"
         '
         'UsersToolStripMenuItem
         '
@@ -528,12 +541,6 @@ Partial Class Frm_AdminDas
         'Timer1
         '
         '
-        'CheckInvoicesToolStripMenuItem
-        '
-        Me.CheckInvoicesToolStripMenuItem.Name = "CheckInvoicesToolStripMenuItem"
-        Me.CheckInvoicesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.CheckInvoicesToolStripMenuItem.Text = "Check Invoices"
-        '
         'Frm_AdminDas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -620,4 +627,5 @@ Partial Class Frm_AdminDas
     Friend WithEvents AddNewUserToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GeneralReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CheckInvoicesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProductStatisticsToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -177,7 +177,7 @@ Module QueriesModel
 
     Function SelectingCount(newQuery As String) As Integer
         connection = New MySqlConnection
-        Dim count
+        Dim counta As Integer = 0
         connection.ConnectionString = connstring
 
         Try
@@ -188,7 +188,7 @@ Module QueriesModel
 
             reader = cmd.ExecuteReader
             While reader.Read
-                count += 1
+                counta += 1
             End While
 
             connection.Close()
@@ -201,7 +201,7 @@ Module QueriesModel
 
         End Try
 
-        Return count
+        Return counta
     End Function
 
 
@@ -340,6 +340,7 @@ Module QueriesModel
         Dim conn As MySqlConnection = New MySqlConnection(DBConnectionString)
         Dim cmd As MySqlCommand = New MySqlCommand("SELECT IF(EXISTS (SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = 'point_of_sale'), 'Y','N') as exixt", conn)
 
+        conn.Close()
         conn.Open()
         Dim read As String = cmd.ExecuteNonQuery()
 
